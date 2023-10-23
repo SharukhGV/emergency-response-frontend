@@ -128,7 +128,7 @@ useEffect(()=>{
           name="description"
           value={person.description}
           rows="7" 
-          cols="50"
+          cols="25"
           placeholder="What is your case about..."
 
           onChange={handleTextChange}

@@ -6,7 +6,7 @@ import './App.css'
 import Home from './pages/Home';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import NewForm from './pages/NewForm';
-
+import Nav from './components/Nav';
 export default function App() {
   // const [count, setCount] = useState(0)
 // const [location, setLocation] = useState(null);
@@ -16,7 +16,7 @@ const [emergencyType, setEmergencyType]=useState("")
    <>
 
 <Router>
-      {/* <Nav /> */}
+      <Nav />
       <Routes>
         <Route path="/" element={<Home setEmergencyType={setEmergencyType}/>} />
         <Route path="/form" element={<NewForm emergencyType={emergencyType} />} />

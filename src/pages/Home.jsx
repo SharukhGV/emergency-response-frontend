@@ -14,6 +14,8 @@ export default function Home({setEmergencyType}){
     return (
       <div style={{ width: '100%', height: '100%', border: '1px solid' }}>
         <div></div>
+<h2>In Need of Help?</h2>
+<p>Click the Category Relevant to your Situation</p>
         <button id='natural1' value="Natural Disasters" onClick={emergencySETTER}>
           Natural Disasters:
         </button>
