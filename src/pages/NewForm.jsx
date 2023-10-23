@@ -1,107 +1,64 @@
 import { Link } from "react-router-dom";
-import { useState,useEffect } from "react";
-// import axios from "axios";
-// import moment from "moment";
-// import LocationCapture from "../components/LocationCapture";
-// const API = process.env.REACT_APP_API_URL;
+import { useState, useEffect } from "react";
 
-function NewForm( {emergencyType }) {
-  const [location, setLocation]=useState(null)
-//   let location = null,
- const [locationFound, setLocationFound]=useState(false)
- const [latitude, setLatitude]=useState(null)
-const [longitude, setLongitude]=useState(null)
+function NewForm({ emergencyType }) {
+  const [location, setLocation] = useState(null);
+  const [locationFound, setLocationFound] = useState(false);
+  const [latitude, setLatitude] = useState(null);
+  const [longitude, setLongitude] = useState(null);
 
-useEffect(()=>{ 
+  useEffect(() => {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(
         (position) => {
           const latitude = position.coords.latitude;
           const longitude = position.coords.longitude;
           setLocation({ latitude, longitude });
-          setLocationFound(true)
-          this.onLocationUpdate(this.location);
+          setLocationFound(true);
         },
         (error) => {
           console.error('Error getting location:', error);
-          setLocationFound(false)
-
-          window.alert("Please Enable Location and Refresh This Page")
+          setLocationFound(false);
+          window.alert("Please Enable Location and Refresh This Page");
         }
       );
     } else {
       console.error('Geolocation is not supported by this browser.');
-      setLocationFound(false)
-
+      setLocationFound(false);
     }
-  },[])
+  }, []); // Empty dependency array to run only once
 
+  useEffect(() => {
+    if (locationFound) {
+      setLatitude(location.latitude);
+      setLongitude(location.longitude);
+    } else {
+      setLatitude("no location found");
+      setLongitude("no location found");
+    }
+  }, [locationFound]); // Include locationFound in the dependency array
 
-useEffect(()=>{
-
-    locationFound ? setLatitude(location.latitude) : setLatitude("no location found")
-    locationFound ? setLongitude(location.latitude) : setLongitude("no location found")
-
-},[])
-// let userShow2 = userShow
-//   let { id } = useParams();
-  // console.log(person)
-  //persons is the previous data populated into the form
-//   const navigate = useNavigate();
-
-//   const addperson = (newperson) => {
-
-//   axios
-//     .post(`${API}/persons`, newperson)
-//     .then((response) => {
-//       console.log(response.data)
-
-//       // setperson(response.data); // set the entire `person` object
-//       navigate('/persons');
-//     })
-//     .catch((e) => console.error("catch", e));
-// };
-
-
-
-  const [person, setperson] = useState({
-    // user_id: userShow,
+  const [person, setPerson] = useState({
     first_Name: "",
     last_Name: "",
-    latitude:latitude,
-    longitude:longitude,
+    latitude: latitude,
+    longitude: longitude,
     description: "",
-    emergency: emergencyType
+    emergency: emergencyType,
   });
-  
-  console.log(person)
-
-
-
-
-
 
   const handleTextChange = (event) => {
-
-    // if (event.target.id === "night") {
-    //     setperson({ ...person, [event.target.id]: event.target.value === "true" });
-    //   } else {
-    //     setperson({ ...person, [event.target.id]: event.target.value });
-    //   }
-    setperson({ ...person, [event.target.id]: event.target.value });
-
+    setPerson({ ...person, [event.target.id]: event.target.value });
   };
 
-
-  
-  
   const handleSubmit = (event) => {
     event.preventDefault();
-    addperson(person);
-
+    // addperson(person); // You should implement this function
   };
 
   return (
+
+
     <div className="edit">
       <h2>Caution:</h2>
       <h4>Posting Will Be Public to Everyone</h4>
@@ -149,16 +106,6 @@ useEffect(()=>{
           onChange={handleTextChange}
         ></textarea>
 <div></div>
-
-        {/* <input
-          id="locationLat"
-          value={location.latitude}
-          type="text"
-          onChange={handleTextChange}
-          placeholder="Your Location..."
-
-          required
-        /> */}
 
 
         <input style={{width:"30%", padding:"0.6em 1.2em"}} type="submit" />
