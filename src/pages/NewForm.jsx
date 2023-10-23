@@ -9,6 +9,9 @@ function NewForm( {emergencyType }) {
   const [location, setLocation]=useState(null)
 //   let location = null,
  const [locationFound, setLocationFound]=useState(false)
+ const [latitude, setLatitude]=useState(null)
+const [longitude, setLongitude]=useState(null)
+
 useEffect(()=>{ 
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(
@@ -17,7 +20,7 @@ useEffect(()=>{
           const longitude = position.coords.longitude;
           setLocation({ latitude, longitude });
           setLocationFound(true)
-        //   this.onLocationUpdate(this.location);
+          this.onLocationUpdate(this.location);
         },
         (error) => {
           console.error('Error getting location:', error);
@@ -33,15 +36,13 @@ useEffect(()=>{
     }
   },[])
 
-const [latitude, setLatitude]=useState(null)
-const [longitude, setLongitude]=useState(null)
 
 useEffect(()=>{
 
-    !!person.location ? setLatitude(person.location.latitude) : setLatitude("no location found")
-    !!person.location ? setLongitude(person.location.latitude) : setLongitude("no location found")
+    locationFound ? setLatitude(location.latitude) : setLatitude("no location found")
+    locationFound ? setLongitude(location.latitude) : setLongitude("no location found")
 
-},[location])
+},[])
 // let userShow2 = userShow
 //   let { id } = useParams();
   // console.log(person)
