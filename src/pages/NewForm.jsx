@@ -38,8 +38,8 @@ const [longitude, setLongitude]=useState(null)
 
 useEffect(()=>{
 
-    locationFound ? setLatitude(person.location.latitude) : setLatitude("no location found")
-    locationFound ? setLongitude(person.location.latitude) : setLongitude("no location found")
+    !!person.location ? setLatitude(person.location.latitude) : setLatitude("no location found")
+    !!person.location ? setLongitude(person.location.latitude) : setLongitude("no location found")
 
 },[location])
 // let userShow2 = userShow
