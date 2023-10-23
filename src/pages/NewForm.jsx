@@ -89,13 +89,14 @@ useEffect(()=>{
 
   return (
     <div className="edit">
-      
+      <h2>Caution:</h2>
+      <h4>Posting Will Be Public to Everyone</h4>
       <form onSubmit={handleSubmit}>
 
       {/* <input type="hidden" id="user_id" name="user_id" value={userShow2}></input> */}
       <div></div>
-        <label htmlFor="name">Your First Name:</label>
-        <input
+       <label htmlFor="name">Your First Name:</label>
+         <div></div><input
           id="first_Name"
           value={person.first_Name}
           type="text"
@@ -106,7 +107,7 @@ useEffect(()=>{
         />
        <div></div>
        <label htmlFor="name">Your Last Name:</label>
-        <input
+       <div></div> <input
           id="last_Name"
           value={person.last_Name}
           type="text"
