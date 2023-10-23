@@ -159,7 +159,7 @@ useEffect(()=>{
   <LocationCapture location={location} setLocation={setLocation}/>
 
   */}
-        <input style={{width:"100%", padding:"0.6em 1.2em"}} type="submit" />
+        <input style={{width:"30%", padding:"0.6em 1.2em"}} type="submit" />
       </form>
   {/* <div className="cardEmergency">
   <h3>{person.emergency}</h3>

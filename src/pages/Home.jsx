@@ -16,6 +16,7 @@ export default function Home({setEmergencyType}){
         <div></div>
 <h2>In Need of Help?</h2>
 <p>Click the Category Relevant to your Situation</p>
+<p>You will be Taken to a Form where you can post to a Public Bulletin</p>
         <button id='natural1' value="Natural Disasters" onClick={emergencySETTER}>
           Natural Disasters:
         </button>
