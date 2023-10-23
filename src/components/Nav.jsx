@@ -5,8 +5,6 @@ export default function Nav() {
     <li>
       <Link to="/">Home</Link>
     </li>
-    <li>
-      <Link to="/index"></Link>
-    </li>
+   
   </ul>;
 }

@@ -7,9 +7,9 @@ import Home from './pages/Home';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import NewForm from './pages/NewForm';
 
-function App() {
+export default function App() {
   // const [count, setCount] = useState(0)
-const [location, setLocation] = useState([]);
+// const [location, setLocation] = useState(null);
 const [emergencyType, setEmergencyType]=useState("")
 
   return (
@@ -19,7 +19,7 @@ const [emergencyType, setEmergencyType]=useState("")
       {/* <Nav /> */}
       <Routes>
         <Route path="/" element={<Home setEmergencyType={setEmergencyType}/>} />
-        <Route path="/form" element={<NewForm emergencyType={emergencyType} location={location} setLocation={setLocation}/>} />
+        <Route path="/form" element={<NewForm emergencyType={emergencyType} />} />
 
         </Routes>
 </Router>
@@ -27,4 +27,3 @@ const [emergencyType, setEmergencyType]=useState("")
   )
 }
 
-export default App

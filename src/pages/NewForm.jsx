@@ -1,14 +1,33 @@
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useState,useEffect } from "react";
 // import axios from "axios";
 // import moment from "moment";
-import LocationButton from "../components/LocationButton";
+// import LocationCapture from "../components/LocationCapture";
 
 // const API = process.env.REACT_APP_API_URL;
 
-function NewForm({location, setLocation, emergencyType }) {
-  // const [userShow, setUserShow]=useState("")
-
+function NewForm( {emergencyType }) {
+  const [location, setLocation]=useState(null)
+//   let location = null,
+ 
+useEffect(()=>{ 
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(
+        (position) => {
+          const latitude = position.coords.latitude;
+          const longitude = position.coords.longitude;
+          setLocation({ latitude, longitude });
+        //   this.onLocationUpdate(this.location);
+        },
+        (error) => {
+          console.error('Error getting location:', error);
+          window.alert("Please Enable Location and Refresh This Page")
+        }
+      );
+    } else {
+      console.error('Geolocation is not supported by this browser.');
+    }
+  },[])
 
 
 // let userShow2 = userShow
@@ -30,12 +49,14 @@ function NewForm({location, setLocation, emergencyType }) {
 //     .catch((e) => console.error("catch", e));
 // };
 
+
+
   const [person, setperson] = useState({
     // user_id: userShow,
     first_Name: "",
     last_Name: "",
-    locationLat: location.latitude,
-    locationLong:location.longitude,
+    location:location,
+    // location:Geolocation.getCurrentPosition(),
     description: "",
     emergency: emergencyType
   });
@@ -113,19 +134,41 @@ function NewForm({location, setLocation, emergencyType }) {
           onChange={handleTextChange}
         ></textarea>
 <div></div>
-  {location ? "✅ Location Recorded" : null  }
-  <LocationButton location={location} setLocation={setLocation}/>
+{/* 
+        <input
+          id="locationLat"
+          value={location.latitude}
+          type="hidden"
+          onChange={handleTextChange}
+          placeholder="Your Location..."
 
+          required
+        />
+
+<input
+          id="locationLong"
+          value={location.longitude}
+          type="hidden"
+          onChange={handleTextChange}
+          placeholder="Your Location..."
+
+          required
+        />
+
+{location ? "✅ Location Recorded" : null  }
+  <LocationCapture location={location} setLocation={setLocation}/>
+
+  */}
         <input style={{width:"100%", padding:"0.6em 1.2em"}} type="submit" />
       </form>
-  <div className="cardEmergency">
+  {/* <div className="cardEmergency">
   <h3>{person.emergency}</h3>
   <div>Full Name: <strong>{person.first_Name} {person.last_Name}</strong></div>
-  <div>Latitude: <span style={{color:"red"}}>{person.locationLat}</span></div>
-  <div>Longitude: <span style={{color:"red"}}>{person.locationLong}</span></div>
+  <div>Latitude: <span style={{color:"red"}}>{person.location.latitude}</span></div>
+  <div>Longitude: <span style={{color:"red"}}>{person.location.longitude}</span></div>
   <div>Description:</div>
   <p style={{color:"orange"}}>{person.description}</p>
-</div>
+</div> */}
 
 
     </div>

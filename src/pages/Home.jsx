@@ -1,6 +1,6 @@
-import { useState } from "react"
+// import { useState } from "react"
 import { useNavigate } from "react-router-dom"
-import LocationButton from "../components/LocationButton";
+// import LocationButton from "../components/LocationCapture";
 export default function Home({setEmergencyType}){
     const navigate = useNavigate(); // Initialize the navigation function
 
