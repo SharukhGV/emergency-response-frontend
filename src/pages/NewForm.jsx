@@ -162,14 +162,14 @@ useEffect(()=>{
   */}
         <input style={{width:"30%", padding:"0.6em 1.2em"}} type="submit" />
       </form>
-  {/* <div className="cardEmergency">
+  <div className="cardEmergency">
   <h3>{person.emergency}</h3>
   <div>Full Name: <strong>{person.first_Name} {person.last_Name}</strong></div>
-  <div>Latitude: <span style={{color:"red"}}>{person.location.latitude}</span></div>
-  <div>Longitude: <span style={{color:"red"}}>{person.location.longitude}</span></div>
+  <div>Latitude: <span style={{color:"red"}}>{location ? person.location.latitude : "no location found"}</span></div>
+  <div>Longitude: <span style={{color:"red"}}>{location ? person.location.longitude: "no location found"}</span></div>
   <div>Description:</div>
   <p style={{color:"orange"}}>{person.description}</p>
-</div> */}
+</div>
 
 
     </div>

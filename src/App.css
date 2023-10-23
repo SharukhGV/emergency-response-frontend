@@ -74,6 +74,9 @@ body{
 
 .cardEmergency{
   border: #7c031a;
+  background-color: #7c031942;
+  max-width: 300px;
+  margin:auto
 }
 
 
