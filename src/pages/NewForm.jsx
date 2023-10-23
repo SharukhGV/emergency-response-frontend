@@ -3,13 +3,12 @@ import { useState,useEffect } from "react";
 // import axios from "axios";
 // import moment from "moment";
 // import LocationCapture from "../components/LocationCapture";
-
 // const API = process.env.REACT_APP_API_URL;
 
 function NewForm( {emergencyType }) {
   const [location, setLocation]=useState(null)
 //   let location = null,
- 
+ const [locationFound, setLocationFound]=useState(false)
 useEffect(()=>{ 
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(
@@ -17,19 +16,32 @@ useEffect(()=>{
           const latitude = position.coords.latitude;
           const longitude = position.coords.longitude;
           setLocation({ latitude, longitude });
+          setLocationFound(true)
         //   this.onLocationUpdate(this.location);
         },
         (error) => {
           console.error('Error getting location:', error);
+          setLocationFound(false)
+
           window.alert("Please Enable Location and Refresh This Page")
         }
       );
     } else {
       console.error('Geolocation is not supported by this browser.');
+      setLocationFound(false)
+
     }
   },[])
 
+const [latitude, setLatitude]=useState(null)
+const [longitude, setLongitude]=useState(null)
 
+useEffect(()=>{
+
+    locationFound ? setLatitude(person.location.latitude) : setLatitude("no location found")
+    locationFound ? setLongitude(person.location.latitude) : setLongitude("no location found")
+
+},[location])
 // let userShow2 = userShow
 //   let { id } = useParams();
   // console.log(person)
@@ -55,8 +67,8 @@ useEffect(()=>{
     // user_id: userShow,
     first_Name: "",
     last_Name: "",
-    location:location,
-    // location:Geolocation.getCurrentPosition(),
+    latitude:latitude,
+    longitude:longitude,
     description: "",
     emergency: emergencyType
   });
@@ -76,6 +88,7 @@ useEffect(()=>{
     //     setperson({ ...person, [event.target.id]: event.target.value });
     //   }
     setperson({ ...person, [event.target.id]: event.target.value });
+
   };
 
 
@@ -135,38 +148,25 @@ useEffect(()=>{
           onChange={handleTextChange}
         ></textarea>
 <div></div>
-{/* 
-        <input
+
+        {/* <input
           id="locationLat"
           value={location.latitude}
-          type="hidden"
+          type="text"
           onChange={handleTextChange}
           placeholder="Your Location..."
 
           required
-        />
+        /> */}
 
-<input
-          id="locationLong"
-          value={location.longitude}
-          type="hidden"
-          onChange={handleTextChange}
-          placeholder="Your Location..."
 
-          required
-        />
-
-{location ? "✅ Location Recorded" : null  }
-  <LocationCapture location={location} setLocation={setLocation}/>
-
-  */}
         <input style={{width:"30%", padding:"0.6em 1.2em"}} type="submit" />
       </form>
   <div className="cardEmergency">
   <h3>{person.emergency}</h3>
   <div>Full Name: <strong>{person.first_Name} {person.last_Name}</strong></div>
-  <div>Latitude: <span style={{color:"red"}}>{location ? person.location.latitude : "no location found"}</span></div>
-  <div>Longitude: <span style={{color:"red"}}>{location ? person.location.longitude: "no location found"}</span></div>
+  <div>Latitude: <span style={{color:"red"}}>{latitude}</span></div>
+  <div>Longitude: <span style={{color:"red"}}>{longitude}</span></div>
   <div>Description:</div>
   <p style={{color:"orange"}}>{person.description}</p>
 </div>
