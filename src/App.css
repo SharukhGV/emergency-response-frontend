@@ -1,3 +1,5 @@
+
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -61,4 +63,14 @@ input[type=submit] {
 input[type=submit]:hover {
   background-color: #06ff65;
   color:#7c031a
+}
+
+body{
+
+  background-color: #2f2828;
+  margin: auto;
+}
+
+.cardEmergency{
+  border: #7c031a;
 }

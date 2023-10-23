@@ -68,9 +68,7 @@ function NewForm({location, setLocation, emergencyType }) {
 
   return (
     <div className="edit">
-        {/* {!!location ? "✅ Location Recorded" : null  } */}
-         <LocationButton location={location} setLocation={setLocation}/>
-
+      
       <form onSubmit={handleSubmit}>
 
       {/* <input type="hidden" id="user_id" name="user_id" value={userShow2}></input> */}
@@ -115,11 +113,14 @@ function NewForm({location, setLocation, emergencyType }) {
           onChange={handleTextChange}
         ></textarea>
 <div></div>
+  {location ? "✅ Location Recorded" : null  }
+  <LocationButton location={location} setLocation={setLocation}/>
+
         <input style={{width:"100%", padding:"0.6em 1.2em"}} type="submit" />
       </form>
   <div className="cardEmergency">
   <h3>{person.emergency}</h3>
-  <div>Full Name: {person.first_Name} {person.last_Name}</div>
+  <div>Full Name: <strong>{person.first_Name} {person.last_Name}</strong></div>
   <div>Latitude: <span style={{color:"red"}}>{person.locationLat}</span></div>
   <div>Longitude: <span style={{color:"red"}}>{person.locationLong}</span></div>
   <div>Description:</div>
