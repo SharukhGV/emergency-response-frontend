@@ -1,25 +1,28 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import data from "../../data.json"
+import { v4 as uuidv4 } from 'uuid';
+import markerImage from "./markerImage.png"
+export default function SearchPeople({ setMapMarkers }) {
+  const [query, setQuery] = useState("");
 
-export default function SearchPeople(){
+  const handleQueryChange = (event) => {
+    setQuery(event.target.value);
+  };
 
-    const [query, setQuery] = useState("");
+  const filteredPeople = data.data.filter((person) => {
+    return person.full_Name.toLowerCase().includes(query.toLowerCase());
+  });
 
+  useEffect(() => {
+    const markerArray = filteredPeople.map((person) => ({
+      lat: person.latitude,
+      lng: person.longitude,
+    }));
 
-  
-    const handleQueryChange = (event) => {
-      setQuery(event.target.value);
-    };
-  
-    const filteredPeople = data.data.filter((person) => {
-        return (
-          person.full_Name.toLowerCase().includes(query.toLowerCase())
-        );
-      });
+    setMapMarkers(markerArray); // Update mapMarkers based on filtered data
+  }, [query]); // Update markers when the query changes
 
-
-
-return (
+  return (
     <div>
       <div>
         <strong>Search for a Star</strong>
@@ -27,17 +30,14 @@ return (
       <input type="text" value={query} onChange={handleQueryChange} />
       <ul>
         {filteredPeople.map((person) => (
-          <li>
-            <p>
+          <li key={person.id}>
+            <div>
               <strong>{person.full_Name}</strong>
               <div>{person.latitude}</div>
               <div>{person.longitude}</div>
               <div>{person.description}</div>
               <div>{person.emergency}</div>
-
-
-
-            </p>
+            </div>
           </li>
         ))}
       </ul>

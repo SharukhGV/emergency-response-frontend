@@ -13,7 +13,7 @@ export default function App() {
   // const [count, setCount] = useState(0)
 // const [location, setLocation] = useState(null);
 const [emergencyType, setEmergencyType]=useState("")
-
+const[mapMarkers, setMapMarkers]=useState([])
   return (
    <>
 
@@ -22,7 +22,7 @@ const [emergencyType, setEmergencyType]=useState("")
       <Routes>
         <Route path="/" element={<Home setEmergencyType={setEmergencyType}/>} />
         <Route path="/form" element={<NewForm emergencyType={emergencyType} />} />
-<Route path="/index" element={<Index />}/>
+<Route path="/index" element={<Index mapMarkers={mapMarkers} setMapMarkers={setMapMarkers} />}/>
         </Routes>
 </Router>
     </>

@@ -7,7 +7,7 @@ import SearchPeople from "../components/SearchPeople";
 // import { useState, useEffect } from "react";
 // const dataJSON = require("../../data.json")
 
-export default function Index() {
+export default function Index({setMapMarkers, mapMarkers}) {
 
 // const [data7, setData7] = useState([])
 // useEffect(() => {
@@ -29,7 +29,7 @@ export default function Index() {
 //   }
 
   return (
-<div>  <div><GoogleMaps /></div>
+<div>  <div><GoogleMaps setMapMarkers={setMapMarkers} mapMarkers={mapMarkers} /></div>
 
       {/* <div className="box">
         <form name="search">
@@ -47,7 +47,7 @@ export default function Index() {
     {!!filteredName ? {filteredName} : "Name Not Found"}
 </div> */}
         
-<SearchPeople/>
+<SearchPeople mapMarkers={mapMarkers} setMapMarkers={setMapMarkers} />
 
 {/* {data.data.map((individual, index) =>{
 
