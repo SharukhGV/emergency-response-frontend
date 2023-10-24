@@ -3,9 +3,14 @@ import { Link } from "react-router-dom";
 export default function Nav() {
     return(
   <ul>
-    <li>
+    <span>
       <Link to="/">🏡</Link>
-    </li>
-   
+    </span>
+  
+
+
+    <span>
+      <Link to="/maps">🌐</Link>
+    </span>
   </ul>)
 }

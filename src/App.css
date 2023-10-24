@@ -180,7 +180,8 @@ font-style:oblique}
 ul {text-decoration: none;
 background-color: #a8006a82;
 list-style-type: none;
-  
+  align-items: center;
+  text-align: center;
   padding: 20px;}
 li{text-decoration: none;
 text-align: center;
