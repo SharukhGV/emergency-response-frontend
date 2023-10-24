@@ -4,8 +4,8 @@ import { useState, useEffect } from "react";
 function NewForm({ emergencyType }) {
   const [location, setLocation] = useState(null);
   const [locationFound, setLocationFound] = useState(false);
-  const [latitude, setLatitude] = useState(null);
-  const [longitude, setLongitude] = useState(null);
+  const [lat, setLatitude] = useState(null);
+  const [lng, setLongitude] = useState(null);
 
   useEffect(() => {
     if (navigator.geolocation) {
@@ -41,8 +41,8 @@ function NewForm({ emergencyType }) {
   const [person, setPerson] = useState({
     first_Name: "",
     last_Name: "",
-    latitude: latitude,
-    longitude: longitude,
+    latitude: lat,
+    longitude: lng,
     description: "",
     emergency: emergencyType,
   });
@@ -113,8 +113,8 @@ function NewForm({ emergencyType }) {
   <div className="cardEmergency">
   <h3>{person.emergency}</h3>
   <div>Full Name: <strong>{person.first_Name} {person.last_Name}</strong></div>
-  <div>Latitude: <span style={{color:"red"}}>{latitude}</span></div>
-  <div>Longitude: <span style={{color:"red"}}>{longitude}</span></div>
+  <div>Latitude: <span style={{color:"red"}}>{lat}</span></div>
+  <div>Longitude: <span style={{color:"red"}}>{lng}</span></div>
   <div>Description:</div>
   <p style={{color:"orange"}}>{person.description}</p>
 </div>

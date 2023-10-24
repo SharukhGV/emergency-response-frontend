@@ -10,7 +10,7 @@ export default function Nav() {
 
 
     <span>
-      <Link to="/maps">🌐</Link>
+      <Link to="/index">🌐</Link>
     </span>
   </ul>)
 }
