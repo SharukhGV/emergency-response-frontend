@@ -190,3 +190,16 @@ padding-left: 7px;
 padding-right: 7px;
 
 }
+
+.container{
+
+  display: flex
+}
+
+.item {
+  order: 5; /* default is 0 */
+  background-color: #a8460059;
+  margin:auto;
+  padding: 7px;
+  border-radius: 10px;
+}
