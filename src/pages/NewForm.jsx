@@ -62,6 +62,7 @@ function NewForm({ emergencyType }) {
     <div className="edit">
       <h2>Caution:</h2>
       <h4>Posting Will Be Public to Everyone</h4>
+      <h5>Posts Cannot be Deleted</h5>
       <form onSubmit={handleSubmit}>
 
       {/* <input type="hidden" id="user_id" name="user_id" value={userShow2}></input> */}

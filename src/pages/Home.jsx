@@ -18,23 +18,23 @@ export default function Home({setEmergencyType}){
 <p>Click the Category Relevant to your Situation</p>
 <p>You will be Taken to a Form where you can post to a Public Bulletin</p>
         <button id='natural1' value="Natural Disasters" onClick={emergencySETTER}>
-          Natural Disasters:
+          Natural Disasters
         </button>
         <div></div>
         <button id='natural2' value="Medical Emergencies" onClick={emergencySETTER}>
-          Medical Emergencies:
+          Medical Emergencies
         </button>
         <div></div>
         <button id='natural3' value="Fire and Structure Emergencies" onClick={emergencySETTER}>
-          Fire and Structure Emergencies:
+          Fire and Structure Emergencies
         </button>
         <div></div>
         <button id='natural4' value="Vehicle Emergencies" onClick={emergencySETTER}>
-          Vehicle Emergencies:
+          Vehicle Emergencies
         </button>
         <div></div>
         <button id='natural5' value="Security and Civil Unrest" onClick={emergencySETTER}>
-          Security and Civil Unrest:
+          Security and Civil Unrest
         </button>
 
       </div>
