@@ -39,8 +39,8 @@ function NewForm({ emergencyType }) {
   }, [locationFound]); // Include locationFound in the dependency array
 
   const [person, setPerson] = useState({
-    first_Name: "",
-    last_Name: "",
+    full_Name: "",
+    // last_Name: "",
     latitude: lat,
     longitude: lng,
     description: "",
@@ -67,17 +67,17 @@ function NewForm({ emergencyType }) {
 
       {/* <input type="hidden" id="user_id" name="user_id" value={userShow2}></input> */}
       <div></div>
-       <label htmlFor="name">Your First Name:</label>
+       <label htmlFor="full_Name">Name:</label>
          <div></div><input
-          id="first_Name"
-          value={person.first_Name}
+          id="full_Name"
+          value={person.full_Name}
           type="text"
           onChange={handleTextChange}
           placeholder="Your Name..."
 
           required
         />
-       <div></div>
+       {/* <div></div>
        <label htmlFor="name">Your Last Name:</label>
        <div></div> <input
           id="last_Name"
@@ -87,7 +87,7 @@ function NewForm({ emergencyType }) {
           placeholder="Your Name..."
 
           required
-        />
+        /> */}
        
 
     <div></div>
@@ -113,7 +113,7 @@ function NewForm({ emergencyType }) {
       </form>
   <div className="cardEmergency">
   <h3>{person.emergency}</h3>
-  <div>Full Name: <strong>{person.first_Name} {person.last_Name}</strong></div>
+  <div>Full Name: <strong>{person.full_Name}</strong></div>
   <div>Latitude: <span style={{color:"red"}}>{lat}</span></div>
   <div>Longitude: <span style={{color:"red"}}>{lng}</span></div>
   <div>Description:</div>
