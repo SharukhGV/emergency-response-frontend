@@ -3,14 +3,14 @@ import { Link } from "react-router-dom";
 export default function Nav() {
     return(
   <ul>
-    <span>
+    <li>
       <Link to="/">🏡</Link>
-    </span>
+    </li>
   
 
 
-    <span>
+    <li>
       <Link to="/index">🌐</Link>
-    </span>
+    </li>
   </ul>)
 }

@@ -185,4 +185,8 @@ list-style-type: none;
   padding: 20px;}
 li{text-decoration: none;
 text-align: center;
+display: inline;
+padding-left: 7px;
+padding-right: 7px;
+
 }
