@@ -4,7 +4,17 @@ export default function Index() {
   return (
     <div>
       <GoogleMaps />
-
+      <div class="box">
+        <form name="search">
+            <div style={{fontFamily:"helvetica", color:"orangered"}}>Search Someone...</div>
+          <input
+            type="text"
+            class="input"
+            name="txt"
+            onmouseout="this.value = ''; this.blur();"
+          />
+        </form>
+ </div>
       <div className="container">
         <div className="item">
           <h3>Natural Disasters</h3>

@@ -206,3 +206,57 @@ padding-right: 7px;
   border-radius: 10px;
   width: 100%;
 }
+
+
+input[type=text] {
+  width: 75%;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #7c031a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+  margin-top: 5px;
+  color: #fbffda;
+}
+
+
+/* SEARCH BAR CSS */
+
+.box{
+  position: relative;
+  width: 75%;
+  margin: auto;
+
+}
+
+
+.box:hover input{
+  width: 75%;
+  background: #3b3640;
+  border-radius: 10px;
+}
+.box i{
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translate(-50%,-50%);
+  font-size: 26px;
+  color: #ffd52d;
+  transition: .2s;
+  width: 75%;
+}
+.box:hover i{
+  opacity: 0;
+  z-index: -1;
+}
+
+/* YouTube icon */
+
+
+
+
+/* END SEARCH BAR CSS */
