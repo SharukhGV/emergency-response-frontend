@@ -53,7 +53,7 @@ input[type=submit] {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #7c031a;
+  background-color: #999898;
   cursor: pointer;
   transition: border-color 0.25s;
   width: 100%;
@@ -61,15 +61,15 @@ input[type=submit] {
 }
 
 input[type=submit]:hover {
-  background-color: #06ff65;
+  background-color: #ffffff;
   color:#7c031a
 }
 
 body{
 
-  background-color: #2f2828;
+  background-color: #ffffff;
   margin: auto;
-  color:beige
+  color:373436
 }
 
 .cardEmergency{
@@ -108,8 +108,8 @@ body{
   }
   
   input[type=submit]:hover {
-    background-color: #06ff65;
-    color:#7c031a
+    background-color: #f6944d;
+    color:#ffffff
   }
 
   body{
@@ -119,7 +119,7 @@ body{
   }
 button{
 
-background-color: #7c031a;
+background-color: #999898;
 color: #fbffda;
 padding-top: 5px;
 padding-bottom: 5px;
@@ -129,7 +129,7 @@ padding-bottom: 5px;
 }
 
 button:hover{
-  background-color: #a84600;
+  background-color: #f6944d;
 color:#fbffda;}
 
 }
@@ -142,7 +142,7 @@ input[type=submit] {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #7c031a;
+  background-color: #999898;
   cursor: pointer;
   transition: border-color 0.25s;
   width: 100%;
@@ -150,7 +150,7 @@ input[type=submit] {
 }
 
 input[type=submit]:hover {
-  background-color: #06ff65;
+  background-color: #f6944d;
   color:#7c031a
 }
 
@@ -162,7 +162,7 @@ body{
 }
 button{
 
-background-color: #7c031a;
+background-color: #f6944d;
 color: #fbffda;
 padding-top: 9px;
 padding-bottom: 9px;
@@ -178,7 +178,7 @@ color:#ffffff;
 font-style:oblique}
 
 ul {text-decoration: none;
-background-color: #a8006a82;
+background-color: #f6944d;
 list-style-type: none;
   align-items: center;
   text-align: center;
@@ -200,7 +200,7 @@ padding-right: 7px;
 
 .item {
   order: 5; /* default is 0 */
-  background-color: #a8460059;
+  background-color: #999898;
   margin:auto;
   padding: 30px;
   border-radius: 10px;
@@ -216,11 +216,11 @@ input[type=text] {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #7c031a;
+  background-color: #f6944d;
   cursor: pointer;
   transition: border-color 0.25s;
   margin-top: 5px;
-  color: #fbffda;
+  color: #373436;
 }
 
 

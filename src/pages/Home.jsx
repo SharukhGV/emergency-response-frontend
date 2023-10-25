@@ -1,6 +1,8 @@
 // import { useState } from "react"
 import { useNavigate } from "react-router-dom"
 // import LocationButton from "../components/LocationCapture";
+
+import FindSpot from "./FindSpot.png"
 export default function Home({setEmergencyType}){
     const navigate = useNavigate(); // Initialize the navigation function
 
@@ -14,6 +16,8 @@ export default function Home({setEmergencyType}){
     return (
       <div style={{ width: '100%', height: '100%', border: '1px solid' }}>
         <div></div>
+
+        <img style={{maxWidth:"300px"}} src={FindSpot} alt="Logo"></img>
 <h2>In Need of Help?</h2>
 <p>Click the Category Relevant to your Situation</p>
 <p>You will be Taken to a Form where you can post to a Public Bulletin</p>
