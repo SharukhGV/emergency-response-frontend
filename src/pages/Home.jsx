@@ -37,7 +37,7 @@ export default function Home({setEmergencyType}){
           Vehicle Emergencies
         </button>
         <div></div>
-        <button id='natural5' value="Security and Civil Unrest" onClick={emergencySETTER}>
+        <button style={{marginBottom:"20px"}} id='natural5' value="Security and Civil Unrest" onClick={emergencySETTER}>
           Security and Civil Unrest
         </button>
 
