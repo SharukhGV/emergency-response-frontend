@@ -2,7 +2,16 @@ import { GoogleMap, Marker, LoadScript } from "@react-google-maps/api";
 import markerImage from "./markerImage.png"
 import { useEffect, useState } from "react";
 export default function GoogleMaps({setMapMarkers, mapMarkers}){
+  // const [isMarkerHovered, setMarkerHovered] = useState(false);
+  // const [markerInfo, setMarkerInfo] = useState('Marker Information');
 
+  // const handleMarkerMouseOver = () => {
+  //     setMarkerHovered(true);
+  // };
+
+  // const handleMarkerMouseOut = () => {
+  //     setMarkerHovered(false);
+  // };
     const mapStyles = {
       height: "400px",
       width: "100%",
@@ -35,6 +44,10 @@ useEffect(() => {
             <Marker
               key={index}
               position={{ lat: marker.lat, lng: marker.lng }}
+              title={marker.name}
+              icon={markerImage}
+              // onMouseover={handleMarkerMouseOver}
+              // onMouseout={handleMarkerMouseOut}
              
             />
           ))}
@@ -42,5 +55,4 @@ useEffect(() => {
       </LoadScript>
     );
   };
-  
   

@@ -17,6 +17,7 @@ export default function SearchPeople({ setMapMarkers }) {
     const markerArray = filteredPeople.map((person) => ({
       lat: person.latitude,
       lng: person.longitude,
+      name: person.full_Name
     }));
 
     setMapMarkers(markerArray); // Update mapMarkers based on filtered data
