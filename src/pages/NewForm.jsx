@@ -111,11 +111,11 @@ function NewForm({ emergencyType }) {
 
         <input style={{width:"30%", padding:"0.6em 1.2em"}} type="submit" />
       </form>
-  <div className="cardEmergency">
+  <div style={{marginTop:"20px"}} className="cardEmergency">
   <h3>{person.emergency}</h3>
   <div>Full Name: <strong>{person.full_Name}</strong></div>
-  <div>Latitude: <span style={{color:"red"}}>{lat}</span></div>
-  <div>Longitude: <span style={{color:"red"}}>{lng}</span></div>
+  <div>Latitude: <span style={{color:"beige"}}>{lat}</span></div>
+  <div>Longitude: <span style={{color:"beige"}}>{lng}</span></div>
   <div>Description:</div>
   <p style={{color:"#373436"}}>{person.description}</p>
 </div>

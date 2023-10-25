@@ -74,16 +74,18 @@ body{
 
 .cardEmergency{
   border-radius: 10px;
-  background-color: #f6934da0;
+  background-color: #f6944d;
   max-width: 300px;
   margin:auto;
   padding: 5px;
+  color:#373436
 }
 .cardEmergency:hover{
   border-radius: 10px;
-  background-color: #f6934d45;
+  background-color: #f5771d;
   max-width: 300px;
   margin:auto;
+  color:#373436
   padding: 5px;
 }
 
@@ -105,6 +107,7 @@ body{
     transition: border-color 0.25s;
     width: 100%;
     margin-top: 5px;
+    color:#ffffff
   }
   
   input[type=submit]:hover {
