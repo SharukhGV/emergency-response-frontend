@@ -260,3 +260,10 @@ input[type=text] {
 
 
 /* END SEARCH BAR CSS */
+
+.individual{
+background-color: #ff060615;
+border-radius: 10%;
+padding: 10px;
+
+}

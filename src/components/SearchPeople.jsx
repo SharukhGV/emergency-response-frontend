@@ -25,18 +25,18 @@ export default function SearchPeople({ setMapMarkers }) {
   return (
     <div>
       <div>
-        <strong>Search for a Star</strong>
+        <strong>Search for a Person</strong>
       </div>
       <input type="text" value={query} onChange={handleQueryChange} />
       <ul>
         {filteredPeople.map((person) => (
           <li key={person.id}>
-            <div>
-              <strong>{person.full_Name}</strong>
-              <div>{person.latitude}</div>
-              <div>{person.longitude}</div>
-              <div>{person.description}</div>
-              <div>{person.emergency}</div>
+            <div className="individual">
+              <strong>Name:{person.full_Name}</strong>
+              <div>Latitude: {person.latitude}</div>
+              <div>Longitude:{person.longitude}</div>
+              <div> Description:{person.description}</div>
+              <div>Emergency Type:{person.emergency}</div>
             </div>
           </li>
         ))}
