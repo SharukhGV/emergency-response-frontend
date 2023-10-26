@@ -1,8 +1,19 @@
-# React + Vite
+# Find Spot
+## Emergency Bulletin Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An application to help those in dire need, where their phone might by at 1%
 
-Currently, two official plugins are available:
+They can fill out the location capturing form and then submit their data, and their location will be public to everyone, so that those nearby or who are first responders can help in their plight.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Home Page of App
+
+![Screen of App Image](./screen1.png)
+
+## Map and Persons Index Page
+
+
+![Screen of App Image](./screen2.png)
+
+
+Here is the Link to the Site: [Find Spot](https://findspot.dev/)
+
