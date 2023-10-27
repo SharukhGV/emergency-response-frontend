@@ -26,8 +26,8 @@ console.log(data)
 
   useEffect(() => {
     const markerArray = filteredPeople.map((person) => ({
-      lat: setLocation.latitude,
-      lng: setLocation.longitude,
+      lat: person.latitude,
+      lng: person.longitude,
       name: person.full_name
     }));
 
