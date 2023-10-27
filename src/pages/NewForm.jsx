@@ -44,8 +44,8 @@ function NewForm({ emergencyType, setLongitude, setLatitude, lat, lng }) {
           // const longitude = position.coords.longitude;
           // setLocation({ latitude, longitude });
           // setLocationFound(true);
-          setLatitude(position.coords.latitude);
-          setLongitude(position.coords.longitude);
+          setLatitude( parseFloat(position.coords.latitude));
+          setLongitude( parseFloat(position.coords.longitude));
         },
         (error) => {
           console.error("Error getting location:", error);
@@ -84,7 +84,7 @@ function NewForm({ emergencyType, setLongitude, setLatitude, lat, lng }) {
     // } else {
 
       setPerson({ ...person, [event.target.id]: event.target.value });
-      console.log(person)
+      // console.log(person)
 // 
     // }
   };

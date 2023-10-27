@@ -13,7 +13,10 @@ useEffect(() => {
       .catch((e) => console.error("catch", e));
   }, []);
 
-console.log(data)
+
+
+
+// console.log(data)
   const [query, setQuery] = useState("");
 
   const handleQueryChange = (event) => {
@@ -28,19 +31,12 @@ console.log(data)
     const markerArray = filteredPeople.map((person) => ({
       lat: person.latitude,
       lng: person.longitude,
-      name: person.full_name
     }));
 
     setMapMarkers(markerArray); // Update mapMarkers based on filtered data
   }, [query]); // Update markers when the query changes
 
 
-//   function parseDATE(date){
-//     // console.log(d.getUTCHours()); // Hours
-
-//     // console.log(d.getUTCSeconds());
-// return `${date.charAt(5)}${date.charAt(6)} / ${date.charAt(8)}${date.charAt(9)} / ${date.charAt(0)}${date.charAt(1)}${date.charAt(2)}${date.charAt(3)}`
-//   }
   return (
     <div>
       <div>
