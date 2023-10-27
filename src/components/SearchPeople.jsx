@@ -3,9 +3,9 @@ import axios from "axios";
 // import data from "../../data.json"
 import { v4 as uuidv4 } from 'uuid';
 import markerImage from "./markerImage.png"
+import Individual from "./Individual";
 export default function SearchPeople({ setMapMarkers, emergencyType, setLongitude, setLatitude, lat, lng }) {
   const [data, setData] = useState([])
-
 useEffect(() => {
     axios
       .get(`${import.meta.env.VITE_BACKEND_API}/findspots`)
@@ -35,12 +35,12 @@ console.log(data)
   }, [query]); // Update markers when the query changes
 
 
-  function parseDATE(date){
-    // console.log(d.getUTCHours()); // Hours
+//   function parseDATE(date){
+//     // console.log(d.getUTCHours()); // Hours
 
-    // console.log(d.getUTCSeconds());
-return `${date.charAt(5)}${date.charAt(6)} / ${date.charAt(8)}${date.charAt(9)} / ${date.charAt(0)}${date.charAt(1)}${date.charAt(2)}${date.charAt(3)}`
-  }
+//     // console.log(d.getUTCSeconds());
+// return `${date.charAt(5)}${date.charAt(6)} / ${date.charAt(8)}${date.charAt(9)} / ${date.charAt(0)}${date.charAt(1)}${date.charAt(2)}${date.charAt(3)}`
+//   }
   return (
     <div>
       <div>
@@ -50,14 +50,7 @@ return `${date.charAt(5)}${date.charAt(6)} / ${date.charAt(8)}${date.charAt(9)} 
       <ul>
         {filteredPeople.map((person) => (
           <li key={person.id}>
-            <div className="individual">
-              <strong>Name:{person.full_name}</strong>
-              <div style={{fontSize:"10px"}}>Date: {parseDATE(person.date)}</div>
-              <div>Latitude: {person.latitude}</div>
-              <div>Longitude:{person.longitude}</div>
-              <div> Description:{person.description}</div>
-              <div>Emergency Type:{person.emergency}</div>
-            </div>
+            <Individual person={person} />
           </li>
         ))}
       </ul>

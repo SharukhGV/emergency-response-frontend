@@ -14,7 +14,7 @@ export default function Home({setEmergencyType}){
     };
   
     return (
-      <div style={{ width: '100%', height: '100%', border: '1px solid' }}>
+      <div style={{ width: '100%', height: '100%' }}>
         <div></div>
 
         <img style={{maxWidth:"300px"}} src={FindSpot} alt="Logo"></img>
