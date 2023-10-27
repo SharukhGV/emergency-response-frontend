@@ -1,22 +1,21 @@
 import GoogleMaps from "../components/GoogleMaps";
-import data from "../../data.json"
+// import data from "../../data.json"
 import Individual from "../components/Individual";
 import { useState } from "react";
 import SearchPeople from "../components/SearchPeople";
-// import axios from "axios";
+import axios from "axios";
 // import { useState, useEffect } from "react";
 // const dataJSON = require("../../data.json")
 
-export default function Index({setMapMarkers, mapMarkers}) {
+export default function Index({setMapMarkers, mapMarkers, location}) {
 
-// const [data7, setData7] = useState([])
+// const [data, setData] = useState([])
 // useEffect(() => {
 //     axios
-//       .get(data)
-//       .then((response) => setData7(response.data))
+//       .get(import.meta.env.BACKEND_API)
+//       .then((response) => setData(response.data))
 //       .catch((e) => console.error("catch", e));
 //   }, []);
-// console.log(data.data)
 // function filterByName(data, filterText) {
 //     if (!data || !Array.isArray(data)) {
 //       return [];
@@ -47,7 +46,7 @@ export default function Index({setMapMarkers, mapMarkers}) {
     {!!filteredName ? {filteredName} : "Name Not Found"}
 </div> */}
         
-<SearchPeople mapMarkers={mapMarkers} setMapMarkers={setMapMarkers} />
+<SearchPeople location={location} mapMarkers={mapMarkers} setMapMarkers={setMapMarkers} />
 
 {/* {data.data.map((individual, index) =>{
 

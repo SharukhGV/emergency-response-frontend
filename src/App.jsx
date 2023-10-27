@@ -11,7 +11,9 @@ import Nav from './components/Nav';
 import Index from './pages/Index';
 export default function App() {
   // const [count, setCount] = useState(0)
-// const [location, setLocation] = useState(null);
+// const [location, setLocation] = useState(0);
+const [lat, setLatitude] = useState(null);
+const [lng, setLongitude] = useState(null);
 const [emergencyType, setEmergencyType]=useState("")
 const[mapMarkers, setMapMarkers]=useState([])
   return (
@@ -21,8 +23,8 @@ const[mapMarkers, setMapMarkers]=useState([])
       <Nav />
       <Routes>
         <Route path="/" element={<Home setEmergencyType={setEmergencyType}/>} />
-        <Route path="/form" element={<NewForm emergencyType={emergencyType} />} />
-<Route path="/index" element={<Index mapMarkers={mapMarkers} setMapMarkers={setMapMarkers} />}/>
+        <Route path="/form" element={<NewForm lat={lat} lng={lng} setLongitude={setLongitude} setLatitude={setLatitude} emergencyType={emergencyType} />} />
+<Route path="/index" element={<Index lat={lat} lng={lng} setLongitude={setLongitude} setLatitude={setLatitude} mapMarkers={mapMarkers} setMapMarkers={setMapMarkers} />}/>
         </Routes>
 </Router>
     </>
