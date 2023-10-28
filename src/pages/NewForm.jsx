@@ -107,7 +107,7 @@ function NewForm({ emergencyType, setLongitude, setLatitude, lat, lng }) {
           <div></div>
           <input
             id="full_name"
-            value={person.full_name}
+            value={person.full_name.replace(/[^a-z]/gi, ' ')}
             type="text"
             onChange={handleTextChange}
             placeholder="Your Name..."
