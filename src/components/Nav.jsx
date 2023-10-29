@@ -10,7 +10,11 @@ export default function Nav() {
 
 
     <li>
-      <Link to="/index">🌐</Link>
+      <Link to="/index">🌍</Link>
+    </li>
+
+    <li>
+      <Link to="/about">👨🏼‍🚀</Link>
     </li>
   </ul>)
 }
