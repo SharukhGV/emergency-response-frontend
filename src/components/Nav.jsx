@@ -13,8 +13,8 @@ export default function Nav() {
       <Link to="/index">🌍</Link>
     </li>
 
-    <li>
+    {/* <li>
       <Link to="/about">👨🏼‍🚀</Link>
-    </li>
+    </li> */}
   </ul>)
 }

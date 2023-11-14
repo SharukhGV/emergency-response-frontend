@@ -26,7 +26,7 @@ const[mapMarkers, setMapMarkers]=useState([])
         <Route path="/" element={<Home setEmergencyType={setEmergencyType}/>} />
         <Route path="/form" element={<NewForm lat={lat} lng={lng} setLongitude={setLongitude} setLatitude={setLatitude} emergencyType={emergencyType} />} />
 <Route path="/index" element={<Index lat={lat} lng={lng} setLongitude={setLongitude} setLatitude={setLatitude} mapMarkers={mapMarkers} setMapMarkers={setMapMarkers} />}/>
-<Route path="/about" element={<About/>} />
+{/* <Route path="/about" element={<About/>} /> */}
 
         </Routes>
 </Router>
