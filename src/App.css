@@ -61,31 +61,31 @@ input[type=submit] {
 }
 
 input[type=submit]:hover {
-  background-color: #ffffff;
-  color:#7c031a
+  background-color: #000000;
+  color:#ffffff
 }
 
 body{
 
   background-color: #ffffff;
   margin: auto;
-  color:373436
+  color:#373436
 }
 
 .cardEmergency{
   border-radius: 10px;
-  background-color: #f6944d;
+  background-color: #000000;
   max-width: 300px;
   margin:auto;
   padding: 5px;
-  color:#373436
+  color:#ff00aa
 }
 .cardEmergency:hover{
   border-radius: 10px;
-  background-color: #f5771d;
+  background-color: #000000e0;
   max-width: 300px;
   margin:auto;
-  color:#373436;
+  color:#ff00c8;
   padding: 5px;
 }
 
@@ -111,7 +111,7 @@ body{
   }
   
   input[type=submit]:hover {
-    background-color: #f6944d;
+    background-color: #000000;
     color:#ffffff
   }
 
@@ -122,7 +122,7 @@ body{
   }
 button{
 
-background-color: #999898;
+background-color: #000000;
 color: #fbffda;
 padding-top: 5px;
 padding-bottom: 5px;
@@ -132,7 +132,7 @@ padding-bottom: 5px;
 }
 
 button:hover{
-  background-color: #f6944d;
+  background-color: #000000;
 color:#fbffda;}
 
 }
@@ -145,16 +145,17 @@ input[type=submit] {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #999898;
+  background-color: #000000;
   cursor: pointer;
   transition: border-color 0.25s;
   width: 100%;
   margin-top: 5px;
+  color:white
 }
 
 input[type=submit]:hover {
-  background-color: #f6944d;
-  color:#7c031a
+  background-color: #000000de;
+  color:#c54c62
 }
 
 body{
@@ -165,7 +166,7 @@ body{
 }
 button{
 
-background-color: #f6944d;
+background-color: #000000;
 color: #fbffda;
 padding-top: 9px;
 padding-bottom: 9px;
@@ -176,7 +177,7 @@ font-size: 17px;
 }
 
 button:hover{
-background-color: #a84600;
+background-color: #000000;
 color:#ffffff;
 font-style:oblique}
 
@@ -220,7 +221,7 @@ input[type=text] {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #f6944d;
+  background-color: #d8d8d8;
   cursor: pointer;
   transition: border-color 0.25s;
   margin-top: 5px;
@@ -240,7 +241,7 @@ input[type=text] {
 
 .box:hover input{
   width: 75%;
-  background: #3b3640;
+  background: #03911b;
   border-radius: 10px;
 }
 .box i{

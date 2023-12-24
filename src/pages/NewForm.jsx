@@ -99,7 +99,6 @@ function NewForm({ emergencyType, setLongitude, setLatitude, lat, lng }) {
       <div className="edit">
         <h2>Caution:</h2>
         <h4>Posting Will Be Public to Everyone</h4>
-        <h5>Posts Cannot be Deleted</h5>
         <form onSubmit={handleSubmit}>
           {/* <input type="hidden" id="user_id" name="user_id" value={userShow2}></input> */}
           <div></div>
@@ -130,7 +129,7 @@ function NewForm({ emergencyType, setLongitude, setLatitude, lat, lng }) {
 
           <div></div>
           <div></div>
-          <label htmlFor="description">Describe Your Problem:</label>
+          <label htmlFor="description">Describe Your Environment:</label>
           <div></div>
           <textarea
             id="description"
@@ -146,6 +145,7 @@ function NewForm({ emergencyType, setLongitude, setLatitude, lat, lng }) {
             style={{ width: "30%", padding: "0.6em 1.2em" }}
             type="file" name="image"
           />
+          <div></div>
           <input
             style={{ width: "30%", padding: "0.6em 1.2em" }}
             type="submit"
