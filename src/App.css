@@ -270,3 +270,13 @@ background-color: #ff060615;
 border-radius: 10%;
 padding: 10px;
 }
+
+.skydescription{
+
+color:#000000;
+background-color: #ffffff;
+margin: auto;
+padding: 20px;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+background-color: #fbffda5e;
+}
