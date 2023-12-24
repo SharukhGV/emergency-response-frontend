@@ -181,7 +181,7 @@ color:#ffffff;
 font-style:oblique}
 
 ul {text-decoration: none;
-background-color: #f6944d;
+background-color: #2b1404;
 list-style-type: none;
   align-items: center;
   text-align: center;
@@ -265,9 +265,8 @@ input[type=text] {
 
 /* END SEARCH BAR CSS */
 
-.individual{
+#individual{
 background-color: #ff060615;
 border-radius: 10%;
 padding: 10px;
-
 }

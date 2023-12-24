@@ -13,6 +13,10 @@ export default function Nav() {
       <Link to="/index">🌍</Link>
     </li>
 
+    <li>
+      <Link to="/skydata">🌃</Link>
+    </li>
+
     {/* <li>
       <Link to="/about">👨🏼‍🚀</Link>
     </li> */}

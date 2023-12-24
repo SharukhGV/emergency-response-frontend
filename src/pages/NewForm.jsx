@@ -103,7 +103,7 @@ function NewForm({ emergencyType, setLongitude, setLatitude, lat, lng }) {
         <form onSubmit={handleSubmit}>
           {/* <input type="hidden" id="user_id" name="user_id" value={userShow2}></input> */}
           <div></div>
-          <label htmlFor="full_name">Name:</label>
+          <label htmlFor="full_name">Posted By:</label>
           <div></div>
           <input
             id="full_name"
@@ -142,7 +142,10 @@ function NewForm({ emergencyType, setLongitude, setLatitude, lat, lng }) {
             onChange={handleTextChange}
           ></textarea>
           <div></div>
-
+          <input
+            style={{ width: "30%", padding: "0.6em 1.2em" }}
+            type="file" name="image"
+          />
           <input
             style={{ width: "30%", padding: "0.6em 1.2em" }}
             type="submit"
