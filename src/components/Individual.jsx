@@ -41,7 +41,7 @@ const styleIndividual = {
         <div>Latitude: {person.latitude}</div>
         <div>Longitude: {person.longitude}</div>
         <div> Description: {person.description}</div>
-        <div>Emergency Type: {person.emergency}</div>
+        <div> Light Pollution Level: {person.skybrightness}</div>
         {/* <button style={{width:'150px'}}>Archive Status: {!person.archived ? <div>❎</div>:<div>✅</div>}</button> */}
       </div>
     )

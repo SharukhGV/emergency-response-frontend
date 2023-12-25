@@ -13,7 +13,7 @@ function NewForm({ emergencyType, setLongitude, setLatitude, lat, lng }) {
       latitude: lat,
       longitude: lng,
       description: "",
-      emergency: emergencyType,
+      skybrightness: emergencyType,
       archived: false,
     });
     
@@ -155,7 +155,7 @@ function NewForm({ emergencyType, setLongitude, setLatitude, lat, lng }) {
           style={{ marginTop: "20px", marginBottom: "20px" }}
           className="cardEmergency"
         >
-          <h3>{person.emergency}</h3>
+          <h3>{person.skybrightness}</h3>
           <div>
             Full Name: <strong>{person.full_name}</strong>
           </div>
