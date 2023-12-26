@@ -10,7 +10,11 @@ import Nav from './components/Nav';
 // import GoogleMaps from './components/GoogleMaps';
 import Index from './pages/Index';
 import About from './pages/About';
-import SkyBrightness from "./pages/SkyBrightness"
+import SkyBrightness from "./pages/SkyBrightness";
+import Login from './pages/Login';
+import TermsConditions from './pages/TermsConditions';
+import Register from './pages/Register';
+
 export default function App() {
   // const [count, setCount] = useState(0)
 // const [location, setLocation] = useState(0);
@@ -28,6 +32,10 @@ const[mapMarkers, setMapMarkers]=useState([])
         <Route path="/form" element={<NewForm lat={lat} lng={lng} setLongitude={setLongitude} setLatitude={setLatitude} emergencyType={emergencyType} />} />
 <Route path="/index" element={<Index lat={lat} lng={lng} setLongitude={setLongitude} setLatitude={setLatitude} mapMarkers={mapMarkers} setMapMarkers={setMapMarkers} />}/>
 <Route path="/skydata" element={<SkyBrightness/>} />
+<Route path="/signup" element={<Register/>} />
+<Route path="/login" element={<Login/>} />
+<Route path="/termsconditions" element={<TermsConditions/>} />
+
 
         </Routes>
 </Router>

@@ -1,35 +1,71 @@
-// import "./login.css"
-// import { Link } from "react-router-dom"
-// function Login(){
+import "./login.css"
+import { Link } from "react-router-dom"
+import { useState } from "react";
+function Login(){
+    const [personUser, setPersonUser] = useState({
+        username: "",
+        hashed_password: ""
+      });
 
 
-// return(
-// <>
-// <form>
-//   <div class="container">
-//     <h1>Register</h1>
-//     <p>Please fill in this form to create an account.</p>
+    function validatePassword(user, inputPassword) {
+        const inputHash = crypto
+          .pbkdf2Sync(inputPassword, user.salt, 1000, 64, 'sha512')
+          .toString('hex')
+        const passwordsMatch = user.hash === inputHash
+        return passwordsMatch
+      }
+      
 
-//     <label for="email"><b>Email</b></label>
-//     <input type="text" placeholder="Enter Email" name="email" id="email" required>
+      const loginUser = (logUser)=>{axios
+      .get(`${import.meta.env.VITE_BACKEND_API}/newUser`, logUser)
+      .then((response) => setData(response.data))
+      .catch((e) => console.error("catch", e));
+      }
 
-//     <label for="psw"><b>Password</b></label>
-//     <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
 
-//     <label for="psw-repeat"><b>Repeat Password</b></label>
-//     <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required>
-//     <hr>
-//     <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+const handleTextChange = (event) => {
 
-//     <button type="submit" class="registerbtn">Register</button>
-//   </div>
+    setPersonUser({ ...personUser, [event.target.id]: event.target.value });
+    setSecPW({ ...secPW, [event.target.id]: [event.target.value] })
+  };
+
+
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    loginUser(validatePassword(personUser.username, personUser.hashed_password));
+  }
+
+
+return(
+<> <h1>Login</h1>
+    <p>Please fill in this form to Login to an account.</p>
+    <form style={{margin:"auto"}}> 
+  <div className="container">
+   
+<div>
+<div></div>
+          <label onSubmit={handleSubmit} htmlFor="username"><b>Email</b></label>
+          <input type="text" value={personUser.username} onChange={handleTextChange}
+
+            placeholder="Enter Email" name="username" id="username" required></input>
+
+          <label htmlFor="hashed_password"><b>Password</b></label>
+          <input type="password" value={personUser.hashed_password} placeholder="Enter Password" name="hashed_password" id="hashed_password" onChange={handleTextChange}
+            required></input>
+
+    <p>By Logging in to an account you agree to our <Link to="/termsconditions">Terms & Privacy</Link>.</p>
+
+    <button type="submit" className="registerbtn">Login</button>
   
-//   <div class="container signin">
-//     <p>Already have an account? <Link to="/login">Sign in</Link>.</p>
-//   </div>
-// </form>
-// </>
-// )
-// }
+  <div className="container signin">
+    <p>Don't have an account? <Link to="/signup">Sign Up</Link>.</p>
+  </div></div>
+  </div>
+</form>
+</>
+)
+}
 
-// export default Login
+export default Login
