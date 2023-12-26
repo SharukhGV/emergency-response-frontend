@@ -75,7 +75,7 @@ Food & Water Shortage
         </div> */}
                       <div>
             <Popup trigger=
-                {<button><strong> ・｡✧:˚*:・ 0-10% Light Pollution ・:*˚:✧｡・</strong></button>} 
+                {<button style={{ backgroundColor: "black", color: "white" }}><strong> ・｡✧:˚*:・ 0-10% Light Pollution ・:*˚:✧｡・</strong></button>} 
                 modal nested>
                 {
                     close => (
@@ -103,7 +103,7 @@ Food & Water Shortage
 
         <div>
             <Popup trigger=
-                {<button><strong> ｡✧* 10-30% Light Pollution *✧｡ </strong></button>} 
+                {<button style={{ backgroundColor: "black", color: "white" }}><strong> ｡✧* 10-30% Light Pollution *✧｡ </strong></button>} 
                 modal nested>
                 {
                     close => (
