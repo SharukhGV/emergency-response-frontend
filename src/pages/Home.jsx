@@ -75,7 +75,7 @@ Food & Water Shortage
         </div> */}
                       <div>
             <Popup trigger=
-                {<button><strong> ・:*˚:✧｡・ 0-10% Light Pollution ・:*˚:✧｡・</strong></button>} 
+                {<button><strong> ・｡✧:˚*:・ 0-10% Light Pollution ・:*˚:✧｡・</strong></button>} 
                 modal nested>
                 {
                     close => (
@@ -90,7 +90,7 @@ Food & Water Shortage
                             <div>
                                 <button style={{backgroundColor:"white", color:"black"}} onClick=
                                     {() => close()}>
-                                        Close modal
+                                        Close
                                 </button>
                             </div>
                         </div>
@@ -119,7 +119,7 @@ Approximate Star Visibility: Roughly 1,000 to 2,000 stars visible to the naked e
                             <div>
                                 <button style={{backgroundColor:"white", color:"black"}} onClick=
                                     {() => close()}>
-                                        Close modal
+                                        Close
                                 </button>
                             </div>
                         </div>
@@ -151,7 +151,7 @@ Approximate Star Visibility: Around 500 to 1,000 stars visible to the naked eye.
                             <div>
                                 <button style={{backgroundColor:"white", color:"black"}} onClick=
                                     {() => close()}>
-                                        Close modal
+                                        Close
                                 </button>
                             </div>
                         </div>
@@ -183,7 +183,7 @@ Approximate Star Visibility: Approximately 100 to 500 stars visible to the naked
                             <div>
                                 <button style={{backgroundColor:"white", color:"black"}} onClick=
                                     {() => close()}>
-                                        Close modal
+                                        Close
                                 </button>
                             </div>
                         </div>
@@ -213,7 +213,7 @@ Approximate Star Visibility: Less than 100 stars visible to the naked eye, often
                             <div>
                                 <button style={{backgroundColor:"white", color:"black"}} onClick=
                                     {() => close()}>
-                                        Close modal
+                                        Close
                                 </button>
                             </div>
                         </div>
