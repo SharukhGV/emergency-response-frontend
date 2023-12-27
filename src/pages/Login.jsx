@@ -27,7 +27,6 @@ function Login(){
 const handleTextChange = (event) => {
 
     setPersonUser({ ...personUser, [event.target.id]: event.target.value });
-    setSecPW({ ...secPW, [event.target.id]: [event.target.value] })
   };
 
 
@@ -47,7 +46,7 @@ return(
 <div>
 <div></div>
           <label onSubmit={handleSubmit} htmlFor="username"><b>Email</b></label>
-          <input type="text" value={personUser.username} onChange={handleTextChange}
+          <input type="email" value={personUser.username} onChange={handleTextChange}
 
             placeholder="Enter Email" name="username" id="username" required></input>
 

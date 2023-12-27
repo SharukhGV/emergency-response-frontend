@@ -55,7 +55,6 @@ axios
   const handleTextChange = (event) => {
 
     setPersonUser({ ...personUser, [event.target.id]: event.target.value });
-    setSecPW({ ...secPW, [event.target.id]: [event.target.value] })
   };
 
 
@@ -65,6 +64,10 @@ axios
     if(secPW.secpass ===personUser.hashed_password) createUser(personUser.username,personUser.hashed_password)
   else window.alert("Passwords Do Not Match")
   }
+  const handleTextChange2 = (event) => {
+
+    setSecPW({ [secPW.secpass] : event.target.value })
+  };
 
 
   // createUser
@@ -76,7 +79,7 @@ axios
 
           <div></div>
           <label htmlFor="username"><b>Email</b></label>
-          <input type="text" value={personUser.username} onChange={handleTextChange}
+          <input type="email" value={personUser.username} onChange={handleTextChange}
 
             placeholder="Enter Email" name="username" id="username" required></input>
 
@@ -85,11 +88,11 @@ axios
             required></input>
 
           <label htmlFor="hashed_password-repeat"><b>Repeat Password</b></label>
-          <input type="password" placeholder="Repeat Password" name="hashed_password-repeat" id="hashed_password-repeat" value={secPW.secpass} onChange={handleTextChange} required></input>
+          <input type="password" placeholder="Repeat Password" name="hashed_password-repeat" id="hashed_password-repeat" value={secPW.secpass} onChange={handleTextChange2} required></input>
 
           <p>By creating an account you agree to our  <Link to="/termsconditions">Terms & Privacy</Link>.</p>
 
-          <div>{secPW.secpass === personUser.hashed_password ? <button type="submit" className="registerbtn">Register</button> : null}</div>
+          <div><button type="submit" className="registerbtn">Register</button></div>
 
           <div className="container signin">
             <p>Already have an account? <Link to="/login">Login</Link>.</p>
