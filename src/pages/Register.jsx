@@ -36,8 +36,9 @@ const newUser = (user) =>{axios
   .then((response) => {
     console.log(response.data);
 
-    navigate("/");
-  })
+    setTimeout(() => {
+      navigate("/");
+    }, 3000);  })
   .catch((e) => console.error("catch", e));
 
 }
@@ -99,11 +100,11 @@ const newUser = (user) =>{axios
             placeholder="Enter Email" name="username" id="username" required></input>
 
           <label htmlFor="hashed_password"><b>Password</b></label>
-          <input type="password" value={personUser.hashed_password} placeholder="Enter Password" name="hashed_password" id="hashed_password" onChange={handleTextChange}
+          <input type="password" value={personUser.hashed_password} placeholder="Enter Password" name="hashed_password" id="hashed_password" minLength="7" onChange={handleTextChange}
             required></input>
 
           <label htmlFor="hashed_password-repeat"><b>Repeat Password</b></label>
-          <input type="password" placeholder="Repeat Password" name="hashed_password-repeat" id="hashed_password-repeat" value={secPW.secpass} onChange={handleTextChange2} required></input>
+          <input type="password" placeholder="Repeat Password" minLength="7" name="hashed_password-repeat" id="hashed_password-repeat" value={secPW.secpass} onChange={handleTextChange2} required></input>
 
           <p>By creating an account you agree to our  <Link to="/termsconditions">Terms & Privacy</Link>.</p>
 

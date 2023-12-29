@@ -30,12 +30,11 @@ const token = getTokenFromCookie('token');
 
 
 const loginUser = (user) => {axios
-.get(`${import.meta.env.VITE_BACKEND_API}/newusers/${user.username}`, user, {
+.post(`${import.meta.env.VITE_BACKEND_API}/newusers/${user.username}`, user, {
 // method: 'POST',
 headers: {
-  'Authorization': `Bearer ${token}`, //  Bearer token in the Authorization header
-  'Content-Type': 'application/json' // Content type if required by your API
-}
+    method: "POST",
+    headers: {"Authorization": `Bearer ${token}`}}
 })
 .then(response => {
 if (!response.ok) {
@@ -45,10 +44,12 @@ return response.json();
 })
 .then(data => {
 // Handle the retrieved user information
-console.log('User Info:', data);
-setPersonUser(data.username)
-navigate("/");
-
+// console.log('User Info:', data);
+console.log(data)
+setPersonUser(true)
+setTimeout(() => {
+    navigate("/");
+  }, 3000);
 })
 .catch(error => {
 // Handle errors
@@ -80,7 +81,7 @@ const handleTextChange = (event) => {
 return (
 <> <h1>Login</h1>
     <p>Please fill in this form to Login to an account.</p>
-    <form style={{margin:"auto"}}> 
+    <form action="/newusers" method="post" style={{margin:"auto"}}> 
   <div className="container">
    
 <div>

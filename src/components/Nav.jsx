@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-
+import Logout from "./Logout";
 export default function Nav({loginUsername}) {
     return(
   <ul>
@@ -18,17 +18,19 @@ export default function Nav({loginUsername}) {
     </li>
 
     <li>
-      <Link to="/signup">Sign Up</Link>
+    {!loginUsername ? <Link to="/signup">Sign Up</Link>:null}
     </li>
 
     <li>
-      <Link to="/login">Login</Link>
+    {!loginUsername ?  <Link to="/login">Login</Link>:null}
     </li>
 
     
     <li>
     {loginUsername ? <Link to="/profile">👨🏼‍🚀</Link> : null}
     </li>
+
+    {loginUsername ? <Logout/> :null}
 
     {/* <li>
       <Link to="/about">👨🏼‍🚀</Link>

@@ -15,6 +15,7 @@ import Login from './pages/Login';
 import TermsConditions from './pages/TermsConditions';
 import Register from './pages/Register';
 import Profile from './pages/Profile';
+import NotFound from './pages/NotFound';
 
 // import Iron from '@hapi/iron'
 // import { MAX_AGE, setTokenCookie, getTokenCookie } from './auth-cookies'
@@ -39,7 +40,7 @@ const [lat, setLatitude] = useState(null);
 const [lng, setLongitude] = useState(null);
 const [emergencyType, setEmergencyType]=useState("")
 const[mapMarkers, setMapMarkers]=useState([])
-const [loginUsername, setLoginUsername]=useState("")
+const [loginUsername, setLoginUsername]=useState(false)
 // sessionStorage.setItem("username", loginUsername);
 
 
@@ -58,6 +59,7 @@ const [loginUsername, setLoginUsername]=useState("")
 <Route path="/login" element={<Login setLoginUsername={setLoginUsername}/>} />
 <Route path="/termsconditions" element={<TermsConditions/>} />
 <Route path="/profile" element={<Profile loginUsername={loginUsername}/>} />
+<Route path="/*" element={<NotFound/>} />
 
 
         </Routes>
