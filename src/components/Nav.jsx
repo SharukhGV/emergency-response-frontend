@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-export default function Nav() {
+export default function Nav({loginUsername}) {
     return(
   <ul>
     <li>
@@ -23,6 +23,11 @@ export default function Nav() {
 
     <li>
       <Link to="/login">Login</Link>
+    </li>
+
+    
+    <li>
+    {loginUsername ? <Link to="/profile">👨🏼‍🚀</Link> : null}
     </li>
 
     {/* <li>

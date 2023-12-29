@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-function NewForm({ emergencyType, setLongitude, setLatitude, lat, lng }) {
+function NewForm({ emergencyType, setLongitude, setLatitude, lat, lng, loginUsername }) {
   // const [location, setLocation] = useState(null);
   // const [locationFound, setLocationFound] = useState(false);
   // const [lat, setLatitude] = useState(0);
@@ -25,9 +25,9 @@ function NewForm({ emergencyType, setLongitude, setLatitude, lat, lng }) {
       }));
     }, [lat, lng]);
     
-  const addFindSpot = (newFindSpot) => {
+  const addFindSpot = (newFindSpot, username) => {
     axios
-      .post(`${import.meta.env.VITE_BACKEND_API}/findspots`, newFindSpot)
+      .post(`${import.meta.env.VITE_BACKEND_API}/findspots`, newFindSpot, username)
       .then((response) => {
         console.log(response.data);
 
@@ -91,7 +91,7 @@ function NewForm({ emergencyType, setLongitude, setLatitude, lat, lng }) {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    addFindSpot(person);
+    addFindSpot(person,loginUsername);
   }
 
 
