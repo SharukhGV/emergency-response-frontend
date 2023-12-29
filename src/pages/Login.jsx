@@ -31,7 +31,7 @@ const token = getTokenFromCookie('token');
 
 const loginUser = (user) => {axios
 .get(`${import.meta.env.VITE_BACKEND_API}/newusers/${user.username}`, user, {
-method: 'POST',
+// method: 'POST',
 headers: {
   'Authorization': `Bearer ${token}`, //  Bearer token in the Authorization header
   'Content-Type': 'application/json' // Content type if required by your API
@@ -46,6 +46,9 @@ return response.json();
 .then(data => {
 // Handle the retrieved user information
 console.log('User Info:', data);
+setPersonUser(data.username)
+navigate("/");
+
 })
 .catch(error => {
 // Handle errors
