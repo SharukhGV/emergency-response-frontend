@@ -1,7 +1,8 @@
 import "./login.css"
 import { Link } from "react-router-dom"
 import { useState } from "react";
-function Login(){
+import axios from "axios";
+function Login({setLoginUsername, loginUsername}){
     const [personUser, setPersonUser] = useState({
         username: "",
         hashed_password: ""
@@ -47,9 +48,8 @@ return response.json();
 // console.log('User Info:', data);
 console.log(data)
 setPersonUser(true)
-setTimeout(() => {
+console.log(loginUsername)
     navigate("/");
-  }, 3000);
 })
 .catch(error => {
 // Handle errors
@@ -81,12 +81,12 @@ const handleTextChange = (event) => {
 return (
 <> <h1>Login</h1>
     <p>Please fill in this form to Login to an account.</p>
-    <form action="/newusers" method="post" style={{margin:"auto"}}> 
+    <form onSubmit={handleSubmit} method="post" style={{margin:"auto"}}> 
   <div className="container">
    
 <div>
 <div></div>
-          <label onSubmit={handleSubmit} htmlFor="username"><b>Email</b></label>
+          <label htmlFor="username"><b>Email</b></label>
           <input type="email" value={personUser.username} onChange={handleTextChange}
 
             placeholder="Enter Email" name="username" id="username" required></input>

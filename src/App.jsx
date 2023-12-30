@@ -56,7 +56,7 @@ const [loginUsername, setLoginUsername]=useState(false)
 <Route path="/index" element={<Index lat={lat} lng={lng} setLongitude={setLongitude} setLatitude={setLatitude} mapMarkers={mapMarkers} setMapMarkers={setMapMarkers} />}/>
 <Route path="/skydata" element={<SkyBrightness/>} />
 <Route path="/signup" element={<Register/>} />
-<Route path="/login" element={<Login setLoginUsername={setLoginUsername}/>} />
+<Route path="/login" element={<Login loginUsername={loginUsername} setLoginUsername={setLoginUsername}/>} />
 <Route path="/termsconditions" element={<TermsConditions/>} />
 <Route path="/profile" element={<Profile loginUsername={loginUsername}/>} />
 <Route path="/*" element={<NotFound/>} />

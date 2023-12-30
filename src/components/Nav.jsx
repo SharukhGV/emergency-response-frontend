@@ -30,7 +30,7 @@ export default function Nav({loginUsername}) {
     {loginUsername ? <Link to="/profile">👨🏼‍🚀</Link> : null}
     </li>
 
-    {loginUsername ? <Logout/> :null}
+    {loginUsername ? <Logout loginUsername={loginUsername}/> :null}
 
     {/* <li>
       <Link to="/about">👨🏼‍🚀</Link>
