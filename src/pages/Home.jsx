@@ -8,7 +8,7 @@ import Popup from 'reactjs-popup';
 import 'reactjs-popup/dist/index.css';
 
 
-export default function Home({ setEmergencyType,loginUsername }) {
+export default function Home({ setEmergencyType,loginUsername,accessToken }) {
         const navigate = useNavigate(); // Initialize the navigation function
         const [toggle1, setToggle1] = useState(false);
 
@@ -69,6 +69,7 @@ export default function Home({ setEmergencyType,loginUsername }) {
                         <img style={{ maxWidth: "300px" }} src={logo} alt="Logo"></img>
                         <h2>Light Pollution & Dark Skies</h2>
                         <h3>Welcome {loginUsername} to Hive of Heaven</h3>
+                        <p>TESTING: {!accessToken? <span>"no Token, not logged in"</span> : <span>`${accessToken}`</span>}</p>
                         <p>A community driven app to report light-polluted areas or dark skies for others to be aware of for future enjoyment</p>
                         <p>You will be Taken to a Form where you can post to a Public Bulletin</p>
                         {/* <div id='natural6' value="Food & Water Shortage" onClick={emergencySETTER}>

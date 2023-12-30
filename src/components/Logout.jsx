@@ -1,11 +1,14 @@
 import axios from "axios";
 
-function Logout({ loginUsername,setLoginUsername }) {
+function Logout({ loginUsername,setLoginUsername,toggleLOGIN,settoggleLOGIN }) {
   const logOut = () => {
     axios.get(`${import.meta.env.VITE_BACKEND_API}/logout`).then(res => {
       console.log(res);
       // Perform further actions after logging out if needed
-      setLoginUsername(!loginUsername)
+      setLoginUsername("")
+      settoggleLOGIN(!toggleLOGIN)
+      reload()
+
     }).catch(error => {
       console.error(error);
       // Handle errors if any

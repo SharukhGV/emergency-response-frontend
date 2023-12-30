@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import Logout from "./Logout";
-export default function Nav({loginUsername, accessToken}) {
+export default function Nav({loginUsername, toggleLOGIN,settoggleLOGIN, accessToken}) {
     return(
   <ul>
     <li>
@@ -18,19 +18,19 @@ export default function Nav({loginUsername, accessToken}) {
     </li>
 
     <li>
-    {!accessToken ? <Link to="/signup">Sign Up</Link>:null}
+    {!toggleLOGIN ? <Link to="/signup">Sign Up</Link>:null}
     </li>
 
     <li>
-    {!accessToken ?  <Link to="/login">Login</Link>:null}
+    {!toggleLOGIN ?  <Link to="/login">Login</Link>:null}
     </li>
 
     
     <li>
-    {!!accessToken ? <Link to="/profile">👨🏼‍🚀</Link> : null}
+    {!!toggleLOGIN ? <Link to="/profile">👨🏼‍🚀</Link> : null}
     </li>
 
-    {!!accessToken ? <Logout loginUsername={loginUsername}/> :null}
+    {!!toggleLOGIN ? <Logout toggleLOGIN={toggleLOGIN} settoggleLOGIN={settoggleLOGIN} loginUsername={loginUsername}/> :null}
 
     {/* <li>
       <Link to="/about">👨🏼‍🚀</Link>

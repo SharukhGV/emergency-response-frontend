@@ -3,19 +3,19 @@ import { Link } from "react-router-dom"
 import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-function Login({ setLoginUsername, loginUsername, setAccessToken, accessToken }) {
+function Login({ setLoginUsername, loginUsername,toggleLOGIN,settoggleLOGIN, setAccessToken, accessToken }) {
     const [personUser, setPersonUser] = useState({
         username: "",
         hashed_password: ""
     });
-
     const navigate = useNavigate()
     const loginUser = (user) => {
-        axios.post(`${import.meta.env.VITE_BACKEND_API}/newusers`, user)
+        axios.post(`${import.meta.env.VITE_BACKEND_API}/newusers/login`, user)
             .then(response => {
                 const token = response.data.accessToken;
                 setAccessToken(token);
-                !!accessToken && setLoginUsername(true);
+          setLoginUsername(user.username);
+          settoggleLOGIN(!toggleLOGIN)
             })
             .catch(error => {
                 console.error('There was a problem with the login operation:', error);
