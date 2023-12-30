@@ -42,6 +42,7 @@ const [emergencyType, setEmergencyType]=useState("")
 const[mapMarkers, setMapMarkers]=useState([])
 const [loginUsername, setLoginUsername]=useState(false)
 // sessionStorage.setItem("username", loginUsername);
+const [accessToken, setAccessToken] = useState('');
 
 
 
@@ -49,14 +50,14 @@ const [loginUsername, setLoginUsername]=useState(false)
    <>
 
 <Router>
-      <Nav loginUsername={loginUsername} />
+      <Nav accessToken={accessToken} setLoginUsername={setLoginUsername} loginUsername={loginUsername} />
       <Routes>
-        <Route path="/" element={<Home setEmergencyType={setEmergencyType}/>} />
+        <Route path="/" element={<Home accessToken={accessToken} setAccessToken={setAccessToken} loginUsername={loginUsername} setLoginUsername={setLoginUsername} setEmergencyType={setEmergencyType}/>} />
         <Route path="/form" element={<NewForm lat={lat} lng={lng} loginUsername={loginUsername} setLongitude={setLongitude} setLatitude={setLatitude} emergencyType={emergencyType} />} />
 <Route path="/index" element={<Index lat={lat} lng={lng} setLongitude={setLongitude} setLatitude={setLatitude} mapMarkers={mapMarkers} setMapMarkers={setMapMarkers} />}/>
 <Route path="/skydata" element={<SkyBrightness/>} />
 <Route path="/signup" element={<Register/>} />
-<Route path="/login" element={<Login loginUsername={loginUsername} setLoginUsername={setLoginUsername}/>} />
+<Route path="/login" element={<Login accessToken={accessToken} setAccessToken={setAccessToken} loginUsername={loginUsername} setLoginUsername={setLoginUsername}/>} />
 <Route path="/termsconditions" element={<TermsConditions/>} />
 <Route path="/profile" element={<Profile loginUsername={loginUsername}/>} />
 <Route path="/*" element={<NotFound/>} />

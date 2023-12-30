@@ -1,22 +1,20 @@
-import axios from "axios"
-// import { useNavigate } from "react-router-dom"
-function Logout({loginUsername}){
-// const navigate=useNavigate()
-    const logOut = ()=> {
-        axios.get(`${import.meta.env.VITE_BACKEND_API}/${loginUsername}/logout)`).then(res =>{console.log(res)})
-    }
+import axios from "axios";
 
+function Logout({ loginUsername,setLoginUsername }) {
+  const logOut = () => {
+    axios.get(`${import.meta.env.VITE_BACKEND_API}/logout`).then(res => {
+      console.log(res);
+      // Perform further actions after logging out if needed
+      setLoginUsername(!loginUsername)
+    }).catch(error => {
+      console.error(error);
+      // Handle errors if any
+    });
+  };
 
-
-
-return(
-
-    <button onClick={logOut}>Logout</button>
-)
-
-
-
+  return (
+    <button style={{margin:"right", width:"30px"}} onClick={logOut}>Logout</button>
+  );
 }
 
-
-export default Logout
+export default Logout;
