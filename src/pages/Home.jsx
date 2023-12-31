@@ -83,19 +83,23 @@ Food & Water Shortage
                     close => (
                         <div className='modal'>
                             <div className='content'>
-                         
+                            <div className="background-container">
+<div className="stars"></div>
+<div className="twinkling"></div>
+<div className="clouds"></div>
+
 <strong><div style={{backgroundColor:"black", color:"white"}} className="skydescription">0-10% Light Pollution:</div></strong>
 <div style={{backgroundColor:"black", color:"white"}}><strong >Sky Description:</strong></div>
 
 <div  style={{backgroundColor:"black", color:"white"}}  className="skydescription">In areas with minimal light pollution, the sky appears exceptionally dark. The Milky Way is vividly visible, and thousands of stars are discernible. There are around 2,500 to 3,000 stars visible to the naked eye.</div>
- <button style={{ backgroundColor: "Green", color: "white" }} id='natural2' value="0-10% Light Pollution" onClick={emergencySETTER}>Click to Go to Form</button></div>
+ <button style={{ backgroundColor: "Green", color: "white" }} id='natural2' value="0-10% Light Pollution" onClick={emergencySETTER}>Click to Go to Form</button>
                             <div>
                                 <button style={{backgroundColor:"white", color:"black"}} onClick=
                                     {() => close()}>
                                         Close
-                                </button>
+                                </button></div>
                             </div>
-                        </div>
+                        </div></div>
                     )
                 }
             </Popup>
@@ -111,20 +115,24 @@ Food & Water Shortage
                     close => (
                         <div className='modal'>
                             <div className='content'>
-                         
-<strong><div style={{backgroundColor:"black", color:"white"}} className="skydescription">10-30% Light Pollution:</div></strong>
-<div style={{backgroundColor:"black", color:"white"}}><strong >Sky Description:</strong></div>
+                            <div className="background-container">
+<div className="stars"></div>
+<div className="twinkling"></div>
+<div className="clouds"></div>
 
-<div  style={{backgroundColor:"black", color:"white"}}  className="skydescription">Light pollution begins to affect the visibility of fainter stars, causing a visible glow near the horizon. However, major constellations and the Milky Way's core are still relatively clear.
+<strong><div style={{backgroundColor:"rgba(0,0,0, 0.30)", color:"white"}} className="skydescription">10-30% Light Pollution:</div></strong>
+<div style={{backgroundColor:"rgba(0,0,0, 0.30)", color:"white"}}><strong >Sky Description:</strong></div>
+
+<div  style={{backgroundColor:"rgba(0,0,0, 0.30)", color:"white"}}  className="skydescription">Light pollution begins to affect the visibility of fainter stars, causing a visible glow near the horizon. However, major constellations and the Milky Way's core are still relatively clear.
 Approximate Star Visibility: Roughly 1,000 to 2,000 stars visible to the naked eye.</div>
- <button style={{ backgroundColor: "Green", color: "white" }} id='natural2' value="10-30% Light Pollution" onClick={emergencySETTER}>Click to Go to Form</button></div>
+ <button style={{ backgroundColor: "Green", color: "white" }} id='natural2' value="10-30% Light Pollution" onClick={emergencySETTER}>Click to Go to Form</button>
                             <div>
                                 <button style={{backgroundColor:"white", color:"black"}} onClick=
                                     {() => close()}>
                                         Close
                                 </button>
                             </div>
-                        </div>
+                        </div></div></div>
                     )
                 }
             </Popup>
@@ -136,27 +144,31 @@ Approximate Star Visibility: Roughly 1,000 to 2,000 stars visible to the naked e
 
 
         <div>
-            <Popup trigger=
+            <Popup style={{ backgroundColor: "rgb(58, 55, 50, 0.30)", color: "white" }} trigger=
                 {<button style={{ backgroundColor: "rgb(58, 55, 50)", color: "white" }}><strong> ｡✧* 30-50% Light Pollution *✧｡</strong></button>} 
                 modal nested>
                 {
                     close => (
                         <div className='modal'>
                             <div className='content'>
-                         
-<strong><div style={{ backgroundColor: "rgb(58, 55, 50)", color: "white" }} className="skydescription">30-50% Light Pollution:</div></strong>
-<div style={{ backgroundColor: "rgb(58, 55, 50)", color: "white" }}><strong style={{ backgroundColor: "rgb(58, 55, 50)", color: "white" }}>Sky Description:</strong></div>
+                            <div className="background-container">
+<div className="stars"></div>
+<div className="twinkling"></div>
+<div className="clouds"></div>
 
-<div style={{ backgroundColor: "rgb(58, 55, 50)", color: "white" }}  className="skydescription"> Moderate light pollution dims the view of the Milky Way and fainter stars. Only the brightest stars and major constellations are easily identifiable.
-Approximate Star Visibility: Around 500 to 1,000 stars visible to the naked eye.</div>
- <button style={{ backgroundColor: "Green", color: "white" }} id='natural2' value="30-50% Light Pollution" onClick={emergencySETTER}>Click to Go to Form</button></div>
+<strong><div style={{ backgroundColor: "rgb(58, 55, 50, 0.30)", color: "white" }} className="skydescription">30-50% Light Pollution:</div></strong>
+<div style={{ backgroundColor: "rgb(58, 55, 50, 0.30)", color: "white" }}><strong style={{ backgroundColor: "rgb(58, 55, 50)", color: "white" }}>Sky Description:</strong></div>
+
+<div style={{ backgroundColor: "rgb(58, 55, 50, 0.30)", color: "white" }}  className="skydescription"> Moderate light pollution dims the view of the Milky Way and fainter stars. Only the brightest stars and major constellations are easily identifiable.
+<div>Approximate Star Visibility:</div> <div>Around 500 to 1,000 stars visible to the naked eye.</div></div>
+ <button style={{ backgroundColor: "Green", color: "white" }} id='natural2' value="30-50% Light Pollution" onClick={emergencySETTER}>Click to Go to Form</button>
                             <div>
                                 <button style={{backgroundColor:"white", color:"black"}} onClick=
                                     {() => close()}>
                                         Close
                                 </button>
-                            </div>
-                        </div>
+                            </div></div>
+                        </div></div>
                     )
                 }
             </Popup>
@@ -168,26 +180,30 @@ Approximate Star Visibility: Around 500 to 1,000 stars visible to the naked eye.
 
         
         <div>
-            <Popup trigger=
+            <Popup style={{backgroundColor:"rgb(85, 72, 43, 0.30)", color:"white"}} trigger=
                 {<button style={{backgroundColor:"rgb(85, 72, 43)", color:"white"}}><strong>｡✧ 50-70% Light Pollution: ✧｡</strong></button>} 
                 modal nested>
                 {
                     close => (
                         <div className='modal'>
                             <div className='content'>
-                         
-<strong><div style={{backgroundColor:"rgb(85, 72, 43)", color:"white"}} className="skydescription">50-70% Light Pollution:</div></strong>
-<div style={{backgroundColor:"rgb(85, 72, 43)", color:"white"}}><strong >Sky Description:</strong></div>
+                            <div className="background-container">
+<div className="stars"></div>
+<div className="twinkling"></div>
+<div className="clouds"></div>
 
-<div  style={{backgroundColor:"rgb(85, 72, 43)", color:"white"}}  className="skydescription"> Substantial light pollution obscures most of the Milky Way and dimmer stars, leaving only the brightest stars and planets visible. The sky appears significantly brightened, even at night.
-Approximate Star Visibility: Approximately 100 to 500 stars visible to the naked eye.</div>
- <button style={{ backgroundColor: "Green", color: "white" }} id='natural2' value="50-70% Light Pollution" onClick={emergencySETTER}>Click to Go to Form</button></div>
+<strong><div style={{backgroundColor:"rgb(85, 72, 43, 0.30)", color:"white"}} className="skydescription">50-70% Light Pollution:</div></strong>
+<div style={{backgroundColor:"rgb(85, 72, 43, 0.30)", color:"white"}}><strong >Sky Description:</strong></div>
+
+<div  style={{backgroundColor:"rgb(85, 72, 43, 0.30)", color:"white"}}  className="skydescription"> Substantial light pollution obscures most of the Milky Way and dimmer stars, leaving only the brightest stars and planets visible. The sky appears significantly brightened, even at night.
+<div>Approximate Star Visibility:</div> <div>Approximately 100 to 500 stars visible to the naked eye.</div></div>
+ <button style={{ backgroundColor: "Green", color: "white" }} id='natural2' value="50-70% Light Pollution" onClick={emergencySETTER}>Click to Go to Form</button>
                             <div>
                                 <button style={{backgroundColor:"white", color:"black"}} onClick=
                                     {() => close()}>
                                         Close
-                                </button>
-                            </div>
+                                </button></div>
+                            </div></div>
                         </div>
                     )
                 }
@@ -198,26 +214,37 @@ Approximate Star Visibility: Approximately 100 to 500 stars visible to the naked
 
 
         <div>
-            <Popup trigger=
+            <Popup style={{backgroundColor:"rgb(119, 85, 10, 0.30)"}} trigger=
                 {<button style={{backgroundColor:"rgb(119, 85, 10)", color:"white"}}><strong> 70-100% Light Pollution </strong></button>} 
                 modal nested>
                 {
                     close => (
                         <div className='modal'>
                             <div className='content'>
-                         
-<strong><div  style={{backgroundColor:"rgb(119, 85, 10)", color:"white"}} className="skydescription">70-100% Light Pollution:</div></strong>
-<div style={{backgroundColor:"rgb(119, 85, 10)", color:"white"}}><strong >Sky Description:</strong></div>
+                            <div className="background-container">
+<div className="stars"></div>
+<div className="twinkling"></div>
+<div className="clouds"></div>
+<div> </div>
+<div> </div>
+<div> </div>
+<div> </div>
+<strong><div  style={{backgroundColor:"rgb(119, 85, 10, 0.30)", color:"white"}} className="skydescription">70-100% Light Pollution:</div></strong><div></div>
+<div></div>
+<div></div>
+<div></div>
+<div style={{backgroundColor:"rgb(119, 85, 10, 0.30)", color:"white"}}><strong >Sky Description:</strong></div>
 
-<div  style={{backgroundColor:"rgb(119, 85, 10)", color:"white"}}   className="skydescription">Heavily affected by light pollution, the sky is illuminated, making it challenging to distinguish individual stars or constellations. Only the very brightest celestial objects, such as the Moon, planets, and a few prominent stars, are visible.
-Approximate Star Visibility: Less than 100 stars visible to the naked eye, often limited to the brightest stars and planets.</div>
- <button style={{ backgroundColor: "Green", color: "white" }} id='natural2' value="70-100% Light Pollution" onClick={emergencySETTER}>Click to Go to Form</button></div>
+<div  style={{backgroundColor:"rgba(119, 85, 10, 0.30)", color:"white"}}   className="skydescription">Heavily affected by light pollution, the sky is illuminated, making it challenging to distinguish individual stars or constellations. Only the very brightest celestial objects, such as the Moon, planets, and a few prominent stars, are visible.
+<div>Approximate Star Visibility:</div> 
+<div>Less than 100 stars visible to the naked eye, often limited to the brightest stars and planets.</div></div>
+ <button style={{ backgroundColor: "Green", color: "white" }} id='natural2' value="70-100% Light Pollution" onClick={emergencySETTER}>Click to Go to Form</button>
                             <div>
                                 <button style={{backgroundColor:"white", color:"black"}} onClick=
                                     {() => close()}>
                                         Close
                                 </button>
-                            </div>
+                            </div></div></div>
                         </div>
                     )
                 }
