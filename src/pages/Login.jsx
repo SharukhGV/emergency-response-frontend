@@ -15,7 +15,7 @@ function Login({ setLoginUsername, loginUsername,toggleLOGIN,settoggleLOGIN, set
                 const token = response.data.accessToken;
                 setAccessToken(token);
           setLoginUsername(user.username);
-          settoggleLOGIN(!toggleLOGIN)
+          token && settoggleLOGIN(!toggleLOGIN)
             })
             .catch(error => {
                 console.error('There was a problem with the login operation:', error);

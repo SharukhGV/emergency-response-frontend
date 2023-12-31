@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-function NewForm({ emergencyType, setLongitude, setLatitude, lat, lng, loginUsername }) {
+function NewForm({  accessToken, emergencyType, setLongitude, setLatitude, lat, lng, loginUsername }) {
   // const [location, setLocation] = useState(null);
   // const [locationFound, setLocationFound] = useState(false);
   // const [lat, setLatitude] = useState(0);
@@ -96,7 +96,7 @@ function NewForm({ emergencyType, setLongitude, setLatitude, lat, lng, loginUser
 
 
     return (
-      <div className="edit">
+      <div>{accessToken ?<div className="edit">
         <h2>Caution:</h2>
         <h4>Posting Will Be Public to Everyone</h4>
         <form onSubmit={handleSubmit}>
@@ -168,7 +168,7 @@ function NewForm({ emergencyType, setLongitude, setLatitude, lat, lng, loginUser
           <div>Description:</div>
           <p style={{ color: "#373436" }}>{person.description}</p>
         </div>
-      </div>
+      </div>:<p>Please Log In to Continue</p>}</div>
     );
   };
 
