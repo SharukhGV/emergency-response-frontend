@@ -77,7 +77,7 @@ Food & Water Shortage
         </div> */}
                       <div>
             <Popup trigger=
-                {<button style={{ backgroundColor: "black", color: "white" }}><strong> ・｡✧:˚*:・ 0-10% Light Pollution ・:*˚:✧｡・</strong></button>} 
+                {<button style={{ backgroundColor: "black", color: "white" }}><strong>0-10% Light Pollution</strong></button>} 
                 modal nested>
                 {
                     close => (
@@ -109,7 +109,7 @@ Food & Water Shortage
 
         <div>
             <Popup trigger=
-                {<button style={{ backgroundColor: "black", color: "white" }}><strong> ｡✧˚* 10-30% Light Pollution *˚✧｡ </strong></button>} 
+                {<button style={{ backgroundColor: "black", color: "white" }}><strong>10-30% Light Pollution</strong></button>} 
                 modal nested>
                 {
                     close => (
@@ -145,7 +145,7 @@ Approximate Star Visibility: Roughly 1,000 to 2,000 stars visible to the naked e
 
         <div>
             <Popup style={{ backgroundColor: "rgb(58, 55, 50, 0.30)", color: "white" }} trigger=
-                {<button style={{ backgroundColor: "rgb(58, 55, 50)", color: "white" }}><strong> ｡✧* 30-50% Light Pollution *✧｡</strong></button>} 
+                {<button style={{ backgroundColor: "rgb(58, 55, 50)", color: "white" }}><strong>30-50% Light Pollution</strong></button>} 
                 modal nested>
                 {
                     close => (
@@ -181,7 +181,7 @@ Approximate Star Visibility: Roughly 1,000 to 2,000 stars visible to the naked e
         
         <div>
             <Popup style={{backgroundColor:"rgb(85, 72, 43, 0.30)", color:"white"}} trigger=
-                {<button style={{backgroundColor:"rgb(85, 72, 43)", color:"white"}}><strong>｡✧ 50-70% Light Pollution: ✧｡</strong></button>} 
+                {<button style={{backgroundColor:"rgb(85, 72, 43)", color:"white"}}><strong>50-70% Light Pollution: </strong></button>} 
                 modal nested>
                 {
                     close => (
