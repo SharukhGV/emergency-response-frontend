@@ -18,7 +18,7 @@ function Logout({ loginUsername,setLoginUsername,toggleLOGIN,settoggleLOGIN }) {
       
 
   return (
-    <button style={{margin:"right", width:"30px"}} onClick={logOut}>Logout</button>
+    <button style={{margin:"right", width:"30px"}} onClick={logOut}>🔒</button>
   );
 }
 
