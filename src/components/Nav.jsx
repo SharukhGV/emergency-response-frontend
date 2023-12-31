@@ -18,11 +18,11 @@ export default function Nav({loginUsername, toggleLOGIN,settoggleLOGIN, accessTo
     </li>
 
     <li>
-    {!toggleLOGIN ? <Link to="/signup">Sign Up</Link>:null}
+    {!toggleLOGIN ? <Link to="/signup">📃</Link>:null}
     </li>
 
     <li>
-    {!toggleLOGIN ?  <Link to="/login">Login</Link>:null}
+    {!toggleLOGIN ?  <Link to="/login">💻</Link>:null}
     </li>
 
     
