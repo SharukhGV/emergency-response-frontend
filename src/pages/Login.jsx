@@ -14,8 +14,7 @@ function Login({ setLoginUsername, loginUsername,toggleLOGIN,settoggleLOGIN, set
             .then(response => {
                 const token = response.data.accessToken;
                 setAccessToken(token);
-          setLoginUsername(user.username);
-          token && settoggleLOGIN(!toggleLOGIN)
+                
             })
             .catch(error => {
                 console.error('There was a problem with the login operation:', error);
@@ -33,6 +32,7 @@ function Login({ setLoginUsername, loginUsername,toggleLOGIN,settoggleLOGIN, set
         event.preventDefault();
         loginUser(personUser);
         accessToken ? setLoginUsername(personUser.username) : null
+        accessToken ? settoggleLOGIN(!toggleLOGIN) : null
         navigate("/");
 
     }

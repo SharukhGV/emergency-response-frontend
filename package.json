@@ -10,6 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@cloudinary/react": "^1.11.2",
+    "@cloudinary/url-gen": "^1.14.0",
     "@react-google-maps/api": "^2.19.2",
     "axios": "^1.6.2",
     "crypto": "^1.0.1",

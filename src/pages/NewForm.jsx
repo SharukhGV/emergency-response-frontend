@@ -1,6 +1,10 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+// import {Cloudinary} from "@cloudinary/url-gen";
+
+  // const cld = new Cloudinary({cloud: {cloudName: 'damkrnln2'}});
+
 function NewForm({  accessToken, emergencyType, setLongitude, setLatitude, lat, lng, loginUsername }) {
   // const [location, setLocation] = useState(null);
   // const [locationFound, setLocationFound] = useState(false);
@@ -14,7 +18,7 @@ function NewForm({  accessToken, emergencyType, setLongitude, setLatitude, lat, 
       longitude: lng,
       description: "",
       skybrightness: emergencyType,
-      archived: false,
+      username: loginUsername,
     });
     
     useEffect(() => {
@@ -25,9 +29,9 @@ function NewForm({  accessToken, emergencyType, setLongitude, setLatitude, lat, 
       }));
     }, [lat, lng]);
     
-  const addFindSpot = (newFindSpot, username) => {
+  const addFindSpot = (newFindSpot) => {
     axios
-      .post(`${import.meta.env.VITE_BACKEND_API}/findspots`, newFindSpot, username)
+      .post(`${import.meta.env.VITE_BACKEND_API}/findspots`, newFindSpot)
       .then((response) => {
         console.log(response.data);
 
@@ -91,7 +95,7 @@ function NewForm({  accessToken, emergencyType, setLongitude, setLatitude, lat, 
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    addFindSpot(person,loginUsername);
+    addFindSpot(person);
   }
 
 
@@ -141,10 +145,10 @@ function NewForm({  accessToken, emergencyType, setLongitude, setLatitude, lat, 
             onChange={handleTextChange}
           ></textarea>
           <div></div>
-          <input
+          {/* <input
             style={{ width: "30%", padding: "0.6em 1.2em" }}
             type="file" name="image"
-          />
+          /> */}
           <div></div>
           <input
             style={{ width: "30%", padding: "0.6em 1.2em" }}

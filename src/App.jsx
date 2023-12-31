@@ -35,38 +35,38 @@ import NotFound from './pages/NotFound';
 
 export default function App() {
   // const [count, setCount] = useState(0)
-// const [location, setLocation] = useState(0);
-const [lat, setLatitude] = useState(null);
-const [lng, setLongitude] = useState(null);
-const [emergencyType, setEmergencyType]=useState("")
-const[mapMarkers, setMapMarkers]=useState([])
-const [loginUsername, setLoginUsername]=useState("")
-const [toggleLOGIN, settoggleLOGIN]=useState(false)
+  // const [location, setLocation] = useState(0);
+  const [lat, setLatitude] = useState(null);
+  const [lng, setLongitude] = useState(null);
+  const [emergencyType, setEmergencyType] = useState("")
+  const [mapMarkers, setMapMarkers] = useState([])
+  const [loginUsername, setLoginUsername] = useState("")
+  const [toggleLOGIN, settoggleLOGIN] = useState(false)
 
-// sessionStorage.setItem("username", loginUsername);
-const [accessToken, setAccessToken] = useState('');
+  // sessionStorage.setItem("username", loginUsername);
+  const [accessToken, setAccessToken] = useState('');
 
 
 
   return (
-   <>
+    <>
 
-<Router>
-      <Nav settoggleLOGIN={settoggleLOGIN} toggleLOGIN={toggleLOGIN} accessToken={accessToken} setLoginUsername={setLoginUsername} loginUsername={loginUsername} />
-      <Routes>
-        <Route path="/" element={<Home accessToken={accessToken} setAccessToken={setAccessToken} loginUsername={loginUsername} setLoginUsername={setLoginUsername} setEmergencyType={setEmergencyType}/>} />
-        <Route path="/form" element={<NewForm settoggleLOGIN={settoggleLOGIN} toggleLOGIN={toggleLOGIN} accessToken={accessToken} setAccessToken={setAccessToken} loginUsername={loginUsername} setLoginUsername={setLoginUsername} lat={lat} lng={lng}  setLongitude={setLongitude} setLatitude={setLatitude} emergencyType={emergencyType} />} />
-<Route path="/index" element={<Index lat={lat} lng={lng} setLongitude={setLongitude} setLatitude={setLatitude} mapMarkers={mapMarkers} setMapMarkers={setMapMarkers} />}/>
-<Route path="/skydata" element={<SkyBrightness/>} />
-<Route path="/signup" element={<Register/>} />
-<Route path="/login" element={<Login settoggleLOGIN={settoggleLOGIN} toggleLOGIN={toggleLOGIN} accessToken={accessToken} setAccessToken={setAccessToken} loginUsername={loginUsername} setLoginUsername={setLoginUsername}/>} />
-<Route path="/termsconditions" element={<TermsConditions/>} />
-<Route path="/profile" element={<Profile loginUsername={loginUsername}/>} />
-<Route path="/*" element={<NotFound/>} />
+      <Router>
+        <Nav settoggleLOGIN={settoggleLOGIN} toggleLOGIN={toggleLOGIN} accessToken={accessToken} setLoginUsername={setLoginUsername} loginUsername={loginUsername} />
+        <Routes>
+          <Route path="/" element={<Home accessToken={accessToken} setAccessToken={setAccessToken} loginUsername={loginUsername} setLoginUsername={setLoginUsername} setEmergencyType={setEmergencyType} />} />
+          <Route path="/form" element={<NewForm settoggleLOGIN={settoggleLOGIN} toggleLOGIN={toggleLOGIN} accessToken={accessToken} setAccessToken={setAccessToken} loginUsername={loginUsername} setLoginUsername={setLoginUsername} lat={lat} lng={lng} setLongitude={setLongitude} setLatitude={setLatitude} emergencyType={emergencyType} />} />
+          <Route path="/index" element={<Index lat={lat} lng={lng} setLongitude={setLongitude} setLatitude={setLatitude} mapMarkers={mapMarkers} setMapMarkers={setMapMarkers} />} />
+          <Route path="/skydata" element={<SkyBrightness />} />
+          <Route path="/signup" element={<Register />} />
+          <Route path="/login" element={<Login settoggleLOGIN={settoggleLOGIN} toggleLOGIN={toggleLOGIN} accessToken={accessToken} setAccessToken={setAccessToken} loginUsername={loginUsername} setLoginUsername={setLoginUsername} />} />
+          <Route path="/termsconditions" element={<TermsConditions />} />
+          <Route path="/profile" element={<Profile loginUsername={loginUsername} />} />
+          <Route path="/*" element={<NotFound />} />
 
 
         </Routes>
-</Router>
+      </Router>
     </>
   )
 }
