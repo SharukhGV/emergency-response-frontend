@@ -18,7 +18,14 @@ useEffect(() => {
 return(
 
 <div>
+<div>{data.username}</div>
+<div>{data.skybrightness}</div>
 <div>{data.description}</div>
+<div>{data.date}</div>
+<div>{data.latitude}</div>
+<div>{data.longitude}</div>
+<div>{!!data.image_url ? data.image_url : null}</div>
+
 </div>
 
 )
