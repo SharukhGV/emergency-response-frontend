@@ -110,7 +110,7 @@ function EditForm({  accessToken, emergencyType, setLongitude, setLatitude, lat,
 
     return (
       <div className="edit">
-        <h2>Caution:</h2>
+        <h2>Edit Form:</h2>
         <h4>Posting Will Be Public to Everyone</h4>
         <form onSubmit={handleSubmit}>
           {/* <input type="hidden" id="user_id" name="user_id" value={userShow2}></input> */}

@@ -101,14 +101,14 @@ function NewForm({  accessToken, emergencyType, setLongitude, setLatitude, lat, 
 
     return (
       <div>{accessToken ?<div className="edit">
-        <h2>Caution:</h2>
+        <h2>New Post:</h2>
         <h4>Posting Will Be Public to Everyone</h4>
         <form onSubmit={handleSubmit}>
           {/* <input type="hidden" id="user_id" name="user_id" value={userShow2}></input> */}
           <div></div>
           <label htmlFor="full_name">Location Nickname:</label>
           <div></div>
-          <input
+          <input style={{width:"300px"}}
             id="full_name"
             value={person.full_name.replace(/[^a-z]/gi, ' ')}
             type="text"
@@ -141,7 +141,7 @@ function NewForm({  accessToken, emergencyType, setLongitude, setLatitude, lat, 
             value={person.description}
             rows="7"
             cols="25"
-            placeholder="What is your case about..."
+            placeholder="Write about what you see..."
             onChange={handleTextChange}
           ></textarea>
           <div></div>
