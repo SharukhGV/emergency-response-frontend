@@ -17,7 +17,7 @@ useEffect(() => {
 
 return(
 
-<div>
+<div className="viewsDIV">
 <div>{data.username}</div>
 <div>{data.skybrightness}</div>
 <div>{data.description}</div>

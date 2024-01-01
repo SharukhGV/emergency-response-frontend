@@ -495,3 +495,14 @@ button:hover, a:hover {
   -webkit-animation:move-background 150s linear infinite;
   animation:move-background 150s linear infinite;
 }
+
+
+.viewsDIV{
+
+margin: auto;
+text-align: center;
+background-color: #000000dc;
+color: #3cff00;
+padding: 10px;
+
+}
