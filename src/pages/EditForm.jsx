@@ -118,6 +118,7 @@ function EditForm({  accessToken, emergencyType, setLongitude, setLatitude, lat,
           <label htmlFor="full_name">Location Nickname:</label>
           <div></div>
           <input
+          style={{width:"300px"}}
             id="full_name"
             value={person.full_name}
             type="text"
