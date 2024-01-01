@@ -2,7 +2,8 @@ import { useParams } from "react-router-dom"
 import { useState } from "react";
 import { useEffect } from "react";
 import axios from "axios";
-function IndividualView(){
+import { Link } from "react-router-dom";
+function IndividualView({}){
     const [data, setData] = useState([])
 
 const {id} = useParams()
@@ -14,6 +15,7 @@ useEffect(() => {
       .catch((e) => console.error("catch", e));
   }, []);
 
+const storedValue = sessionStorage.getItem('username');
 
 return(
 
@@ -25,6 +27,7 @@ return(
 <div>{data.latitude}</div>
 <div>{data.longitude}</div>
 <div>{!!data.image_url ? data.image_url : null}</div>
+<div>{data.username === storedValue?<Link style={{fontSize:"15px"}} to={`/index/${id}/edit`}>Edit Page</Link>:null}</div>
 
 </div>
 

@@ -4,7 +4,8 @@ import axios from "axios";
 import { v4 as uuidv4 } from 'uuid';
 import markerImage from "./markerImage.png"
 import Individual from "./Individual";
-export default function SearchPeople({ setMapMarkers, emergencyType, setLongitude, setLatitude, lat, lng }) {
+
+export default function SearchPeople({loginUsername, setMapMarkers, emergencyType, setLongitude, setLatitude, lat, lng }) {
   const [data, setData] = useState([])
 useEffect(() => {
     axios
@@ -13,6 +14,8 @@ useEffect(() => {
       .catch((e) => console.error("catch", e));
   }, []);
 
+// Set data in sessionStorage
+sessionStorage.setItem('username', loginUsername);
 
 
 
@@ -46,7 +49,7 @@ useEffect(() => {
       <ul className="ultraelem"> 
         {filteredPeople.map((person) => (
           <li className="listelem" style={{display:"flex",flexWrap:"wrap"}} key={person.id}>
-            <Individual id={person.id} person={person} />
+            <Individual loginUsername={loginUsername} id={person.id} person={person} />
           </li>
         ))}
       </ul>

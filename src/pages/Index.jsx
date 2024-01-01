@@ -8,7 +8,7 @@ import SearchPeople from "../components/SearchPeople";
 // import { useState, useEffect } from "react";
 // const dataJSON = require("../../data.json")
 
-function Index({setMapMarkers, mapMarkers, location}) {
+function Index({setMapMarkers, mapMarkers, location, setAccessToken,loginUsername}) {
 
 // const [data, setData] = useState([])
 // useEffect(() => {
@@ -31,7 +31,7 @@ return (
   <>
   <div>
     <GoogleMaps mapMarkers={mapMarkers} />
-  </div><SearchPeople location={location} mapMarkers={mapMarkers} setMapMarkers={setMapMarkers} />
+  </div><SearchPeople setAccessToken={setAccessToken} loginUsername={loginUsername} location={location} mapMarkers={mapMarkers} setMapMarkers={setMapMarkers} />
 </>
 );
 }

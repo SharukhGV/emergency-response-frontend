@@ -4,7 +4,7 @@ import { Link } from "react-router-dom"
 import dipperDefault from "./dipperDefault.png"
 import mountainsky from "./mountainsky.jpg"
 
-function Individual({id, person}){
+function Individual({loginUsername, id, person}){
 
 
 const styleIndividual = {
@@ -20,20 +20,21 @@ const styleIndividual = {
       }
     return(
 
-<div class="card">
-      <img src={mountainsky} class="card__image" alt="" />
-      <div class="card__overlay">
-        <div class="card__header">
-          <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                     
-          <img class="card__thumb" src={dipperDefault} alt="" />
-          <div class="card__header-text">
+<div className="card">
+      <img src={mountainsky} className="card__image" alt="" />
+      <div className="card__overlay">
+        <div className="card__header">
+          <svg className="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                     
+          <img className="card__thumb" src={dipperDefault} alt="" />
+          <div className="card__header-text">
             <h5>Location Nickname:</h5>
-            <h3 class="card__title">{person.full_name}</h3>            
-            <span class="card__status">{parseDATE(person.date)}</span>
+            <h3 className="card__title">{person.full_name}</h3>            
+            <span className="card__status">{parseDATE(person.date)}</span>
           </div>
         </div><div>{person.skybrightness}</div>
-        <p class="card__description">{person.description}</p>
+        <p className="card__description">{person.description}</p>
         <Link style={{fontSize:"15px"}} to={`/index/${id}`}>View Page</Link>
+       
         <div></div>
 
       </div>

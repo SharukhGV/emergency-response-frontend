@@ -17,6 +17,7 @@ import Register from './pages/Register';
 import Profile from './pages/Profile';
 import NotFound from './pages/NotFound';
 import IndividualView from './components/IndividualView';
+import EditForm from './pages/EditForm';
 
 // import Iron from '@hapi/iron'
 // import { MAX_AGE, setTokenCookie, getTokenCookie } from './auth-cookies'
@@ -57,13 +58,14 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Home accessToken={accessToken} setAccessToken={setAccessToken} loginUsername={loginUsername} setLoginUsername={setLoginUsername} setEmergencyType={setEmergencyType} />} />
           <Route path="/form" element={<NewForm settoggleLOGIN={settoggleLOGIN} toggleLOGIN={toggleLOGIN} accessToken={accessToken} setAccessToken={setAccessToken} loginUsername={loginUsername} setLoginUsername={setLoginUsername} lat={lat} lng={lng} setLongitude={setLongitude} setLatitude={setLatitude} emergencyType={emergencyType} />} />
-          <Route path="/index" element={<Index lat={lat} lng={lng} setLongitude={setLongitude} setLatitude={setLatitude} mapMarkers={mapMarkers} setMapMarkers={setMapMarkers} />} />
+          <Route path="/index" element={<Index setAccessToken={setAccessToken} loginUsername={loginUsername} lat={lat} lng={lng} setLongitude={setLongitude} setLatitude={setLatitude} mapMarkers={mapMarkers} setMapMarkers={setMapMarkers} />} />
           <Route path="/skydata" element={<SkyBrightness />} />
           <Route path="/signup" element={<Register />} />
           <Route path="/login" element={<Login settoggleLOGIN={settoggleLOGIN} toggleLOGIN={toggleLOGIN} accessToken={accessToken} setAccessToken={setAccessToken} loginUsername={loginUsername} setLoginUsername={setLoginUsername} />} />
           <Route path="/termsconditions" element={<TermsConditions />} />
           <Route path="/profile" element={<Profile loginUsername={loginUsername} />} />
           <Route path="/index/:id" element={<IndividualView />}/>
+          <Route path="/index/:id/edit" element={<EditForm />}/>
 
           <Route path="/*" element={<NotFound />} />
 
