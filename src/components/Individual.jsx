@@ -1,27 +1,9 @@
 
-import { useState } from "react"
 // import axios from "axios"
-function Individual({person}){
-// const[isArchive, setArchive]=useState()
+import { Link } from "react-router-dom"
 
-// function onClickARCHIVE(){
-// if(!isArchive){
-//     setArchive(true)
-// }
+function Individual({id, person}){
 
-// const settheArchiveStatus = (archiveStatus) => { 
-
-//     axios
-//       .put(`${import.meta.env.VITE_BACKEND_API}/findspots/${person.id}`, archiveStatus)
-//       .then((response) => {
-//         console.log(response.data);
-
-//         navigate("/index");
-//       })
-//       .catch((e) => console.error("catch", e));
-
-
-// }
 
 const styleIndividual = {
   color:"white",
@@ -42,6 +24,7 @@ const styleIndividual = {
         <div>Longitude: {person.longitude}</div>
         <div> Description: {person.description}</div>
         <div> Light Pollution Level: {person.skybrightness}</div>
+        <Link to={`/index/${id}`}>View Page</Link>
         {/* <button style={{width:'150px'}}>Archive Status: {!person.archived ? <div>❎</div>:<div>✅</div>}</button> */}
       </div>
     )

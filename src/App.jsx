@@ -16,6 +16,7 @@ import TermsConditions from './pages/TermsConditions';
 import Register from './pages/Register';
 import Profile from './pages/Profile';
 import NotFound from './pages/NotFound';
+import IndividualView from './components/IndividualView';
 
 // import Iron from '@hapi/iron'
 // import { MAX_AGE, setTokenCookie, getTokenCookie } from './auth-cookies'
@@ -62,8 +63,9 @@ export default function App() {
           <Route path="/login" element={<Login settoggleLOGIN={settoggleLOGIN} toggleLOGIN={toggleLOGIN} accessToken={accessToken} setAccessToken={setAccessToken} loginUsername={loginUsername} setLoginUsername={setLoginUsername} />} />
           <Route path="/termsconditions" element={<TermsConditions />} />
           <Route path="/profile" element={<Profile loginUsername={loginUsername} />} />
-          <Route path="/*" element={<NotFound />} />
+          <Route path="/index/:id" element={<IndividualView />}/>
 
+          <Route path="/*" element={<NotFound />} />
 
         </Routes>
       </Router>

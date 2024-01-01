@@ -46,7 +46,7 @@ useEffect(() => {
       <ul>
         {filteredPeople.map((person) => (
           <li key={person.id}>
-            <Individual person={person} />
+            <Individual id={person.id} person={person} />
           </li>
         ))}
       </ul>
