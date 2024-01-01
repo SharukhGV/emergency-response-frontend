@@ -106,7 +106,7 @@ function NewForm({  accessToken, emergencyType, setLongitude, setLatitude, lat, 
         <form onSubmit={handleSubmit}>
           {/* <input type="hidden" id="user_id" name="user_id" value={userShow2}></input> */}
           <div></div>
-          <label htmlFor="full_name">Posted By:</label>
+          <label htmlFor="full_name">Location Nickname:</label>
           <div></div>
           <input
             id="full_name"

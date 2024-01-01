@@ -40,12 +40,12 @@ useEffect(() => {
   return (
     <div>
       <div>
-        <strong>Search for a Person</strong>
+        <strong>Search for a Location</strong>
       </div>
       <input type="text" value={query} onChange={handleQueryChange} />
-      <ul>
+      <ul className="ultraelem"> 
         {filteredPeople.map((person) => (
-          <li key={person.id}>
+          <li className="listelem" style={{display:"flex",flexWrap:"wrap"}} key={person.id}>
             <Individual id={person.id} person={person} />
           </li>
         ))}

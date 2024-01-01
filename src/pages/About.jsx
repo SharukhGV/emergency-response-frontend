@@ -8,6 +8,7 @@ return(
 <div> 
 
 <div className="card">
+  
   <img style={{width:'100%'}} src={sharukh} alt="sharukh"></img>
   <h1>Sharukh GV</h1>
   <p className="title">Full Stack Software Developer</p>
