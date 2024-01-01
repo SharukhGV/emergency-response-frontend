@@ -67,11 +67,11 @@ export default function Home({ setEmergencyType,loginUsername,accessToken }) {
                         <div></div>
 
                         <img style={{ maxWidth: "300px" }} src={logo} alt="Logo"></img>
-                        <h2>Light Pollution & Dark Skies</h2>
+                        <h2>Night Sky Finder</h2>
                         <h3>Welcome {loginUsername} to Hive of Heaven</h3>
                         {/* <p>TESTING: {!accessToken? <span>"no Token, not logged in"</span> : <span>`${accessToken}`</span>}</p> */}
-                        <p>A community driven app to report light-polluted areas or dark skies for others to be aware of for future enjoyment</p>
-                        <p>You will be Taken to a Form where you can post to a Public Bulletin</p>
+                        <p>A community driven app to report dark skies for others to be aware of for future enjoyment</p>
+                        <p>Click one of the Buttons Below to Create a Post.</p>
                         {/* <div id='natural6' value="Food & Water Shortage" onClick={emergencySETTER}>
 Food & Water Shortage
         </div> */}
@@ -91,13 +91,18 @@ Food & Water Shortage
 <strong><div style={{backgroundColor:"black", color:"white"}} className="skydescription">0-10% Light Pollution:</div></strong>
 <div style={{backgroundColor:"black", color:"white"}}><strong >Sky Description:</strong></div>
 
-<div  style={{backgroundColor:"black", color:"white"}}  className="skydescription">In areas with minimal light pollution, the sky appears exceptionally dark. The Milky Way is vividly visible, and thousands of stars are discernible. There are around 2,500 to 3,000 stars visible to the naked eye.</div>
+<div  style={{backgroundColor:"black", color:"white"}}  className="skydescription">Click here if there is minimal light pollution and the sky appears exceptionally dark where the Milky Way is vividly visible, and thousands of stars are discernible. Click here if There are around 2,500 to 3,000 stars visible to the naked eye.</div>
+
+                                
  <button style={{ backgroundColor: "Green", color: "white" }} id='natural2' value="0-10% Light Pollution" onClick={emergencySETTER}>Click to Go to Form</button>
                             <div>
                                 <button style={{backgroundColor:"white", color:"black"}} onClick=
                                     {() => close()}>
                                         Close
-                                </button></div>
+                                </button>
+<div style={{backgroundColor:"black", color:"white"}}  className="skydescription">Create a Posting to help others know whether the place you visited has a beautiful night sky or not. Describe your experience, the weather, etc.</div>
+                                
+                                </div>
                             </div>
                         </div></div>
                     )
@@ -123,14 +128,16 @@ Food & Water Shortage
 <strong><div style={{backgroundColor:"rgba(0,0,0, 0.30)", color:"white"}} className="skydescription">10-30% Light Pollution:</div></strong>
 <div style={{backgroundColor:"rgba(0,0,0, 0.30)", color:"white"}}><strong >Sky Description:</strong></div>
 
-<div  style={{backgroundColor:"rgba(0,0,0, 0.30)", color:"white"}}  className="skydescription">Light pollution begins to affect the visibility of fainter stars, causing a visible glow near the horizon. However, major constellations and the Milky Way's core are still relatively clear.
-Approximate Star Visibility: Roughly 1,000 to 2,000 stars visible to the naked eye.</div>
+<div  style={{backgroundColor:"rgba(0,0,0, 0.30)", color:"white"}}  className="skydescription">Click here if light pollution affects the visibility of fainter stars, causing a visible glow near the horizon but major constellations and the Milky Way's core are still relatively clear.
+Click here if There are around roughly 1,000 to 2,000 stars visible to the naked eye.</div>
  <button style={{ backgroundColor: "Green", color: "white" }} id='natural2' value="10-30% Light Pollution" onClick={emergencySETTER}>Click to Go to Form</button>
                             <div>
                                 <button style={{backgroundColor:"white", color:"black"}} onClick=
                                     {() => close()}>
                                         Close
                                 </button>
+                                <div style={{backgroundColor:"black", color:"white"}}  className="skydescription">Create a Posting to help others know whether the place you visited has a beautiful night sky or not. Describe your experience, the weather, etc.</div>
+          
                             </div>
                         </div></div></div>
                     )
@@ -159,14 +166,16 @@ Approximate Star Visibility: Roughly 1,000 to 2,000 stars visible to the naked e
 <strong><div style={{ backgroundColor: "rgb(58, 55, 50, 0.30)", color: "white" }} className="skydescription">30-50% Light Pollution:</div></strong>
 <div style={{ backgroundColor: "rgb(58, 55, 50, 0.30)", color: "white" }}><strong style={{ backgroundColor: "rgb(58, 55, 50)", color: "white" }}>Sky Description:</strong></div>
 
-<div style={{ backgroundColor: "rgb(58, 55, 50, 0.30)", color: "white" }}  className="skydescription"> Moderate light pollution dims the view of the Milky Way and fainter stars. Only the brightest stars and major constellations are easily identifiable.
-<div>Approximate Star Visibility:</div> <div>Around 500 to 1,000 stars visible to the naked eye.</div></div>
+<div style={{ backgroundColor: "rgb(58, 55, 50, 0.30)", color: "white" }}  className="skydescription">Click here if moderate light pollution dims the view of the Milky Way and fainter stars. Click here if only the brightest stars and major constellations are easily identifiable.
+<div>Click here if There are around roughly 500 to 1,000 stars visible to the naked eye.</div></div>
  <button style={{ backgroundColor: "Green", color: "white" }} id='natural2' value="30-50% Light Pollution" onClick={emergencySETTER}>Click to Go to Form</button>
                             <div>
                                 <button style={{backgroundColor:"white", color:"black"}} onClick=
                                     {() => close()}>
                                         Close
                                 </button>
+
+                                <div style={{backgroundColor:"black", color:"white"}}  className="skydescription">Create a Posting to help others know whether the place you visited has a beautiful night sky or not. Describe your experience, the weather, etc.</div>
                             </div></div>
                         </div></div>
                     )
@@ -195,14 +204,14 @@ Approximate Star Visibility: Roughly 1,000 to 2,000 stars visible to the naked e
 <strong><div style={{backgroundColor:"rgb(85, 72, 43, 0.30)", color:"white"}} className="skydescription">50-70% Light Pollution:</div></strong>
 <div style={{backgroundColor:"rgb(85, 72, 43, 0.30)", color:"white"}}><strong >Sky Description:</strong></div>
 
-<div  style={{backgroundColor:"rgb(85, 72, 43, 0.30)", color:"white"}}  className="skydescription"> Substantial light pollution obscures most of the Milky Way and dimmer stars, leaving only the brightest stars and planets visible. The sky appears significantly brightened, even at night.
-<div>Approximate Star Visibility:</div> <div>Approximately 100 to 500 stars visible to the naked eye.</div></div>
+<div  style={{backgroundColor:"rgb(85, 72, 43, 0.30)", color:"white"}}  className="skydescription">Click here if Substantial light pollution obscures most of the Milky Way and dimmer stars, leaving only the brightest stars and planets visible. The sky appears significantly brightened, even at night.
+Click here if there are 100 to 500 stars visible to the naked eye.</div>
  <button style={{ backgroundColor: "Green", color: "white" }} id='natural2' value="50-70% Light Pollution" onClick={emergencySETTER}>Click to Go to Form</button>
                             <div>
                                 <button style={{backgroundColor:"white", color:"black"}} onClick=
                                     {() => close()}>
                                         Close
-                                </button></div>
+                                </button><div style={{backgroundColor:"black", color:"white"}}  className="skydescription">Create a Posting to help others know whether the place you visited has a beautiful night sky or not. Describe your experience, the weather, etc.</div></div>
                             </div></div>
                         </div>
                     )
@@ -235,15 +244,14 @@ Approximate Star Visibility: Roughly 1,000 to 2,000 stars visible to the naked e
 <div></div>
 <div style={{backgroundColor:"rgb(119, 85, 10, 0.30)", color:"white"}}><strong >Sky Description:</strong></div>
 
-<div  style={{backgroundColor:"rgba(119, 85, 10, 0.30)", color:"white"}}   className="skydescription">Heavily affected by light pollution, the sky is illuminated, making it challenging to distinguish individual stars or constellations. Only the very brightest celestial objects, such as the Moon, planets, and a few prominent stars, are visible.
-<div>Approximate Star Visibility:</div> 
-<div>Less than 100 stars visible to the naked eye, often limited to the brightest stars and planets.</div></div>
+<div  style={{backgroundColor:"rgba(119, 85, 10, 0.30)", color:"white"}}   className="skydescription">Click here if the sky is heavily affected by light pollution, the sky is illuminated, making it challenging to distinguish individual stars or constellations. Click here if only the very brightest celestial objects, such as the Moon, planets, and a few prominent stars, are visible.
+<div>If there are less than 100 stars visible to the naked eye or you are limited to seeing the brightest stars and planets, click here.</div></div>
  <button style={{ backgroundColor: "Green", color: "white" }} id='natural2' value="70-100% Light Pollution" onClick={emergencySETTER}>Click to Go to Form</button>
                             <div>
                                 <button style={{backgroundColor:"white", color:"black"}} onClick=
                                     {() => close()}>
                                         Close
-                                </button>
+                                </button><div style={{backgroundColor:"black", color:"white"}}  className="skydescription">Create a Posting to help others know whether the place you visited has a beautiful night sky or not. Describe your experience, the weather, etc.</div>
                             </div></div></div>
                         </div>
                     )
