@@ -77,7 +77,7 @@ Food & Water Shortage
         </div> */}
                       <div>
             <Popup trigger=
-                {<button style={{ backgroundColor: "black", color: "white" }}><strong>0-10% Light Pollution</strong></button>} 
+                {<button style={{ backgroundColor: "black", color: "white" }}><strong>No Light Pollution</strong></button>} 
                 modal nested>
                 {
                     close => (
@@ -114,7 +114,7 @@ Food & Water Shortage
 
         <div>
             <Popup trigger=
-                {<button style={{ backgroundColor: "black", color: "white" }}><strong>10-30% Light Pollution</strong></button>} 
+                {<button style={{ backgroundColor: "black", color: "white" }}><strong>Some Light Pollution</strong></button>} 
                 modal nested>
                 {
                     close => (
@@ -152,7 +152,7 @@ Click here if There are around roughly 1,000 to 2,000 stars visible to the naked
 
         <div>
             <Popup style={{ backgroundColor: "rgb(58, 55, 50, 0.30)", color: "white" }} trigger=
-                {<button style={{ backgroundColor: "rgb(58, 55, 50)", color: "white" }}><strong>30-50% Light Pollution</strong></button>} 
+                {<button style={{ backgroundColor: "rgb(58, 55, 50)", color: "white" }}><strong>Moderate Light Pollution</strong></button>} 
                 modal nested>
                 {
                     close => (
@@ -190,7 +190,7 @@ Click here if There are around roughly 1,000 to 2,000 stars visible to the naked
         
         <div>
             <Popup style={{backgroundColor:"rgb(85, 72, 43, 0.30)", color:"white"}} trigger=
-                {<button style={{backgroundColor:"rgb(85, 72, 43)", color:"white"}}><strong>50-70% Light Pollution: </strong></button>} 
+                {<button style={{backgroundColor:"rgb(85, 72, 43)", color:"white"}}><strong>Substantial Light Pollution </strong></button>} 
                 modal nested>
                 {
                     close => (
@@ -224,7 +224,7 @@ Click here if there are 100 to 500 stars visible to the naked eye.</div>
 
         <div>
             <Popup style={{backgroundColor:"rgb(119, 85, 10, 0.30)"}} trigger=
-                {<button style={{backgroundColor:"rgb(119, 85, 10)", color:"white"}}><strong> 70-100% Light Pollution </strong></button>} 
+                {<button style={{backgroundColor:"rgb(119, 85, 10)", color:"white"}}><strong> Heavy Light Pollution </strong></button>} 
                 modal nested>
                 {
                     close => (
