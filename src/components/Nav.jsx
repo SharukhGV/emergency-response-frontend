@@ -13,9 +13,9 @@ export default function Nav({loginUsername, toggleLOGIN,settoggleLOGIN, accessTo
     {!!toggleLOGIN ?  <Link to="/index">🌍</Link>:null}
     </li>
 
-    <li>
+    {/* <li>
     {!toggleLOGIN ? <Link to="/skydata">🌃</Link>:null}
-    </li>
+    </li> */}
 
     <li>
     {!toggleLOGIN ? <Link to="/signup">📃</Link>:null}
