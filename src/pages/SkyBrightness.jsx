@@ -13,6 +13,7 @@ function SkyBrightness(){
 
 return(
 <div className="skydescription">
+    <div></div>
     <div className="skydescription">
         Here are five descriptions of sky brightness affected by light pollution, categorized by a percent, along with approximate descriptions of how many stars you might see under total darkness:
 </div>
