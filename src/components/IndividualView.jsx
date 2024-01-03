@@ -43,7 +43,7 @@ return(
   </tr>
   <tr>
     <td>Longitude</td>
-    <td>{!!data.latitude ? data.latitude : "No Location Found"}</td>
+    <td>{!!data.longitude ? data.longitude : "No Location Found"}</td>
   </tr>
   <tr>
     <td>Description</td>

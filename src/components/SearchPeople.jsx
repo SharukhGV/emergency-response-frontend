@@ -47,7 +47,10 @@ sessionStorage.setItem('username', loginUsername);
         <img onClick={planetsvis} style={{width:"100px"}} src={solarsystem}></img>
         <strong>Search for a Location</strong>
       </div> */}
-      <input type="text" value={query} onChange={handleQueryChange} />
+      {/* <div></div>
+              <strong>Search for a Location</strong>
+<div></div> */}
+      <input type="text" placeholder="Search for a Location" value={query} onChange={handleQueryChange} />
       <ul className="ultraelem"> 
         {filteredPeople.map((person) => (
           <li className="listelem" style={{display:"flex",flexWrap:"wrap"}} key={person.id}>
