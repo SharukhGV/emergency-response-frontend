@@ -2,7 +2,8 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 // import {Cloudinary} from "@cloudinary/url-gen";
-
+import dipperDefault from "../components/dipperDefault.png"
+import mountainsky from "../components/mountainsky.jpg"
   // const cld = new Cloudinary({cloud: {cloudName: 'damkrnln2'}});
 
 function NewForm({  accessToken, emergencyType, setLongitude, setLatitude, lat, lng, loginUsername }) {
@@ -97,7 +98,9 @@ function NewForm({  accessToken, emergencyType, setLongitude, setLatitude, lat, 
     event.preventDefault();
     addFindSpot(person);
   }
-
+  // function parseDATE(date){
+  //   return `${date.charAt(5)}${date.charAt(6)} / ${date.charAt(8)}${date.charAt(9)} / ${date.charAt(0)}${date.charAt(1)}${date.charAt(2)}${date.charAt(3)}`
+  //     }
 
     return (
       <div>{accessToken ?<div className="edit">
@@ -155,23 +158,45 @@ function NewForm({  accessToken, emergencyType, setLongitude, setLatitude, lat, 
             type="submit"
           />
         </form>
+
+
+
+
+<h3>Card Preview</h3>
+        <div style={{fontFamily:"Arial"}} className="card">
+      <img src={mountainsky} className="card__image" alt="" />
+      <div className="card__overlay">
+        <div className="card__header">
+          <svg className="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                     
+          <img className="card__thumb" src={dipperDefault} alt="" />
+          <div className="card__header-text">
+            <h5 style={{fontFamily:"Arial"}} >Location Nickname:</h5>
+            <h3 className="card__title">{person.full_name}</h3>            
+            <span style={{fontFamily:"Arial"}}  className="card__status">SOME DATE HERE</span>
+          </div>
+        </div><div style={{fontFamily:"Arial"}} >{person.skybrightness}</div>
+        <p style={{fontFamily:"Arial", fontSize:"10px"}}  className="card__description">{person.description}</p>
+        <div style={{fontSize:"15px", color:"blue"}} >View Page</div>
+       
+        <div></div>
+
+      </div>
+    </div> 
+
+
+
         <div
           style={{ marginTop: "20px", marginBottom: "20px" }}
           className="cardEmergency"
         >
-          <h3>{person.skybrightness}</h3>
-          <div>
-            Full Name: <strong>{person.full_name}</strong>
-          </div>
+         
           <div>
             Latitude: <span style={{ color: "beige" }}>{lat}</span>
           </div>
           <div>
             Longitude: <span style={{ color: "beige" }}>{lng}</span>
           </div>
-          <div>Description:</div>
-          <p style={{ color: "#373436" }}>{person.description}</p>
-        </div>
+          </div>
       </div>:<p>Please Log In to Continue</p>}</div>
     );
   };

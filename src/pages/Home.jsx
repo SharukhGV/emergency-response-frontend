@@ -93,13 +93,13 @@ Food & Water Shortage
                                                 close => (
                                                         <div className='modal'>
                                                                 <div className='content'>
-                                                                        <div style={{overflow:"auto", height: "50%", width: "70%", top: "0", left: "0", bottom: "0", right: "0",margin:"auto", border:"solid 7px"}} className="background-container">
+                                                                        <div style={{overflow:"auto", height: "50%", width: "70%", top: "0", left: "0", bottom: "0", right: "0",margin:"auto", border:"solid 7px", backgroundColor:"whitesmoke"}} className="background-container">
                                                                                
 
-                                                                                <strong><div style={{ backgroundColor: "black", color: "white" }} className="skydescription">0-10% Light Pollution:</div></strong>
-                                                                                <div style={{ backgroundColor: "black", color: "white" }}><strong >Sky Description:</strong></div>
+                                                                                <strong><div     className="skydescription">0-10% Light Pollution:</div></strong>
+                                                                                <div className="skydescription"><strong >Sky Description:</strong></div>
 
-                                                                                <div style={{ backgroundColor: "black", color: "white" }} className="skydescription">Click here if there is minimal light pollution and the sky appears exceptionally dark where the Milky Way is vividly visible, and thousands of stars are discernible. Click here if There are around 2,500 to 3,000 stars visible to the naked eye.</div>
+                                                                                <div className="skydescription">Click here if there is minimal light pollution and the sky appears exceptionally dark where the Milky Way is vividly visible, and thousands of stars are discernible. Click here if There are around 2,500 to 3,000 stars visible to the naked eye.</div>
 
 
                                                                                 <button style={{ backgroundColor: "Green", color: "white" }} id='natural2' value="0-10% Light Pollution" onClick={emergencySETTER}>Click to Go to Form</button>
@@ -108,7 +108,7 @@ Food & Water Shortage
                                                                                                 {() => close()}>
                                                                                                 Close
                                                                                         </button>
-                                                                                        <div style={{ backgroundColor: "black", color: "white" }} className="skydescription">Create a Posting to help others know whether the place you visited has a beautiful night sky or not. Describe your experience, the weather, etc.</div>
+                                                                                        <div  className="skydescription">Create a Posting to help others know whether the place you visited has a beautiful night sky or not. Describe your experience, the weather, etc.</div>
 
                                                                                 </div>
                                                                         </div>
@@ -130,10 +130,10 @@ Food & Water Shortage
                                                                 <div className='content'>
                                                                 <div style={{overflow:"auto", height: "50%", width: "70%", top: "0", left: "0", bottom: "0", right: "0",margin:"auto", border:"solid 7px"}} className="background-container">
                                                                                
-                                                                                <strong><div style={{ backgroundColor: "rgba(0,0,0, 0.70)", color: "white" }} className="skydescription">10-30% Light Pollution:</div></strong>
-                                                                                <div style={{ backgroundColor: "rgba(0,0,0, 0.70)", color: "white" }}><strong >Sky Description:</strong></div>
+                                                                                <strong><div className="skydescription">10-30% Light Pollution:</div></strong>
+                                                                                <div className="skydescription" ><strong >Sky Description:</strong></div>
 
-                                                                                <div style={{ backgroundColor: "rgba(0,0,0, 0.70)", color: "white" }} className="skydescription">Click here if light pollution affects the visibility of fainter stars, causing a visible glow near the horizon but major constellations and the Milky Way's core are still relatively clear.
+                                                                                <div className="skydescription">Click here if light pollution affects the visibility of fainter stars, causing a visible glow near the horizon but major constellations and the Milky Way's core are still relatively clear.
                                                                                         Click here if There are around roughly 1,000 to 2,000 stars visible to the naked eye.</div>
                                                                                 <button style={{ backgroundColor: "Green", color: "white" }} id='natural2' value="10-30% Light Pollution" onClick={emergencySETTER}>Click to Go to Form</button>
                                                                                 <div>
@@ -141,7 +141,7 @@ Food & Water Shortage
                                                                                                 {() => close()}>
                                                                                                 Close
                                                                                         </button>
-                                                                                        <div style={{ backgroundColor: "black", color: "white" }} className="skydescription">Create a Posting to help others know whether the place you visited has a beautiful night sky or not. Describe your experience, the weather, etc.</div>
+                                                                                        <div className="skydescription">Create a Posting to help others know whether the place you visited has a beautiful night sky or not. Describe your experience, the weather, etc.</div>
 
                                                                                 </div>
                                                                         </div></div></div>
@@ -166,10 +166,10 @@ Food & Water Shortage
                                                                 <div style={{overflow:"auto", height: "50%", width: "70%", top: "0", left: "0", bottom: "0", right: "0",margin:"auto", border:"solid 7px"}} className="background-container">
                                                                                
 
-                                                                                <strong><div style={{ backgroundColor: "rgb(58, 55, 50, 0.70)", color: "white" }} className="skydescription">30-50% Light Pollution:</div></strong>
-                                                                                <div style={{ backgroundColor: "rgb(58, 55, 50, 0.70)", color: "white" }}><strong style={{ backgroundColor: "rgb(58, 55, 50)", color: "white" }}>Sky Description:</strong></div>
+                                                                                <strong><div className="skydescription">30-50% Light Pollution:</div></strong>
+                                                                                <div className="skydescription"><strong  >Sky Description:</strong></div>
 
-                                                                                <div style={{ backgroundColor: "rgb(58, 55, 50, 0.70)", color: "white" }} className="skydescription">Click here if moderate light pollution dims the view of the Milky Way and fainter stars. Click here if only the brightest stars and major constellations are easily identifiable.
+                                                                                <div  className="skydescription">Click here if moderate light pollution dims the view of the Milky Way and fainter stars. Click here if only the brightest stars and major constellations are easily identifiable.
                                                                                         <div>Click here if There are around roughly 500 to 1,000 stars visible to the naked eye.</div></div>
                                                                                 <button style={{ backgroundColor: "Green", color: "white" }} id='natural2' value="30-50% Light Pollution" onClick={emergencySETTER}>Click to Go to Form</button>
                                                                                 <div>
@@ -178,7 +178,7 @@ Food & Water Shortage
                                                                                                 Close
                                                                                         </button>
 
-                                                                                        <div style={{ backgroundColor: "black", color: "white" }} className="skydescription">Create a Posting to help others know whether the place you visited has a beautiful night sky or not. Describe your experience, the weather, etc.</div>
+                                                                                        <div className="skydescription">Create a Posting to help others know whether the place you visited has a beautiful night sky or not. Describe your experience, the weather, etc.</div>
                                                                                 </div></div>
                                                                 </div></div>
                                                 )
@@ -202,17 +202,17 @@ Food & Water Shortage
                                                                 <div style={{overflow:"auto", height: "50%", width: "70%", top: "0", left: "0", bottom: "0", right: "0",margin:"auto", border:"solid 7px"}} className="background-container">
                                                                                
 
-                                                                                <strong><div style={{ backgroundColor: "rgb(85, 72, 43, 0.70)", color: "white" }} className="skydescription">50-70% Light Pollution:</div></strong>
-                                                                                <div style={{ backgroundColor: "rgb(85, 72, 43, 0.70)", color: "white" }}><strong >Sky Description:</strong></div>
+                                                                                <strong><div className="skydescription">50-70% Light Pollution:</div></strong>
+                                                                                <div className="skydescription"><strong >Sky Description:</strong></div>
 
-                                                                                <div style={{ backgroundColor: "rgb(85, 72, 43, 0.70)", color: "white" }} className="skydescription">Click here if Substantial light pollution obscures most of the Milky Way and dimmer stars, leaving only the brightest stars and planets visible. The sky appears significantly brightened, even at night.
+                                                                                <div  className="skydescription">Click here if Substantial light pollution obscures most of the Milky Way and dimmer stars, leaving only the brightest stars and planets visible. The sky appears significantly brightened, even at night.
                                                                                         Click here if there are 100 to 500 stars visible to the naked eye.</div>
                                                                                 <button style={{ backgroundColor: "Green", color: "white" }} id='natural2' value="50-70% Light Pollution" onClick={emergencySETTER}>Click to Go to Form</button>
                                                                                 <div>
                                                                                         <button style={{ backgroundColor: "white", color: "black" }} onClick=
                                                                                                 {() => close()}>
                                                                                                 Close
-                                                                                        </button><div style={{ backgroundColor: "black", color: "white" }} className="skydescription">Create a Posting to help others know whether the place you visited has a beautiful night sky or not. Describe your experience, the weather, etc.</div></div>
+                                                                                        </button><div className="skydescription">Create a Posting to help others know whether the place you visited has a beautiful night sky or not. Describe your experience, the weather, etc.</div></div>
                                                                         </div></div>
                                                         </div>
                                                 )
@@ -233,24 +233,19 @@ Food & Water Shortage
                                                                 <div className='content'>
                                                                 <div style={{overflow:"auto", height: "50%", width: "70%", top: "0", left: "0", bottom: "0", right: "0",margin:"auto", border:"solid 7px"}} className="background-container">
                                                                                
-                                                                                <div> </div>
-                                                                                <div> </div>
-                                                                                <div> </div>
-                                                                                <div> </div>
-                                                                                <strong><div style={{ backgroundColor: "rgb(119, 85, 10, 0.70)", color: "white" }} className="skydescription">70-100% Light Pollution:</div></strong><div></div>
-                                                                                <div></div>
-                                                                                <div></div>
-                                                                                <div></div>
-                                                                                <div style={{ backgroundColor: "rgb(119, 85, 10, 0.70)", color: "white" }}><strong >Sky Description:</strong></div>
+                                                                         
+                                                                                <strong><div className="skydescription">70-100% Light Pollution:</div></strong><div></div>
+                                                                             
+                                                                                <div className="skydescription"><strong >Sky Description:</strong></div>
 
-                                                                                <div style={{ backgroundColor: "rgba(119, 85, 10, 0.70)", color: "white" }} className="skydescription">Click here if the sky is heavily affected by light pollution, the sky is illuminated, making it challenging to distinguish individual stars or constellations. Click here if only the very brightest celestial objects, such as the Moon, planets, and a few prominent stars, are visible.
+                                                                                <div className="skydescription">Click here if the sky is heavily affected by light pollution, the sky is illuminated, making it challenging to distinguish individual stars or constellations. Click here if only the very brightest celestial objects, such as the Moon, planets, and a few prominent stars, are visible.
                                                                                         <div>If there are less than 100 stars visible to the naked eye or you are limited to seeing the brightest stars and planets, click here.</div></div>
                                                                                 <button style={{ backgroundColor: "Green", color: "white" }} id='natural2' value="70-100% Light Pollution" onClick={emergencySETTER}>Click to Go to Form</button>
                                                                                 <div>
                                                                                         <button style={{ backgroundColor: "white", color: "black" }} onClick=
                                                                                                 {() => close()}>
                                                                                                 Close
-                                                                                        </button><div style={{ backgroundColor: "black", color: "white" }} className="skydescription">Create a Posting to help others know whether the place you visited has a beautiful night sky or not. Describe your experience, the weather, etc.</div>
+                                                                                        </button><div className="skydescription">Create a Posting to help others know whether the place you visited has a beautiful night sky or not. Describe your experience, the weather, etc.</div>
                                                                                 </div></div></div>
                                                         </div>
                                                 )
