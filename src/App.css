@@ -601,7 +601,7 @@ body {
 .card__title {
   font-size: 1em;
   margin: 0 0 .3em;
-  color: #6A515E;
+  color: #3a1212;
 }
 
 .card__tagline {
@@ -609,18 +609,18 @@ body {
   margin: 1em 0;
   font-family: "MockFlowFont";  
   font-size: .8em; 
-  color: #D7BDCA;  
+  color: #3a1125;  
 }
 
 .card__status {
   font-size: .8em;
-  color: #D7BDCA;
+  color: #692547;
 }
 
 .card__description {
   padding: 0 2em 2em;
   margin: 0;
-  color: #D7BDCA;
+  color: #7e1a4c;
   font-family: "MockFlowFont";   
   display: -webkit-box;
   -webkit-box-orient: vertical;

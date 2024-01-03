@@ -13,26 +13,23 @@ const styleIndividual = {
 }
 // }
     function parseDATE(date){
-        // console.log(d.getUTCHours()); // Hours
-    
-        // console.log(d.getUTCSeconds());
     return `${date.charAt(5)}${date.charAt(6)} / ${date.charAt(8)}${date.charAt(9)} / ${date.charAt(0)}${date.charAt(1)}${date.charAt(2)}${date.charAt(3)}`
       }
     return(
 
-<div className="card">
+<div style={{fontFamily:"Arial"}} className="card">
       <img src={mountainsky} className="card__image" alt="" />
       <div className="card__overlay">
         <div className="card__header">
           <svg className="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                     
           <img className="card__thumb" src={dipperDefault} alt="" />
           <div className="card__header-text">
-            <h5>Location Nickname:</h5>
+            <h5 style={{fontFamily:"Arial"}} >Location Nickname:</h5>
             <h3 className="card__title">{person.full_name}</h3>            
-            <span className="card__status">{parseDATE(person.date)}</span>
+            <span style={{fontFamily:"Arial"}}  className="card__status">{parseDATE(person.date)}</span>
           </div>
-        </div><div>{person.skybrightness}</div>
-        <p className="card__description">{person.description}</p>
+        </div><div style={{fontFamily:"Arial"}} >{person.skybrightness}</div>
+        <p style={{fontFamily:"Arial", fontSize:"10px"}}  className="card__description">{person.description}</p>
         <Link style={{fontSize:"15px"}} to={`/index/${id}`}>View Page</Link>
        
         <div></div>

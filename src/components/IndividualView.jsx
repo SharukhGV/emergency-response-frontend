@@ -16,7 +16,12 @@ useEffect(() => {
   }, []);
 
 const storedValue = sessionStorage.getItem('username');
+function parseDATE(date){
+  // console.log(d.getUTCHours()); // Hours
 
+  // console.log(d.getUTCSeconds());
+return `${date.charAt(5)}${date.charAt(6)} / ${date.charAt(8)}${date.charAt(9)} / ${date.charAt(0)}${date.charAt(1)}${date.charAt(2)}${date.charAt(3)}`
+}
 return(
     
     <div>
@@ -24,7 +29,7 @@ return(
 <h2>{data.full_name}</h2>
 
 <p>Username: {data.username}</p>
-    <p>Date:</p>
+    {/* <p>Date:<span>{parseDATE(data.date)}</span></p> */}
 
 
 <table>

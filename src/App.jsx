@@ -60,12 +60,12 @@ export default function App() {
           <Route path="/form" element={<NewForm settoggleLOGIN={settoggleLOGIN} toggleLOGIN={toggleLOGIN} accessToken={accessToken} setAccessToken={setAccessToken} loginUsername={loginUsername} setLoginUsername={setLoginUsername} lat={lat} lng={lng} setLongitude={setLongitude} setLatitude={setLatitude} emergencyType={emergencyType} />} />
           {!!accessToken ?  <Route path="/index" element={<Index setAccessToken={setAccessToken} loginUsername={loginUsername} lat={lat} lng={lng} setLongitude={setLongitude} setLatitude={setLatitude} mapMarkers={mapMarkers} setMapMarkers={setMapMarkers} />} />:null}
           <Route path="/skydata" element={<SkyBrightness />} />
-          <Route path="/signup" element={<Register />} />
-          <Route path="/login" element={<Login settoggleLOGIN={settoggleLOGIN} toggleLOGIN={toggleLOGIN} accessToken={accessToken} setAccessToken={setAccessToken} loginUsername={loginUsername} setLoginUsername={setLoginUsername} />} />
+          {!accessToken ?  <Route path="/signup" element={<Register />} />:null}
+          {!accessToken ?  <Route path="/login" element={<Login settoggleLOGIN={settoggleLOGIN} toggleLOGIN={toggleLOGIN} accessToken={accessToken} setAccessToken={setAccessToken} loginUsername={loginUsername} setLoginUsername={setLoginUsername} />} />:null}
           <Route path="/termsconditions" element={<TermsConditions />} />
 {!!accessToken ?  <Route path="/profile" element={<Profile loginUsername={loginUsername} />} />:null}
-  <Route path="/index/:id" element={<IndividualView />}/>
-          <Route path="/index/:id/edit" element={<EditForm />}/>
+{!!accessToken ?   <Route path="/index/:id" element={<IndividualView />}/>:null}
+{!!accessToken ?   <Route path="/index/:id/edit" element={<EditForm />}/>:null}
 
           <Route path="/*" element={<NotFound />} />
 
