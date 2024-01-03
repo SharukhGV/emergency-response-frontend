@@ -18,6 +18,7 @@ import Profile from './pages/Profile';
 import NotFound from './pages/NotFound';
 import IndividualView from './components/IndividualView';
 import EditForm from './pages/EditForm';
+import PlanetsVisible from './pages/PlanetsVisible';
 
 // import Iron from '@hapi/iron'
 // import { MAX_AGE, setTokenCookie, getTokenCookie } from './auth-cookies'
@@ -66,6 +67,7 @@ export default function App() {
 {!!accessToken ?  <Route path="/profile" element={<Profile loginUsername={loginUsername} />} />:null}
 {!!accessToken ?   <Route path="/index/:id" element={<IndividualView />}/>:null}
 {!!accessToken ?   <Route path="/index/:id/edit" element={<EditForm />}/>:null}
+<Route path="/visibleplanets" element={<PlanetsVisible latitude={lat} longitude={lng} />}/>
 
           <Route path="/*" element={<NotFound />} />
 

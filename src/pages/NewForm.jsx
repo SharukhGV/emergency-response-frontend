@@ -12,6 +12,7 @@ function NewForm({  accessToken, emergencyType, setLongitude, setLatitude, lat, 
   // const [lat, setLatitude] = useState(0);
   // const [lng, setLongitude] = useState(0);
   // const [data, setData] = useState([])
+  
     const navigate=useNavigate()
     const [person, setPerson] = useState({
       full_name: "",

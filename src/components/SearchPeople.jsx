@@ -4,7 +4,8 @@ import axios from "axios";
 import { v4 as uuidv4 } from 'uuid';
 import markerImage from "./markerImage.png"
 import Individual from "./Individual";
-
+// import solarsystem from "../pages/solarsystem.png"
+import { useNavigate } from "react-router-dom";
 export default function SearchPeople({loginUsername, setMapMarkers, emergencyType, setLongitude, setLatitude, lat, lng }) {
   const [data, setData] = useState([])
 useEffect(() => {
@@ -42,9 +43,10 @@ sessionStorage.setItem('username', loginUsername);
 
   return (
     <div>
-      <div>
+      {/* <div>
+        <img onClick={planetsvis} style={{width:"100px"}} src={solarsystem}></img>
         <strong>Search for a Location</strong>
-      </div>
+      </div> */}
       <input type="text" value={query} onChange={handleQueryChange} />
       <ul className="ultraelem"> 
         {filteredPeople.map((person) => (

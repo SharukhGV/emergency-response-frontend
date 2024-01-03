@@ -9,7 +9,9 @@ import 'reactjs-popup/dist/index.css';
 import hiveheavenLOGO from "./hiveheavenLOGO.png"
 import constellationlogo from "./constellationlogo.png"
 import constellationlogoCOLOR from "./constellationlogoCOLOR.png"
-import { auto } from "@cloudinary/url-gen/qualifiers/quality";
+import { auto } from "@cloudinary/url-gen/qualifiers/quality";                        
+import solarsystem from "../pages/solarsystem.png"
+
 export default function Home({ setEmergencyType, loginUsername, accessToken }) {
         const navigate = useNavigate(); // Initialize the navigation function
         const [toggle1, setToggle1] = useState(false);
@@ -70,16 +72,25 @@ export default function Home({ setEmergencyType, loginUsername, accessToken }) {
         //         setToggle5(true)
         // }
 
+        // const navigate= useNavigate()
 
+        function planetsvis(){
+          navigate("/visibleplanets")
+        }
 
         return (
                 <div style={{ width: '100%', height: '100%' }}>
                         <div></div>
                         {toggleConst ? <img onClick={clickConstellation} style={{ maxWidth: "300px" }} src={hiveheavenLOGO} alt="Logo"></img> :toggleConst2 ?<img onClick={clickConstellation2} style={{ maxWidth: "300px" }} src={constellationlogo} alt="Logo"></img>: <img onClick={clickConstellation} style={{ maxWidth: "300px" }} src={constellationlogoCOLOR} alt="Logo"></img>}
-                        <h2>Night Sky Finder</h2>
+                        {/* <h2>Night Sky Finder</h2> */}
                         <h3>{!!loginUsername ? "Welcome" : null}</h3>
                         <h3>{loginUsername}</h3>
                         {/* <p>TESTING: {!accessToken? <span>"no Token, not logged in"</span> : <span>`${accessToken}`</span>}</p> */}
+
+<div>
+  <img onClick={planetsvis} style={{width:"200px"}} src={solarsystem}></img>
+  <div></div>
+</div>
                         <p>A community driven app to report dark skies for others to be aware of for future enjoyment</p>
                         <p>Click one of the Buttons Below to Create a Post.</p>
                         {/* <div id='natural6' value="Food & Water Shortage" onClick={emergencySETTER}>
