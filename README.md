@@ -1,19 +1,27 @@
-# Find Spot
-## Emergency Bulletin Application
+# Hive of Heaven
+## Community Night Sky Finder
 
-An application to help those in dire need, where their phone might by at 1%
+A community powered app where users may
+create a post on light-polluted areas or dark skies
+with geolocation tags. This is so others can be
+better informed if travelling to see the beauty of
+the night sky. Almost 80% of the world's
+populations cannot see the Milky Way band, and
+such beauty being hidden is truly a catastrophe!
 
-They can fill out the location capturing form and then submit their data, and their location will be public to everyone, so that those nearby or who are first responders can help in their plight.
+
+Future Features include File Upload, comments on
+posts, Planets API checklist, and upvoting posts.
 
 ## Home Page of App
 
 ![Screen of App Image](./screen1.png)
 
-## Map and Persons Index Page
+## Map Index Page
 
 
 ![Screen of App Image](./screen2.png)
 
 
-Here is the Link to the Site: [Find Spot](https://findspot.dev/)
+Here is the Link to the Site: [Hive of Heaven](https://hiveheaven.pro/)
 
