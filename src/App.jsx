@@ -63,6 +63,8 @@ export default function App() {
           <Route path="/skydata" element={<SkyBrightness />} />
           {!accessToken ?  <Route path="/signup" element={<Register />} />:null}
           {!accessToken ?  <Route path="/login" element={<Login settoggleLOGIN={settoggleLOGIN} toggleLOGIN={toggleLOGIN} accessToken={accessToken} setAccessToken={setAccessToken} loginUsername={loginUsername} setLoginUsername={setLoginUsername} />} />:null}
+          <Route path="/about" element={<About />} />
+
           <Route path="/termsconditions" element={<TermsConditions />} />
 {!!accessToken ?  <Route path="/profile" element={<Profile loginUsername={loginUsername} />} />:null}
 {!!accessToken ?   <Route path="/index/:id" element={<IndividualView />}/>:null}

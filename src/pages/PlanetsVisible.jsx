@@ -51,8 +51,8 @@ function PlanetsVisible() {
         <div>
 
 <h1 style={{color:"purple"}}>Current Visible Planets</h1>
-<h3 style={{color:"yellowgreen"}}>Latitude:{latitude}</h3>
-<h3 style={{color:"yellowgreen"}}>Longitude{longitude}</h3>
+<h3 style={{color:"yellowgreen"}}>Latitude: {latitude}</h3>
+<h3 style={{color:"yellowgreen"}}>Longitude: {longitude}</h3>
              {planets.map((planet, index)=>{
             return(
             <Planet key={index} planet={planet} />

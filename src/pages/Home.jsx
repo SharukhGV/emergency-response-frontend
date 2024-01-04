@@ -1,5 +1,5 @@
 // import { useState } from "react"
-import { useNavigate } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 // import Locationdiv from "../components/LocationCapture";
 import { useState } from "react";
 // import FindSpot from "./FindSpot.png"
@@ -91,7 +91,7 @@ export default function Home({ setEmergencyType, loginUsername, accessToken }) {
   <img onClick={planetsvis} style={{width:"200px"}} src={solarsystem}></img>
   <div></div>
 </div>
-                        <p>A community driven app to report dark skies for others to be aware of for future enjoyment</p>
+                        <p>Visit <Link to="/about">About</Link> Page to Learn More About this App</p>
                         <p>Click one of the Buttons Below to Create a Post.</p>
                         {/* <div id='natural6' value="Food & Water Shortage" onClick={emergencySETTER}>
 Food & Water Shortage
