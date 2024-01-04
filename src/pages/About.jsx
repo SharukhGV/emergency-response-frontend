@@ -1,6 +1,6 @@
 import "./about.css"
 import sharukh from "./sharukhPro.png"
-import hiveheavenLOGO from "./hiveHeavenLOGO.png"
+// import hiveheavenLOGO from "./hiveHeavenLOGO.png"
 import loqationIQLOGO from "./loqationIQLOGO.png"
 import VisiblePlanetsAPILOGO from "./VisiblePlanetsAPILOGO.png"
 import googlemapsAPI from "./googlemapsAPI.png"
