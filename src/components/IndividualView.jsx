@@ -5,8 +5,29 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 function IndividualView({}){
     const [data, setData] = useState([])
+    const [locationIQ, setLocationIQ] = useState({})
 
 const {id} = useParams()
+
+
+
+
+useEffect(() => {
+  if (!!data.latitude) {
+    axios
+      .get(`https://us1.locationiq.com/v1/reverse?key=${import.meta.env.VITE_REVERSE_GEOCODING_API_KEY}&lat=${data.latitude}&lon=${data.longitude}&format=json`)
+      .then((response) => {
+        setLocationIQ(response.data);
+        console.log(response.data); // Log data inside the .then() block
+      })
+      .catch((error) => console.error("Error:", error));
+  }
+}, [data.latitude, data.longitude]); // Ensure useEffect runs when latitude or longitude changes
+
+
+
+
+
 
 useEffect(() => {
     axios
@@ -48,6 +69,12 @@ return(
   <tr>
     <td>Description</td>
     <td>{data.description}</td>
+  </tr>
+
+  <tr>
+
+    <td>Address</td>
+    <td>{!!locationIQ.display_name ? <span>{locationIQ.display_name}</span> : "No Location Data"}</td>
   </tr>
 
 </table>
