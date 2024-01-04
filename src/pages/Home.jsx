@@ -104,7 +104,7 @@ Food & Water Shortage
                                                 close => (
                                                         <div className='modal'>
                                                                 <div className='content'>
-                                                                        <div style={{overflow:"auto", height: "50%", width: "70%", top: "0", left: "0", bottom: "0", right: "0",margin:"auto", border:"solid 7px", backgroundColor:"whitesmoke"}} className="background-container">
+                                                                        <div style={{overflow:"auto", height: "50%", width: "70%", top: "0", left: "0", bottom: "0", right: "0",margin:"auto", backgroundColor:"whitesmoke"}} className="background-container">
                                                                                
 
                                                                                 <strong><div     className="skydescription">0-10% Light Pollution:</div></strong>
@@ -139,7 +139,7 @@ Food & Water Shortage
                                                 close => (
                                                         <div className='modal'>
                                                                 <div className='content'>
-                                                                <div style={{overflow:"auto", height: "50%", width: "70%", top: "0", left: "0", bottom: "0", right: "0",margin:"auto", border:"solid 7px"}} className="background-container">
+                                                                <div style={{overflow:"auto", height: "50%", width: "70%", top: "0", left: "0", bottom: "0", right: "0",margin:"auto"}} className="background-container">
                                                                                
                                                                                 <strong><div className="skydescription">10-30% Light Pollution:</div></strong>
                                                                                 <div className="skydescription" ><strong >Sky Description:</strong></div>
@@ -174,7 +174,7 @@ Food & Water Shortage
                                                 close => (
                                                         <div className='modal'>
                                                                 <div className='content'>
-                                                                <div style={{overflow:"auto", height: "50%", width: "70%", top: "0", left: "0", bottom: "0", right: "0",margin:"auto", border:"solid 7px"}} className="background-container">
+                                                                <div style={{overflow:"auto", height: "50%", width: "70%", top: "0", left: "0", bottom: "0", right: "0",margin:"auto"}} className="background-container">
                                                                                
 
                                                                                 <strong><div className="skydescription">30-50% Light Pollution:</div></strong>
@@ -210,7 +210,7 @@ Food & Water Shortage
                                                 close => (
                                                         <div className='modal'>
                                                                 <div className='content'>
-                                                                <div style={{overflow:"auto", height: "50%", width: "70%", top: "0", left: "0", bottom: "0", right: "0",margin:"auto", border:"solid 7px"}} className="background-container">
+                                                                <div style={{overflow:"auto", height: "50%", width: "70%", top: "0", left: "0", bottom: "0", right: "0",margin:"auto"}} className="background-container">
                                                                                
 
                                                                                 <strong><div className="skydescription">50-70% Light Pollution:</div></strong>
@@ -242,7 +242,7 @@ Food & Water Shortage
                                                 close => (
                                                         <div className='modal'>
                                                                 <div className='content'>
-                                                                <div style={{overflow:"auto", height: "50%", width: "70%", top: "0", left: "0", bottom: "0", right: "0",margin:"auto", border:"solid 7px"}} className="background-container">
+                                                                <div style={{overflow:"auto", height: "50%", width: "70%", top: "0", left: "0", bottom: "0", right: "0",margin:"auto"}} className="background-container">
                                                                                
                                                                          
                                                                                 <strong><div className="skydescription">70-100% Light Pollution:</div></strong><div></div>
