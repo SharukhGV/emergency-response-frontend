@@ -15,13 +15,11 @@ function Individual({ loginUsername, id, person }) {
         .get(`https://us1.locationiq.com/v1/reverse?key=${import.meta.env.VITE_REVERSE_GEOCODING_API_KEY}&lat=${person.latitude}&lon=${person.longitude}&format=json`)
         .then((response) => {
           setData(response.data);
-          console.log(response.data); // Log data inside the .then() block
+          console.log(response.data); 
         })
         .catch((error) => console.error("Error:", error));
     }
-  }, [person.latitude, person.longitude]); // Ensure useEffect runs when latitude or longitude changes
-
-
+  }, [person.latitude, person.longitude]); 
   const styleIndividual = {
     color: "white",
     backgroundColor: "rgba(152,160,255,50)"

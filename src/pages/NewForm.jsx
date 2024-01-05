@@ -117,7 +117,7 @@ function NewForm({  accessToken, emergencyType, setLongitude, setLatitude, lat, 
             value={person.full_name.replace(/[^a-z]/gi, ' ')}
             type="text"
             onChange={handleTextChange}
-            placeholder="Your Name..."
+            placeholder="Place Nickname..."
             required
           />
               {/* <input

@@ -123,7 +123,7 @@ function EditForm({  accessToken, emergencyType, setLongitude, setLatitude, lat,
             value={person.full_name}
             type="text"
             onChange={handleTextChange}
-            placeholder="Your Name..."
+            placeholder="Place Name..."
             required
           />
               {/* <input
