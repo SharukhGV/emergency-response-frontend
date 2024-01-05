@@ -11,6 +11,7 @@ import constellationlogo from "./constellationlogo.png"
 import constellationlogoCOLOR from "./constellationlogoCOLOR.png"
 import { auto } from "@cloudinary/url-gen/qualifiers/quality";                        
 import solarsystem from "../pages/solarsystem.png"
+import letter from "./letter.png"
 
 export default function Home({ setEmergencyType, loginUsername, accessToken }) {
         const navigate = useNavigate(); // Initialize the navigation function
@@ -91,7 +92,7 @@ export default function Home({ setEmergencyType, loginUsername, accessToken }) {
   <img onClick={planetsvis} style={{width:"200px"}} src={solarsystem}></img>
   <div></div>
 </div>
-                        <p>Visit <Link to="/about">About</Link> Page to Learn More About this App</p>
+                        <p><Link to="/about"><img style={{width:"75px"}} src={letter}></img></Link></p>
                         <p>Click one of the Buttons Below to Create a Post.</p>
                         {/* <div id='natural6' value="Food & Water Shortage" onClick={emergencySETTER}>
 Food & Water Shortage
