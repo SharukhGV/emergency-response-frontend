@@ -4,7 +4,7 @@ import sharukh from "./sharukhPro.png"
 import loqationIQLOGO from "./loqationIQLOGO.png"
 import VisiblePlanetsAPILOGO from "./VisiblePlanetsAPILOGO.png"
 import googlemapsAPI from "./googlemapsAPI.png"
-
+import community from "./community.png"
 export default function About(){
 
 
@@ -13,6 +13,8 @@ return(
 <div> 
 <h1 style={{color:"orange"}}>Hive of Heaven</h1>
 <h2 style={{color:"purple"}}>Community Night Sky Finder</h2>
+
+<img style={{width:"300px"}} src={community}></img>
 {/* <div style={{backgroundColor:"#FFFDDF", padding:"30px", borderRadius:"20px"}}> */}
 <h4 style={{margin:"50px"}}>A community powered app where users may create a post on light-polluted areas or dark skies with geolocation tags. This is so others can be better informed if travelling to see the beauty of the night sky. </h4>
 
