@@ -32,7 +32,7 @@ function Login({ setLoginUsername, loginUsername,toggleLOGIN,settoggleLOGIN, set
     const handleSubmit = (event) => {
         event.preventDefault();
         loginUser(personUser);
-        navigate("/");
+        navigate("/loading");
 
     }
 

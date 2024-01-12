@@ -37,8 +37,8 @@ const newUser = (user) =>{axios
     console.log(response.data);
 
     setTimeout(() => {
-      navigate("/");
-    }, 3000);  })
+      navigate("/pleaselogin");
+    }, 1000);  })
   .catch((e) => console.error("catch", e));
 
 }

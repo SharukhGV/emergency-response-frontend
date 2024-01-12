@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 // import {Cloudinary} from "@cloudinary/url-gen";
 import { useParams } from "react-router-dom";
   // const cld = new Cloudinary({cloud: {cloudName: 'damkrnln2'}});
-
+import { Link } from "react-router-dom";
 function EditForm({  accessToken, emergencyType, setLongitude, setLatitude, lat, lng, loginUsername }) {
   // const [location, setLocation] = useState(null);
   // const [locationFound, setLocationFound] = useState(false);
@@ -182,6 +182,9 @@ function EditForm({  accessToken, emergencyType, setLongitude, setLatitude, lat,
           <div>Description:</div>
           <p style={{ color: "#373436" }}>{person.description}</p>
         </div>
+
+        <div><Link to={`/index/${id}`}><button>Back</button></Link></div>
+
       </div>
     );
   };

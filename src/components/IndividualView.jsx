@@ -3,6 +3,7 @@ import { useState } from "react";
 import { useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 function IndividualView({}){
     const [data, setData] = useState([])
     const [locationIQ, setLocationIQ] = useState({})
@@ -26,7 +27,7 @@ useEffect(() => {
 
 
 
-
+const navigate= useNavigate()
 
 
 useEffect(() => {
@@ -35,6 +36,20 @@ useEffect(() => {
       .then((response) => setData(response.data))
       .catch((e) => console.error("catch", e));
   }, []);
+
+
+  const deleteItem = (username, id) => {
+    axios
+      .delete(`${import.meta.env.VITE_BACKEND_API}/findspots/${id}`, { data: { username } })
+      .then((response) => navigate("/index"))
+      .catch((e) => console.error("catch", e));
+  };
+  
+
+
+  function deletePost() {
+    deleteItem(data.username, id);
+  }
 
 const storedValue = sessionStorage.getItem('username');
 function parseDATE(date){
@@ -78,9 +93,10 @@ return(
   </tr>
 
 </table>
-<div>{data.username === storedValue?<Link style={{fontSize:"15px"}} to={`/index/${id}/edit`}>Edit Page</Link>:null}</div>
-
-
+<div>{data.username === storedValue ?<Link style={{fontSize:"15px"}} to={`/index/${id}/edit`}><button style={{backgroundColor:"orange"}}>Edit Page</button></Link>:null}</div>
+<div>{data.username === storedValue ? <button style={{backgroundColor:"red"}} onClick={deletePost}>Delete Post</button> : null}</div>
+<div><Link to="/index"><button>Back</button></Link></div>
+<br></br>
 <div>{!!data.image_url ? data.image_url : null}</div>
 
 {/* 

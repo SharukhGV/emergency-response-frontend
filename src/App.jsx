@@ -19,6 +19,8 @@ import NotFound from './pages/NotFound';
 import IndividualView from './components/IndividualView';
 import EditForm from './pages/EditForm';
 import PlanetsVisible from './pages/PlanetsVisible';
+import Loading from './pages/Loading';
+import PleaseLogin from './pages/PleaseLogin';
 
 // import Iron from '@hapi/iron'
 // import { MAX_AGE, setTokenCookie, getTokenCookie } from './auth-cookies'
@@ -64,6 +66,8 @@ export default function App() {
           {!accessToken ?  <Route path="/signup" element={<Register />} />:null}
           {!accessToken ?  <Route path="/login" element={<Login settoggleLOGIN={settoggleLOGIN} toggleLOGIN={toggleLOGIN} accessToken={accessToken} setAccessToken={setAccessToken} loginUsername={loginUsername} setLoginUsername={setLoginUsername} />} />:null}
           <Route path="/about" element={<About />} />
+          <Route path="/loading" element={<Loading accessToken={accessToken}/>} />
+          <Route path="/pleaselogin" element={<PleaseLogin accessToken={accessToken}/>} />
 
           <Route path="/termsconditions" element={<TermsConditions />} />
 {!!accessToken ?  <Route path="/profile" element={<Profile loginUsername={loginUsername} />} />:null}
