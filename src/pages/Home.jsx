@@ -75,9 +75,10 @@ export default function Home({ setEmergencyType, loginUsername, accessToken }) {
 
         // const navigate= useNavigate()
 
-        function planetsvis(){
-          navigate("/visibleplanets")
-        }
+        // COMMENTED OUT VISIBLE PLANETS ROUTE FOR LATER USE
+        // function planetsvis(){
+        //   navigate("/visibleplanets")
+        // }
 
         return (
                 <div style={{ width: '100%', height: '100%' }}>
@@ -87,12 +88,12 @@ export default function Home({ setEmergencyType, loginUsername, accessToken }) {
                         <h3>{!!loginUsername ? "Welcome" : null}</h3>
                         <h3>{loginUsername}</h3>
                         {/* <p>TESTING: {!accessToken? <span>"no Token, not logged in"</span> : <span>`${accessToken}`</span>}</p> */}
-
-<div>
+{/* CODE WILL DIRECT USER TO VISIBLE PLANETS ROUTE */}
+{/* <div>
   <img onClick={planetsvis} style={{width:"200px"}} src={solarsystem}></img>
   <div></div>
-</div>
-                        <p><Link to="/about"><img style={{width:"180px"}} src={astronaut}></img></Link></p>
+</div> */}
+                       {!loginUsername ?<p><Link to="/about"><img style={{width:"180px"}} src={astronaut}></img></Link></p>:null}
                         <p>Click one of the Buttons Below to Create a Post.</p>
                         {/* <div id='natural6' value="Food & Water Shortage" onClick={emergencySETTER}>
 Food & Water Shortage

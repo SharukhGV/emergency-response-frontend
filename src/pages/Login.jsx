@@ -3,6 +3,7 @@ import { Link } from "react-router-dom"
 import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+// import hiveLOGO from "./hiveLOGO.gif"
 function Login({ setLoginUsername, loginUsername,toggleLOGIN,settoggleLOGIN, setAccessToken, accessToken }) {
     const [personUser, setPersonUser] = useState({
         username: "",
@@ -40,6 +41,8 @@ function Login({ setLoginUsername, loginUsername,toggleLOGIN,settoggleLOGIN, set
     return (
         <> <h1>Login</h1>
             <p>Please fill in this form to Login to an account.</p>
+{/* <div><img style={{width:"300px"}} src={hiveLOGO}></img></div> */}
+
             <form onSubmit={handleSubmit} method="post" style={{ margin: "auto" }}>
                 <div className="container">
 

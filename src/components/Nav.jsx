@@ -1,39 +1,25 @@
 import { Link } from "react-router-dom";
 import Logout from "./Logout";
+import Menu from "../Menu";
 export default function Nav({loginUsername, toggleLOGIN,settoggleLOGIN, accessToken}) {
     return(
-  <ul>
-    <li>
-      <Link to="/">🏡</Link>
-    </li>
-  
+  <div style={{backgroundColor:"black", paddingBottom:"15px",paddingTop:"10px"}}>
+    {/* <span style={{backgroundColor:"black", paddingTop:"10px", paddingRight:"100%"}}></span> */}
 
+      <span>{!!toggleLOGIN ? <Logout toggleLOGIN={toggleLOGIN} settoggleLOGIN={settoggleLOGIN} loginUsername={loginUsername}/> :null}</span>
 
-    <li>
-    {!!toggleLOGIN ?  <Link to="/index">🌍</Link>:null}
-    </li>
+  {!!toggleLOGIN ? <Menu />:null}
+ 
+  {!toggleLOGIN ?<Link to="/">🏡</Link>:null}
+  {!toggleLOGIN ? <span style={{paddingLeft:"7px",paddingRight:"7px"}}></span>:null}
 
-    {/* <li>
-    {!toggleLOGIN ? <Link to="/skydata">🌃</Link>:null}
-    </li> */}
+     {!toggleLOGIN ? <span>
+   <Link to="/signup">📃</Link>
+    </span>:null}
+    {!toggleLOGIN ?<span style={{paddingLeft:"7px",paddingRight:"7px"}}></span>:null}
+   {!toggleLOGIN ?  <span>
+     <Link to="/login">💻</Link>
+    </span>:null}
 
-    <li>
-    {!toggleLOGIN ? <Link to="/signup">📃</Link>:null}
-    </li>
-
-    <li>
-    {!toggleLOGIN ?  <Link to="/login">💻</Link>:null}
-    </li>
-
-    
-    <li>
-    {!!toggleLOGIN ? <Link to="/profile">👨🏼‍🚀</Link> : null}
-    </li>
-
-    {!!toggleLOGIN ? <Logout toggleLOGIN={toggleLOGIN} settoggleLOGIN={settoggleLOGIN} loginUsername={loginUsername}/> :null}
-
-    {/* <li>
-      <Link to="/about">👨🏼‍🚀</Link>
-    </li> */}
-  </ul>)
+  </div>)
 }

@@ -1,0 +1,55 @@
+{
+    "meteorShowers": [
+      {
+        "name": "Quadrantids",
+        "date": "January 1-5",
+        "frequency": "Active annually, peak around January 3"
+      },
+      {
+        "name": "Lyrids",
+        "date": "April 16-25",
+        "frequency": "Active annually, peak around April 22"
+      },
+      {
+        "name": "Eta Aquarids",
+        "date": "April 19 - May 28",
+        "frequency": "Active annually, peak around May 6"
+      },
+      {
+        "name": "Perseids",
+        "date": "July 17 - August 26",
+        "frequency": "Active annually, peak around August 12"
+      },
+      {
+        "name": "Draconids",
+        "date": "October 6-10",
+        "frequency": "Active annually, variable intensity, occasional meteor storms"
+      },
+      {
+        "name": "Orionids",
+        "date": "October 2 - November 7",
+        "frequency": "Active annually, peak around October 21"
+      },
+      {
+        "name": "Taurids",
+        "date": "October 20 - December 10",
+        "frequency": "Active annually, separate branches for Northern and Southern Taurids, peaks in late October and early November"
+      },
+      {
+        "name": "Leonids",
+        "date": "November 6-30",
+        "frequency": "Active annually, peak around November 17-18, periodic meteor storms"
+      },
+      {
+        "name": "Geminids",
+        "date": "December 4-17",
+        "frequency": "Active annually, peak around December 13-14, one of the most reliable meteor showers"
+      },
+      {
+        "name": "Ursids",
+        "date": "December 17-26",
+        "frequency": "Active annually, peak around December 21-22"
+      }
+    ]
+  }
+  
