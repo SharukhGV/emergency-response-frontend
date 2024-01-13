@@ -9,10 +9,15 @@ function Menu({ toggleLOGIN }) {
         <span style={{ margin: "0px", padding: "0px" }} role="navigation">
             <span id="menuToggle">
 
-                <input type="checkbox" />
+                <input style={{width:"30px",height:"70px"}} type="checkbox" />
 
                 <span></span>
-            
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+
                 <span></span>
                 <span></span>
 
