@@ -49,11 +49,13 @@ function Login({ setLoginUsername, loginUsername,toggleLOGIN,settoggleLOGIN, set
                     <div>
                         <div></div>
                         <label htmlFor="username"><b>Email</b></label>
+                        <br></br>
                         <input type="email" value={personUser.username} onChange={handleTextChange}
 
                             placeholder="Enter Email" name="username" id="username" required></input>
 
                         <label htmlFor="hashed_password"><b>Password</b></label>
+                        <br></br>
                         <input type="password" value={personUser.hashed_password} placeholder="Enter Password" name="hashed_password" id="hashed_password" onChange={handleTextChange}
                             required></input>
 
