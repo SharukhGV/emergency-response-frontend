@@ -94,12 +94,15 @@ const newUser = (user) =>{axios
         <div className="container">
 
           <div></div>
+          <br></br>
           <label htmlFor="username"><b>Email</b></label>
+          <br></br>
           <input type="email" value={personUser.username} onChange={handleTextChange}
 
             placeholder="Enter Email" name="username" id="username" required></input>
-
+<br></br>
           <label htmlFor="hashed_password"><b>Password</b></label>
+          <br></br>
           <input type="password" value={personUser.hashed_password} placeholder="Enter Password" name="hashed_password" id="hashed_password" minLength="7" onChange={handleTextChange}
             required></input>
 

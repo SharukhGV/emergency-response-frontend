@@ -53,6 +53,7 @@ function Login({ setLoginUsername, loginUsername,toggleLOGIN,settoggleLOGIN, set
                         <input type="email" value={personUser.username} onChange={handleTextChange}
 
                             placeholder="Enter Email" name="username" id="username" required></input>
+                        <br></br>
 
                         <label htmlFor="hashed_password"><b>Password</b></label>
                         <br></br>
