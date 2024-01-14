@@ -11,15 +11,11 @@ function Menu({ toggleLOGIN }) {
 
                 <input style={{width:"30px",height:"70px"}} type="checkbox" />
 
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-
-                <span></span>
-                <span></span>
+         
+                {/* <span></span> */}
+<br></br>
+           <span style={{color:"orange"}}><strong>Menu</strong></span>
+                {/* <span></span> */}
 
                 <div className="ul" id="menu">
                     <a ><div className="li"><Link to="/">🏡 Home</Link>

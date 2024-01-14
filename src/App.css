@@ -739,7 +739,7 @@ footer {
   margin-bottom: 5px;
   position: relative;
   
-  background: #cdcdcd;
+  background: #cdcdcd00;
   border-radius: 3px;
   
   z-index: 1;
@@ -769,7 +769,7 @@ footer {
 {
   opacity: 1;
   transform: rotate(45deg) translate(-2px, -1px);
-  background: #232323;
+  background: #23232305;
 }
 
 #menu
