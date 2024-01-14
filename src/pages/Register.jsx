@@ -111,7 +111,10 @@ const newUser = (user) =>{axios
 <div></div>
 
           <label htmlFor="hashed_password-repeat"><b>Repeat Password</b></label>
+          <div></div>
+
           <input type="password" placeholder="Repeat Password" minLength="7" name="hashed_password-repeat" id="hashed_password-repeat" value={secPW.secpass} onChange={handleTextChange2} required></input>
+          <div></div>
 
           <p>By creating an account you agree to our  <Link to="/termsconditions">Terms & Privacy</Link>.</p>
 
