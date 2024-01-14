@@ -22,6 +22,8 @@ function Menu({ toggleLOGIN }) {
                     </div></a>
                     <a>< div className="li"><Link to="/index">🌍Community Page</Link>
                     </div></a>
+                    <a >< div className="li"><Link to="/meteorshowers">☄️ Meteor Showers</Link> </div></a>
+
                     <a >< div className="li">< Link to="/visibleplanets">🔭Visible Planets</Link></div></a>
                     <a >< div className="li"><Link to="/about">🏢 About</Link></div></a>
                     <a >< div className="li"><Link to="/profile">👨🏼‍🚀 Profile</Link> </div></a>

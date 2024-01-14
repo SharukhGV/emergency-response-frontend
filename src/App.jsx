@@ -21,6 +21,7 @@ import EditForm from './pages/EditForm';
 import PlanetsVisible from './pages/PlanetsVisible';
 import Loading from './pages/Loading';
 import PleaseLogin from './pages/PleaseLogin';
+import MeteorShowers from './pages/MeteorShowers';
 
 // import Iron from '@hapi/iron'
 // import { MAX_AGE, setTokenCookie, getTokenCookie } from './auth-cookies'
@@ -68,6 +69,7 @@ export default function App() {
           <Route path="/about" element={<About />} />
           <Route path="/loading" element={<Loading accessToken={accessToken}/>} />
           <Route path="/pleaselogin" element={<PleaseLogin accessToken={accessToken}/>} />
+          {!!accessToken ?    <Route path="/meteorshowers" element={<MeteorShowers accessToken={accessToken}/>} />:null}
 
           <Route path="/termsconditions" element={<TermsConditions />} />
 {!!accessToken ?  <Route path="/profile" element={<Profile loginUsername={loginUsername} />} />:null}
