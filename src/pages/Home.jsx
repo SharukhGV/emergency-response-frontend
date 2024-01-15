@@ -164,10 +164,10 @@ Food & Water Shortage
 
  <p>Around 2,000 to 3,000 stars are discernible to the naked eye, creating a breathtaking and immersive celestial panorama.</p>
 
-<p>If your Sky appears this way, Click "Go to Form."</p>
+<p>If your Sky appears this way, Click "Entry."</p>
 		</section>
 		<footer className="modal-container-footer">
-			 <button  className="button is-ghost" style={{ backgroundColor: "Green", color: "white" }} id='natural2' value="Low Light Pollution" onClick={emergencySETTER}>Click to Go to Form</button>
+			 <button  className="button is-ghost" style={{ backgroundColor: "Green", color: "white" }} id='natural2' value="Low Light Pollution" onClick={emergencySETTER}>Entry</button>
 			<button onClick={modal1Click} className="button is-primary">Close</button>
 		</footer>
 	</article>
@@ -199,10 +199,10 @@ Food & Water Shortage
 
  <p>Roughly 500 to 2,000 stars are visible to the naked eye, offering a compromised but still engaging astronomical experience..</p>
 
-<p>If your Sky appears this way, Click "Go to Form."</p>
+<p>If your Sky appears this way, Click "Entry."</p>
 		</section>
 		<footer className="modal-container-footer">
-			 <button  className="button is-ghost" style={{ backgroundColor: "Green", color: "white" }} id='natural2' value="Moderate Light Pollution" onClick={emergencySETTER}>Click to Go to Form</button>
+			 <button  className="button is-ghost" style={{ backgroundColor: "Green", color: "white" }} id='natural2' value="Moderate Light Pollution" onClick={emergencySETTER}>Entry</button>
 			<button onClick={modal2Click} className="button is-primary">Close</button>
 		</footer>
 	</article>
@@ -235,10 +235,10 @@ Food & Water Shortage
 
  <p>Less than 500 stars are visible to the naked eye, with the majority being the brightest and most prominent celestial bodies. The sky is noticeably brighter, and the cosmic landscape is significantly muted.</p>
 
-<p>If your Sky appears this way, Click "Go to Form."</p>
+<p>If your Sky appears this way, Click "Entry."</p>
 		</section>
 		<footer className="modal-container-footer">
-			 <button  className="button is-ghost" style={{ backgroundColor: "Green", color: "white" }} id='natural2' value="High Light Pollution" onClick={emergencySETTER}>Click to Go to Form</button>
+			 <button  className="button is-ghost" style={{ backgroundColor: "Green", color: "white" }} id='natural2' value="High Light Pollution" onClick={emergencySETTER}>Entry</button>
 			<button onClick={modal3Click} className="button is-primary">Close</button>
 		</footer>
 	</article>
@@ -269,10 +269,10 @@ Food & Water Shortage
 
  <p>Viewing the Northern Lights is a surreal and otherworldly experience, providing a rare opportunity to witness the dynamic interaction between solar winds and Earth's magnetic field. The level of activity and intensity can vary, with some displays featuring rapid movement and vivid colors, while others unfold more gently, creating a tranquil celestial spectacle.</p>
 
-<p>If you witnessed this event, Click "Go to Form."</p>
+<p>If you witnessed this event, Click "Entry."</p>
 		</section>
 		<footer className="modal-container-footer">
-			 <button  className="button is-ghost" style={{ backgroundColor: "Green", color: "white" }} id='natural2' value="Northern Lights" onClick={emergencySETTER}>Click to Go to Form</button>
+			 <button  className="button is-ghost" style={{ backgroundColor: "Green", color: "white" }} id='natural2' value="Northern Lights" onClick={emergencySETTER}>Entry</button>
 			<button onClick={modal4Click} className="button is-primary">Close</button>
 		</footer>
 	</article>
@@ -303,10 +303,10 @@ Food & Water Shortage
 
  <p>Witnessing a fireball is a thrilling and unpredictable event. The rapid descent and fiery trail of these cosmic visitors add an element of excitement to night sky observation. Fireballs are fleeting, often lasting only a few seconds, but their dramatic appearance leaves a lasting impression on those fortunate enough to witness their celestial journey.</p>
 
-<p>If you witnessed this event, Click "Go to Form."</p>
+<p>If you witnessed this event, Click "Entry."</p>
 		</section>
 		<footer className="modal-container-footer">
-			 <button  className="button is-ghost" style={{ backgroundColor: "Green", color: "white" }} id='natural2' value="Fireball Meteoric Event" onClick={emergencySETTER}>Click to Go to Form</button>
+			 <button  className="button is-ghost" style={{ backgroundColor: "Green", color: "white" }} id='natural2' value="Fireball Meteoric Event" onClick={emergencySETTER}>Entry</button>
 			<button onClick={modal5Click} className="button is-primary">Close</button>
 		</footer>
 	</article>
@@ -329,7 +329,7 @@ Food & Water Shortage
                                                                                 <div className="skydescription">Click here if there is minimal light pollution and the sky appears exceptionally dark where the Milky Way is vividly visible, and thousands of stars are discernible. Click here if There are around 2,500 to 3,000 stars visible to the naked eye.</div>
 
 
-                                                                                <button style={{ backgroundColor: "Green", color: "white" }} id='natural2' value="0-10% Light Pollution" onClick={emergencySETTER}>Click to Go to Form</button>
+                                                                                <button style={{ backgroundColor: "Green", color: "white" }} id='natural2' value="0-10% Light Pollution" onClick={emergencySETTER}>Entry</button>
                                                                                 <div>
                                                                                         <button style={{ backgroundColor: "white", color: "black" }} onClick=
                                                                                                 {() => close()}>
@@ -362,7 +362,7 @@ Food & Water Shortage
 
                                                                                 <div className="skydescription">Click here if light pollution affects the visibility of fainter stars, causing a visible glow near the horizon but major constellations and the Milky Way's core are still relatively clear.
                                                                                         Click here if There are around roughly 1,000 to 2,000 stars visible to the naked eye.</div>
-                                                                                <button style={{ backgroundColor: "Green", color: "white" }} id='natural2' value="10-30% Light Pollution" onClick={emergencySETTER}>Click to Go to Form</button>
+                                                                                <button style={{ backgroundColor: "Green", color: "white" }} id='natural2' value="10-30% Light Pollution" onClick={emergencySETTER}>Entry</button>
                                                                                 <div>
                                                                                         <button style={{ backgroundColor: "white", color: "black" }} onClick=
                                                                                                 {() => close()}>
@@ -398,7 +398,7 @@ Food & Water Shortage
 
                                                                                 <div  className="skydescription">Click here if moderate light pollution dims the view of the Milky Way and fainter stars. Click here if only the brightest stars and major constellations are easily identifiable.
                                                                                         <div>Click here if There are around roughly 500 to 1,000 stars visible to the naked eye.</div></div>
-                                                                                <button style={{ backgroundColor: "Green", color: "white" }} id='natural2' value="30-50% Light Pollution" onClick={emergencySETTER}>Click to Go to Form</button>
+                                                                                <button style={{ backgroundColor: "Green", color: "white" }} id='natural2' value="30-50% Light Pollution" onClick={emergencySETTER}>Entry</button>
                                                                                 <div>
                                                                                         <button style={{ backgroundColor: "white", color: "black" }} onClick=
                                                                                                 {() => close()}>
@@ -434,7 +434,7 @@ Food & Water Shortage
 
                                                                                 <div  className="skydescription">Click here if Substantial light pollution obscures most of the Milky Way and dimmer stars, leaving only the brightest stars and planets visible. The sky appears significantly brightened, even at night.
                                                                                         Click here if there are 100 to 500 stars visible to the naked eye.</div>
-                                                                                <button style={{ backgroundColor: "Green", color: "white" }} id='natural2' value="50-70% Light Pollution" onClick={emergencySETTER}>Click to Go to Form</button>
+                                                                                <button style={{ backgroundColor: "Green", color: "white" }} id='natural2' value="50-70% Light Pollution" onClick={emergencySETTER}>Entry</button>
                                                                                 <div>
                                                                                         <button style={{ backgroundColor: "white", color: "black" }} onClick=
                                                                                                 {() => close()}>
@@ -467,7 +467,7 @@ Food & Water Shortage
 
                                                                                 <div className="skydescription">Click here if the sky is heavily affected by light pollution, the sky is illuminated, making it challenging to distinguish individual stars or constellations. Click here if only the very brightest celestial objects, such as the Moon, planets, and a few prominent stars, are visible.
                                                                                         <div>If there are less than 100 stars visible to the naked eye or you are limited to seeing the brightest stars and planets, click here.</div></div>
-                                                                                <button style={{ backgroundColor: "Green", color: "white" }} id='natural2' value="70-100% Light Pollution" onClick={emergencySETTER}>Click to Go to Form</button>
+                                                                                <button style={{ backgroundColor: "Green", color: "white" }} id='natural2' value="70-100% Light Pollution" onClick={emergencySETTER}>Entry</button>
                                                                                 <div>
                                                                                         <button style={{ backgroundColor: "white", color: "black" }} onClick=
                                                                                                 {() => close()}>
