@@ -127,7 +127,10 @@ function modal5Click(){
   <div></div>
 </div> */}
                        {!loginUsername ?<p><Link to="/about"><img style={{width:"180px"}} src={astronaut}></img></Link></p>:null}
-                        <p>Click one of the Buttons Below to Create a Post.</p>
+                       <div style={{marginLeft:"70px",marginRight:"70px"}}>
+                        <p><strong>A Bee Hive is full of... well... bees! The night sky is full of stars. This app is meant to be a culmination of useful information for the average city-dweller to find and get to a place of starry beauty.</strong></p>
+
+<p><strong>A Night Sky Companion APP that integrates features to show what's in your sky tonight, and ultimately to get to somewhere that gives you better view of the Night Sky according to research and user input.</strong></p></div>
                         {/* <div id='natural6' value="Food & Water Shortage" onClick={emergencySETTER}>
 Food & Water Shortage
         </div> */}
