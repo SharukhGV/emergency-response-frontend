@@ -38,9 +38,9 @@ useEffect(() => {
   }, []);
 
 
-  const deleteItem = (username, id) => {
+  const deleteItem = (identification) => {
     axios
-      .delete(`${import.meta.env.VITE_BACKEND_API}/findspots/${id}`, { data: { username } })
+      .delete(`${import.meta.env.VITE_BACKEND_API}/findspots/${identification}`,identification)
       .then((response) => navigate("/index"))
       .catch((e) => console.error("catch", e));
   };
@@ -48,7 +48,7 @@ useEffect(() => {
 
 
   function deletePost() {
-    deleteItem(data.username, id);
+    deleteItem(id);
   }
 
 const storedValue = sessionStorage.getItem('username');

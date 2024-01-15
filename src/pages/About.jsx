@@ -16,7 +16,7 @@ return(
 
 <img style={{width:"300px"}} src={community}></img>
 {/* <div style={{backgroundColor:"#FFFDDF", padding:"30px", borderRadius:"20px"}}> */}
-<h4 style={{margin:"50px"}}>A community powered app where users may create a post on light-polluted areas or dark skies with geolocation tags. This is so others can be better informed if travelling to see the beauty of the night sky. </h4>
+<h4 style={{margin:"50px"}}>Embark on a celestial journey with our community-powered app, a mesmerizing portal where the cosmos converges with human wonder. Within this celestial haven, users weave tales of starry night destinations, crafting geotagged posts that illuminate the secrets of the nocturnal sky. </h4>
 
 <h4 style={{margin:"50px"}}>Almost 80% of the world's populations cannot see the Milky Way band, and such beauty being hidden is truly a catastrophe!</h4>
 
