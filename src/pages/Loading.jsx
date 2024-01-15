@@ -1,9 +1,14 @@
+import { useEffect } from "react"
 import "./loading.css"
 import { useNavigate } from "react-router-dom"
 
 function Loading({accessToken}){
 const navigate=useNavigate()
-if(accessToken){navigate("/")}
+useEffect(() => {
+  // Function to be executed after 2000 milliseconds (2 seconds)
+  const timeoutId = setTimeout(() => {
+navigate("/")  }, 2000)});
+
 
 return (
 

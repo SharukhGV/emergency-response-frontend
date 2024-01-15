@@ -9,6 +9,8 @@ function Login({ setLoginUsername, loginUsername,toggleLOGIN,settoggleLOGIN, set
         username: "",
         hashed_password: ""
     });
+
+    const [errorMessage, setErrorMessage]=useState(null)
     const navigate = useNavigate()
     const loginUser = (user) => {
         axios.post(`${import.meta.env.VITE_BACKEND_API}/newusers/login`, user)
@@ -17,9 +19,14 @@ function Login({ setLoginUsername, loginUsername,toggleLOGIN,settoggleLOGIN, set
                 setAccessToken(token);
                 token.length>20 ? setLoginUsername(user.username) : null
                 token.length>20 ? settoggleLOGIN(!toggleLOGIN) : null
+                setErrorMessage(false)
+                setTimeout(navigate("/loading"), 1000)
+
+
             })
             .catch(error => {
                 console.error('There was a problem with the login operation:', error);
+                setErrorMessage(true)
             });
     };
 
@@ -33,7 +40,7 @@ function Login({ setLoginUsername, loginUsername,toggleLOGIN,settoggleLOGIN, set
     const handleSubmit = (event) => {
         event.preventDefault();
         loginUser(personUser);
-        navigate("/loading");
+        // navigate("/loading");
 
     }
 
@@ -42,6 +49,8 @@ function Login({ setLoginUsername, loginUsername,toggleLOGIN,settoggleLOGIN, set
         <> <h1>Login</h1>
             <p>Please fill in this form to Login to an account.</p>
 {/* <div><img style={{width:"300px"}} src={hiveLOGO}></img></div> */}
+{errorMessage ? <p style={{color:"red"}}>Incorrect Credentials</p>:null}
+{errorMessage===false ? <p style={{color:"green"}}>Success! Please Wait</p>:null}
 
             <form onSubmit={handleSubmit} method="post" style={{ margin: "auto" }}>
                 <div className="container">
