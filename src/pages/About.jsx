@@ -5,6 +5,10 @@ import loqationIQLOGO from "./loqationIQLOGO.png"
 import VisiblePlanetsAPILOGO from "./VisiblePlanetsAPILOGO.png"
 import googlemapsAPI from "./googlemapsAPI.png"
 import community from "./community.png"
+import telescopeicon from "./telescopeicon.png"
+import markerImage from "../components/markerImage.png"
+
+
 export default function About(){
 
 
@@ -20,6 +24,13 @@ return(
 
 <h4 style={{margin:"50px"}}>Almost 80% of the world's populations cannot see the Milky Way band, and such beauty being hidden is truly a catastrophe!</h4>
 
+
+<div style={{paddingBottom:"100px"}}>
+<img style={{paddingRight:"10px"}} src={telescopeicon}></img>
+<div>This Marker on the Map denotes a Dark Sky Preserve</div>
+<img src={markerImage}></img>
+<div>This Marker on the Map denotes a Point of Interest by a Community User</div>
+</div>
 <h2 style={{color:"purple"}}>APIs Used</h2>
 <div>
 <a href="https://locationiq.com/"><img src={loqationIQLOGO}></img></a>
@@ -47,8 +58,7 @@ return(
 
 {/* <div style={{backgroundColor:"#EEDFFF", padding:"30px", borderRadius:"20px"}}> */}
 
-
-
+{/* 
 <div className="card">
   
   <img style={{width:'100%'}} src={sharukh} alt="sharukh"></img>
@@ -58,7 +68,7 @@ return(
   <p>PURSUIT Fellowship</p>
 
   <p><button className="buttonCard"></button></p>
-</div>
+</div> */}
 {/* </div> */}
 </div>
 )
