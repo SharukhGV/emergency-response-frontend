@@ -4,13 +4,11 @@ import { useNavigate } from "react-router-dom"
 
 function PleaseLogin({ accessToken }) {
   const navigate = useNavigate()
-  useEffect(
-    () => {
-      setTimeout(() => {
-        navigate("/");
-      }, 3000);
-    }, []
-  )
+  useEffect(() => {
+    // Function to be executed after 2000 milliseconds (2 seconds)
+    const timeoutId = setTimeout(() => {
+  navigate("/login")  }, 2000)});
+  
 
 
   return (
