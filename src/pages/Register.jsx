@@ -94,28 +94,20 @@ const newUser = (user) =>{axios
       <form onSubmit={handleSubmit} style={{ margin: "auto", display:"block" }}>
         <div className="container">
 
-          <div></div>
-          <div></div>
 
           <label htmlFor="username"><b>Email</b></label>
-          <div></div>
 
           <input type="email" value={personUser.username} onChange={handleTextChange}
 
             placeholder="Enter Email" name="username" id="username" required></input>
-<div></div>
 
           <label htmlFor="hashed_password"><b>Password</b></label>
-<div></div>
 <input type="password" value={personUser.hashed_password} placeholder="Enter Password" name="hashed_password" id="hashed_password" minLength="7" onChange={handleTextChange}
             required></input>
-<div></div>
 
           <label htmlFor="hashed_password-repeat"><b>Repeat Password</b></label>
-          <div></div>
 
           <input type="password" placeholder="Repeat Password" minLength="7" name="hashed_password-repeat" id="hashed_password-repeat" value={secPW.secpass} onChange={handleTextChange2} required></input>
-          <div></div>
 
           <p>By creating an account you agree to our  <Link to="/termsconditions">Terms & Privacy</Link>.</p>
 
