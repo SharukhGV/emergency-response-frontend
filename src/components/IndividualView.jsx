@@ -110,6 +110,9 @@ return(
 // <div>{!!data.image_url ? data.image_url : null}</div>
 // <div>{data.username === storedValue?<Link style={{fontSize:"15px"}} to={`/index/${id}/edit`}>Edit Page</Link>:null}</div> */}
 
+
+<div>Comments Section</div>
+
 </div>
 
 )

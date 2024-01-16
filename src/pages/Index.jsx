@@ -7,6 +7,9 @@ import SearchPeople from "../components/SearchPeople";
 // import MyMap from "../components/MyMap";
 // import { useState, useEffect } from "react";
 // const dataJSON = require("../../data.json")
+import telescopeicon2 from "./telescopeicon2.png"
+import markerImage from "../components/markerImage.png"
+
 
 function Index({setMapMarkers, mapMarkers, location, setAccessToken,loginUsername}) {
 
@@ -31,6 +34,12 @@ return (
   <>
   <div>
     <GoogleMaps mapMarkers={mapMarkers} />
+    <div style={{paddingBottom:"10px"}}>
+<img style={{paddingRight:"10px"}} src={telescopeicon2}></img>
+<div>This Marker on the Map denotes a Dark Sky Preserve</div>
+<img src={markerImage}></img>
+<div>This Marker on the Map denotes a Point of Interest by a Community User</div>
+</div>
   </div><SearchPeople setAccessToken={setAccessToken} loginUsername={loginUsername} location={location} mapMarkers={mapMarkers} setMapMarkers={setMapMarkers} />
 </>
 );

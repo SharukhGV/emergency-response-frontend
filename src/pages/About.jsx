@@ -25,12 +25,12 @@ return(
 <h4 style={{margin:"50px"}}>Almost 80% of the world's populations cannot see the Milky Way band, and such beauty being hidden is truly a catastrophe!</h4>
 
 
-<div style={{paddingBottom:"100px"}}>
+{/* <div style={{paddingBottom:"100px"}}>
 <img style={{paddingRight:"10px"}} src={telescopeicon}></img>
 <div>This Marker on the Map denotes a Dark Sky Preserve</div>
 <img src={markerImage}></img>
 <div>This Marker on the Map denotes a Point of Interest by a Community User</div>
-</div>
+</div> */}
 <h2 style={{color:"purple"}}>APIs Used</h2>
 <div>
 <a href="https://locationiq.com/"><img src={loqationIQLOGO}></img></a>

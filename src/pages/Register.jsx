@@ -91,7 +91,7 @@ const newUser = (user) =>{axios
   return (
     <> <h1>Register</h1>
       <p>Please fill in this form to create an account.</p>
-      <form onSubmit={handleSubmit} style={{ margin: "auto" }}>
+      <form onSubmit={handleSubmit} style={{ margin: "auto", display:"block" }}>
         <div className="container">
 
           <div></div>

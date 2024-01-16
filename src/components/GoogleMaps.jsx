@@ -65,7 +65,7 @@ const darkSkyPreserves = [
       >
 {darkSkyPreserves.map((marker, index) => (
           <Marker
-            key={index+12345}
+            key={index+1236545}
             position={{ lat: parseFloat(marker.lat), lng: parseFloat(marker.lng) }}
             icon={telescopeicon}
           />

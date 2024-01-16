@@ -12,7 +12,7 @@ import constellationlogoCOLOR from "./constellationlogoCOLOR.png"
 import { auto } from "@cloudinary/url-gen/qualifiers/quality";                        
 import solarsystem from "../pages/solarsystem.png"
 import astronaut from "./astronaut.png"
-
+import "./home.css"
 export default function Home({ setEmergencyType, loginUsername, accessToken }) {
         const navigate = useNavigate(); // Initialize the navigation function
         const [toggle1, setToggle1] = useState(false);
@@ -114,7 +114,7 @@ function modal5Click(){
         // }
 
         return (
-                <div style={{ width: '100%', height: '100%' }}>
+                <div className="homepageContainer" style={{ width: '100%', height: '100%' }}>
                         <div></div>
                         {toggleConst ? <img onClick={clickConstellation} style={{ maxWidth: "300px" }} src={hiveheavenLOGO} alt="Logo"></img> :toggleConst2 ?<img onClick={clickConstellation2} style={{ maxWidth: "300px" }} src={constellationlogo} alt="Logo"></img>: <img onClick={clickConstellation} style={{ maxWidth: "300px" }} src={constellationlogoCOLOR} alt="Logo"></img>}
                         {/* <h2>Night Sky Finder</h2> */}
@@ -127,7 +127,7 @@ function modal5Click(){
   <div></div>
 </div> */}
                        {!loginUsername ?<p><Link to="/about"><img style={{width:"180px"}} src={astronaut}></img></Link></p>:null}
-                       <div style={{marginLeft:"70px",marginRight:"70px"}}>
+                       <div style={{marginLeft:"70px",marginRight:"70px", marginBottom:"3px",  border:"solid",backgroundColor:"lightgray", borderRadius:"10px"}}>
                         <p><strong>A Bee Hive is full of... well... bees! The night sky is full of stars. This app is meant to be a culmination of useful information for the average city-dweller to find and get to a place of starry beauty.</strong></p>
 
 <p><strong>A Night Sky Companion APP that integrates features to show what's in your sky tonight, and ultimately to get to somewhere that gives you better view of the Night Sky according to research and user input.</strong></p></div>
