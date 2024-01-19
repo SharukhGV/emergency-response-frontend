@@ -1,6 +1,6 @@
 
 import meteorShowers from "./meteorShower.json"
-
+import meteorpics from "./meteorpics.png"
 function MeteorShowers() {
 
 console.log(meteorShowers.meteorShowers)
@@ -10,6 +10,7 @@ console.log(meteorShowers.meteorShowers)
 
 
 <h1 style={{color:"black"}}>Meteor Showers</h1>
+<img src={meteorpics} style={{width:"350px"}}></img>
         <div>{meteorShowers.meteorShowers.map(meteor => {
             return (
 <div key={meteor.name} style={{ color:"green", boarderRadius:"7%", padding:"3px"}}>
