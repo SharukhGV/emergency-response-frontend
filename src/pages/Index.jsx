@@ -9,6 +9,8 @@ import SearchPeople from "../components/SearchPeople";
 // const dataJSON = require("../../data.json")
 import telescopeicon2 from "./telescopeicon2.png"
 import markerImage from "../components/markerImage.png"
+import { useState } from "react";
+import SearchPreserves from "../components/SearchPreserves";
 
 
 function Index({setMapMarkers, mapMarkers, location, setAccessToken,loginUsername}) {
@@ -30,17 +32,35 @@ function Index({setMapMarkers, mapMarkers, location, setAccessToken,loginUsernam
 //       })
     
 //   }
+
+const [preserveMarkers,setPreserveMarkers]=useState([])
+
+const [darkPreserve,setDarkPreserve]=useState(true)
+
+function darkSKIES(){
+  setDarkPreserve(true)
+}
+
+function communityPosts(){
+  setDarkPreserve(false)
+}
+
+
 return (
   <>
   <div>
-    <GoogleMaps mapMarkers={mapMarkers} />
+    <GoogleMaps preserveMarkers={preserveMarkers} mapMarkers={mapMarkers} />
     <div style={{paddingBottom:"10px"}}>
 <img style={{paddingRight:"10px"}} src={telescopeicon2}></img>
 <div>This Marker on the Map denotes a Dark Sky Preserve</div>
 <img src={markerImage}></img>
 <div>This Marker on the Map denotes a Point of Interest by a Community User</div>
 </div>
-  </div><SearchPeople setAccessToken={setAccessToken} loginUsername={loginUsername} location={location} mapMarkers={mapMarkers} setMapMarkers={setMapMarkers} />
+<button onClick={(darkSKIES)} style={{width:"250px", color:"green"}}>Dark Sky Preserves</button>   <button onClick={communityPosts} style={{width:"250px", color:"orange"}}>Community Posts</button>
+{darkPreserve ? <h1>Dark Sky Preserves</h1> : <h1>Community Posts</h1>}
+  {darkPreserve ?<div><SearchPreserves preserveMarkers={preserveMarkers} setPreserveMarkers={setPreserveMarkers} /></div>
+  :<SearchPeople setAccessToken={setAccessToken} loginUsername={loginUsername} location={location} mapMarkers={mapMarkers} setMapMarkers={setMapMarkers} />}
+</div>
 </>
 );
 }
