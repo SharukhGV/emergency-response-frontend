@@ -60,6 +60,10 @@ return (
 {darkPreserve ? <h1>Dark Sky Preserves</h1> : <h1>Community Posts</h1>}
   {darkPreserve ?<div><SearchPreserves preserveMarkers={preserveMarkers} setPreserveMarkers={setPreserveMarkers} /></div>
   :<SearchPeople setAccessToken={setAccessToken} loginUsername={loginUsername} location={location} mapMarkers={mapMarkers} setMapMarkers={setMapMarkers} />}
+  <br></br>
+  <br></br>
+  <br></br>
+  <br></br>
 </div>
 </>
 );
