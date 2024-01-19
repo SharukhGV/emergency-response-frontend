@@ -96,7 +96,7 @@ return(
 {data.username === storedValue ? <button style={{backgroundColor:"red", width:"100px", height:"50px"}} onClick={deletePost}>Delete Post</button> : null}
 <Link to="/index"><button style={{width:"100px", height:"50px"}}>Back</button></Link></div>
 <br></br>
-<div>{!!data.image_url ? data.image_url : null}</div>
+{/* <div>{!!data.image_url ? data.image_url : null}</div> */}
 
 {/* 
 // <div className="viewsDIV">
