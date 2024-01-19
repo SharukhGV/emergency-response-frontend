@@ -96,7 +96,7 @@ function SearchPreserves({preserveMarkers, setPreserveMarkers}){
     
           <ul className="ultraelem"> 
             {filteredPreserves.map((preserve) => (
-              <li className="listelem" style={{display:"flex",flexWrap:"wrap", paddingLeft:"70px"}} key={preserve.lat + preserve.lng}>
+              <li className="listelem" style={{display:"flex",flexWrap:"wrap"}} key={preserve.lat + preserve.lng}>
                 <IndividualPreserves  preserve={preserve} />
               </li>
             ))}
