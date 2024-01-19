@@ -25,8 +25,7 @@ useEffect(() => {
   }
 }, [data.latitude, data.longitude]); // Ensure useEffect runs when latitude or longitude changes
 
-
-
+console.log(data)
 const navigate= useNavigate()
 
 
@@ -61,12 +60,12 @@ return `${date.charAt(5)}${date.charAt(6)} / ${date.charAt(8)}${date.charAt(9)} 
 return(
     
     <div>
-
 <h2>{data.full_name}</h2>
 
 <p>Username: {data.username}</p>
     {/* <p>Date:<span>{parseDATE(data.date)}</span></p> */}
 
+    <img src={data.image_url} style={{width:"300px"}}></img>
 
 <table>
   <tr>

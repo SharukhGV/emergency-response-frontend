@@ -5,24 +5,82 @@ import { useNavigate } from "react-router-dom";
 import dipperDefault from "../components/dipperDefault.png"
 import mountainsky from "../components/mountainsky.jpg"
   // const cld = new Cloudinary({cloud: {cloudName: 'damkrnln2'}});
-
+  // import {AdvancedImage} from '@cloudinary/react';
+  import {Cloudinary} from "@cloudinary/url-gen";
+  import CloudinaryUploadWidget from "./CloudinaryUploadWidget";
 function NewForm({  accessToken, emergencyType, setLongitude, setLatitude, lat, lng, loginUsername }) {
-  // const [location, setLocation] = useState(null);
-  // const [locationFound, setLocationFound] = useState(false);
-  // const [lat, setLatitude] = useState(0);
-  // const [lng, setLongitude] = useState(0);
-  // const [data, setData] = useState([])
-  
+  // Create a Cloudinary instance and set your cloud name.
+  const [publicId, setPublicId] = useState("");
+  const [imagePreview, setImagePreview] = useState(null);
+
+  const [uwConfig] = useState({
+    cloudName: 'damkrnln2',
+    uploadPreset: 'unsigned_upload',
+  })
+const cld = new Cloudinary({
+  cloud: {
+    cloudName: 'damkrnln2',
+        uploadPreset: 'unsigned_upload',
+        sources: ['local', 'url', 'camera'],
+        multiple: false,
+        resourceType: 'image',
+        form: '#upload-form',
+        fieldName: 'file',
+        thumbnails: '.thumbnails',
+        thumbnailTransformation: [{ width: 100, height: 100, crop: 'thumb' }],
+      },
+  })  
+
+
+
+
     const navigate=useNavigate()
+    const [file, setFile] = useState(null);
+    // const [previewfile, previewFiles] = useState(null);
+  
     const [person, setPerson] = useState({
       full_name: "",
       latitude: lat,
       longitude: lng,
       description: "",
       skybrightness: emergencyType,
+      image_url: "", 
       username: loginUsername,
     });
-    
+
+   
+    useEffect(() => {
+      // const myImage = cld.image(publicId);
+     
+          setImagePreview(file);
+          
+      
+      }, [file]);
+
+      useEffect(() => {
+        if (file) {
+          setPerson((prevPerson) => ({
+            ...prevPerson,
+            image_url: file,
+          }));
+        }
+      }, [file]);
+// two useeffects to allow time processing of image
+      useEffect(() => {
+        if (imagePreview) {
+          setPerson((prevPerson) => ({
+            ...prevPerson,
+            image_url: imagePreview,
+          }));
+        }
+      }, [imagePreview]);
+      
+  //       const myImage = cld.image(publicId);
+
+  //   setImagePreview(file)
+  //   setPerson({ ...person, image_url: imagePreview });
+
+  // },[file])
     useEffect(() => {
       setPerson((prevPerson) => ({
         ...prevPerson,
@@ -46,10 +104,7 @@ function NewForm({  accessToken, emergencyType, setLongitude, setLatitude, lat, 
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(
         (position) => {
-          // const latitude = position.coords.latitude;
-          // const longitude = position.coords.longitude;
-          // setLocation({ latitude, longitude });
-          // setLocationFound(true);
+        
           setLatitude( parseFloat(position.coords.latitude));
           setLongitude( parseFloat(position.coords.longitude));
         },
@@ -65,43 +120,31 @@ function NewForm({  accessToken, emergencyType, setLongitude, setLatitude, lat, 
     }
   }, []); // Empty dependency array to run only once
 
-  // useEffect(() => {
-  //   if (locationFound) {
-  //     setLatitude(location.latitude);
-  //     setLongitude(location.longitude);
-  //   } else {
-  //     setLatitude(0);
-  //     setLongitude(0);
-  //   }
-  // }, [locationFound]);
 
+  const handleTextChange = (event) => {
+    const { id, value } = event.target;
+    setPerson((prevPerson) => ({
+      ...prevPerson,
+      [id]: value,
+    }));
+  };
 
   
 
-  const handleTextChange = (event) => {
-    // if (event.target.id === 'latitude') {
-    //   setPerson({ ...person, latitude: lat });
-    //   console.log(person)
 
-    // } else if (event.target.id === 'longitude') {
-    //   setPerson({ ...person, longitude: lng });
-    //   console.log(person)
-
-    // } else {
-
-      setPerson({ ...person, [event.target.id]: event.target.value });
-      // console.log(person)
-// 
-    // }
-  };
 
   const handleSubmit = (event) => {
     event.preventDefault();
     addFindSpot(person);
   }
-  // function parseDATE(date){
-  //   return `${date.charAt(5)}${date.charAt(6)} / ${date.charAt(8)}${date.charAt(9)} / ${date.charAt(0)}${date.charAt(1)}${date.charAt(2)}${date.charAt(3)}`
-  //     }
+ 
+
+
+
+// cld.image returns a CloudinaryImage with the configuration set.
+// const myImage = cld.image(file);
+
+
 
     return (
       <div>{accessToken ?<div className="edit">
@@ -110,14 +153,14 @@ function NewForm({  accessToken, emergencyType, setLongitude, setLatitude, lat, 
         <form onSubmit={handleSubmit}>
           {/* <input type="hidden" id="user_id" name="user_id" value={userShow2}></input> */}
           <div></div>
-          <label htmlFor="full_name">Location Nickname:</label>
+          <label htmlFor="full_name">Post Title:</label>
           <div></div>
           <input style={{width:"300px"}}
             id="full_name"
             value={person.full_name.replace(/[^a-z]/gi, ' ')}
             type="text"
             onChange={handleTextChange}
-            placeholder="Place Nickname..."
+            placeholder="Place Nickname or Post Title..."
             required
           />
               {/* <input
@@ -151,8 +194,9 @@ function NewForm({  accessToken, emergencyType, setLongitude, setLatitude, lat, 
           <div></div>
           {/* <input
             style={{ width: "30%", padding: "0.6em 1.2em" }}
-            type="file" name="image"
+            type="file" name="image" onChange={handleFileChange}
           /> */}
+      <CloudinaryUploadWidget setFile={setFile} uwConfig={uwConfig} setPublicId={setPublicId} />
           <div></div>
           <input
             style={{ width: "30%", padding: "0.6em 1.2em" }}
@@ -161,11 +205,17 @@ function NewForm({  accessToken, emergencyType, setLongitude, setLatitude, lat, 
         </form>
 
 
-
+        {imagePreview && (
+          <img
+            src={imagePreview}
+            alt="Preview"
+            style={{ maxWidth: "100%", maxHeight: "200px", marginTop: "10px" }}
+          />
+        )}
 
 <h3>Card Preview</h3>
         <div style={{fontFamily:"Arial"}} className="card">
-      <img src={mountainsky} className="card__image" alt="" />
+        <img className="card__image" alt="" src={mountainsky} />
       <div className="card__overlay">
         <div className="card__header">
           <svg className="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                     
