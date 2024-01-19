@@ -117,6 +117,7 @@ function CloudinaryUploadWidget({ uwConfig,setPublicId,setFile }) {
         id="upload_widget"
         className="cloudinary-button"
         onClick={initializeCloudinaryWidget}
+        style={{width:"300px"}}
       >
         Upload
       </button>
