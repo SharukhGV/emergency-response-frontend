@@ -93,9 +93,9 @@ return(
   </tr>
 
 </table>
-<div>{data.username === storedValue ?<Link style={{fontSize:"15px"}} to={`/index/${id}/edit`}><button style={{backgroundColor:"orange"}}>Edit Page</button></Link>:null}</div>
-<div>{data.username === storedValue ? <button style={{backgroundColor:"red"}} onClick={deletePost}>Delete Post</button> : null}</div>
-<div><Link to="/index"><button>Back</button></Link></div>
+<div>{data.username === storedValue ?<Link style={{fontSize:"15px"}} to={`/index/${id}/edit`}><button style={{backgroundColor:"orange", width:"100px", height:"50px"}}>Edit Page</button></Link>:null}
+{data.username === storedValue ? <button style={{backgroundColor:"red", width:"100px", height:"50px"}} onClick={deletePost}>Delete Post</button> : null}
+<Link to="/index"><button style={{width:"100px", height:"50px"}}>Back</button></Link></div>
 <br></br>
 <div>{!!data.image_url ? data.image_url : null}</div>
 
