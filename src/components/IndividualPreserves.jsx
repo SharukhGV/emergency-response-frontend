@@ -2,9 +2,9 @@
 function IndividualPreserves({preserve}){
 
 return (
-<div>
+<div className="darkskypreserves">
 <div>{preserve.name}</div>
-<img  style={{width:"300px", height:"200px"}} src={preserve.image}></img>
+<img  style={{width:"250px", height:"180px"}} src={preserve.image}></img>
 </div>
 )
 
