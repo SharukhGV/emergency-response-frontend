@@ -2,6 +2,9 @@
 import { GoogleMap, Marker, LoadScript } from "@react-google-maps/api";
 import markerImage from "./markerImage.png";
 import telescopeicon from "../pages/telescopeicon.png"
+import collegeMarker from "./collegeMarker.png"
+    import AstronomyColleges from "./AstronomyColleges.json"
+
 import { useEffect, useState } from "react";
 import axios from "axios";
 export default function GoogleMaps({ mapMarkers,preserveMarkers }) {
@@ -71,6 +74,14 @@ export default function GoogleMaps({ mapMarkers,preserveMarkers }) {
             key={index+1236545}
             position={{ lat: parseFloat(marker.lat), lng: parseFloat(marker.lng) }}
             icon={telescopeicon}
+          />
+        ))}
+
+{AstronomyColleges.colleges.map((marker, index) => (
+          <Marker
+            key={index+17779745}
+            position={{ lat: parseFloat(marker.coordinates.latitude), lng: parseFloat(marker.coordinates.longitude) }}
+            icon={collegeMarker}
           />
         ))}
 

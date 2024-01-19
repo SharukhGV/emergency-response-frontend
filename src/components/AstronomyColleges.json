@@ -1,0 +1,75 @@
+{
+    "colleges": [
+      {
+        "name": "Princeton University",
+        "location": "New Jersey",
+        "description": "Princeton boasts a renowned Department of Astrophysical Sciences and houses numerous research centers like the Princeton Institute for Advanced Study.",
+        "coordinates": { "latitude": 40.3443, "longitude": -74.6512 },
+        "timeZone": "Eastern Time Zone (UTC-4)"
+      },
+      {
+        "name": "McGill University",
+        "location": "Montreal, Canada",
+        "description": "McGill offers a strong astronomy program within its Physics department, featuring access to observatories and collaborations with international partners.",
+        "coordinates": { "latitude": 45.5060, "longitude": -73.5772 },
+        "timeZone": "Eastern Time Zone (UTC-4)"
+      },
+      {
+        "name": "University of Texas at Austin",
+        "location": "Texas",
+        "description": "This Texas powerhouse boasts a top-ranked Astronomy department with active research in areas like gravitational waves and exoplanets. They partner with observatories like McDonald Observatory.",
+        "coordinates": { "latitude": 30.2631, "longitude": -97.7499 },
+        "timeZone": "Central Time Zone (UTC-6)"
+      },
+      {
+        "name": "University of Toronto",
+        "location": "Toronto, Canada",
+        "description": "Toronto's Astronomy & Astrophysics department boasts a diverse research environment with access to major facilities like the David Dunlap Observatory.",
+        "coordinates": { "latitude": 43.6674, "longitude": -79.3832 },
+        "timeZone": "Central Time Zone (UTC-6)"
+      },
+      {
+        "name": "Stanford University",
+        "location": "California",
+        "description": "Stanford's Department of Physics houses a vibrant astronomy program known for its cutting-edge research in areas like cosmology and galaxy formation.",
+        "coordinates": { "latitude": 37.4418, "longitude": -122.1730 },
+        "timeZone": "Western Time Zone (UTC-8)"
+      },
+      {
+        "name": "University of California, Los Angeles (UCLA)",
+        "location": "California",
+        "description": "UCLA's Department of Astronomy offers diverse research opportunities from exoplanet studies to theoretical cosmology, with access to facilities like the Keck Observatory.",
+        "coordinates": { "latitude": 34.0739, "longitude": -118.4551 },
+        "timeZone": "Western Time Zone (UTC-8)"
+      },
+      {
+        "name": "University College London (UCL)",
+        "location": "London, United Kingdom",
+        "description": "Part of the prestigious University of London, UCL's Department of Physics & Astronomy offers robust research across diverse areas, including gravitational physics and astrobiology.",
+        "coordinates": { "latitude": 51.5246, "longitude": -0.1357 },
+        "timeZone": "Greenwich Mean Time (UTC+0)"
+      },
+      {
+        "name": "Leiden University",
+        "location": "Leiden, Netherlands",
+        "description": "Leiden's Observatory is the oldest in the country and houses a renowned astronomy program with a strong emphasis on observational research.",
+        "coordinates": { "latitude": 52.1959, "longitude": 4.4540 },
+        "timeZone": "Greenwich Mean Time (UTC+0)"
+      },
+      {
+        "name": "National Astronomical Observatories of China (NAOC)",
+        "location": "Beijing, China",
+        "description": "NAOC operates multiple observatories and research institutes, offering postgraduate programs in astronomy and related fields.",
+        "coordinates": { "latitude": 39.9905, "longitude": 116.3191 },
+        "timeZone": "Asia Time Zone (UTC+8)"
+      },
+      {
+        "name": "Indian Institute of Astrophysics (IIA)",
+        "location": "Bangalore, India",
+        "description": "IIA is a premier research institute offering programs in astrophysics and astronomy, with a focus on areas like solar physics and galactic studies.",
+        "coordinates": { "latitude": 12.9595, "longitude": 77.5881 },
+        "timeZone": "Asia Time Zone (UTC+8)"
+      }
+    ]
+  }
+  
