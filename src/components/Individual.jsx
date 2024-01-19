@@ -29,11 +29,12 @@ function Individual({ loginUsername, id, person }) {
     return `${date.charAt(5)}${date.charAt(6)} / ${date.charAt(8)}${date.charAt(9)} / ${date.charAt(0)}${date.charAt(1)}${date.charAt(2)}${date.charAt(3)}`
   }return (
     <div style={{ fontFamily: "Arial" }} className="card">
-      <img src={mountainsky} className="card__image" alt="" />
+      {!!person.image_url ? <img src={person.image_url} className="card__image" alt="" />
+ :<img src={mountainsky} className="card__image" alt="" />}
       <div className="card__overlay">
         <div className="card__header">
           <svg className="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>
-          <img className="card__thumb" src={dipperDefault} alt="" />
+          {!!person.image_url ?<img className="card__thumb" src={person.image_url} alt="" /> :<img className="card__thumb" src={dipperDefault} alt="" />}
           <div className="card__header-text">
             <h5 style={{ fontFamily: "Arial" }}>
               {!!data && data.address && data.address.city ? data.address.city : <span>No Data</span>},
