@@ -54,7 +54,7 @@ return (
   <div>
     <GoogleMaps preserveMarkers={preserveMarkers} mapMarkers={mapMarkers} />
     <br></br>
-    <button style={{backgroundColor:"black", color:"yellow", width:"500px"}} onClick={legendToggle}>Show Marker Legend</button>
+    <button style={{backgroundColor:"black", color:"yellow"}} onClick={legendToggle}>Show Marker Legend</button>
     <br></br>
     <div>
       <br></br>
