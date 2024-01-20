@@ -171,11 +171,18 @@ return(
 
 <br></br>
 <br></br>
-<div>{dataComments.map((commentz, index)=>{
-return(
-<CommentsBox uuid={uuidv4()} commentz={commentz} id={id} index={index}/>)
+<div>
+  {dataComments.map((commentz, index) => {
+    if(parseFloat(commentz.findspot_id) ===parseFloat(id)){
+    return (
+    
+    <CommentsBox key={uuidv4()} commentz={commentz} id={id} index={index} />
+    
+    )
+    }
+  })}
+</div>
 
-})}</div>
 <br></br>
 
 </div>
