@@ -176,7 +176,7 @@ return(
     if(parseFloat(commentz.findspot_id) ===parseFloat(id)){
     return (
     
-    <CommentsBox key={uuidv4()} commentz={commentz} id={id} index={index} />
+    <CommentsBox loginUsername={loginUsername} key={uuidv4()} commentz={commentz} id={id} index={index} />
     
     )
     }
