@@ -8,28 +8,7 @@ import Individual from "./Individual";
 import { useNavigate } from "react-router-dom";
 export default function SearchPeople({loginUsername, setMapMarkers, emergencyType, setLongitude, setLatitude, lat, lng }) {
   const [data, setData] = useState([])
-  // const [usrname777, setUsername777] = useState(true)
-  // const [description777, setDescription777] = useState(false)
-  // const [locationNickanme, setLocationNickname] = useState(true)
 
-// function userNAME7(){
-//   setUsername777(true)
-//   setDescription777(false)
-//   setLocationNickname(false)
-// }
-
-
-// function description7(){
-//   setUsername777(false)
-//   setDescription777(true)
-//   setLocationNickname(false)
-// }
-
-// function locationNickanme7(){
-//   setUsername777(false)
-//   setDescription777(false)
-//   setLocationNickname(true)
-// }
 
 useEffect(() => {
     axios

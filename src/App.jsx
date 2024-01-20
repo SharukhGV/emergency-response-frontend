@@ -73,7 +73,7 @@ export default function App() {
 
           <Route path="/termsconditions" element={<TermsConditions />} />
 {!!accessToken ?  <Route path="/profile" element={<Profile loginUsername={loginUsername} />} />:null}
-{!!accessToken ?   <Route path="/index/:id" element={<IndividualView />}/>:null}
+{!!accessToken ?   <Route path="/index/:id" element={<IndividualView loginUsername={loginUsername} />}/>:null}
 {!!accessToken ?   <Route path="/index/:id/edit" element={<EditForm />}/>:null}
 <Route path="/visibleplanets" element={<PlanetsVisible latitude={lat} longitude={lng} />}/>
 

@@ -4,14 +4,55 @@ import { useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-function IndividualView({}){
+import CommentsBox from "./CommentsBox";
+import { v4 as uuidv4 } from 'uuid';
+
+function IndividualView({loginUsername}){
     const [data, setData] = useState([])
     const [locationIQ, setLocationIQ] = useState({})
 
 const {id} = useParams()
 
+const [comment, setComment] = useState({
+  description: "",
+  findspot_id: id,
+  my_username: loginUsername,
+  
+});
+
+const [dataComments, setDataComments] = useState([])
 
 
+useEffect(() => {
+    axios
+      .get(`${import.meta.env.VITE_BACKEND_API}/comments`)
+      .then((response) => setDataComments(response.data))
+      .catch((e) => console.error("catch", e));
+  }, []);
+
+
+const handleTextChange = (event) => {
+  setComment({...comment,description:event.target.value})
+};
+// console.log(comment)
+
+
+const addComment = (newComment) => {
+  axios
+    .post(`${import.meta.env.VITE_BACKEND_API}/comments`, newComment)
+    .then((response) => {
+      console.log(response.data);
+
+      navigate(`/index/${id}`);
+    })
+    .catch((e) => console.error("catch", e));
+};
+
+
+const handleSubmit = (event) => {
+  event.preventDefault();
+  addComment(comment);
+}
 
 useEffect(() => {
   if (!!data.latitude) {
@@ -25,7 +66,8 @@ useEffect(() => {
   }
 }, [data.latitude, data.longitude]); // Ensure useEffect runs when latitude or longitude changes
 
-console.log(data)
+console.log(dataComments)
+console.log(id)
 const navigate= useNavigate()
 
 
@@ -55,6 +97,12 @@ function parseDATE(date){
   // console.log(d.getUTCHours()); // Hours
 
   // console.log(d.getUTCSeconds());
+
+
+console.log(dataComments)
+
+
+
 return `${date.charAt(5)}${date.charAt(6)} / ${date.charAt(8)}${date.charAt(9)} / ${date.charAt(0)}${date.charAt(1)}${date.charAt(2)}${date.charAt(3)}`
 }
 return(
@@ -111,6 +159,24 @@ return(
 
 
 <div>Comments Section</div>
+<form onSubmit={handleSubmit}>
+
+<input onChange={handleTextChange} type="text"></input>
+<input
+            style={{ width: "30%", padding: "0.6em 1.2em" }}
+            type="submit"
+          />
+</form>
+
+
+<br></br>
+<br></br>
+<div>{dataComments.map((commentz, index)=>{
+return(
+<CommentsBox uuid={uuidv4()} commentz={commentz} id={id} index={index}/>)
+
+})}</div>
+<br></br>
 
 </div>
 
