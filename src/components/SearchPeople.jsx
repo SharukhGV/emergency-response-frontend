@@ -147,16 +147,19 @@ function lowLightPollution(){
 
 {/* <button onClick={locationNickanme7}>Location Nickname</button>   <button onClick={userNAME7}>Username</button> <button onClick={description7}>Description</button> */}
 {allPosts ? <input type="text" placeholder="Search for a Location" value={query} onChange={handleQueryChange} /> : null}
-
+<br></br>
+<br></br>
       {/* {locationNickanme ?<input type="text" placeholder="Search for a Location" value={query} onChange={handleQueryChange} /> :null} */}
       {/* {usrname777?<input type="text" placeholder="Search for a User" value={queryUser} onChange={handleQueryChangeUser} />:null} */}
       {/* {description777?<input type="text" placeholder="Search for a Description" value={handleQueryChangeDescription} onChange={handleQueryChangeDescription} />: null} */}
 <div>
 <button style={{borderRadius:"50%", width:"70px", height:"70px", backgroundColor:"black", fontSize:"10px"}} onClick={allPostsSet}>Every Single Post</button>
-
+<span>     </span>
 <button style={{borderRadius:"50%", width:"70px", height:"70px", backgroundColor:"black", fontSize:"10px"}} onClick={northernLights}>Northern Lights</button>
+<span>     </span>
 
 <button style={{borderRadius:"50%", width:"70px", height:"70px", backgroundColor:"black", fontSize:"10px"}} onClick={meteoricEvent}>Meteoric Events</button>
+<span>     </span>
 
 <button style={{borderRadius:"50%", width:"70px", height:"70px", backgroundColor:"black", fontSize:"10px"}} onClick={lowLightPollution}>Low Light Pollution</button>
 </div>
