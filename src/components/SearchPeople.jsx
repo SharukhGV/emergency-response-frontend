@@ -146,7 +146,7 @@ function lowLightPollution(){
 
 
 {/* <button onClick={locationNickanme7}>Location Nickname</button>   <button onClick={userNAME7}>Username</button> <button onClick={description7}>Description</button> */}
-<input type="text" placeholder="Search for a Location" value={query} onChange={handleQueryChange} /> 
+{allPosts ? <input type="text" placeholder="Search for a Location" value={query} onChange={handleQueryChange} /> : null}
 
       {/* {locationNickanme ?<input type="text" placeholder="Search for a Location" value={query} onChange={handleQueryChange} /> :null} */}
       {/* {usrname777?<input type="text" placeholder="Search for a User" value={queryUser} onChange={handleQueryChangeUser} />:null} */}
