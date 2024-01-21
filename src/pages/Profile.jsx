@@ -111,7 +111,7 @@ useEffect(()=>{
 if(prof.my_username===loginUsername){
     return(
 <div style={{width:"350px", margin:"auto"}}>
-    <img src={prof.image_url} alt="profile icon" style={{ width: "100%" }}></img> 
+    <img src={prof.image_url} alt="profile icon" style={{ width:"300px", height:"300px",borderRadius:"50%" }}></img> 
                 <h1>Welcome Back</h1>
                 <p className="title">{loginUsername}</p>
                 <p>Hive of Heaven User</p>
