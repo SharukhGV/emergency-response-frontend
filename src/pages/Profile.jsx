@@ -70,7 +70,7 @@ useEffect(()=>{
             .then((response) => {
                 console.log(response.data);
 
-                navigate(`/profile/`);
+                navigate(`/`);
             })
             .catch((e) => console.error("catch", e));
     };
@@ -88,7 +88,7 @@ useEffect(()=>{
           .then((response) => {
             console.log(response.data);
     
-            navigate(`/profile`);
+            navigate(`/`);
           })
           .catch((e) => console.error("catch", e));
       };

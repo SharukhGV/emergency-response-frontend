@@ -43,7 +43,7 @@ const addComment = (newComment) => {
     .then((response) => {
       console.log(response.data);
 
-      navigate(`/index/${id}`);
+      navigate(`/index`);
     })
     .catch((e) => console.error("catch", e));
 };
