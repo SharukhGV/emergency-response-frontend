@@ -5,6 +5,7 @@ import CloudinaryUploadWidget from "./CloudinaryUploadWidget";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { v4 as uuidv4 } from 'uuid';
+import ProfileCard from "./ProfileCard";
 function Profile({ loginUsername }) {
     // const [data,setData] =useState([])
     const [publicId, setPublicId] = useState("");
@@ -92,8 +93,9 @@ useEffect(()=>{
           })
           .catch((e) => console.error("catch", e));
       };
+              const matchingProfile = dataProfile.find(prof => prof.my_username === loginUsername);
+
       function editProfile() {
-        const matchingProfile = dataProfile.find(prof => prof.my_username === loginUsername);
       
         if (matchingProfile) {
           updateProfile(profilephoto, matchingProfile.id);
@@ -101,32 +103,21 @@ useEffect(()=>{
           console.error('Profile not found for username:', loginUsername);
         }
       }
+      
 
       
       
     return (
 <>
     
-{dataProfile.map(prof =>{
-if(prof.my_username===loginUsername){
-    return(
-<div style={{width:"350px", margin:"auto"}}>
-    <img src={prof.image_url} alt="profile icon" style={{ width:"300px", height:"300px",borderRadius:"50%" }}></img> 
-                <h1>Welcome Back</h1>
-                <p className="title">{loginUsername}</p>
-                <p>Hive of Heaven User</p>
-</div>
-    )
-}
-})}
+<ProfileCard dataProfile={dataProfile} loginUsername={loginUsername}/>
 <div><CloudinaryUploadWidget setFile={setFile} uwConfig={uwConfig} setPublicId={setPublicId} /></div>
-{
-  dataProfile.length > 0 && dataProfile[0].my_username === loginUsername ? (
-    <button onClick={editProfile}>Edit Profile Image</button>
-  ) : (
-    <button onClick={addImage}>Upload Profile Image</button>
-  )
-}
+{matchingProfile ? (
+        <button onClick={editProfile}>Edit Profile Image</button>
+      ) : (
+        <button onClick={addImage}>Upload Profile Image</button>
+      )}
+
 
 
 </>
