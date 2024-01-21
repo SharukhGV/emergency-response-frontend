@@ -42,7 +42,25 @@ sessionStorage.setItem('username', loginUsername);
   const filteredPeople = data.filter((person) => {
     return person.full_name.toLowerCase().includes(query.toLowerCase());
   });
+  const filteredNorthernLights = data.filter((person) => {
+    return person.skybrightness.toLowerCase().includes("northern");
+  });
 
+  const filteredMeteor = data.filter((person) => {
+    return person.skybrightness.toLowerCase().includes("fireball");
+  });
+
+  const filteredLow = data.filter((person) => {
+    return person.skybrightness.toLowerCase().includes("low");
+  });
+
+  const filteredModerate = data.filter((person) => {
+    return person.skybrightness.toLowerCase().includes("moderate");
+  });
+
+  const filteredHigh = data.filter((person) => {
+    return person.skybrightness.toLowerCase().includes("high");
+  });
   // const filteredusers = data.filter((person) => {
   //   return person.username.toLowerCase().includes(queryUser.toLowerCase());
   // });
@@ -80,6 +98,42 @@ sessionStorage.setItem('username', loginUsername);
   //   setMapMarkers(markerArray); // Update mapMarkers based on filtered data
   // }, [queryDescription]); // Update markers when the query changes
 
+const [allPosts,setAllPosts]=useState(false)
+const [northern,setNorthern]=useState(false)
+const [meteoric,setMeteoric]=useState(false)
+const [lowLight,setlowLight]=useState(false)
+
+function northernLights(){
+  setAllPosts(false)
+  setNorthern(true)
+  setMeteoric(false)
+  setlowLight(false)
+}
+
+function meteoricEvent(){
+  setAllPosts(false)
+  setNorthern(false)
+  setMeteoric(true)
+  setlowLight(false)
+}
+
+
+function allPostsSet(){
+  setAllPosts(true)
+  setNorthern(false)
+  setMeteoric(false)
+  setlowLight(false)
+}
+
+
+function lowLightPollution(){
+  setAllPosts(false)
+  setNorthern(false)
+  setMeteoric(false)
+  setlowLight(true)
+}
+
+
   return (
     <div>
       {/* <div>
@@ -97,16 +151,58 @@ sessionStorage.setItem('username', loginUsername);
       {/* {locationNickanme ?<input type="text" placeholder="Search for a Location" value={query} onChange={handleQueryChange} /> :null} */}
       {/* {usrname777?<input type="text" placeholder="Search for a User" value={queryUser} onChange={handleQueryChangeUser} />:null} */}
       {/* {description777?<input type="text" placeholder="Search for a Description" value={handleQueryChangeDescription} onChange={handleQueryChangeDescription} />: null} */}
+<div>
+<button style={{borderRadius:"50%", width:"70px", height:"70px", backgroundColor:"black", fontSize:"10px"}} onClick={allPostsSet}>Every Single Post</button>
+
+<button style={{borderRadius:"50%", width:"70px", height:"70px", backgroundColor:"black", fontSize:"10px"}} onClick={northernLights}>Northern Lights</button>
+
+<button style={{borderRadius:"50%", width:"70px", height:"70px", backgroundColor:"black", fontSize:"10px"}} onClick={meteoricEvent}>Meteoric Events</button>
+
+<button style={{borderRadius:"50%", width:"70px", height:"70px", backgroundColor:"black", fontSize:"10px"}} onClick={lowLightPollution}>Low Light Pollution</button>
+</div>
 
 
 
-      <ul className="ultraelem"> 
+     {allPosts ? <ul className="ultraelem"> 
         {filteredPeople.map((person) => (
           <li className="listelem" style={{display:"flex",flexWrap:"wrap"}} key={person.id}>
+            
             <Individual loginUsername={loginUsername} id={person.id} person={person} />
           </li>
         ))}
-      </ul>
+      </ul> :null}
+
+      {northern ? <ul className="ultraelem"> 
+        {filteredNorthernLights.map((person) => (
+          <li className="listelem" style={{display:"flex",flexWrap:"wrap"}} key={person.id}>
+            
+            <Individual loginUsername={loginUsername} id={person.id} person={person} />
+          </li>
+        ))}
+      </ul> :null}
+
+
+      {meteoric ? <ul className="ultraelem"> 
+        {filteredMeteor.map((person) => (
+          <li className="listelem" style={{display:"flex",flexWrap:"wrap"}} key={person.id}>
+            
+            <Individual loginUsername={loginUsername} id={person.id} person={person} />
+          </li>
+        ))}
+      </ul> :null}
+
+
+
+      {lowLight ? <ul className="ultraelem"> 
+        {filteredLow.map((person) => (
+          <li className="listelem" style={{display:"flex",flexWrap:"wrap"}} key={person.id}>
+            
+            <Individual loginUsername={loginUsername} id={person.id} person={person} />
+          </li>
+        ))}
+      </ul> :null}
+
+
     </div>
   );
 }
