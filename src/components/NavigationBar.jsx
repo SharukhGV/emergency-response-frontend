@@ -34,14 +34,14 @@ return (
   <Navbar expand="lg" className="bg-body-tertiary">
     <Container>
       <Navbar.Brand ><Link to="/"><img style={{width:"57px", height:"35px"}} src={hivelogoClear}></img></Link></Navbar.Brand>
-      {/* <Navbar.Toggle aria-controls="basic-navbar-nav" /> */}
-      {/* <Navbar.Collapse id="basic-navbar-nav"> */}
+      {/* <Navbar.Toggle aria-controls="basic-navbar-nav" />
+      <Navbar.Collapse id="basic-navbar-nav"> */}
         {/* <Nav className="me-auto"> */}
           {/* <Nav.Link ><Link to="/">🏡 Home</Link></Nav.Link> */}
          
 
 
-          {!!toggleLOGIN ?  <NavDropdown title="Profile" id="basic-nav-dropdown">
+          {!!toggleLOGIN ?  <NavDropdown style={{color:"yellow"}} title="Profile" id="basic-nav-dropdown">
             <NavDropdown.Item ><Link to="/profile">👨🏼‍🚀 Profile</Link> </NavDropdown.Item>
 
     
@@ -58,8 +58,8 @@ return (
 
      {!!toggleLOGIN ?     <Nav.Link>< Link to="/visibleplanets">🔭</Link></Nav.Link> :null}
  {!!toggleLOGIN ?  <Nav.Link ><Link to="/index">🌍</Link></Nav.Link>:null}
-          {!toggleLOGIN ?  <Nav.Link><Link to="/login">💻</Link></Nav.Link>:null}
-          {!toggleLOGIN ?<Nav.Link><Link to="/signup">📃</Link></Nav.Link>:null}
+          {!toggleLOGIN ?  <Nav.Link><Link to="/login">💻 <strong style={{color:"yellow"}}>Login</strong></Link></Nav.Link>:null}
+          {!toggleLOGIN ?<Nav.Link><Link to="/signup">📃 <strong style={{color:"yellow"}}>Register</strong></Link></Nav.Link>:null}
 
 
         {/* </Nav> */}
