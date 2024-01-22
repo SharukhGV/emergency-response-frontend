@@ -6,9 +6,11 @@ import './App.css'
 import Home from './pages/Home';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import NewForm from './pages/NewForm';
-import Nav from './components/Nav';
+// import Nav from './components/Nav';
 // import GoogleMaps from './components/GoogleMaps';
+import NavigationBar from './components/NavigationBar';
 import Index from './pages/Index';
+
 import About from './pages/About';
 import SkyBrightness from "./pages/SkyBrightness";
 import Login from './pages/Login';
@@ -58,7 +60,7 @@ export default function App() {
     <>
 
       <Router>
-        <Nav settoggleLOGIN={settoggleLOGIN} toggleLOGIN={toggleLOGIN} accessToken={accessToken} setLoginUsername={setLoginUsername} loginUsername={loginUsername} />
+        <NavigationBar settoggleLOGIN={settoggleLOGIN} toggleLOGIN={toggleLOGIN} accessToken={accessToken} setLoginUsername={setLoginUsername} loginUsername={loginUsername} />
         <Routes>
           <Route path="/" element={<Home accessToken={accessToken} setAccessToken={setAccessToken} loginUsername={loginUsername} setLoginUsername={setLoginUsername} setEmergencyType={setEmergencyType} />} />
           <Route path="/form" element={<NewForm settoggleLOGIN={settoggleLOGIN} toggleLOGIN={toggleLOGIN} accessToken={accessToken} setAccessToken={setAccessToken} loginUsername={loginUsername} setLoginUsername={setLoginUsername} lat={lat} lng={lng} setLongitude={setLongitude} setLatitude={setLatitude} emergencyType={emergencyType} />} />

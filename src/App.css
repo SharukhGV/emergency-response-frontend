@@ -1079,3 +1079,8 @@ max-height:"auto";
 }
 
 } */
+
+
+.bg-body-tertiary .container{
+  background-color: rgba(0, 0, 0, 0.452);
+}

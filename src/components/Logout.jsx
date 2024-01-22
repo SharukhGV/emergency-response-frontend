@@ -18,7 +18,7 @@ function Logout({ loginUsername,setLoginUsername,toggleLOGIN,settoggleLOGIN }) {
       
 
   return (
-    <button style={{margin:"right", width:"30px", backgroundColor:"#00000000"}} onClick={logOut}>🔒</button>
+    <button style={{margin:"right", width:"30px", backgroundColor:"#00000000", color:"black"}} onClick={logOut}>🔒 Logout</button>
   );
 }
 
