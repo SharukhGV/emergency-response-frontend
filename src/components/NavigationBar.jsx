@@ -31,7 +31,7 @@ function NavigationBar({loginUsername, toggleLOGIN,settoggleLOGIN, accessToken})
 //   </div>)
 // }
 return (
-  <Navbar expand="lg" className="bg-body-tertiary">
+  <Navbar expand="lg" >
     <Container>
       <Navbar.Brand ><Link to="/"><img style={{width:"57px", height:"35px"}} src={hivelogoClear}></img></Link></Navbar.Brand>
       {/* <Navbar.Toggle aria-controls="basic-navbar-nav" />

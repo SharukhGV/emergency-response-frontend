@@ -201,7 +201,6 @@ text-decoration: none;
 
   display: flex;
   flex-wrap: wrap;
-
 }
 
 .item {
@@ -549,13 +548,13 @@ body {
   gap: 7px 7px;
   row-gap: 7px;
   column-gap: 7px;
-background-color: white;
+background-color: rgba(255, 255, 255, 0);
 }
 
 .listelem {
   height: 40vh;
   flex-grow: 1;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0);
 }
 
 
@@ -1081,6 +1080,11 @@ max-height:"auto";
 } */
 
 
-.bg-body-tertiary .container{
-  background-color: rgba(0, 0, 0, 0.452);
+.navbar .container{
+  background-color: rgba(0, 0, 0, 0.541);
+}
+
+body{
+  background: rgb(0,255,102);
+background: linear-gradient(90deg, rgba(249,255,0,0.258140756302521) 36%, rgba(94,90,25,0.21612394957983194) 63%);
 }

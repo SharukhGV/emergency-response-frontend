@@ -6,7 +6,7 @@ return (
 
 
 
-<div style={{ fontFamily: "Arial" }} className="card">
+<div style={{ fontFamily: "Arial", backgroundColor:"rgba(255, 255, 255, 0)" }} className="card">
       <img src={preserve.image} className="card__image" alt="" />
       <div className="card__overlay">
         <div className="card__header">
