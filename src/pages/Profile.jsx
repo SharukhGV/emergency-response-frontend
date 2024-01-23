@@ -111,15 +111,16 @@ useEffect(()=>{
 <>
     
 <ProfileCard dataProfile={dataProfile} loginUsername={loginUsername}/>
+<br></br>
 <div><CloudinaryUploadWidget setFile={setFile} uwConfig={uwConfig} setPublicId={setPublicId} /></div>
 {matchingProfile ? (
-        <button onClick={editProfile}>Edit Profile Image</button>
+        <button style={{backgroundColor:"green", width:"300px"}} onClick={editProfile}>Submit</button>
       ) : (
-        <button onClick={addImage}>Upload Profile Image</button>
+        <button style={{backgroundColor:"green", width:"300px"}} onClick={addImage}>Submit</button>
       )}
 
-
-
+<br></br>
+<br></br>
 </>
 
     )

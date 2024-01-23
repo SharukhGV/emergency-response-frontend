@@ -11,10 +11,11 @@ const latestPost = dataProfile
 
 if (latestPost) {
   return (
-    <div style={{ width: "350px", margin: "auto" }}>
-      <img src={latestPost.image_url} alt="profile icon" style={{ width: "300px", height: "300px", borderRadius: "50%" }} />
+    <div style={{ width: "350px", margin: "auto", border:"solid", borderRadius:"10px",
+    background: "linear-gradient(90deg, rgba(13,177,1,0.6530987394957983) 30%, rgba(0,255,217,0.5102415966386555) 84%)" }}>
+      <img src={latestPost.image_url} alt="profile icon" style={{ width: "300px", height: "300px", borderRadius: "50%", border:"solid" }} />
       <h1>Welcome Back</h1>
-      <p className="title">{loginUsername}</p>
+      <p style={{color:"green"}} className="title">{loginUsername}</p>
       <p>Hive of Heaven User</p>
     </div>
   );
