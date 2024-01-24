@@ -145,7 +145,7 @@ function modal5Click(){
 </div>
 
 
-  <div style={{border:"2px solid #373436", background:"radial-gradient(circle, rgba(255,226,0,0.7707457983193278) 7%, rgba(75,73,62,0.8687850140056023) 68%)"}} class="welcome">
+  <div style={{border:"2px solid #373436",borderRadius:"7px", background:"radial-gradient(circle, rgba(255,226,0,0.7707457983193278) 7%, rgba(75,73,62,0.8687850140056023) 68%)"}} class="welcome">
         <br></br>
         <br></br>
         <h3>{!!loginUsername ? "Welcome" : "Please Login to view all Features"}</h3>
