@@ -3,18 +3,18 @@ import { Link, useNavigate } from "react-router-dom"
 // import Locationdiv from "../components/LocationCapture";
 import { useState } from "react";
 // import FindSpot from "./FindSpot.png"
-import logo from "./logo.png"
-import Popup from 'reactjs-popup';
+// import logo from "./logo.png"
+// import Popup from 'reactjs-popup';
 import 'reactjs-popup/dist/index.css';
-import hiveheavenLOGO from "./hiveheavenLOGO.png"
-import constellationlogo from "./constellationlogo.png"
-import constellationlogoCOLOR from "./constellationlogoCOLOR.png"
+// import hiveheavenLOGO from "./hiveheavenLOGO.png"
+// import constellationlogo from "./constellationlogo.png"
+// import constellationlogoCOLOR from "./constellationlogoCOLOR.png"
 import hiveheavenLOGOWHITE from "./hiveheavenLOGOWHITE.png"
-import hiveheavenLOGO2 from "./hiveheavenLOGO2.png"
+// import hiveheavenLOGO2 from "./hiveheavenLOGO2.png"
 
-import { auto } from "@cloudinary/url-gen/qualifiers/quality";                        
+// import { auto } from "@cloudinary/url-gen/qualifiers/quality";                        
 // import solarsystem from "./solarsystem.png"
-import astronaut from "./astronaut.png"
+// import astronaut from "./astronaut.png"
 import "./home.css"
 import ControlledCarousel from "../components/ControlledCarousel";
 export default function Home({ setEmergencyType, loginUsername, accessToken }) {

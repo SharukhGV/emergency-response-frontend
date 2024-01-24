@@ -1,15 +1,15 @@
 // import { useState } from 'react';
 // import Carousel from 'react-bootstrap/Carousel';
 // // import ExampleCarouselImage from 'components/ExampleCarouselImage';
-import northern from "./northern.jpg"
-import fireball from "./fireball.jpg"
-import starrysky from "./starrysky.jpg"
-import cherrysprings from "./cherrysprings.jpg"
-import hiveheavenLOGO from "../pages/hiveheavenLOGO.png"
+// import northern from "./northern.jpg"
+// import fireball from "./fireball.jpg"
+// import starrysky from "./starrysky.jpg"
+// import cherrysprings from "./cherrysprings.jpg"
+// import hiveheavenLOGO from "../pages/hiveheavenLOGO.png"
 import beeinsect from "../pages/beeinsect.png"
-import socialmediacommunity from "./socialmediacommunity.png"
-import sunmoonpic from "./sunmoonpic.png"
-import communitycircle from "./communitycircle.png"
+// import socialmediacommunity from "./socialmediacommunity.png"
+// import sunmoonpic from "./sunmoonpic.png"
+// import communitycircle from "./communitycircle.png"
 import solarsystem from "./solarsystem.png"
 import earthglobe from "./earthglobe.png"
 // function ControlledCarousel() {
