@@ -57,21 +57,21 @@ function ControlledCarousel() {
   return (
     <Carousel slide={false}>
       <Carousel.Item>
-    <img style={{maxWidth:"550px", maxHeight:"250px"}} src={beeinsect} alt="First slide" />
+    <img  src={beeinsect} alt="First slide" />
         <Carousel.Caption>
         <h3 style={{backgroundColor:"rgba(0,0,0,0.5)"}}>Hive of Heaven</h3>
         <p style={{backgroundColor:"rgba(0,0,0,0.5)"}}>A Bee Hive is full of bees as the Night should be filled with Stars </p>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
-               <img style={{maxWidth:"550px", maxHeight:"250px"}} src={solarsystem} alt="First slide" />
+               <img  src={solarsystem} alt="First slide" />
         <Carousel.Caption>
         <h3 style={{backgroundColor:"rgba(0,0,0,0.5)"}}>Our Purpose</h3>
            <p style={{backgroundColor:"rgba(0,0,0,0.5)"}}> Get to a better view of the Night Sky according to research and user input.</p>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
-                <img style={{maxWidth:"550px", maxHeight:"250px"}} src={earthglobe} alt="First slide" />
+                <img  src={earthglobe} alt="First slide" />
         <Carousel.Caption>
         <h3 style={{backgroundColor:"rgba(0,0,0,0.5)"}}>We Thrive on Community</h3>
            <p style={{backgroundColor:"rgba(0,0,0,0.5)"}}>
