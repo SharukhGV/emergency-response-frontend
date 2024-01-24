@@ -73,7 +73,7 @@ function Login({ setLoginUsername, loginUsername,toggleLOGIN,settoggleLOGIN, set
 
                         <button type="submit" className="registerbtn">Login</button>
 
-                        <div className="container signin">
+                        <div className="container-signin">
                             <p>Don't have an account? <Link to="/signup">Sign Up</Link>.</p>
                         </div></div>
                 </div>

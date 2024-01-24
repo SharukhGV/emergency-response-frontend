@@ -113,7 +113,7 @@ const newUser = (user) =>{axios
 
           <div><button type="submit" className="registerbtn">Register</button></div>
 
-          <div className="container signin">
+          <div className="container-signin">
             <p>Already have an account? <Link to="/login">Login</Link>.</p>
           </div>
         </div>

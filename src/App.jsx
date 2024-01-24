@@ -83,6 +83,15 @@ export default function App() {
 
         </Routes>
       </Router>
+      
+<div id="space">
+  <div class="stars"></div>
+  <div class="stars"></div>
+  <div class="stars"></div>
+  <div class="stars"></div>
+  <div class="stars"></div>
+</div>
+
     </>
   )
 }

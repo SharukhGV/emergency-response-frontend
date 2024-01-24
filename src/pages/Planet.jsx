@@ -106,8 +106,8 @@ return(
           </div>
         </div>
         {/* <p style={{fontFamily:"Arial", fontSize:"10px"}}  className="card__description">{person.description}</p> */}
-<p>Need a Telescope? {!planet.nakedEyeObject? "Yes" : "No"}</p>
-<p>Above Horizon? {planet.aboveHorizon ? "Yes" : "No"}</p>       
+<p style={{color:"black"}}>Need a Telescope? {!planet.nakedEyeObject? "Yes" : "No"}</p>
+<p style={{color:"black"}}>Above Horizon? {planet.aboveHorizon ? "Yes" : "No"}</p>       
 
         <div></div>
 

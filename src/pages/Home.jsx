@@ -9,10 +9,14 @@ import 'reactjs-popup/dist/index.css';
 import hiveheavenLOGO from "./hiveheavenLOGO.png"
 import constellationlogo from "./constellationlogo.png"
 import constellationlogoCOLOR from "./constellationlogoCOLOR.png"
+import hiveheavenLOGOWHITE from "./hiveheavenLOGOWHITE.png"
+import hiveheavenLOGO2 from "./hiveheavenLOGO2.png"
+
 import { auto } from "@cloudinary/url-gen/qualifiers/quality";                        
-import solarsystem from "../pages/solarsystem.png"
+// import solarsystem from "./solarsystem.png"
 import astronaut from "./astronaut.png"
 import "./home.css"
+import ControlledCarousel from "../components/ControlledCarousel";
 export default function Home({ setEmergencyType, loginUsername, accessToken }) {
         const navigate = useNavigate(); // Initialize the navigation function
         const [toggle1, setToggle1] = useState(false);
@@ -113,33 +117,53 @@ function modal5Click(){
         //   navigate("/visibleplanets")
         // }
 
-        return (
-                <div className="homepageContainer" style={{ width: '100%', height: '100%' }}>
-                        <div></div>
-                        {toggleConst ? <img onClick={clickConstellation} style={{ maxWidth: "300px" }} src={hiveheavenLOGO} alt="Logo"></img> :toggleConst2 ?<img onClick={clickConstellation2} style={{ maxWidth: "300px" }} src={constellationlogo} alt="Logo"></img>: <img onClick={clickConstellation} style={{ maxWidth: "300px" }} src={constellationlogoCOLOR} alt="Logo"></img>}
-                        {/* <h2>Night Sky Finder</h2> */}
-                        <h3>{!!loginUsername ? "Welcome" : null}</h3>
+        // return (
+                // <div className="homepageContainer" style={{ width: '100%', height: '100%' }}>
+//                         {/* <div></div> */}
+                 
+//                         {/* <p>TESTING: {!accessToken? <span>"no Token, not logged in"</span> : <span>`${accessToken}`</span>}</p> */}
+// {/* CODE WILL DIRECT USER TO VISIBLE PLANETS ROUTE */}
+// {/* <div>
+//   <img onClick={planetsvis} style={{width:"200px"}} src={solarsystem}></img>
+//   <div></div>
+// </div> */}
+//                        {/* {!loginUsername ?<p><Link to="/about"><img style={{width:"180px"}} src={astronaut}></img></Link></p>:null} */}
+                //       {/* {toggleConst ? <img onClick={clickConstellation} style={{ width: "300px",paddingRight:"45px" }} src={hiveheavenLOGOWHITE} alt="Logo"></img> :toggleConst2 ?<img onClick={clickConstellation2} style={{ width: "300px",paddingRight:"45px" }} src={hiveheavenLOGOWHITE} alt="Logo"></img>: <img onClick={clickConstellation} style={{ width: "300px",paddingRight:"45px" }} src={hiveheavenLOGOWHITE} alt="Logo"></img>} */}
+                //         {/* <h2 style={{color:"white"}}>Night Sky Finder</h2> */}
+               return(     
+                    <div  class="homecontainer">
+
+  <div class="caro"><ControlledCarousel /></div>
+  <div class="buttons">
+<button style={{width:"350px",border: "2px solid #373436"}} onClick={modal1Click}>Low Light Pollution</button>
+<button style={{width:"350px",border: "2px solid #373436"}} onClick={modal2Click}>Moderate Light Pollution</button>
+<button style={{width:"350px",border: "2px solid #373436"}} onClick={modal3Click}>High Light Pollution</button>
+<button style={{width:"350px",border: "2px solid #373436"}} className="northernLights" onClick={modal4Click}>Northern Lights</button>
+<button style={{width:"350px",border: "2px solid #373436"}} className="fireBall" onClick={modal5Click}>Meteoric Events</button>
+<br></br>
+<br></br>
+</div>
+
+
+  <div style={{border:"2px solid #373436", background:"radial-gradient(circle, rgba(255,226,0,0.7707457983193278) 7%, rgba(75,73,62,0.8687850140056023) 68%)"}} class="welcome">
+        <br></br>
+        <br></br>
+        <h3>{!!loginUsername ? "Welcome" : "Please Login to view all Features"}</h3>
                         <h3>{loginUsername}</h3>
-                        {/* <p>TESTING: {!accessToken? <span>"no Token, not logged in"</span> : <span>`${accessToken}`</span>}</p> */}
-{/* CODE WILL DIRECT USER TO VISIBLE PLANETS ROUTE */}
-{/* <div>
-  <img onClick={planetsvis} style={{width:"200px"}} src={solarsystem}></img>
-  <div></div>
-</div> */}
-                       {!loginUsername ?<p><Link to="/about"><img style={{width:"180px"}} src={astronaut}></img></Link></p>:null}
-                       <div style={{marginLeft:"70px",marginRight:"70px", marginBottom:"3px",  border:"solid",backgroundColor:"lightgray", borderRadius:"10px"}}>
-                        <p><strong>A Bee Hive is full of... well... bees! The night sky is full of stars. This app is meant to be a culmination of useful information for the average city-dweller to find and get to a place of starry beauty.</strong></p>
+                        
+                        </div>
 
-<p><strong>A Night Sky Companion APP that integrates features to show what's in your sky tonight, and ultimately to get to somewhere that gives you better view of the Night Sky according to research and user input.</strong></p></div>
-                        {/* <div id='natural6' value="Food & Water Shortage" onClick={emergencySETTER}>
-Food & Water Shortage
-        </div> */}
 
-<button onClick={modal1Click}>Low Light Pollution</button>
-<button onClick={modal2Click}>Moderate Light Pollution</button>
-<button onClick={modal3Click}>High Light Pollution</button>
-<button className="northernLights" onClick={modal4Click}>Northern Lights</button>
-<button className="fireBall" onClick={modal5Click}>Meteoric Events</button>
+  <div  class="logoabout">
+
+
+<img style={{maxWidth:"430px"}} className="hiveLOGO" src={hiveheavenLOGOWHITE}></img>
+                        
+  </div>
+
+
+
+
 
 
 
@@ -315,201 +339,7 @@ Food & Water Shortage
 	</article>
 </div>
 : null}
-                        {/* <div> 
-                               <Popup trigger=
-                                        {<button style={{ backgroundColor: "black", color: "white" }}><strong>No Light Pollution</strong></button>}
-                                        modal nested>
-                                        {
-                                                close => (
-                                                        <div className='modal'>
-                                                                <div className='content'>
-                                                                        <div style={{overflow:"auto", height: "50%", width: "70%", top: "0", left: "0", bottom: "0", right: "0",margin:"auto", backgroundColor:"whitesmoke"}} className="background-container">
-                                                                               
-
-                                                                                <strong><div     className="skydescription">0-10% Light Pollution:</div></strong>
-                                                                                <div className="skydescription"><strong >Sky Description:</strong></div>
-
-                                                                                <div className="skydescription">Click here if there is minimal light pollution and the sky appears exceptionally dark where the Milky Way is vividly visible, and thousands of stars are discernible. Click here if There are around 2,500 to 3,000 stars visible to the naked eye.</div>
-
-
-                                                                                <button style={{ backgroundColor: "Green", color: "white" }} id='natural2' value="0-10% Light Pollution" onClick={emergencySETTER}>Entry</button>
-                                                                                <div>
-                                                                                        <button style={{ backgroundColor: "white", color: "black" }} onClick=
-                                                                                                {() => close()}>
-                                                                                                Close
-                                                                                        </button>
-                                                                                        <div  className="skydescription">Create a Posting to help others know whether the place you visited has a beautiful night sky or not. Describe your experience, the weather, etc.</div>
-
-                                                                                </div>
-                                                                        </div>
-                                                                </div></div>
-                                                )
-                                        }
-                                </Popup>
-                        </div>
-
-
-
-                        <div>
-                                <Popup trigger=
-                                        {<button style={{ backgroundColor: "black", color: "white" }}><strong>Some Light Pollution</strong></button>}
-                                        modal nested>
-                                        {
-                                                close => (
-                                                        <div className='modal'>
-                                                                <div className='content'>
-                                                                <div style={{overflow:"auto", height: "50%", width: "70%", top: "0", left: "0", bottom: "0", right: "0",margin:"auto"}} className="background-container">
-                                                                               
-                                                                                <strong><div className="skydescription">10-30% Light Pollution:</div></strong>
-                                                                                <div className="skydescription" ><strong >Sky Description:</strong></div>
-
-                                                                                <div className="skydescription">Click here if light pollution affects the visibility of fainter stars, causing a visible glow near the horizon but major constellations and the Milky Way's core are still relatively clear.
-                                                                                        Click here if There are around roughly 1,000 to 2,000 stars visible to the naked eye.</div>
-                                                                                <button style={{ backgroundColor: "Green", color: "white" }} id='natural2' value="10-30% Light Pollution" onClick={emergencySETTER}>Entry</button>
-                                                                                <div>
-                                                                                        <button style={{ backgroundColor: "white", color: "black" }} onClick=
-                                                                                                {() => close()}>
-                                                                                                Close
-                                                                                        </button>
-                                                                                        <div className="skydescription">Create a Posting to help others know whether the place you visited has a beautiful night sky or not. Describe your experience, the weather, etc.</div>
-
-                                                                                </div>
-                                                                        </div></div></div>
-                                                )
-                                        }
-                                </Popup>
-                        </div>
-
-
-
-
-
-
-                        <div>
-                                <Popup style={{ backgroundColor: "rgb(58, 55, 50, 0.70)", color: "white" }} trigger=
-                                        {<button style={{ backgroundColor: "rgb(58, 55, 50)", color: "white" }}><strong>Moderate Light Pollution</strong></button>}
-                                        modal nested>
-                                        {
-                                                close => (
-                                                        <div className='modal'>
-                                                                <div className='content'>
-                                                                <div style={{overflow:"auto", height: "50%", width: "70%", top: "0", left: "0", bottom: "0", right: "0",margin:"auto"}} className="background-container">
-                                                                               
-
-                                                                                <strong><div className="skydescription">30-50% Light Pollution:</div></strong>
-                                                                                <div className="skydescription"><strong  >Sky Description:</strong></div>
-
-                                                                                <div  className="skydescription">Click here if moderate light pollution dims the view of the Milky Way and fainter stars. Click here if only the brightest stars and major constellations are easily identifiable.
-                                                                                        <div>Click here if There are around roughly 500 to 1,000 stars visible to the naked eye.</div></div>
-                                                                                <button style={{ backgroundColor: "Green", color: "white" }} id='natural2' value="30-50% Light Pollution" onClick={emergencySETTER}>Entry</button>
-                                                                                <div>
-                                                                                        <button style={{ backgroundColor: "white", color: "black" }} onClick=
-                                                                                                {() => close()}>
-                                                                                                Close
-                                                                                        </button>
-
-                                                                                        <div className="skydescription">Create a Posting to help others know whether the place you visited has a beautiful night sky or not. Describe your experience, the weather, etc.</div>
-                                                                                </div></div>
-                                                                </div></div>
-                                                )
-                                        }
-                                </Popup>
-                        </div>
-
-
-
-
-
-
-                        <div>
-                                <Popup style={{ backgroundColor: "rgb(85, 72, 43, 0.70)", color: "white" }} trigger=
-                                        {<button style={{ backgroundColor: "rgb(85, 72, 43)", color: "white" }}><strong>Substantial Light Pollution </strong></button>}
-                                        modal nested>
-                                        {
-                                                close => (
-                                                        <div className='modal'>
-                                                                <div className='content'>
-                                                                <div style={{overflow:"auto", height: "50%", width: "70%", top: "0", left: "0", bottom: "0", right: "0",margin:"auto"}} className="background-container">
-                                                                               
-
-                                                                                <strong><div className="skydescription">50-70% Light Pollution:</div></strong>
-                                                                                <div className="skydescription"><strong >Sky Description:</strong></div>
-
-                                                                                <div  className="skydescription">Click here if Substantial light pollution obscures most of the Milky Way and dimmer stars, leaving only the brightest stars and planets visible. The sky appears significantly brightened, even at night.
-                                                                                        Click here if there are 100 to 500 stars visible to the naked eye.</div>
-                                                                                <button style={{ backgroundColor: "Green", color: "white" }} id='natural2' value="50-70% Light Pollution" onClick={emergencySETTER}>Entry</button>
-                                                                                <div>
-                                                                                        <button style={{ backgroundColor: "white", color: "black" }} onClick=
-                                                                                                {() => close()}>
-                                                                                                Close
-                                                                                        </button><div className="skydescription">Create a Posting to help others know whether the place you visited has a beautiful night sky or not. Describe your experience, the weather, etc.</div></div>
-                                                                        </div></div>
-                                                        </div>
-                                                )
-                                        }
-                                </Popup>
-                        </div>
-
-
-
-
-                        <div>
-                                <Popup style={{ backgroundColor: "rgb(119, 85, 10, 0.70)" }} trigger=
-                                        {<button style={{ backgroundColor: "rgb(119, 85, 10)", color: "white" }}><strong> Heavy Light Pollution </strong></button>}
-                                        modal nested>
-                                        {
-                                                close => (
-                                                        <div className='modal'>
-                                                                <div className='content'>
-                                                                <div style={{overflow:"auto", height: "50%", width: "70%", top: "0", left: "0", bottom: "0", right: "0",margin:"auto"}} className="background-container">
-                                                                               
-                                                                         
-                                                                                <strong><div className="skydescription">70-100% Light Pollution:</div></strong><div></div>
-                                                                             
-                                                                                <div className="skydescription"><strong >Sky Description:</strong></div>
-
-                                                                                <div className="skydescription">Click here if the sky is heavily affected by light pollution, the sky is illuminated, making it challenging to distinguish individual stars or constellations. Click here if only the very brightest celestial objects, such as the Moon, planets, and a few prominent stars, are visible.
-                                                                                        <div>If there are less than 100 stars visible to the naked eye or you are limited to seeing the brightest stars and planets, click here.</div></div>
-                                                                                <button style={{ backgroundColor: "Green", color: "white" }} id='natural2' value="70-100% Light Pollution" onClick={emergencySETTER}>Entry</button>
-                                                                                <div>
-                                                                                        <button style={{ backgroundColor: "white", color: "black" }} onClick=
-                                                                                                {() => close()}>
-                                                                                                Close
-                                                                                        </button><div className="skydescription">Create a Posting to help others know whether the place you visited has a beautiful night sky or not. Describe your experience, the weather, etc.</div>
-                                                                                </div></div></div>
-                                                        </div>
-                                                )
-                                        }
-                                </Popup>
-                        </div> */}
-
-                        {/* 
-                        <div></div>
-                        <div style={{ backgroundColor: "black", color: "white" }} id='natural2' value="10-30% Light Pollution" onClick={emergencySETTER}>
-                                10-30% Light Pollution: *˚✧｡
-                                <span className="popup" onClick={myFunction2}>⭐
-                                        <span className="popuptext" id="myPopup">A Simple Popup!</span>
-                                </span>
-                        </div>
-                        <div></div>
-                        <div style={{ backgroundColor: "rgb(58, 55, 50)", color: "white" }} id='natural3' value="30-50% Light Pollution" onClick={emergencySETTER}>
-                                30-50% Light Pollution:✧｡         <span className="popup" onClick={myFunction3}>⭐
-                                        <span className="popuptext" id="myPopup">A Simple Popup!</span>
-                                </span>
-                        </div>
-                        <div></div>
-                        <div style={{ backgroundColor: "rgb(85, 72, 43)", color: "white" }} id='natural4' value="50-70% Light Pollution" onClick={emergencySETTER}>
-                                50-70% Light Pollution:✧       <span className="popup" onClick={myFunction4}>⭐
-                                        <span className="popuptext" id="myPopup">A Simple Popup!</span>
-                                </span>
-                        </div>
-                        <div></div>
-                        <div style={{ backgroundColor: "rgb(119, 85, 10)", color: "white", marginBottom: "20px" }} id='natural5' value="70-100% Light Pollution" onClick={emergencySETTER}>
-                                70-100% Light Pollution:  <span className="popup" onClick={myFunction5}>⭐
-                                        <span className="popuptext" id="myPopup">A Simple Popup!</span>
-                                </span>
-                        </div> */}
-
-                </div>
+                      
+</div>
         );
 }

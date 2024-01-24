@@ -1,5 +1,235 @@
-/* .homepageContainer{
+.homecontainer {  display: grid;
+    grid-template-columns: 1fr 0.7fr;
+    grid-template-rows: 1.4fr 0.6fr;
+    grid-auto-columns: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "caro logoabout"
+      "buttons welcome";
+  }
+  
+  .caro { grid-area: caro; }
+  
+  .logoabout { grid-area: logoabout; }
+  
+  .buttons { grid-area: buttons; }
+  
+  .welcome { grid-area: welcome; }
+  
+  @media (min-width:0px) and (max-width: 736px) {
+    /* .homecontainer {  display: grid;
+        grid-template-rows: 1.5fr 0.9fr 0.4fr 1.6fr;
+        grid-auto-columns: 1fr;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+      }
+      
+      .caro { grid-area: 1 / 1 / 2 / 2; }
+      
+      .logoabout { grid-area: 2 / 1 / 3 / 2; }
+      
+      .welcome { grid-area: 3 / 1 / 4 / 2; }
+      
+      .buttons { grid-area: 4 / 1 / 5 / 2; }
+       */
 
-    display: grid;
-    grid-template-columns: 50% 50%;
-} */
+
+       .homecontainer {  display: grid;
+        grid-template-rows: 0.3fr 0.5fr 0.7fr 0.9fr;
+        grid-auto-columns: 1fr;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        text-align: center;
+        padding-left: 10%;
+
+      }
+      
+      .logoabout { grid-area: 1 / 1 / 2 / 2; }
+      
+      .caro { grid-area: 2 / 1 / 3 / 2; }
+      
+      .welcome { grid-area: 3 / 1 / 4 / 2; }
+      
+      .buttons { grid-area: 4 / 1 / 5 / 2; }
+      
+
+      .hiveLOGO{width: 300px;height: auto;}
+  }
+
+
+
+
+
+
+
+  @media (min-width:434px) and (max-width: 736px) {
+    /* .homecontainer {  display: grid;
+        grid-template-rows: 1.5fr 0.9fr 0.4fr 1.6fr;
+        grid-auto-columns: 1fr;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+      }
+      
+      .caro { grid-area: 1 / 1 / 2 / 2; }
+      
+      .logoabout { grid-area: 2 / 1 / 3 / 2; }
+      
+      .welcome { grid-area: 3 / 1 / 4 / 2; }
+      
+      .buttons { grid-area: 4 / 1 / 5 / 2; }
+       */
+
+
+       .homecontainer {  display: grid;
+        grid-template-rows: 0.3fr 0.5fr 0.7fr 0.9fr;
+        grid-auto-columns: 1fr;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        text-align: center;
+        padding-left: 20%;
+
+      }
+      
+      .logoabout { grid-area: 1 / 1 / 2 / 2; }
+      
+      .caro { grid-area: 2 / 1 / 3 / 2; }
+      
+      .welcome { grid-area: 3 / 1 / 4 / 2; }
+      
+      .buttons { grid-area: 4 / 1 / 5 / 2; }
+      
+
+      .hiveLOGO{width: 300px;height: auto;}
+  }
+
+
+
+
+
+
+  @media (min-width:0px) and (max-width: 437px) {
+    /* .homecontainer {  display: grid;
+        grid-template-rows: 1.5fr 0.9fr 0.4fr 1.6fr;
+        grid-auto-columns: 1fr;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+      }
+      
+      .caro { grid-area: 1 / 1 / 2 / 2; }
+      
+      .logoabout { grid-area: 2 / 1 / 3 / 2; }
+      
+      .welcome { grid-area: 3 / 1 / 4 / 2; }
+      
+      .buttons { grid-area: 4 / 1 / 5 / 2; }
+       */
+
+
+       .homecontainer {  display: grid;
+        grid-template-rows: 0.3fr 0.5fr 0.7fr 0.9fr;
+        grid-auto-columns: 1fr;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        text-align: center;
+        padding-left: 5%;
+
+      }
+      
+      .logoabout { grid-area: 1 / 1 / 2 / 2; }
+      
+      .caro { grid-area: 2 / 1 / 3 / 2; }
+      
+      .welcome { grid-area: 3 / 1 / 4 / 2; }
+      
+      .buttons { grid-area: 4 / 1 / 5 / 2; }
+      
+
+      .hiveLOGO{width: 300px;height: auto;}
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Stars 
+------------------------------------- */
+
+#space, .stars {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -10000;
+}
+
+.stars {
+  background-image: 
+    radial-gradient(2px 2px at 20px 30px, #eee, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 40px 70px, #fff, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 50px 160px, #ddd, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 90px 40px, #fff, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 130px 80px, #fff, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 160px 120px, #ddd, rgba(0,0,0,0));
+  background-repeat: repeat;
+  background-size: 200px 200px;
+  animation: zoom 5s infinite;
+  opacity: 0;
+}
+
+.stars:nth-child(1) {
+  background-position: 50% 50%;
+  animation-delay: 0s;
+}
+.stars:nth-child(2) {
+  background-position: 20% 60%;
+  animation-delay: 1s;
+}
+.stars:nth-child(3) {
+  background-position: -20% -30%;
+  animation-delay: 2s;
+}
+.stars:nth-child(4) {
+  background-position: 40% -80%;
+  animation-delay: 3s;
+}
+.stars:nth-child(5) {
+  background-position: -20% 30%;
+  animation-delay: 4s;
+}
+
+@keyframes zoom {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+    animation-timing-function: ease-in;
+  } 
+  85% {
+    opacity: 1;
+    transform: scale(2.8);
+    animation-timing-function: linear;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(3.5);
+  }
+}
+
+/* Demo syles 
+------------------------------------- */
+
+body {
+  background: #000;
+}
+
