@@ -17,6 +17,7 @@ import hiveheavenLOGOWHITE from "./hiveheavenLOGOWHITE.png"
 // import astronaut from "./astronaut.png"
 import "./home.css"
 import ControlledCarousel from "../components/ControlledCarousel";
+import NewMoonNext from "./NewMoonNext";
 export default function Home({ setEmergencyType, loginUsername, accessToken }) {
         const navigate = useNavigate(); // Initialize the navigation function
         const [toggle1, setToggle1] = useState(false);
@@ -131,10 +132,10 @@ function modal5Click(){
                 //       {/* {toggleConst ? <img onClick={clickConstellation} style={{ width: "300px",paddingRight:"45px" }} src={hiveheavenLOGOWHITE} alt="Logo"></img> :toggleConst2 ?<img onClick={clickConstellation2} style={{ width: "300px",paddingRight:"45px" }} src={hiveheavenLOGOWHITE} alt="Logo"></img>: <img onClick={clickConstellation} style={{ width: "300px",paddingRight:"45px" }} src={hiveheavenLOGOWHITE} alt="Logo"></img>} */}
                 //         {/* <h2 style={{color:"white"}}>Night Sky Finder</h2> */}
                return(     
-                    <div  class="homecontainer">
+                    <div  className="homecontainer">
 
-  <div class="caro"><ControlledCarousel /></div>
-  <div class="buttons">
+  <div className="caro"><ControlledCarousel /></div>
+  <div className="buttons">
 <button style={{width:"350px",border: "2px solid #373436"}} onClick={modal1Click}>Low Light Pollution</button>
 <button style={{width:"350px",border: "2px solid #373436"}} onClick={modal2Click}>Moderate Light Pollution</button>
 <button style={{width:"350px",border: "2px solid #373436"}} onClick={modal3Click}>High Light Pollution</button>
@@ -145,7 +146,7 @@ function modal5Click(){
 </div>
 
 
-  <div style={{border:"2px solid #373436",borderRadius:"7px", background:"radial-gradient(circle, rgba(255,226,0,0.7707457983193278) 7%, rgba(75,73,62,0.8687850140056023) 68%)"}} class="welcome">
+  <div style={{border:"2px solid #373436",borderRadius:"7px", background:"radial-gradient(circle, rgba(255,226,0,0.7707457983193278) 7%, rgba(75,73,62,0.8687850140056023) 68%)"}} className="welcome">
         <br></br>
         <br></br>
         <h3>{!!loginUsername ? "Welcome" : "Please Login to view all Features"}</h3>
@@ -154,11 +155,11 @@ function modal5Click(){
                         </div>
 
 
-  <div  class="logoabout">
+  <div  className="logoabout">
 
 
 <img style={{maxWidth:"430px"}} className="hiveLOGO" src={hiveheavenLOGOWHITE}></img>
-                        
+<div style={{fontSize:"15px",backgroundColor:"gray",borderRadius:"7px"}}>Days until next new moon: <NewMoonNext/> </div>            
   </div>
 
 
