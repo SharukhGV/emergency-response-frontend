@@ -7,7 +7,7 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-
+import telescopeHome from "./telescopeHome.png"
 function NavigationBar({loginUsername, toggleLOGIN,settoggleLOGIN, accessToken}) {
 //     return(
 //   <div style={{backgroundColor:"black", paddingBottom:"15px",paddingTop:"10px"}}>
@@ -33,7 +33,7 @@ function NavigationBar({loginUsername, toggleLOGIN,settoggleLOGIN, accessToken})
 return (
   <Navbar expand="lg" className="navigationBAr" >
     <Container>
-      <Navbar.Brand ><Link to="/"><img style={{width:"57px", height:"35px"}} src={hivelogoClear}></img></Link></Navbar.Brand>
+      <Navbar.Brand ><Link to="/"><img style={{width:"50px", height:"50px"}} src={telescopeHome}></img></Link></Navbar.Brand>
       {/* <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav"> */}
         {/* <Nav className="me-auto"> */}

@@ -11,7 +11,7 @@ import 'reactjs-popup/dist/index.css';
 // import constellationlogoCOLOR from "./constellationlogoCOLOR.png"
 import hiveheavenLOGOWHITE from "./hiveheavenLOGOWHITE.png"
 // import hiveheavenLOGO2 from "./hiveheavenLOGO2.png"
-
+import HiveLogoGif from "./HiveLogoGif.gif"
 // import { auto } from "@cloudinary/url-gen/qualifiers/quality";                        
 // import solarsystem from "./solarsystem.png"
 // import astronaut from "./astronaut.png"
@@ -146,7 +146,7 @@ function modal5Click(){
 </div>
 
 
-  <div style={{border:"2px solid #373436",borderRadius:"7px", background:"radial-gradient(circle, rgba(255,226,0,0.7707457983193278) 7%, rgba(75,73,62,0.8687850140056023) 68%)"}} className="welcome">
+  <div style={{border:"2px solid #373436",borderRadius:"7px"}} className="welcome">
         <br></br>
         <br></br>
         <h3>{!!loginUsername ? "Welcome" : "Please Login to view all Features"}</h3>
@@ -158,7 +158,7 @@ function modal5Click(){
   <div  className="logoabout">
 
 
-<Link to="/about"><img style={{maxWidth:"430px"}} className="hiveLOGO" src={hiveheavenLOGOWHITE}></img></Link>
+<Link to="/about"><img style={{maxWidth:"430px"}} className="hiveLOGO" src={HiveLogoGif}></img></Link>
 <div style={{fontSize:"15px",backgroundColor:"gray",borderRadius:"7px"}}>Days until next new moon: <NewMoonNext/> </div>            
   </div>
 

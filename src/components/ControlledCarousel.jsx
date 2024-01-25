@@ -12,6 +12,9 @@ import beeinsect from "../pages/beeinsect.png"
 // import communitycircle from "./communitycircle.png"
 import solarsystem from "./solarsystem.png"
 import earthglobe from "./earthglobe.png"
+import lightpollution from "./lightpollution.jpg"
+import shootingstar from "./shootingstar.jpg"
+import aurora from "./aurora.jpg"
 // function ControlledCarousel() {
 //   const [index, setIndex] = useState(0);
 
@@ -57,23 +60,23 @@ function ControlledCarousel() {
   return (
     <Carousel slide={false}>
       <Carousel.Item>
-    <img  src={beeinsect} alt="First slide" />
+    <img  src={lightpollution} alt="First slide" />
         <Carousel.Caption>
-        <h3 style={{backgroundColor:"rgba(0,0,0,0.5)"}}>Hive of Heaven</h3>
+        <h3 style={{backgroundColor:"rgba(0,0,0,0.5)"}}>Starry Nights are Rare</h3>
         <p style={{backgroundColor:"rgba(0,0,0,0.5)"}}>A Bee Hive is full of bees as the Night should be filled with Stars </p>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
-               <img  src={solarsystem} alt="First slide" />
+               <img  src={shootingstar} alt="First slide" />
         <Carousel.Caption>
-        <h3 style={{backgroundColor:"rgba(0,0,0,0.5)"}}>Our Purpose</h3>
-           <p style={{backgroundColor:"rgba(0,0,0,0.5)"}}> Get to a better view of the Night Sky according to research and user input.</p>
+        <h3 style={{backgroundColor:"rgba(0,0,0,0.5)"}}>Gaze at Other Worlds</h3>
+           <p style={{backgroundColor:"rgba(0,0,0,0.5)"}}>Report Dark Skies for Others to Enjoy</p>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
-                <img  src={earthglobe} alt="First slide" />
+                <img  src={aurora} alt="First slide" />
         <Carousel.Caption>
-        <h3 style={{backgroundColor:"rgba(0,0,0,0.5)"}}>We Thrive on Community</h3>
+        <h3 style={{backgroundColor:"rgba(0,0,0,0.5)"}}>Auroras & Meteors</h3>
            <p style={{backgroundColor:"rgba(0,0,0,0.5)"}}>
  Report dark skies near you, or astronomical anomalies.</p>
         </Carousel.Caption>
