@@ -158,7 +158,7 @@ function modal5Click(){
   <div  className="logoabout">
 
 
-<img style={{maxWidth:"430px"}} className="hiveLOGO" src={hiveheavenLOGOWHITE}></img>
+<Link to="/about"><img style={{maxWidth:"430px"}} className="hiveLOGO" src={hiveheavenLOGOWHITE}></img></Link>
 <div style={{fontSize:"15px",backgroundColor:"gray",borderRadius:"7px"}}>Days until next new moon: <NewMoonNext/> </div>            
   </div>
 
