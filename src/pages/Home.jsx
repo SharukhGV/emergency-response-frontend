@@ -155,7 +155,7 @@ function modal5Click(){
 
 
   <div style={{border:"2px solid #373436",borderRadius:"7px"}} className="welcome">
-  <div style={{fontSize:"15px",backgroundColor:"gray",borderRadius:"7px"}}>Days until next new moon: <NewMoonNext/> </div>    
+  <div style={{fontSize:"23px",backgroundColor:"gray",borderRadius:"7px"}}>Days until next new moon: <NewMoonNext/> </div>    
         <br></br>
         <br></br>
         <h3>{!!loginUsername ? "Welcome" : "Please Login to view all Features"}</h3>
