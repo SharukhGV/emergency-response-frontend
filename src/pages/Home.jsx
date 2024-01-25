@@ -137,11 +137,11 @@ function modal5Click(){
   <div className="caro"><ControlledCarousel /></div>
   <div className="buttons">
         <br></br>
-<button style={{width:"350px",border: "2px solid #373436"}} onClick={modal1Click}>Low Light Pollution</button>
-<button style={{width:"350px",border: "2px solid #373436"}} onClick={modal2Click}>Moderate Light Pollution</button>
-<button style={{width:"350px",border: "2px solid #373436"}} onClick={modal3Click}>High Light Pollution</button>
-<button style={{width:"350px",border: "2px solid #373436"}} className="northernLights" onClick={modal4Click}>Northern Lights</button>
-<button style={{width:"350px",border: "2px solid #373436"}} className="fireBall" onClick={modal5Click}>Meteoric Events</button>
+<button style={{border: "2px solid #373436"}} onClick={modal1Click}>Low Light Pollution</button>
+<button style={{border: "2px solid #373436"}} onClick={modal2Click}>Moderate Light Pollution</button>
+<button style={{border: "2px solid #373436"}} onClick={modal3Click}>High Light Pollution</button>
+<button style={{border: "2px solid #373436"}} className="northernLights" onClick={modal4Click}>Northern Lights</button>
+<button style={{border: "2px solid #373436"}} className="fireBall" onClick={modal5Click}>Meteoric Events</button>
 <br></br>
 <br></br>
 </div>
