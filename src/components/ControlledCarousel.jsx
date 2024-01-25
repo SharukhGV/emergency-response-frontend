@@ -17,6 +17,7 @@ import shootingstar from "./shootingstar.jpg"
 import aurora from "./aurora.jpg"
 // function ControlledCarousel() {
 //   const [index, setIndex] = useState(0);
+import { Container, Row, Col, Image } from 'react-bootstrap';
 
 //   const handleSelect = (selectedIndex) => {
 //     setIndex(selectedIndex);
@@ -60,21 +61,21 @@ function ControlledCarousel() {
   return (
     <Carousel slide={false}>
       <Carousel.Item>
-    <img  src={lightpollution} alt="First slide" />
+    <Image fluid src={lightpollution} alt="First slide" />
         <Carousel.Caption>
         <h3 style={{backgroundColor:"rgba(0,0,0,0.5)"}}>Starry Nights are Rare</h3>
         <p style={{backgroundColor:"rgba(0,0,0,0.5)"}}>A Bee Hive is full of bees as the Night should be filled with Stars </p>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
-               <img  src={shootingstar} alt="First slide" />
+               <Image fluid src={shootingstar} alt="First slide" />
         <Carousel.Caption>
         <h3 style={{backgroundColor:"rgba(0,0,0,0.5)"}}>Gaze at Other Worlds</h3>
            <p style={{backgroundColor:"rgba(0,0,0,0.5)"}}>Report Dark Skies for Others to Enjoy</p>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
-                <img  src={aurora} alt="First slide" />
+                <Image fluid  src={aurora} alt="First slide" />
         <Carousel.Caption>
         <h3 style={{backgroundColor:"rgba(0,0,0,0.5)"}}>Auroras & Meteors</h3>
            <p style={{backgroundColor:"rgba(0,0,0,0.5)"}}>

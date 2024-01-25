@@ -136,6 +136,7 @@ function modal5Click(){
 
   <div className="caro"><ControlledCarousel /></div>
   <div className="buttons">
+        <br></br>
 <button style={{width:"350px",border: "2px solid #373436"}} onClick={modal1Click}>Low Light Pollution</button>
 <button style={{width:"350px",border: "2px solid #373436"}} onClick={modal2Click}>Moderate Light Pollution</button>
 <button style={{width:"350px",border: "2px solid #373436"}} onClick={modal3Click}>High Light Pollution</button>
@@ -147,6 +148,7 @@ function modal5Click(){
 
 
   <div style={{border:"2px solid #373436",borderRadius:"7px"}} className="welcome">
+  <div style={{fontSize:"15px",backgroundColor:"gray",borderRadius:"7px"}}>Days until next new moon: <NewMoonNext/> </div>    
         <br></br>
         <br></br>
         <h3>{!!loginUsername ? "Welcome" : "Please Login to view all Features"}</h3>
@@ -159,7 +161,7 @@ function modal5Click(){
 
 
 <Link to="/about"><img style={{maxWidth:"430px"}} className="hiveLOGO" src={HiveLogoGif}></img></Link>
-<div style={{fontSize:"15px",backgroundColor:"gray",borderRadius:"7px"}}>Days until next new moon: <NewMoonNext/> </div>            
+        
   </div>
 
 

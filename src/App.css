@@ -1076,7 +1076,7 @@ max-height:"auto";
 } */
 
 
-.navbar .container{
+.container-fluid{
   background-color: rgba(255, 255, 255, 0.288);
 }
 
@@ -1086,36 +1086,10 @@ background: linear-gradient(90deg, rgba(249,255,0,0.258140756302521) 36%, rgba(9
 } */
 
 
-.carousel img {
-  width:450px;
-  height:350px;
-  /* border: 2px solid #04AA6D */
-}
-@media (max-width: 1300px) {
-  .carousel {
-    width:100%;
-    height:100%;
-    /* border: 2px solid #04AA6D  } */
-}
-
-}
-
-
-@media (max-width: 1300px) {
-  .carousel img {
-    width:100%;
-    height:100%;
-    /* border: 2px solid #04AA6D  } */
-}
-.carousel {
-  width:100%;
-  height:100%;
-  /* border: 2px solid #04AA6D  } */
-}
-
-}
+/*  */
 
 
 .navigationBAr{
   z-index: 1000;
 }
+

@@ -32,7 +32,7 @@ function NavigationBar({loginUsername, toggleLOGIN,settoggleLOGIN, accessToken})
 // }
 return (
   <Navbar expand="lg" className="navigationBAr" >
-    <Container>
+    <Container fluid>
       <Navbar.Brand ><Link to="/"><img style={{width:"50px", height:"50px"}} src={telescopeHome}></img></Link></Navbar.Brand>
       {/* <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav"> */}
