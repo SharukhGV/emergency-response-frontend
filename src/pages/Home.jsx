@@ -133,8 +133,15 @@ function modal5Click(){
                 //         {/* <h2 style={{color:"white"}}>Night Sky Finder</h2> */}
                return(     
                     <div  className="homecontainer">
+                    
 
   <div className="caro"><ControlledCarousel /></div>
+  <div  className="logoabout">
+
+
+<Link to="/about"><img style={{maxWidth:"430px"}} className="hiveLOGO" src={HiveLogoGif}></img></Link>
+        
+  </div>
   <div className="buttons">
         <br></br>
 <button style={{border: "2px solid #373436"}} onClick={modal1Click}>Low Light Pollution</button>
@@ -153,16 +160,12 @@ function modal5Click(){
         <br></br>
         <h3>{!!loginUsername ? "Welcome" : "Please Login to view all Features"}</h3>
                         <h3>{loginUsername}</h3>
-                        
+                        <br></br>
+                        <br></br>
                         </div>
 
 
-  <div  className="logoabout">
 
-
-<Link to="/about"><img style={{maxWidth:"430px"}} className="hiveLOGO" src={HiveLogoGif}></img></Link>
-        
-  </div>
 
 
 

@@ -13,13 +13,15 @@
   
   .logoabout { grid-area: logoabout; }
   
-  .buttons { grid-area: buttons; }
+  .buttons { grid-area: buttons;
+background-color: #373436; }
   
   .welcome { grid-area: welcome;
     background-image: url("../components/borealis.jpg");
-    background-size: cover }
+    background-size: cover;
+background-color: #373436; }
   
-  @media (min-width:0px) and (max-width: 736px) {
+  /* @media (min-width:0px) and (max-width: 736px) { */
     /* .homecontainer {  display: grid;
         grid-template-rows: 1.5fr 0.9fr 0.4fr 1.6fr;
         grid-auto-columns: 1fr;
@@ -37,7 +39,7 @@
        */
 
 
-       .homecontainer {  display: grid;
+       /* .homecontainer {  display: grid;
         grid-template-rows: 0.3fr 0.5fr 0.7fr 0.9fr;
         grid-auto-columns: 1fr;
         gap: 0px 0px;
@@ -55,20 +57,20 @@
     
     background-image: url("../components/borealis.jpg");
     background-size: cover
-}
+} */
       
-      .buttons { grid-area: 4 / 1 / 5 / 2; }
+      /* .buttons { grid-area: 4 / 1 / 5 / 2; } */
       
 
       /* .hiveLOGO{width: 300px;height: auto;} */
-  }
+  /* } */
 
 
 
 
 
 
-
+/* 
   @media (min-width:434px) and (max-width: 736px) {
     /* .homecontainer {  display: grid;
         grid-template-rows: 1.5fr 0.9fr 0.4fr 1.6fr;
@@ -85,7 +87,7 @@
       
       .buttons { grid-area: 4 / 1 / 5 / 2; }
        */
-
+/* 
 
        .homecontainer {  display: grid;
         grid-template-rows: 0.3fr 0.5fr 0.7fr 0.9fr;
@@ -107,14 +109,14 @@
       
 
       .hiveLOGO{width: 300px;height: auto;}
-  }
+  } */
+
+ 
 
 
 
 
-
-
-  @media (min-width:0px) and (max-width: 437px) {
+  @media (min-width:0px) and (max-width: 1115px) {
     /* .homecontainer {  display: grid;
         grid-template-rows: 1.5fr 0.9fr 0.4fr 1.6fr;
         grid-auto-columns: 1fr;
@@ -130,39 +132,65 @@
       
       .buttons { grid-area: 4 / 1 / 5 / 2; }
        */
-
-
-       .homecontainer {  display: grid;
+/* 
+       .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh; /* Adjust the height as needed */
+      
+      
+      /* .row {
+        display: flex;
+      }
+      
+      .grid-item {
+        text-align: center;
+        margin: 10px; /* Adjust margin as needed */
+      /* } */ 
+      
+       .homecontainer {  
+        /* display: grid;
         grid-template-rows: 0.3fr 0.5fr 0.7fr 0.9fr;
         grid-auto-columns: 1fr;
         gap: 0px 0px;
         grid-auto-flow: row;
         text-align: center;
-        padding-left: 5%;
+        padding-left: 5%; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* height: 100vh; Adjust the height as needed */
+        flex-direction: column;
 
       }
       
-      .logoabout { grid-area: 1 / 1 / 2 / 2; }
-      
-      .caro { grid-area: 2 / 1 / 3 / 2; }
-      
-      .welcome { grid-area: 3 / 1 / 4 / 2; }
-      
-      .buttons { grid-area: 4 / 1 / 5 / 2; }
+      .logoabout { 
+        grid-area: 1 / 1 / 2 / 2; 
+        text-align: center;
+      }      
+      .caro { 
+        /* grid-area: 2 / 1 / 3 / 2;   */
+        text-align: center;
+      }
+      .welcome { 
+        /* grid-area: 3 / 1 / 4 / 2;  */
+        text-align: center;
+      }      
+      .buttons { 
+        /* grid-area: 4 / 1 / 5 / 2;   */
+        text-align: center;
       
 
-      .hiveLOGO{width: 300px;height: auto;}
+    
+
+
+    }
+
+
+
+
   }
-
-
-
-
-
-
-
-
-
-
 
 
 
