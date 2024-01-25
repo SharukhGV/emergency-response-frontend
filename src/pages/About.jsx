@@ -34,8 +34,11 @@ return(
 <h2 style={{color:"purple"}}>APIs Used</h2>
 <div>
 <a href="https://locationiq.com/"><img src={loqationIQLOGO}></img></a>
+<br></br>
 <a href="https://github.com/shavik/visible-planets-api/blob/master/README.md"><img  src={VisiblePlanetsAPILOGO}></img></a>
+<br></br>
 <a href="https://developers.google.com/maps/apis-by-platform"><img  src={googlemapsAPI}></img></a>
+<br></br>
 <a href="https://moon-api.com/"><img  src={moonapi}></img></a>
 
 </div>
