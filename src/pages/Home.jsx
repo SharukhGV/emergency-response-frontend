@@ -139,7 +139,7 @@ function modal5Click(){
   <div  className="logoabout">
 
 
-<Link to="/about"><img style={{maxWidth:"430px"}} className="hiveLOGO" src={HiveLogoGif}></img></Link>
+<Link to="/about"><img  style={{border:"2px solid #373436",borderRadius:"7px"}}className="hiveLOGO" src={HiveLogoGif}></img></Link>
         
   </div>
   <div className="buttons">
