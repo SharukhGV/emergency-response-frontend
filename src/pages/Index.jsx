@@ -14,6 +14,7 @@ import SearchPreserves from "../components/SearchPreserves";
 import collegeMarker from "../components/collegeMarker.png"
 // import observatoryMarker from "./observatoryMarker.png"
 import SearchObservatories from "../components/SearchObservatories";
+import observatoryMarker from "../components/observatoryMarker.png"
 function Index({setMapMarkers, mapMarkers, location, setAccessToken,loginUsername}) {
 
 // const [data, setData] = useState([])
@@ -76,6 +77,10 @@ return (
 <div>This Marker on the Map denotes a Point of Interest by a Community User</div>
 <img src={collegeMarker}></img>
 <div>This Marker on the Map denotes a College that offers Astronomy as a Major</div>
+<img src={observatoryMarker}></img>
+<div>This Marker on the Map denotes a public Observatory</div>
+
+
 </div> :null}</div>
 <br></br>
 
