@@ -4,19 +4,21 @@ import markerImage from "./markerImage.png";
 import telescopeicon from "../pages/telescopeicon.png"
 import collegeMarker from "./collegeMarker.png"
     import AstronomyColleges from "./AstronomyColleges.json"
-
 import { useEffect, useState } from "react";
 import axios from "axios";
-export default function GoogleMaps({ mapMarkers,preserveMarkers }) {
+import observatoryMarker from "./observatoryMarker.png"
+
+export default function GoogleMaps({ mapMarkers,preserveMarkers,observatoryMarkers }) {
   const [markers, setMarkers] = useState([]);
   const [markersPreserves, setMarkersPreserves] = useState([]);
-
+const [markersObserv,setMarkersObserv]=useState([])
   const [fireball, setFireball] = useState([]);
 
   useEffect(() => {
     setMarkers(mapMarkers);
     setMarkersPreserves(preserveMarkers)
-  }, [mapMarkers,preserveMarkers]);
+    setMarkersObserv(observatoryMarkers)
+  }, [mapMarkers,preserveMarkers,observatoryMarkers]);
 
   const mapStyles = {
     height: "400px",
@@ -24,8 +26,8 @@ export default function GoogleMaps({ mapMarkers,preserveMarkers }) {
   };
 
   let defaultCenter = {
-    lat: 0, // Default latitude
-    lng: 0, // Default longitude
+    lat: 39.8097343, // Default latitude
+    lng: -98.5556199, // Default longitude
   };
 
   if(markers.length === 1){
@@ -66,7 +68,7 @@ export default function GoogleMaps({ mapMarkers,preserveMarkers }) {
     <LoadScript googleMapsApiKey={import.meta.env.VITE_GOOGLE_MAPS_API_KEY}>
       <GoogleMap
         mapContainerStyle={mapStyles}
-        zoom={2}
+        zoom={3}
         center={defaultCenter}
       >
 {markersPreserves.map((marker, index) => (
@@ -74,6 +76,14 @@ export default function GoogleMaps({ mapMarkers,preserveMarkers }) {
             key={index+1236545}
             position={{ lat: parseFloat(marker.lat), lng: parseFloat(marker.lng) }}
             icon={telescopeicon}
+          />
+        ))}
+
+{markersObserv.map((marker, index) => (
+          <Marker
+            key={index+198986545}
+            position={{ lat: parseFloat(marker.lat), lng: parseFloat(marker.lng) }}
+            icon={observatoryMarker}
           />
         ))}
 

@@ -12,7 +12,8 @@ import markerImage from "../components/markerImage.png"
 import { useState } from "react";
 import SearchPreserves from "../components/SearchPreserves";
 import collegeMarker from "../components/collegeMarker.png"
-
+// import observatoryMarker from "./observatoryMarker.png"
+import SearchObservatories from "../components/SearchObservatories";
 function Index({setMapMarkers, mapMarkers, location, setAccessToken,loginUsername}) {
 
 // const [data, setData] = useState([])
@@ -32,17 +33,27 @@ function Index({setMapMarkers, mapMarkers, location, setAccessToken,loginUsernam
 //       })
     
 //   }
+const [observatoryMarkers,setObservatoryMarker]=useState([])
 
 const [preserveMarkers,setPreserveMarkers]=useState([])
 
-const [darkPreserve,setDarkPreserve]=useState(true)
+const [darkPreserve,setDarkPreserve]=useState(0)
 
 function darkSKIES(){
-  setDarkPreserve(true)
+  setDarkPreserve(1)
 }
 
 function communityPosts(){
-  setDarkPreserve(false)
+  setDarkPreserve(2)
+}
+
+
+function ObservatoryPosts(){
+  setDarkPreserve(3)
+}
+
+function AstronomyColleges(){
+  setDarkPreserve(4)
 }
 
 const [showLegend, setShowLegend]=useState(false)
@@ -52,7 +63,7 @@ function legendToggle(){
 return (
   <>
   <div>
-    <GoogleMaps preserveMarkers={preserveMarkers} mapMarkers={mapMarkers} />
+    <GoogleMaps preserveMarkers={preserveMarkers} mapMarkers={mapMarkers} observatoryMarkers={observatoryMarkers} />
     <br></br>
     <button style={{backgroundColor:" #00000000", color:"yellow"}} onClick={legendToggle}>🧭</button>
     <br></br>
@@ -67,11 +78,26 @@ return (
 <div>This Marker on the Map denotes a College that offers Astronomy as a Major</div>
 </div> :null}</div>
 <br></br>
+
 <button onClick={(darkSKIES)} style={{width:"250px", color:"green"}}>Dark Sky Preserves</button>   <button onClick={communityPosts} style={{width:"250px", color:"orange"}}>Community Posts</button>
-{darkPreserve ? <h1>Dark Sky Preserves</h1> : <h1>Community Posts</h1>}
-  {darkPreserve ?<div><SearchPreserves preserveMarkers={preserveMarkers} setPreserveMarkers={setPreserveMarkers} /></div>
-  :<SearchPeople setAccessToken={setAccessToken} loginUsername={loginUsername} location={location} mapMarkers={mapMarkers} setMapMarkers={setMapMarkers} />}
-  <br></br>
+<button onClick={(ObservatoryPosts)} style={{width:"250px", color:"green"}}>Public Observatories</button>  
+ {/* <button onClick={AstronomyColleges} style={{width:"250px", color:"orange"}}>Astronomy Colleges</button> */}
+
+{darkPreserve === 1 ? <h1>Dark Sky Preserves</h1> : null}
+{darkPreserve === 2 ? <h1> Community Posts</h1> : null}
+{darkPreserve === 3 ? <h1>Public Observatories</h1> : null}
+{/* {darkPreserve === 4 ? <h1>Astronomy Colleges</h1> : null} */}
+{darkPreserve ===1 ?<div><SearchPreserves preserveMarkers={preserveMarkers} setPreserveMarkers={setPreserveMarkers} /></div>
+  :null}
+  
+  
+  {darkPreserve ===2 ?<SearchPeople setAccessToken={setAccessToken} loginUsername={loginUsername} location={location} mapMarkers={mapMarkers} setMapMarkers={setMapMarkers} /> : null}
+ 
+  {darkPreserve ===3 ?<div><SearchObservatories observatoryMarkers={observatoryMarkers} setObservatoryMarker={setObservatoryMarker} /></div>
+  :null}
+ 
+ 
+ <br></br>
   <br></br>
   <br></br>
   <br></br>
