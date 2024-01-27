@@ -3,52 +3,62 @@
       {
         "name": "Quadrantids",
         "date": "January 1-5",
-        "frequency": "Active annually, peak around January 3"
+        "frequency": "Active annually, peak around January 3",
+        "image":"https://upload.wikimedia.org/wikipedia/commons/f/f2/Bootes-foreleg.png"
       },
       {
         "name": "Lyrids",
         "date": "April 16-25",
-        "frequency": "Active annually, peak around April 22"
+        "frequency": "Active annually, peak around April 22",
+        "image": "https://cdn.pixabay.com/photo/2018/04/08/17/08/constellation-3301788_1280.jpg"
       },
       {
         "name": "Eta Aquarids",
         "date": "April 19 - May 28",
-        "frequency": "Active annually, peak around May 6"
+        "frequency": "Active annually, peak around May 6",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Lspn_comet_halley.jpg/800px-Lspn_comet_halley.jpg"
       },
       {
         "name": "Perseids",
         "date": "July 17 - August 26",
-        "frequency": "Active annually, peak around August 12"
+        "frequency": "Active annually, peak around August 12",
+        "image":"https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/%D8%B2%D8%AE%D8%A9_%D8%B4%D9%87%D8%A8_%D8%A7%D9%84%D8%A8%D8%B1%D8%B4%D8%A7%D9%88%D9%8A%D8%A7%D8%AA.jpg/800px-%D8%B2%D8%AE%D8%A9_%D8%B4%D9%87%D8%A8_%D8%A7%D9%84%D8%A8%D8%B1%D8%B4%D8%A7%D9%88%D9%8A%D8%A7%D8%AA.jpg"
       },
       {
         "name": "Draconids",
         "date": "October 6-10",
-        "frequency": "Active annually, variable intensity, occasional meteor storms"
+        "frequency": "Active annually, variable intensity, occasional meteor storms",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/8/89/Bolide.jpg"
       },
       {
         "name": "Orionids",
         "date": "October 2 - November 7",
-        "frequency": "Active annually, peak around October 21"
+        "frequency": "Active annually, peak around October 21",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Orionid_Meteor%281%29.JPG/800px-Orionid_Meteor%281%29.JPG"
       },
       {
         "name": "Taurids",
         "date": "October 20 - December 10",
-        "frequency": "Active annually, separate branches for Northern and Southern Taurids, peaks in late October and early November"
+        "frequency": "Active annually, separate branches for Northern and Southern Taurids, peaks in late October and early November",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Tauride-20201204.jpg/800px-Tauride-20201204.jpg"
       },
       {
         "name": "Leonids",
         "date": "November 6-30",
-        "frequency": "Active annually, peak around November 17-18, periodic meteor storms"
+        "frequency": "Active annually, peak around November 17-18, periodic meteor storms",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Leonid_Meteor.jpg/800px-Leonid_Meteor.jpg"
       },
       {
         "name": "Geminids",
         "date": "December 4-17",
-        "frequency": "Active annually, peak around December 13-14, one of the most reliable meteor showers"
+        "frequency": "Active annually, peak around December 13-14, one of the most reliable meteor showers",
+        "image" : "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Geminids.jpg/800px-Geminids.jpg"
       },
       {
         "name": "Ursids",
         "date": "December 17-26",
-        "frequency": "Active annually, peak around December 21-22"
+        "frequency": "Active annually, peak around December 21-22",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/4/4a/Radiant_for_Ursids_2018.jpg"
       }
     ]
   }
