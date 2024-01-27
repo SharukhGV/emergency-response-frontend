@@ -1093,3 +1093,7 @@ background: linear-gradient(90deg, rgba(249,255,0,0.258140756302521) 36%, rgba(9
   z-index: 1000;
 }
 
+.card p{
+  color:black
+}
+
