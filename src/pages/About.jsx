@@ -8,17 +8,21 @@ import community from "./community.png"
 import telescopeicon from "./telescopeicon.png"
 import markerImage from "../components/markerImage.png"
 import moonapi from "./moonapi.png"
-
+import HiveLogoGif from "./HiveLogoGif.gif"
 export default function About(){
 
 
 return(
 
 <div> 
-<h1 style={{color:"orange"}}>Hive of Heaven</h1>
-<h2 style={{color:"purple"}}>Community Night Sky Finder</h2>
+{/* <Link to="/about"> */}
+  {/* <img className="hiveLOGO" src={HiveLogoGif}></img> */}
+  {/* </Link> */}
 
-<img style={{width:"300px"}} src={community}></img>
+{/* <h1 style={{color:"orange"}}>Hive of Heaven</h1> */}
+{/* <h2 style={{color:"purple"}}>Community Night Sky Finder</h2> */}
+
+{/* <img style={{width:"300px"}} src={community}></img> */}
 {/* <div style={{backgroundColor:"#FFFDDF", padding:"30px", borderRadius:"20px"}}> */}
 <h4 style={{margin:"50px"}}>Embark on a celestial journey with our community-powered app, a mesmerizing portal where the cosmos converges with human wonder. Within this celestial haven, users weave tales of starry night destinations, crafting geotagged posts that illuminate the secrets of the nocturnal sky. </h4>
 
@@ -31,21 +35,21 @@ return(
 <img src={markerImage}></img>
 <div>This Marker on the Map denotes a Point of Interest by a Community User</div>
 </div> */}
-<h2 style={{color:"purple"}}>APIs Used</h2>
+{/* <h2 style={{color:"purple"}}>APIs Used</h2>
 <div>
-<a href="https://locationiq.com/"><img src={loqationIQLOGO}></img></a>
+<a href="https://locationiq.com/"><img style={{width:"auto", height:"auto"}} src={loqationIQLOGO}></img></a>
 <br></br>
-<a href="https://github.com/shavik/visible-planets-api/blob/master/README.md"><img  src={VisiblePlanetsAPILOGO}></img></a>
+<a href="https://github.com/shavik/visible-planets-api/blob/master/README.md"><img style={{width:"auto", height:"auto"}} src={VisiblePlanetsAPILOGO}></img></a>
 <br></br>
-<a href="https://developers.google.com/maps/apis-by-platform"><img  src={googlemapsAPI}></img></a>
+<a href="https://developers.google.com/maps/apis-by-platform"><img style={{width:"auto", height:"auto"}} src={googlemapsAPI}></img></a>
 <br></br>
-<a href="https://moon-api.com/"><img  src={moonapi}></img></a>
+<a href="https://moon-api.com/"><img style={{width:"auto", height:"auto"}} src={moonapi}></img></a>
 
 </div>
 
 <br></br>
 <br></br>
-<br></br>
+<br></br> */}
 {/* <div className="card">
   
   <img style={{width:'100%'}} src={hiveheavenLOGO} alt="sharukh"></img>

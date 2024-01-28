@@ -18,6 +18,7 @@ import HiveLogoGif from "./HiveLogoGif.gif"
 import "./home.css"
 import ControlledCarousel from "../components/ControlledCarousel";
 import NewMoonNext from "./NewMoonNext";
+import About from "./About";
 export default function Home({ setEmergencyType, loginUsername, accessToken }) {
         const navigate = useNavigate(); // Initialize the navigation function
         const [toggle1, setToggle1] = useState(false);
@@ -138,15 +139,17 @@ function modal5Click(){
   <div className="caro"><ControlledCarousel /></div>
   <div  className="logoabout">
 
-
-<Link to="/about"><img className="hiveLOGO" src={HiveLogoGif}></img></Link>
+<About/>
+{/* <Link to="/about"><img className="hiveLOGO" src={HiveLogoGif}></img></Link> */}
         
   </div>
   <div className="buttons">
         <br></br>
-<button style={{border: "2px solid #373436"}} onClick={modal1Click}>Low Light Pollution</button>
-<button style={{border: "2px solid #373436"}} onClick={modal2Click}>Moderate Light Pollution</button>
-<button style={{border: "2px solid #373436"}} onClick={modal3Click}>High Light Pollution</button>
+        <h3 style={{color:"yellowgreen"}}>Below are Buttons to Make a Post</h3>
+        <h7 style={{color:"yellowgreen"}}>Click one to Find Out More Information</h7>
+<button style={{border: "2px solid #373436",backgroundColor:"black"}} onClick={modal1Click}>Low Light Pollution</button>
+<button style={{border: "2px solid #373436",backgroundColor:"rgb(92, 86, 73)"}} onClick={modal2Click}>Moderate Light Pollution</button>
+<button style={{border: "2px solid #373436",backgroundColor:"rgb(120, 102, 62)"}} onClick={modal3Click}>High Light Pollution</button>
 <button style={{border: "2px solid #373436"}} className="northernLights" onClick={modal4Click}>Northern Lights</button>
 <button style={{border: "2px solid #373436"}} className="fireBall" onClick={modal5Click}>Meteoric Events</button>
 <br></br>
@@ -155,7 +158,7 @@ function modal5Click(){
 
 
   <div style={{border:"2px solid #373436",borderRadius:"7px"}} className="welcome">
-  <div style={{fontSize:"23px",backgroundColor:"gray",borderRadius:"7px"}}>Days until next new moon: <NewMoonNext/> </div>    
+  <div className="newMoonBack" style={{fontSize:"23px", color:"yellowgreen",borderRadius:"7px"}}>Days until next new moon: <NewMoonNext/> </div>    
         <br></br>
         <br></br>
         <h3>{!!loginUsername ? "Welcome" : "Please Login to view all Features"}</h3>

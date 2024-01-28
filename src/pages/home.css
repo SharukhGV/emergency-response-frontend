@@ -166,6 +166,7 @@ background-color: #373436; }
       }
       
       .logoabout { 
+        display: inline-block;
         grid-area: 1 / 1 / 2 / 2; 
         text-align: center;
       }      
@@ -189,7 +190,9 @@ background-color: #373436; }
     }
 
 
-
+.logoabout{
+  display: none;
+}
 
   }
 
@@ -268,3 +271,15 @@ body {
   background: #000;
 }
 
+
+.newMoonBack{
+  background-image: url("./moonBackground.jpg");
+  background-size: cover;
+
+}
+
+.logoabout{
+  height:100%;
+  width: 100%;
+  overflow:scroll;
+}
