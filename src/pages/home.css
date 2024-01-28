@@ -290,3 +290,8 @@ body {
   background-image: url("./milkyBand.jpg");
   background-size: cover;
 }
+
+.logoabout{
+  background-image: url("./beehivePlanet.jpg");
+  background-size: cover;
+}
