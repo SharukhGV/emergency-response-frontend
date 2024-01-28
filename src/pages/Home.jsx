@@ -145,8 +145,9 @@ function modal5Click(){
   </div>
   <div className="buttons">
         <br></br>
-        <h3 style={{color:"yellowgreen"}}>Below are Buttons to Make a Post</h3>
-        <h7 style={{color:"yellowgreen"}}>Click one to Find Out More Information</h7>
+       <div className="milkyBand"><div style={{color:"yellowgreen",fontSize:"20px", paddingTop:"23px"}}>Below are Buttons to Make a Post</div>
+        <div style={{color:"yellowgreen"}}>Click one to find out more Information</div>
+        <br></br></div>
 <button style={{border: "2px solid #373436",backgroundColor:"black"}} onClick={modal1Click}>Low Light Pollution</button>
 <button style={{border: "2px solid #373436",backgroundColor:"rgb(92, 86, 73)"}} onClick={modal2Click}>Moderate Light Pollution</button>
 <button style={{border: "2px solid #373436",backgroundColor:"rgb(120, 102, 62)"}} onClick={modal3Click}>High Light Pollution</button>

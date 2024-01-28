@@ -14,7 +14,8 @@
   .logoabout { grid-area: logoabout; }
   
   .buttons { grid-area: buttons;
-background-color: #373436; }
+background-color: #373436;
+width: 100%; }
   
   .welcome { grid-area: welcome;
     background-image: url("../components/borealis.jpg");
@@ -182,7 +183,7 @@ background-color: #373436; }
       .buttons { 
         /* grid-area: 4 / 1 / 5 / 2;   */
         text-align: center;
-      
+      width: 100%;
 
     
 
@@ -282,4 +283,10 @@ body {
   height:100%;
   width: 100%;
   overflow:scroll;
+}
+
+
+.milkyBand{
+  background-image: url("./milkyBand.jpg");
+  background-size: cover;
 }

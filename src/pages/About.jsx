@@ -9,6 +9,7 @@ import telescopeicon from "./telescopeicon.png"
 import markerImage from "../components/markerImage.png"
 import moonapi from "./moonapi.png"
 import HiveLogoGif from "./HiveLogoGif.gif"
+import astronaut from "./astronaut.png"
 export default function About(){
 
 
@@ -16,7 +17,7 @@ return(
 
 <div> 
 {/* <Link to="/about"> */}
-  {/* <img className="hiveLOGO" src={HiveLogoGif}></img> */}
+  <img style={{width:"150px",height:"auto"}} src={astronaut}></img>
   {/* </Link> */}
 
 {/* <h1 style={{color:"orange"}}>Hive of Heaven</h1> */}
@@ -24,9 +25,13 @@ return(
 
 {/* <img style={{width:"300px"}} src={community}></img> */}
 {/* <div style={{backgroundColor:"#FFFDDF", padding:"30px", borderRadius:"20px"}}> */}
-<h4 style={{margin:"50px"}}>Embark on a celestial journey with our community-powered app, a mesmerizing portal where the cosmos converges with human wonder. Within this celestial haven, users weave tales of starry night destinations, crafting geotagged posts that illuminate the secrets of the nocturnal sky. </h4>
-
-<h4 style={{margin:"50px"}}>Almost 80% of the world's populations cannot see the Milky Way band, and such beauty being hidden is truly a catastrophe!</h4>
+{/* <h4 style={{margin:"50px"}}>Embark on a celestial journey with our community-powered app, a mesmerizing portal where the cosmos converges with human wonder. Within this celestial haven, users weave tales of starry night destinations, crafting geotagged posts that illuminate the secrets of the nocturnal sky. </h4> */}
+<h4 style={{margin:"50px"}}>A Bee Hive is full of... well... bees! The night sky is full of stars.
+This app is meant to be a culmination of useful information for the
+average city-dweller to find and get to a place of starry beauty.</h4>
+<h4 style={{margin:"50px"}}>Almost 80% of the world's populations cannot see the Milky Way band, and
+such beauty being hidden is truly a catastrophe!</h4>
+{/* <h4 style={{margin:"50px"}}>Almost 80% of the world's populations cannot see the Milky Way band, and such beauty being hidden is truly a catastrophe!</h4> */}
 
 
 {/* <div style={{paddingBottom:"100px"}}>
