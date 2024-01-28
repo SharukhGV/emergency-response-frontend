@@ -69,6 +69,8 @@ return (
     <button style={{backgroundColor:" #00000000", color:"yellow"}} onClick={legendToggle}>🧭</button>
     <br></br>
     <div>
+      <h2>Astronomy Atlas</h2>
+      <p>Points of Interest</p>
       <br></br>
    {showLegend ? <div style={{paddingBottom:"10px",border:"dashed"}}>
 <img style={{paddingRight:"10px"}} src={telescopeicon2}></img>
