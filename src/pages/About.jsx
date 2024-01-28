@@ -17,6 +17,8 @@ return(
 
 <div> 
 {/* <Link to="/about"> */}
+<br></br>
+<br></br>
   <img style={{width:"150px",height:"auto"}} src={astronaut}></img>
   {/* </Link> */}
 
@@ -26,11 +28,11 @@ return(
 {/* <img style={{width:"300px"}} src={community}></img> */}
 {/* <div style={{backgroundColor:"#FFFDDF", padding:"30px", borderRadius:"20px"}}> */}
 {/* <h4 style={{margin:"50px"}}>Embark on a celestial journey with our community-powered app, a mesmerizing portal where the cosmos converges with human wonder. Within this celestial haven, users weave tales of starry night destinations, crafting geotagged posts that illuminate the secrets of the nocturnal sky. </h4> */}
-<h4 style={{margin:"50px"}}>A Bee Hive is full of... well... bees! The night sky is full of stars.
+<h5 style={{margin:"50px"}}>A Bee Hive is full of... well... bees! The night sky is full of stars.
 This app is meant to be a culmination of useful information for the
-average city-dweller to find and get to a place of starry beauty.</h4>
-<h4 style={{margin:"50px"}}>Almost 80% of the world's populations cannot see the Milky Way band, and
-such beauty being hidden is truly a catastrophe!</h4>
+average city-dweller to find and get to a place of starry beauty.</h5>
+<h5 style={{margin:"50px"}}>Almost 80% of the world's populations cannot see the Milky Way band, and
+such beauty being hidden is truly a catastrophe!</h5>
 {/* <h4 style={{margin:"50px"}}>Almost 80% of the world's populations cannot see the Milky Way band, and such beauty being hidden is truly a catastrophe!</h4> */}
 
 
