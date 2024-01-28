@@ -69,7 +69,7 @@ return (
     <button style={{backgroundColor:" #00000000", color:"yellow"}} onClick={legendToggle}>🧭</button>
     <br></br>
     <div>
-      <h2>Astronomy Atlas</h2>
+      <h2><strong>Astronomy Atlas</strong></h2>
       <p>Points of Interest</p>
       <br></br>
    {showLegend ? <div style={{paddingBottom:"10px",border:"dashed"}}>
