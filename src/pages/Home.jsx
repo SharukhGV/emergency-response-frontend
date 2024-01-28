@@ -17,7 +17,7 @@ import HiveLogoGif from "./HiveLogoGif.gif"
 // import astronaut from "./astronaut.png"
 import "./home.css"
 import ControlledCarousel from "../components/ControlledCarousel";
-import NewMoonNext from "./NewMoonNext";
+// import NewMoonNext from "./NewMoonNext";
 import About from "./About";
 export default function Home({ setEmergencyType, loginUsername, accessToken }) {
         const navigate = useNavigate(); // Initialize the navigation function
@@ -159,7 +159,7 @@ function modal5Click(){
 
 
   <div style={{border:"2px solid #373436",borderRadius:"7px"}} className="welcome">
-  <div className="newMoonBack" style={{fontSize:"23px", color:"yellowgreen",borderRadius:"7px"}}>Days until next new moon: <NewMoonNext/> </div>    
+  {/* <div className="newMoonBack" style={{fontSize:"23px", color:"yellowgreen",borderRadius:"7px"}}>Days until next new moon: <NewMoonNext/> </div>     */}
         <br></br>
         <br></br>
         <h3>{!!loginUsername ? "Welcome" : "Please Login to view all Features"}</h3>
