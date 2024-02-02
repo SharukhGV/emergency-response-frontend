@@ -85,11 +85,11 @@ export default function App() {
       </Router>
       
 <div id="space">
-  <div class="stars"></div>
-  <div class="stars"></div>
-  <div class="stars"></div>
-  <div class="stars"></div>
-  <div class="stars"></div>
+  <div className="stars"></div>
+  <div className="stars"></div>
+  <div className="stars"></div>
+  <div className="stars"></div>
+  <div className="stars"></div>
 </div>
 
     </>
