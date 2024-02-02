@@ -145,8 +145,8 @@ function modal5Click(){
   </div>
   <div className="buttons">
         <br></br>
-       <div className="milkyBand"><div style={{color:"yellowgreen",fontSize:"20px", paddingTop:"23px"}}>Below are Buttons to Make a Post</div>
-        <div style={{color:"yellowgreen"}}>Click one to find out more Information</div>
+       <div className="milkyBand"><div style={{color:"yellowgreen",fontSize:"20px", paddingTop:"23px"}}>Report Celestial Sightings</div>
+        <div style={{color:"yellowgreen"}}>Choose from the Options Below</div>
         <br></br></div>
 <button style={{border: "2px solid #373436",backgroundColor:"black"}} onClick={modal1Click}>Low Light Pollution</button>
 <button style={{border: "2px solid #373436",backgroundColor:"rgb(92, 86, 73)"}} onClick={modal2Click}>Moderate Light Pollution</button>
@@ -162,7 +162,7 @@ function modal5Click(){
   {/* <div className="newMoonBack" style={{fontSize:"23px", color:"yellowgreen",borderRadius:"7px"}}>Days until next new moon: <NewMoonNext/> </div>     */}
         <br></br>
         <br></br>
-        <h3>{!!loginUsername ? "Welcome" : "Please Login to view all Features"}</h3>
+        <h3>{!!loginUsername ? "Welcome" : "Login to view all Features"}</h3>
                         <h3>{loginUsername}</h3>
                         <br></br>
                         <br></br>
