@@ -201,10 +201,10 @@ function modal5Click(){
 
  <p>Around 2,000 to 3,000 stars are discernible to the naked eye, creating a breathtaking and immersive celestial panorama.</p>
 
-<p>If your Sky appears this way, Click "Entry."</p>
+<p>If your Sky appears this way, Click "Create Entry."</p>
 		</section>
 		<footer className="modal-container-footer">
-			 <button  className="button is-ghost" style={{ backgroundColor: "Green", color: "white" }} id='natural2' value="Low Light Pollution" onClick={emergencySETTER}>Entry</button>
+			 <button  className="button is-ghost" style={{ backgroundColor: "Green", color: "white" }} id='natural2' value="Low Light Pollution" onClick={emergencySETTER}>Create Entry</button>
 			<button onClick={modal1Click} className="button is-primary">Close</button>
 		</footer>
 	</article>
@@ -236,10 +236,10 @@ function modal5Click(){
 
  <p>Roughly 500 to 2,000 stars are visible to the naked eye, offering a compromised but still engaging astronomical experience..</p>
 
-<p>If your Sky appears this way, Click "Entry."</p>
+<p>If your Sky appears this way, Click "Create Entry."</p>
 		</section>
 		<footer className="modal-container-footer">
-			 <button  className="button is-ghost" style={{ backgroundColor: "Green", color: "white" }} id='natural2' value="Moderate Light Pollution" onClick={emergencySETTER}>Entry</button>
+			 <button  className="button is-ghost" style={{ backgroundColor: "Green", color: "white" }} id='natural2' value="Moderate Light Pollution" onClick={emergencySETTER}>Create Entry</button>
 			<button onClick={modal2Click} className="button is-primary">Close</button>
 		</footer>
 	</article>
@@ -272,10 +272,10 @@ function modal5Click(){
 
  <p>Less than 500 stars are visible to the naked eye, with the majority being the brightest and most prominent celestial bodies. The sky is noticeably brighter, and the cosmic landscape is significantly muted.</p>
 
-<p>If your Sky appears this way, Click "Entry."</p>
+<p>If your Sky appears this way, Click "Create Entry."</p>
 		</section>
 		<footer className="modal-container-footer">
-			 <button  className="button is-ghost" style={{ backgroundColor: "Green", color: "white" }} id='natural2' value="High Light Pollution" onClick={emergencySETTER}>Entry</button>
+			 <button  className="button is-ghost" style={{ backgroundColor: "Green", color: "white" }} id='natural2' value="High Light Pollution" onClick={emergencySETTER}>Create Entry</button>
 			<button onClick={modal3Click} className="button is-primary">Close</button>
 		</footer>
 	</article>
@@ -306,10 +306,10 @@ function modal5Click(){
 
  <p>Viewing the Northern Lights is a surreal and otherworldly experience, providing a rare opportunity to witness the dynamic interaction between solar winds and Earth's magnetic field. The level of activity and intensity can vary, with some displays featuring rapid movement and vivid colors, while others unfold more gently, creating a tranquil celestial spectacle.</p>
 
-<p>If you witnessed this event, Click "Entry."</p>
+<p>If you witnessed this event, Click "Create Entry."</p>
 		</section>
 		<footer className="modal-container-footer">
-			 <button  className="button is-ghost" style={{ backgroundColor: "Green", color: "white" }} id='natural2' value="Northern Lights" onClick={emergencySETTER}>Entry</button>
+			 <button  className="button is-ghost" style={{ backgroundColor: "Green", color: "white" }} id='natural2' value="Northern Lights" onClick={emergencySETTER}>Create Entry</button>
 			<button onClick={modal4Click} className="button is-primary">Close</button>
 		</footer>
 	</article>
@@ -340,10 +340,10 @@ function modal5Click(){
 
  <p>Witnessing a fireball is a thrilling and unpredictable event. The rapid descent and fiery trail of these cosmic visitors add an element of excitement to night sky observation. Fireballs are fleeting, often lasting only a few seconds, but their dramatic appearance leaves a lasting impression on those fortunate enough to witness their celestial journey.</p>
 
-<p>If you witnessed this event, Click "Entry."</p>
+<p>If you witnessed this event, Click "Create Entry."</p>
 		</section>
 		<footer className="modal-container-footer">
-			 <button  className="button is-ghost" style={{ backgroundColor: "Green", color: "white" }} id='natural2' value="Fireball Meteoric Event" onClick={emergencySETTER}>Entry</button>
+			 <button  className="button is-ghost" style={{ backgroundColor: "Green", color: "white" }} id='natural2' value="Fireball Meteoric Event" onClick={emergencySETTER}>Create Entry</button>
 			<button onClick={modal5Click} className="button is-primary">Close</button>
 		</footer>
 	</article>
