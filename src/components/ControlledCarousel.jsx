@@ -79,7 +79,7 @@ function ControlledCarousel() {
         <Carousel.Caption>
         <h3 style={{backgroundColor:"rgba(0,0,0,0.5)"}}>Auroras & Meteors</h3>
            <p style={{backgroundColor:"rgba(0,0,0,0.5)"}}>
- Report dark skies near you, or astronomical anomalies.</p>
+ Report Astronomical Wonders and Your Experiences.</p>
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>
