@@ -8,6 +8,7 @@ import mountainsky from "../components/mountainsky.jpg"
   // import {AdvancedImage} from '@cloudinary/react';
   import {Cloudinary} from "@cloudinary/url-gen";
   import CloudinaryUploadWidget from "./CloudinaryUploadWidget";
+import { color } from "@cloudinary/url-gen/qualifiers/background";
 function NewForm({  accessToken, emergencyType, setLongitude, setLatitude, lat, lng, loginUsername }) {
   // Create a Cloudinary instance and set your cloud name.
   const [publicId, setPublicId] = useState("");
@@ -147,7 +148,7 @@ const cld = new Cloudinary({
 
 
     return (
-      <div>{accessToken ?<div className="edit">
+      <div style={{paddingTop:"30px"}}>{accessToken ?<div style={{backgroundColor:"#e6fff7",border:"solid", borderColor:"black", maxWidth:"500px", borderRadius:"10px", margin:"auto", paddingTop:"15px"}} className="edit">
         <h2>New Post:</h2>
         <h4>Posting Will Be Public to Everyone</h4>
         <form onSubmit={handleSubmit}>
@@ -182,7 +183,7 @@ const cld = new Cloudinary({
           <div></div>
           <label htmlFor="description">Describe Your Environment:</label>
           <div></div>
-          <textarea
+          <textarea style={{width:"300px", borderRadius:"10px"}}
             id="description"
             name="description"
             value={person.description}
@@ -199,7 +200,7 @@ const cld = new Cloudinary({
       <CloudinaryUploadWidget setFile={setFile} uwConfig={uwConfig} setPublicId={setPublicId} />
           <div></div>
           <input
-            style={{ width: "30%", padding: "0.6em 1.2em" }}
+            style={{ maxWidth: "300px", padding: "0.6em 1.2em" }}
             type="submit"
           />
         </form>
@@ -212,7 +213,7 @@ const cld = new Cloudinary({
             style={{ maxWidth: "100%", maxHeight: "200px", marginTop: "10px" }}
           />
         )}
-
+{/* 
 <h3>Card Preview</h3>
         <div style={{fontFamily:"Arial"}} className="card">
         <img className="card__image" alt="" src={mountainsky} />
@@ -232,7 +233,7 @@ const cld = new Cloudinary({
         <div></div>
 
       </div>
-    </div> 
+    </div>  */}
 
 
 
