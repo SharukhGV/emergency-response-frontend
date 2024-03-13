@@ -316,19 +316,28 @@ body {
   .lowlight{
     width: 100%;
     color: aqua;
+    text-shadow: 0 0 3px #000000, 0 0 5px #ffffff;
   }
 
   .moderatelight{
     width: 100%;
-color:aqua  }
+color:aqua ;
+text-shadow: 0 0 3px #000000, 0 0 5px #ffffff;
+}
 
   .highlight{
     width: 100%;
-    color:aqua
+    color:aqua;
+    text-shadow: 0 0 3px #000000, 0 0 5px #ffffff;
+
   }
   .northernLights{
     width: 100%;
+    text-shadow: 0 0 3px #ffffff, 0 0 5px #000000;
+
   }
   .fireBall{
     width: 100%;
+    text-shadow: 0 0 3px #ffffff, 0 0 5px #000000;
+
   }
