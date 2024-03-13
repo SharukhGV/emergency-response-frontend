@@ -1125,3 +1125,18 @@ body{background-color: #ffffff;}
   margin: auto;
   text-align: center;
 }
+
+@media only screen and (max-width: 600px) {
+
+  .cardCONTAIN{
+    max-width: 100%;
+    margin: auto;
+    text-align: center;
+  }
+
+  .tableContain{
+    width: 100%;
+    margin: auto;
+    text-align: center;
+  }
+  }
