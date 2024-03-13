@@ -108,13 +108,17 @@ return `${date.charAt(5)}${date.charAt(6)} / ${date.charAt(8)}${date.charAt(9)} 
 return(
     
     <div>
+      <br></br>
+      <br></br>
 <h2>{data.full_name}</h2>
 
 <p>Username: {data.username}</p>
     {/* <p>Date:<span>{parseDATE(data.date)}</span></p> */}
 
-    <img src={data.image_url} style={{width:"300px"}}></img>
-
+    <img className="imageIndView" src={data.image_url} style={{width:"300px"}}></img>
+    <br></br>
+    <br></br>
+<div className="tableContain">
 <table>
   <tr>
     <th>Category</th>
@@ -184,7 +188,7 @@ return(
 </div>
 
 <br></br>
-
+</div>
 </div>
 
 )

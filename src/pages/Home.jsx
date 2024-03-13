@@ -6,7 +6,7 @@ import { useState } from "react";
 // import logo from "./logo.png"
 // import Popup from 'reactjs-popup';
 import 'reactjs-popup/dist/index.css';
-// import hiveheavenLOGO from "./hiveheavenLOGO.png"
+import hiveheavenLOGO from "./hiveheavenLOGO.png"
 // import constellationlogo from "./constellationlogo.png"
 // import constellationlogoCOLOR from "./constellationlogoCOLOR.png"
 import hiveheavenLOGOWHITE from "./hiveheavenLOGOWHITE.png"
@@ -133,42 +133,31 @@ function modal5Click(){
                 //       {/* {toggleConst ? <img onClick={clickConstellation} style={{ width: "300px",paddingRight:"45px" }} src={hiveheavenLOGOWHITE} alt="Logo"></img> :toggleConst2 ?<img onClick={clickConstellation2} style={{ width: "300px",paddingRight:"45px" }} src={hiveheavenLOGOWHITE} alt="Logo"></img>: <img onClick={clickConstellation} style={{ width: "300px",paddingRight:"45px" }} src={hiveheavenLOGOWHITE} alt="Logo"></img>} */}
                 //         {/* <h2 style={{color:"white"}}>Night Sky Finder</h2> */}
                return(     
-                    <div  className="homecontainer">
-                    
+                    <div  >
+                    <img style={{maxWidth:"300px", height:"auto"}}src={hiveheavenLOGO}></img>
 
-  <div className="caro"><ControlledCarousel /></div>
-  <div  className="logoabout">
-
-<About/>
-{/* <Link to="/about"><img className="hiveLOGO" src={HiveLogoGif}></img></Link> */}
-        
-  </div>
-  <div className="buttons">
+  {/* <div className="caro"><ControlledCarousel /></div> */}
+  <h3>{!!loginUsername ? "Welcome" : "Login to view all Features"}</h3>
+                        <h3>{loginUsername}</h3>
+  <div >
         <br></br>
-       <div className="milkyBand"><div style={{color:"yellowgreen",fontSize:"20px", paddingTop:"23px"}}>Report Celestial Sightings</div>
-        <div style={{color:"yellowgreen"}}>Choose from the Options Below</div>
+       <div className="milkyBand"><div>Report Celestial Sightings</div>
+        <div >Choose from the Options Below</div>
         <br></br></div>
-<button style={{border: "2px solid #373436",backgroundColor:"black"}} onClick={modal1Click}>Low Light Pollution</button>
-<button style={{border: "2px solid #373436",backgroundColor:"rgb(92, 86, 73)"}} onClick={modal2Click}>Moderate Light Pollution</button>
-<button style={{border: "2px solid #373436",backgroundColor:"rgb(120, 102, 62)"}} onClick={modal3Click}>High Light Pollution</button>
-<button style={{border: "2px solid #373436"}} className="northernLights" onClick={modal4Click}>Northern Lights</button>
-<button style={{border: "2px solid #373436"}} className="fireBall" onClick={modal5Click}>Meteoric Events</button>
-<br></br>
+        <br></br>
+        <div className="buttonPollCont">
+<button className="lowlight" onClick={modal1Click}>Low Light Pollution</button>        <br></br>
+
+<button className="moderatelight" onClick={modal2Click}>Moderate Light Pollution</button>        <br></br>
+
+<button className="highlight"  onClick={modal3Click}>High Light Pollution</button>        <br></br>
+
+<button className="northernLights" onClick={modal4Click}>Northern Lights</button>        <br></br>
+
+<button  className="fireBall" onClick={modal5Click}>Meteoric Events</button>
+<br></br></div>
 <br></br>
 </div>
-
-
-  <div style={{border:"2px solid #373436",borderRadius:"7px"}} className="welcome">
-  {/* <div className="newMoonBack" style={{fontSize:"23px", color:"yellowgreen",borderRadius:"7px"}}>Days until next new moon: <NewMoonNext/> </div>     */}
-        <br></br>
-        <br></br>
-        <h3>{!!loginUsername ? "Welcome" : "Login to view all Features"}</h3>
-                        <h3>{loginUsername}</h3>
-                        <br></br>
-                        <br></br>
-                        </div>
-
-
 
 
 

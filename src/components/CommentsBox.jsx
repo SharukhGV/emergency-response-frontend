@@ -29,7 +29,7 @@ const [dataProfile, setDataProfile]=useState([])
         return `${date.charAt(5)}${date.charAt(6)} / ${date.charAt(8)}${date.charAt(9)} / ${date.charAt(0)}${date.charAt(1)}${date.charAt(2)}${date.charAt(3)}`
       }
     return (
-      <div style={{backgroundColor:"black", color:"yellow",border:"solid", padding:"30px", margin:"10px", borderRadius:"30px"}} key={uuid}>
+      <div style={{backgroundColor:"#b3ffe6", color:"black",border:"solid", padding:"30px", margin:"10px", borderRadius:"30px"}} key={uuid}>
         {/* {parseFloat(commentz.findspot_id) === parseFloat(id) ? ( */}
             <div>
                {matchingProfile ?<img style={{width:"50px", height:"50px", borderRadius:"50%"}} src={matchingProfile.image_url}></img> :null}

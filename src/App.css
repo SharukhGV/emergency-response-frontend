@@ -431,12 +431,12 @@ padding: 10px;
 }
 
 body{
-  background: rgb(0,0,0);
-  color:whitesmoke;
+  background: rgb(255, 255, 255);
+  color:rgb(0, 0, 0);
 }
 
 p{
-  color: white;
+  color: rgb(255, 255, 255);
 }
 
 .cards {
@@ -563,17 +563,32 @@ background-color: rgba(255, 255, 255, 0);
 
 
 /* glass card */
-
+.tableContain{
+  width: 700px;
+  margin: auto;
+  text-align: center;
+}
 
 table {
   border-collapse: collapse;
   width: 100%;
+  border-color: #000;
+  text-align: center;
+  
 }
 
 th, td {
   padding: 8px;
   text-align: left;
-  border-bottom: 1px solid #ddd;
+  border: 1px solid #000000;
+  text-align: center;
+
+}
+
+.imageIndView{
+  border: solid;
+  border-color: #000;
+  border-radius: 10px;
 }
 
 tr:hover {background-color: coral;}
@@ -877,7 +892,8 @@ a {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	background-color: rgba(#000, 0.25);
+	background-color: rgba(#ffe8e8, 0.25);
+  color: #000;
 
 }
 
@@ -886,7 +902,8 @@ a {
 	max-width: 500px;
 	margin-left: auto;
 	margin-right: auto;
-	background-color: #333333;
+	background-color: #ffffff;
+  color: #000;
 	border-radius: 16px;
 	overflow: hidden;
 	display: flex;
@@ -1077,7 +1094,7 @@ max-height:"auto";
 
 
 .container-fluid{
-  background-color: rgba(255, 255, 255, 0.288);
+  background-color: rgb(255, 255, 255);
 }
 
 /* body{
@@ -1097,3 +1114,14 @@ background: linear-gradient(90deg, rgba(249,255,0,0.258140756302521) 36%, rgba(9
   color:black
 }
 
+p{
+  color: #000;
+}
+
+body{background-color: #ffffff;}
+
+.cardCONTAIN{
+  max-width: 700px;
+  margin: auto;
+  text-align: center;
+}

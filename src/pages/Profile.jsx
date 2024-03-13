@@ -109,7 +109,8 @@ useEffect(()=>{
       
     return (
 <>
-    
+    <br></br>
+    <br></br>
 <ProfileCard dataProfile={dataProfile} loginUsername={loginUsername}/>
 <br></br>
 <div><CloudinaryUploadWidget setFile={setFile} uwConfig={uwConfig} setPublicId={setPublicId} /></div>

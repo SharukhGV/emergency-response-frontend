@@ -41,7 +41,7 @@ return (
          
 
 
-          {!!toggleLOGIN ?  <NavDropdown style={{color:"yellow"}} title="Profile" id="basic-nav-dropdown">
+          {!!toggleLOGIN ?  <NavDropdown style={{color:"black"}} title="Profile" id="basic-nav-dropdown">
             <NavDropdown.Item ><Link to="/profile">👨🏼‍🚀 Profile</Link> </NavDropdown.Item>
 
     
@@ -58,8 +58,8 @@ return (
 
      {!!toggleLOGIN ?     <Nav.Link>< Link to="/visibleplanets">🔭</Link></Nav.Link> :null}
  {!!toggleLOGIN ?  <Nav.Link ><Link to="/index">🌍</Link></Nav.Link>:null}
-          {!toggleLOGIN ?  <Nav.Link><Link to="/login">💻 <strong style={{color:"yellow"}}>Login</strong></Link></Nav.Link>:null}
-          {!toggleLOGIN ?<Nav.Link><Link to="/signup">📃 <strong style={{color:"yellow"}}>Register</strong></Link></Nav.Link>:null}
+          {!toggleLOGIN ?  <Nav.Link><Link to="/login">💻 <strong style={{color:"black"}}>Login</strong></Link></Nav.Link>:null}
+          {!toggleLOGIN ?<Nav.Link><Link to="/signup">📃 <strong style={{color:"black"}}>Register</strong></Link></Nav.Link>:null}
 
 
         {/* </Nav> */}

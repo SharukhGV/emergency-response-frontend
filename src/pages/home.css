@@ -269,7 +269,7 @@ background-color: #373436; }
 ------------------------------------- */
 
 body {
-  background: #000;
+  background: #c6d2e2;
 }
 
 
@@ -286,10 +286,10 @@ body {
 }
 
 
-.milkyBand{
+/* .milkyBand{
   background-image: url("./milkyBand.jpg");
   background-size: cover;
-}
+} */
 
 .logoabout{
   background-image: url("./landnorth.gif");
@@ -302,4 +302,33 @@ body {
   @keyframes fadeIn {
     0% { opacity: 0; }
     100% { opacity: 1; }
+  }
+
+
+
+.buttonPollCont{
+  max-width: 500px;
+  margin:auto;
+  text-align: center;
+  justify-content: center;
+}
+
+  .lowlight{
+    width: 100%;
+    color: aqua;
+  }
+
+  .moderatelight{
+    width: 100%;
+color:aqua  }
+
+  .highlight{
+    width: 100%;
+    color:aqua
+  }
+  .northernLights{
+    width: 100%;
+  }
+  .fireBall{
+    width: 100%;
   }

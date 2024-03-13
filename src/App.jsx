@@ -84,13 +84,13 @@ export default function App() {
         </Routes>
       </Router>
       
-<div id="space">
+{/* <div id="space">
   <div className="stars"></div>
   <div className="stars"></div>
   <div className="stars"></div>
   <div className="stars"></div>
   <div className="stars"></div>
-</div>
+</div> */}
 
     </>
   )
