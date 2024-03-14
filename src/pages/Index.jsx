@@ -86,14 +86,14 @@ return (
 </div> :null}</div>
 <br></br>
 
-<button onClick={(darkSKIES)} style={{width:"250px", color:"green"}}>Dark Sky Preserves</button>   <button onClick={communityPosts} style={{width:"250px", color:"orange"}}>Community Posts</button>
-<button onClick={(ObservatoryPosts)} style={{width:"250px", color:"green"}}>Public Observatories</button>  
+<button onClick={(darkSKIES)} style={{width:"250px", color:"green",textShadow: "0 0 3px #000000, 0 0 5px #ffffff"}}>Dark Sky Preserves</button>   <button onClick={communityPosts} style={{width:"250px", color:"orange",textShadow: "0 0 3px #000000, 0 0 5px #ffffff"}}>Community Posts</button>
+<button onClick={(ObservatoryPosts)} style={{width:"250px", color:"green",textShadow: "0 0 3px #000000, 0 0 5px #ffffff"}}>Public Observatories</button>  
  {/* <button onClick={AstronomyColleges} style={{width:"250px", color:"orange"}}>Astronomy Colleges</button> */}
 <br></br>
 <br></br>
-{darkPreserve === 1 ? <h3>Dark Sky Preserves</h3> : null}
-{darkPreserve === 2 ? <h3> Community Posts</h3> : null}
-{darkPreserve === 3 ? <h3>Public Observatories</h3> : null}
+{darkPreserve === 1 ? <h3 style={{textShadow: "0 0 3px #000000, 0 0 5px #ffffff"}}>Dark Sky Preserves</h3> : null}
+{darkPreserve === 2 ? <h3 style={{textShadow: "0 0 3px #000000, 0 0 5px #ffffff"}}> Community Posts</h3> : null}
+{darkPreserve === 3 ? <h3 style={{textShadow: "0 0 3px #000000, 0 0 5px #ffffff"}}>Public Observatories</h3> : null}
 {/* {darkPreserve === 4 ? <h1>Astronomy Colleges</h1> : null} */}
 <div className="cardCONTAIN">
 {darkPreserve ===1 ?<div><SearchPreserves preserveMarkers={preserveMarkers} setPreserveMarkers={setPreserveMarkers} /></div>
