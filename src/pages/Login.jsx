@@ -46,7 +46,7 @@ function Login({ setLoginUsername, loginUsername,toggleLOGIN,settoggleLOGIN, set
 
 
     return (
-        <> <h1>Login</h1>
+        <div className="loginCONTAIN"> <h1>Login</h1>
             <p>Please fill in this form to Login to an account.</p>
 {/* <div><img style={{width:"300px"}} src={hiveLOGO}></img></div> */}
 {errorMessage ? <p style={{color:"red"}}>Incorrect Credentials</p>:null}
@@ -78,7 +78,7 @@ function Login({ setLoginUsername, loginUsername,toggleLOGIN,settoggleLOGIN, set
                         </div></div>
                 </div>
             </form>
-        </>
+        </div>
     )
 }
 

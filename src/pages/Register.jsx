@@ -89,7 +89,7 @@ const newUser = (user) =>{axios
   };
   // createUser
   return (
-    <> <h1>Register</h1>
+    <div className="registerCONTAIN"> <h1>Register</h1>
       <p>Please fill in this form to create an account.</p>
       <form onSubmit={handleSubmit} style={{ margin: "auto", display:"justified" }}>
         <div className="container">
@@ -110,15 +110,16 @@ const newUser = (user) =>{axios
           <input type="password" placeholder="Repeat Password" minLength="7" name="hashed_password-repeat" id="hashed_password-repeat" value={secPW.secpass} onChange={handleTextChange2} required></input>
 
           <p>By creating an account you agree to our  <Link to="/termsconditions">Terms & Privacy</Link>.</p>
-
+<br></br>
           <div><button type="submit" className="registerbtn">Register</button></div>
 
           <div className="container-signin">
-            <p>Already have an account? <Link to="/login">Login</Link>.</p>
+            <br></br>
+           <div> <p>Already have an account? <Link to="/login">Login</Link>.</p></div>
           </div>
         </div>
       </form>
-    </>
+    </div>
   )
 }
 export default Register

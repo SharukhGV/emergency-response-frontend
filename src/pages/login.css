@@ -66,4 +66,13 @@
 
 
 
-  
+  .loginCONTAIN{
+
+    max-width: 550px;
+    margin: auto;
+    text-align: center;
+  }
+
+  input{
+    margin: auto;
+  }
