@@ -7,6 +7,7 @@ import collegeMarker from "./collegeMarker.png"
 import { useEffect, useState } from "react";
 import axios from "axios";
 import observatoryMarker from "./observatoryMarker.png"
+import ee from '@google/earthengine';
 
 export default function GoogleMaps({ mapMarkers,preserveMarkers,observatoryMarkers }) {
   const [markers, setMarkers] = useState([]);
@@ -62,6 +63,72 @@ const [markersObserv,setMarkersObserv]=useState([])
 //   { name: "Cherry Springs State Park", lat: 41.6501, lng: -77.8165 },
 // ];
 
+// useEffect(()=>{
+// ee.initialize({
+//   apiKey: 'AIzaSyC486p8Uk0va7KqQ-9hUkMOyn29oRriLu8'
+// });
+
+// },[])
+
+// var dataset = ee.ImageCollection('NOAA/DMSP-OLS/NIGHTTIME_LIGHTS')
+//                   .filter(ee.Filter.date('2010-01-01', '2010-12-31'));
+// var nighttimeLights = dataset.select('avg_vis');
+
+// var nighttimeLightsVis = {
+//   min: 3.0,
+//   max: 60.0,
+// };
+
+// Map.setCenter(39.8097343,-98.5556199, 3);
+// Map.addLayer(nighttimeLights, nighttimeLightsVis, 'Nighttime Lights');
+
+// Initialize Earth Engine with your API key
+// ee.initialize({
+//   apiKey: 'YOUR_EARTH_ENGINE_API_KEY'
+// });
+
+// function MapComponent() {
+//   const mapStyles = {
+//     height: "100vh",
+//     width: "100%"
+//   };
+
+  // const defaultCenter = { lat: 39.8097343, lng: -98.5556199 };
+
+  // const [overlay, setOverlay] = useState(null);
+
+  // const onLoad = (overlayView) => {
+  //   setOverlay(overlayView);
+  // }
+
+  // const onUnmount = () => {
+  //   setOverlay(null);
+  // }
+
+  // const addEarthEngineLayer = () => {
+  //   if (overlay) {
+  //     var dataset = ee.ImageCollection('NOAA/DMSP-OLS/NIGHTTIME_LIGHTS')
+  //       .filter(ee.Filter.date('2010-01-01', '2010-12-31'));
+  //     var nighttimeLights = dataset.select('avg_vis');
+
+  //     var nighttimeLightsVis = {
+  //       min: 3.0,
+  //       max: 60.0,
+  //     };
+    
+  //     overlay.setMap(null); // Clear existing overlay
+  //     overlay.setMap(overlay.getMap()); // Trigger re-render
+  //     overlay.draw = () => {
+  //       overlay.getPanes().overlayLayer.appendChild(overlay.getPanes().overlayLayer.firstChild);
+  //       var div = overlay.getPanes().overlayMouseTarget;
+  //       var mapProjection = overlay.getProjection();
+  //       var bounds = overlay.getBounds();
+  //       nighttimeLights.getRegion(bounds, 1000).evaluate((values) => {
+  //         // Process and render Earth Engine imagery here
+  //       });
+  //     };
+  //   }
+  // };
 
 
   return (
@@ -70,6 +137,9 @@ const [markersObserv,setMarkersObserv]=useState([])
         mapContainerStyle={mapStyles}
         zoom={3}
         center={defaultCenter}
+        // overlay={{nighttimeLights, nighttimeLightsVis, 'Nighttime Lights'}}
+        // onLoad={addEarthEngineLayer}
+        // onUnmount={onUnmount}
       >
 {markersPreserves.map((marker, index) => (
           <Marker

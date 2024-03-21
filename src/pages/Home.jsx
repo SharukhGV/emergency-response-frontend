@@ -155,6 +155,9 @@ function modal5Click(){
 <button className="northernLights" onClick={modal4Click}>Northern Lights</button>        <br></br>
 
 <button  className="fireBall" onClick={modal5Click}>Meteoric Events</button>
+
+<button  className="otherCategory" value="Anything Else" onClick={emergencySETTER}>Anything Else</button>
+
 <br></br></div>
 <br></br>
 </div>
