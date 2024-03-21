@@ -13,7 +13,7 @@
 //               zipcode: zipCode // Use the zipCode variable here
 //           },
 //             headers: {
-//               'X-RapidAPI-Key': '424fd6dfa8msh14cf994bbd0df1bp1d9fe8jsn7279305db7f0',
+//               'X-RapidAPI-Key': 'REALESTATEAPIKEY',
 //               'X-RapidAPI-Host': 'us-real-estate.p.rapidapi.com'
 //             }
 //           };

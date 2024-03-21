@@ -65,7 +65,7 @@ const [markersObserv,setMarkersObserv]=useState([])
 
 // useEffect(()=>{
 // ee.initialize({
-//   apiKey: 'AIzaSyC486p8Uk0va7KqQ-9hUkMOyn29oRriLu8'
+//   apiKey: 'GOOGLEAPIKEYHERE'
 // });
 
 // },[])
