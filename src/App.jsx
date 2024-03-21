@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 // import reactLogo from './assets/react.svg'
 // import viteLogo from '/vite.svg'
 import './App.css'
@@ -54,7 +54,37 @@ export default function App() {
   // sessionStorage.setItem("username", loginUsername);
   const [accessToken, setAccessToken] = useState('');
 
-
+    let activityTimer;
+  
+    const reloadPage = () => {
+      window.location.reload();
+    };
+  
+    const resetActivityTimer = () => {
+      clearTimeout(activityTimer);
+      activityTimer = setTimeout(reloadPage, 600000); // 10 minutes
+    };
+  
+    useEffect(() => {
+      // Set up the initial timer
+      resetActivityTimer();
+  
+      // Define user activities to listen for
+      const activities = ['mousedown', 'mousemove', 'keypress', 'scroll', 'touchstart'];
+      
+      // Add event listeners to reset the timer on user activity
+      activities.forEach(event => {
+        window.addEventListener(event, resetActivityTimer);
+      });
+  
+      // Clean up
+      return () => {
+        clearTimeout(activityTimer);
+        activities.forEach(event => {
+          window.removeEventListener(event, resetActivityTimer);
+        });
+      };
+    }, []);
 
   return (
     <>
