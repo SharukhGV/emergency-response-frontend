@@ -196,8 +196,8 @@ function modal5Click(){
 <p>If your Sky appears this way, Click "Create Entry."</p>
 		</section>
 		<footer className="modal-container-footer">
-			 <button  className="button is-ghost" style={{ backgroundColor: "Green", color: "white" }} id='natural2' value="Low Light Pollution" onClick={emergencySETTER}>Create Entry</button>
-			<button onClick={modal1Click} className="button is-primary">Close</button>
+			 <button  className="button is-ghost" style={{ backgroundColor: "Green", color: "white", fontSize:"10px" }} id='natural2' value="Low Light Pollution" onClick={emergencySETTER}>Create Entry</button>
+			<button style={{fontSize:"10px"}} onClick={modal1Click} className="button is-primary">Close</button>
 		</footer>
 	</article>
 </div>
@@ -231,8 +231,8 @@ function modal5Click(){
 <p>If your Sky appears this way, Click "Create Entry."</p>
 		</section>
 		<footer className="modal-container-footer">
-			 <button  className="button is-ghost" style={{ backgroundColor: "Green", color: "white" }} id='natural2' value="Moderate Light Pollution" onClick={emergencySETTER}>Create Entry</button>
-			<button onClick={modal2Click} className="button is-primary">Close</button>
+			 <button  className="button is-ghost" style={{ backgroundColor: "Green", color: "white", fontSize:"10px" }} id='natural2' value="Moderate Light Pollution" onClick={emergencySETTER}>Create Entry</button>
+			<button style ={{fontSize:"10px"}} onClick={modal2Click} className="button is-primary">Close</button>
 		</footer>
 	</article>
 </div>
@@ -267,8 +267,8 @@ function modal5Click(){
 <p>If your Sky appears this way, Click "Create Entry."</p>
 		</section>
 		<footer className="modal-container-footer">
-			 <button  className="button is-ghost" style={{ backgroundColor: "Green", color: "white" }} id='natural2' value="High Light Pollution" onClick={emergencySETTER}>Create Entry</button>
-			<button onClick={modal3Click} className="button is-primary">Close</button>
+			 <button  className="button is-ghost" style={{ backgroundColor: "Green", color: "white", fontSize:"10px" }} id='natural2' value="High Light Pollution" onClick={emergencySETTER}>Create Entry</button>
+			<button style={{fontSize:"10px"}} onClick={modal3Click} className="button is-primary">Close</button>
 		</footer>
 	</article>
 </div>
@@ -301,8 +301,8 @@ function modal5Click(){
 <p>If you witnessed this event, Click "Create Entry."</p>
 		</section>
 		<footer className="modal-container-footer">
-			 <button  className="button is-ghost" style={{ backgroundColor: "Green", color: "white" }} id='natural2' value="Northern Lights" onClick={emergencySETTER}>Create Entry</button>
-			<button onClick={modal4Click} className="button is-primary">Close</button>
+			 <button  className="button is-ghost" style={{ backgroundColor: "Green", color: "white",fontSize:"10px" }} id='natural2' value="Northern Lights" onClick={emergencySETTER}>Create Entry</button>
+			<button style={{fontSize:"10px"}} onClick={modal4Click} className="button is-primary">Close</button>
 		</footer>
 	</article>
 </div>
@@ -335,8 +335,8 @@ function modal5Click(){
 <p>If you witnessed this event, Click "Create Entry."</p>
 		</section>
 		<footer className="modal-container-footer">
-			 <button  className="button is-ghost" style={{ backgroundColor: "Green", color: "white" }} id='natural2' value="Fireball Meteoric Event" onClick={emergencySETTER}>Create Entry</button>
-			<button onClick={modal5Click} className="button is-primary">Close</button>
+			 <button  className="button is-ghost" style={{ backgroundColor: "Green", color: "white",fontSize:"10px" }} id='natural2' value="Fireball Meteoric Event" onClick={emergencySETTER}>Create Entry</button>
+			<button style={{fontSize:"10px"}} onClick={modal5Click} className="button is-primary">Close</button>
 		</footer>
 	</article>
 </div>
