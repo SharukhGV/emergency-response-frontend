@@ -317,28 +317,46 @@ body {
     width: 100%;
     color: aqua;
     text-shadow: 0 0 3px #000000, 0 0 5px #ffffff;
+    border-radius: 20px;
+    border: yellowgreen solid;
+    margin-bottom: 3px;
+
   }
 
   .moderatelight{
     width: 100%;
 color:aqua ;
 text-shadow: 0 0 3px #000000, 0 0 5px #ffffff;
+border-radius: 20px;
+margin-bottom: 3px;
+
 }
 
   .highlight{
     width: 100%;
     color:aqua;
     text-shadow: 0 0 3px #000000, 0 0 5px #ffffff;
+    border-radius: 20px;
+    border: yellowgreen solid;
+    margin-bottom: 3px;
+
 
   }
   .northernLights{
     width: 100%;
     text-shadow: 0 0 3px #ffffff, 0 0 5px #000000;
+    border-radius: 20px;
+    border: yellowgreen solid;
+    margin-bottom: 3px;
 
   }
   .fireBall{
     width: 100%;
     text-shadow: 0 0 3px #ffffff, 0 0 5px #000000;
+    border-radius: 20px;
+    border: yellowgreen solid;
+    margin-bottom: 3px;
+
 
   }
   .otherCategory{
@@ -346,4 +364,7 @@ text-shadow: 0 0 3px #000000, 0 0 5px #ffffff;
     text-shadow: 0 0 3px #ffffff, 0 0 5px #000000;
 background-color: #000000;
 color: yellow;
+border-radius: 20px;
+border: yellowgreen solid;
+
   }
