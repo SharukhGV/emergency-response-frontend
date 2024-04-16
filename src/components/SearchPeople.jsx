@@ -153,16 +153,15 @@ function lowLightPollution(){
       {/* {usrname777?<input type="text" placeholder="Search for a User" value={queryUser} onChange={handleQueryChangeUser} />:null} */}
       {/* {description777?<input type="text" placeholder="Search for a Description" value={handleQueryChangeDescription} onChange={handleQueryChangeDescription} />: null} */}
 <div>
+<button style={{textShadow: "0 0 3px #000000, 0 0 5px #ffffff",borderRadius:"10px",border: "2px solid #373436", width:"70px", height:"70px", opacity:"0.8", backgroundColor:"black", fontSize:"10px"}} onClick={allPostsSet}>Every Post</button>
 <span>     </span>
-<button style={{textShadow: "0 0 3px #000000, 0 0 5px #ffffff",borderRadius:"10px",border: "2px solid #373436", width:"70px", height:"70px", opacity:"0.8", backgroundColor:"black", fontSize:"10px"}} onClick={allPostsSet}>Every Single Post</button>
-<span>     </span>
-<button className="northernLights" style={{textShadow: "0 0 3px #000000, 0 0 5px #ffffff",borderRadius:"10px", width:"70px", height:"70px",  opacity:"0.8",backgroundColor:"black", fontSize:"10px"}} onClick={northernLights}>Northern Lights</button>
-<span>     </span>
-
-<button className="fireBall" style={{textShadow: "0 0 3px #000000, 0 0 5px #ffffff",borderRadius:"10px", width:"70px", height:"70px",  opacity:"0.8", backgroundColor:"black", fontSize:"10px"}} onClick={meteoricEvent}>Meteoric Events</button>
+<button className="northernLights" style={{textShadow: "0 0 3px #000000, 0 0 5px #ffffff",borderRadius:"10px", width:"70px", height:"70px",  opacity:"0.8",backgroundColor:"black", fontSize:"10px"}} onClick={northernLights}>Auroras</button>
 <span>     </span>
 
-<button style={{textShadow: "0 0 3px #000000, 0 0 5px #ffffff",borderRadius:"10px",border: "2px solid #373436", opacity:"0.8", width:"70px", height:"70px", backgroundColor:"black", fontSize:"10px"}} onClick={lowLightPollution}>Low Light Pollution</button>
+<button className="fireBall" style={{textShadow: "0 0 3px #000000, 0 0 5px #ffffff",borderRadius:"10px", width:"70px", height:"70px",  opacity:"0.8", backgroundColor:"black", fontSize:"10px"}} onClick={meteoricEvent}>Meteors</button>
+<span>     </span>
+
+<button style={{textShadow: "0 0 3px #000000, 0 0 5px #ffffff",borderRadius:"10px",border: "2px solid #373436", opacity:"0.8", width:"70px", height:"70px", backgroundColor:"black", fontSize:"10px"}} onClick={lowLightPollution}>Low LP</button>
 </div>
 
 

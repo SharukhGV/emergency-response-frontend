@@ -86,8 +86,8 @@ return (
 </div> :null}</div>
 <br></br>
 
-<button onClick={(darkSKIES)} style={{width:"250px", color:"green",textShadow: "0 0 3px #000000, 0 0 5px #ffffff"}}>Dark Sky Preserves</button>   <button onClick={communityPosts} style={{width:"250px", color:"orange",textShadow: "0 0 3px #000000, 0 0 5px #ffffff"}}>Community Posts</button>
-<button onClick={(ObservatoryPosts)} style={{width:"250px", color:"green",textShadow: "0 0 3px #000000, 0 0 5px #ffffff"}}>Public Observatories</button>  
+<button onClick={(darkSKIES)} style={{width:"250px", color:"white",borderRadius:"20px",textShadow: "0 0 3px #000000, 0 0 5px #ffffff"}}>Dark Sky Preserves</button>   <button onClick={communityPosts} style={{width:"250px", color:"orange", borderRadius:"20px", textShadow: "0 0 3px #000000, 0 0 5px #ffffff"}}>Community Posts</button>
+<button onClick={(ObservatoryPosts)} style={{width:"250px", color:"white",borderRadius:"20px",textShadow: "0 0 3px #000000, 0 0 5px #ffffff"}}>Public Observatories</button>  
  {/* <button onClick={AstronomyColleges} style={{width:"250px", color:"orange"}}>Astronomy Colleges</button> */}
 <br></br>
 <br></br>
