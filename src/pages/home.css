@@ -318,7 +318,7 @@ body {
     color: aqua;
     text-shadow: 0 0 3px #000000, 0 0 5px #ffffff;
     border-radius: 20px;
-    border: yellowgreen solid;
+    border: black solid;
     margin-bottom: 3px;
 
   }
@@ -329,7 +329,7 @@ color:aqua ;
 text-shadow: 0 0 3px #000000, 0 0 5px #ffffff;
 border-radius: 20px;
 margin-bottom: 3px;
-
+border: black solid;
 }
 
   .highlight{
@@ -337,7 +337,7 @@ margin-bottom: 3px;
     color:aqua;
     text-shadow: 0 0 3px #000000, 0 0 5px #ffffff;
     border-radius: 20px;
-    border: yellowgreen solid;
+    border: black solid;
     margin-bottom: 3px;
 
 
@@ -346,7 +346,7 @@ margin-bottom: 3px;
     width: 100%;
     text-shadow: 0 0 3px #ffffff, 0 0 5px #000000;
     border-radius: 20px;
-    border: yellowgreen solid;
+    border: black solid;
     margin-bottom: 3px;
 
   }
@@ -354,7 +354,7 @@ margin-bottom: 3px;
     width: 100%;
     text-shadow: 0 0 3px #ffffff, 0 0 5px #000000;
     border-radius: 20px;
-    border: yellowgreen solid;
+    border: black solid;
     margin-bottom: 3px;
 
 
@@ -365,6 +365,6 @@ margin-bottom: 3px;
 background-color: #000000;
 color: yellow;
 border-radius: 20px;
-border: yellowgreen solid;
+border: black solid;
 
   }
