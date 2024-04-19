@@ -55,8 +55,9 @@ return (
 
 
           {!!toggleLOGIN ? <Nav.Link><Link to="/meteorshowers">☄️</Link></Nav.Link>:null}
+          {!!toggleLOGIN ?     <Nav.Link>< Link to="/celestialobjects">🌌</Link></Nav.Link> :null}
 
-     {!!toggleLOGIN ?     <Nav.Link>< Link to="/visibleplanets">🔭</Link></Nav.Link> :null}
+     {!!toggleLOGIN ?     <Nav.Link>< Link to="/visibleplanets">🪐</Link></Nav.Link> :null}
  {!!toggleLOGIN ?  <Nav.Link ><Link to="/index">🌍</Link></Nav.Link>:null}
           {!toggleLOGIN ?  <Nav.Link><Link to="/login">💻 <strong style={{color:"black"}}>Login</strong></Link></Nav.Link>:null}
           {!toggleLOGIN ?<Nav.Link><Link to="/signup">📃 <strong style={{color:"black"}}>Register</strong></Link></Nav.Link>:null}

@@ -28,8 +28,8 @@ return(
           <svg className="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                     
           <img className="card__thumb" src={mercury} alt="" />
           <div className="card__header-text">
-            <h5 style={{fontFamily:"Arial"}} >{planet.constellation}</h5>
-            <h3 className="card__title">{planet.name}</h3>            
+            <h5 style={{fontFamily:"Arial"}} >{planet.name}</h5>
+            <h3 className="card__title">{planet.constellation}</h3>            
             <span style={{fontFamily:"Arial"}}  className="card__status">Magnitude: {planet.magnitude}</span>
           </div>
         </div>
@@ -54,8 +54,8 @@ return(
           <svg className="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                     
           <img className="card__thumb" src={venus} alt="" />
           <div className="card__header-text">
-            <h5 style={{fontFamily:"Arial"}} >{planet.constellation}</h5>
-            <h3 className="card__title">{planet.name}</h3>            
+            <h5 style={{fontFamily:"Arial"}} >{planet.name}</h5>
+            <h3 className="card__title">{planet.constellation}</h3>            
             <span style={{fontFamily:"Arial"}}  className="card__status">Magnitude: {planet.magnitude}</span>
           </div>
         </div>
@@ -77,8 +77,8 @@ return(
           <svg className="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                     
           <img className="card__thumb" src={mars} alt="" />
           <div className="card__header-text">
-            <h5 style={{fontFamily:"Arial"}} >{planet.constellation}</h5>
-            <h3 className="card__title">{planet.name}</h3>            
+            <h5 style={{fontFamily:"Arial"}} >{planet.name}</h5>
+            <h3 className="card__title">{planet.constellation}</h3>            
             <span style={{fontFamily:"Arial"}}  className="card__status">Magnitude: {planet.magnitude}</span>
           </div>
         </div>
@@ -100,8 +100,8 @@ return(
           <svg className="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                     
           <img className="card__thumb" src={jupiter} alt="" />
           <div className="card__header-text">
-            <h5 style={{fontFamily:"Arial"}} >{planet.constellation}</h5>
-            <h3 className="card__title">{planet.name}</h3>            
+            <h5 style={{fontFamily:"Arial"}} >{planet.name}</h5>
+            <h3 className="card__title">{planet.constellation}</h3>            
             <span style={{fontFamily:"Arial"}}  className="card__status">Magnitude: {planet.magnitude}</span>
           </div>
         </div>
@@ -123,8 +123,8 @@ return(
           <svg className="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                     
           <img className="card__thumb" src={saturn} alt="" />
           <div className="card__header-text">
-            <h5 style={{fontFamily:"Arial"}} >{planet.constellation}</h5>
-            <h3 className="card__title">{planet.name}</h3>            
+            <h5 style={{fontFamily:"Arial"}} >{planet.name}</h5>
+            <h3 className="card__title">{planet.constellation}</h3>            
             <span style={{fontFamily:"Arial"}}  className="card__status">Magnitude: {planet.magnitude}</span>
           </div>
         </div>
@@ -146,8 +146,8 @@ return(
           <svg className="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                     
           <img className="card__thumb" src={uranus} alt="" />
           <div className="card__header-text">
-            <h5 style={{fontFamily:"Arial"}} >{planet.constellation}</h5>
-            <h3 className="card__title">{planet.name}</h3>            
+            <h5 style={{fontFamily:"Arial"}} >{planet.name}</h5>
+            <h3 className="card__title">{planet.constellation}</h3>            
             <span style={{fontFamily:"Arial"}}  className="card__status">Magnitude: {planet.magnitude}</span>
           </div>
         </div>
@@ -169,8 +169,8 @@ return(
           <svg className="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                     
           <img className="card__thumb" src={neptune} alt="" />
           <div className="card__header-text">
-            <h5 style={{fontFamily:"Arial"}} >{planet.constellation}</h5>
-            <h3 className="card__title">{planet.name}</h3>            
+            <h5 style={{fontFamily:"Arial"}} >{planet.name}</h5>
+            <h3 className="card__title">{planet.constellation}</h3>            
             <span style={{fontFamily:"Arial"}}  className="card__status">Magnitude: {planet.magnitude}</span>
           </div>
         </div>
