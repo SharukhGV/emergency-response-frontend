@@ -37,10 +37,12 @@ function Individual({ loginUsername, id, person }) {
           {!!person.image_url ?<img className="card__thumb" src={person.image_url} alt="" /> :<img className="card__thumb" src={dipperDefault} alt="" />}
           <div className="card__header-text">
             <h5 style={{ fontFamily: "Arial" }}>
-              {!!data && data.address && data.address.city ? data.address.city : <span>No Data</span>},
-              {!!data && data.address && data.address.country ? data.address.country : <span>No Location</span>}
+              {/* {!!data && data.address && data.address.city ? data.address.city : <span>No Data</span>},
+              {!!data && data.address && data.address.country ? data.address.country : <span>No Location</span>} */}
+                        {person.full_name}
+
             </h5>
-            <h3 className="card__title">{person.full_name}</h3>
+            {/* <h3 className="card__title">{person.full_name}</h3> */}
             <span style={{ fontFamily: "Arial" }} className="card__status">{parseDATE(person.date)}</span>
           </div>
         </div>
