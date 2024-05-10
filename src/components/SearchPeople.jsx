@@ -39,27 +39,27 @@ sessionStorage.setItem('username', loginUsername);
   //   setQueryDescription(event.target.value);
   // };
 
-  const filteredPeople = data.filter((person) => {
-    return person.full_name.toLowerCase().includes(query.toLowerCase());
+  const filteredPeople = Object.values(data).filter((posts) => {
+    return posts.full_name.toLowerCase().includes(query.toLowerCase());
   });
-  const filteredNorthernLights = data.filter((person) => {
-    return person.skybrightness.toLowerCase().includes("northern");
-  });
-
-  const filteredMeteor = data.filter((person) => {
-    return person.skybrightness.toLowerCase().includes("fireball");
+  const filteredNorthernLights = Object.values(data).filter((posts) => {
+    return posts.skybrightness.toLowerCase().includes("northern");
   });
 
-  const filteredLow = data.filter((person) => {
-    return person.skybrightness.toLowerCase().includes("low");
+  const filteredMeteor = Object.values(data).filter((posts) => {
+    return posts.skybrightness.toLowerCase().includes("fireball");
   });
 
-  const filteredModerate = data.filter((person) => {
-    return person.skybrightness.toLowerCase().includes("moderate");
+  const filteredLow = Object.values(data).filter((posts) => {
+    return posts.skybrightness.toLowerCase().includes("low");
   });
 
-  const filteredHigh = data.filter((person) => {
-    return person.skybrightness.toLowerCase().includes("high");
+  const filteredModerate = Object.values(data).filter((posts) => {
+    return posts.skybrightness.toLowerCase().includes("moderate");
+  });
+
+  const filteredHigh = Object.values(data).filter((posts) => {
+    return posts.skybrightness.toLowerCase().includes("high");
   });
   // const filteredusers = data.filter((person) => {
   //   return person.username.toLowerCase().includes(queryUser.toLowerCase());
