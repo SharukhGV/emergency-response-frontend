@@ -15,7 +15,7 @@ const {id} = useParams()
 
 const [comment, setComment] = useState({
   description: "",
-  findspot_id: id,
+  userpost_id: id,
   my_username: loginUsername,
   
 });
@@ -74,7 +74,7 @@ const navigate= useNavigate()
 useEffect(() => {
     axios
       .get(`${import.meta.env.VITE_BACKEND_API}/userposts/${id}`)
-      .then((response) => setData(response.data))
+      .then((response) => setData(response.data.data))
       .catch((e) => console.error("catch", e));
   }, []);
 

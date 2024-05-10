@@ -13,7 +13,7 @@ export default function SearchPeople({loginUsername, setMapMarkers, emergencyTyp
 useEffect(() => {
     axios
       .get(`${import.meta.env.VITE_BACKEND_API}/userposts`)
-      .then((response) => setData(response.data))
+      .then((response) => setData(response.data.data))
       .catch((e) => console.error("catch", e));
   }, []);
 
@@ -38,28 +38,28 @@ sessionStorage.setItem('username', loginUsername);
   // const handleQueryChangeDescription = (event) => {
   //   setQueryDescription(event.target.value);
   // };
-
-  const filteredPeople = Object.values(data).filter((posts) => {
+console.log(data)
+  const filteredPeople = data.filter((posts) => {
     return posts.full_name.toLowerCase().includes(query.toLowerCase());
   });
-  const filteredNorthernLights = Object.values(data).filter((posts) => {
-    return posts.skybrightness.toLowerCase().includes("northern");
+  const filteredNorthernLights = data.filter((person) => {
+    return person.skybrightness.toLowerCase().includes("northern");
   });
 
-  const filteredMeteor = Object.values(data).filter((posts) => {
-    return posts.skybrightness.toLowerCase().includes("fireball");
+  const filteredMeteor = data.filter((person) => {
+    return person.skybrightness.toLowerCase().includes("fireball");
   });
 
-  const filteredLow = Object.values(data).filter((posts) => {
-    return posts.skybrightness.toLowerCase().includes("low");
+  const filteredLow = data.filter((person) => {
+    return person.skybrightness.toLowerCase().includes("low");
   });
 
-  const filteredModerate = Object.values(data).filter((posts) => {
-    return posts.skybrightness.toLowerCase().includes("moderate");
+  const filteredModerate = data.filter((person) => {
+    return person.skybrightness.toLowerCase().includes("moderate");
   });
 
-  const filteredHigh = Object.values(data).filter((posts) => {
-    return posts.skybrightness.toLowerCase().includes("high");
+  const filteredHigh = data.filter((person) => {
+    return person.skybrightness.toLowerCase().includes("high");
   });
   // const filteredusers = data.filter((person) => {
   //   return person.username.toLowerCase().includes(queryUser.toLowerCase());
