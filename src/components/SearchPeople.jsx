@@ -12,7 +12,7 @@ export default function SearchPeople({loginUsername, setMapMarkers, emergencyTyp
 
 useEffect(() => {
     axios
-      .get(`${import.meta.env.VITE_BACKEND_API}/findspots`)
+      .get(`${import.meta.env.VITE_BACKEND_API}/userposts`)
       .then((response) => setData(response.data))
       .catch((e) => console.error("catch", e));
   }, []);

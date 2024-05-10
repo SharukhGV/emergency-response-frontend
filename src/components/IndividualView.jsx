@@ -73,7 +73,7 @@ const navigate= useNavigate()
 
 useEffect(() => {
     axios
-      .get(`${import.meta.env.VITE_BACKEND_API}/findspots/${id}`)
+      .get(`${import.meta.env.VITE_BACKEND_API}/userposts/${id}`)
       .then((response) => setData(response.data))
       .catch((e) => console.error("catch", e));
   }, []);
@@ -81,7 +81,7 @@ useEffect(() => {
 
   const deleteItem = (identification) => {
     axios
-      .delete(`${import.meta.env.VITE_BACKEND_API}/findspots/${identification}`,identification)
+      .delete(`${import.meta.env.VITE_BACKEND_API}/userposts/${identification}`,identification)
       .then((response) => navigate("/index"))
       .catch((e) => console.error("catch", e));
   };

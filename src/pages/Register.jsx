@@ -46,7 +46,7 @@ const newUser = (user) =>{axios
 
   // const newUser = (newuser) => {
   //   axios
-  //     .post(`${import.meta.env.VITE_BACKEND_API}/findspots`, signup)
+  //     .post(`${import.meta.env.VITE_BACKEND_API}/userposts`, signup)
   //     .then((response) => {
   //       console.log(response.data);
 

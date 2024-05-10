@@ -92,7 +92,7 @@ const cld = new Cloudinary({
     
   const addFindSpot = (newFindSpot) => {
     axios
-      .post(`${import.meta.env.VITE_BACKEND_API}/findspots`, newFindSpot)
+      .post(`${import.meta.env.VITE_BACKEND_API}/userposts`, newFindSpot)
       .then((response) => {
         console.log(response.data);
 

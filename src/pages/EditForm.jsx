@@ -19,7 +19,7 @@ function EditForm({  accessToken, emergencyType, setLongitude, setLatitude, lat,
 
   useEffect(() => {
       axios
-        .get(`${import.meta.env.VITE_BACKEND_API}/findspots/${id}`)
+        .get(`${import.meta.env.VITE_BACKEND_API}/userposts/${id}`)
         .then((response) => setPerson(response.data))
         .catch((e) => console.error("catch", e));
     }, []);
@@ -40,7 +40,7 @@ function EditForm({  accessToken, emergencyType, setLongitude, setLatitude, lat,
     
   const updateFindSpot = (newFindSpot) => {
     axios
-      .put(`${import.meta.env.VITE_BACKEND_API}/findspots/${id}`, newFindSpot)
+      .put(`${import.meta.env.VITE_BACKEND_API}/userposts/${id}`, newFindSpot)
       .then((response) => {
         console.log(response.data);
 
