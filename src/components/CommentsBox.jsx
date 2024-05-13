@@ -1,5 +1,8 @@
 import axios from "axios";
 import { useState,useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+// import { useParams,useNavigate } from "react-router-dom";
+
 function CommentsBox({ commentz, uuid, loginUsername, id, index }) {
     const deleteComment = (identification) => {
         axios
@@ -8,9 +11,12 @@ function CommentsBox({ commentz, uuid, loginUsername, id, index }) {
           .catch((e) => console.error("catch", e));
       };
 
-
+      // const { id } = useParams();
+      const navigate = useNavigate();
 function deleteCommentNow(){
+  
     deleteComment(commentz.id)
+    navigate(`/index`)
 }
 
 
@@ -18,7 +24,7 @@ const [dataProfile, setDataProfile]=useState([])
     useEffect(() => {
         axios
           .get(`${import.meta.env.VITE_BACKEND_API}/profile`)
-          .then((response) => setDataProfile(response.data))
+          .then((response) => setDataProfile(response.data.data))
           .catch((e) => console.error("catch", e));
       }, []);
 

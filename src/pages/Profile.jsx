@@ -53,7 +53,7 @@ const [dataProfile, setDataProfile]=useState([])
     useEffect(() => {
         axios
           .get(`${import.meta.env.VITE_BACKEND_API}/profile`)
-          .then((response) => setDataProfile(response.data))
+          .then((response) => setDataProfile(response.data.data))
           .catch((e) => console.error("catch", e));
       }, []);
 

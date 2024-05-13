@@ -177,7 +177,7 @@ return(
 <br></br>
 <div>
   {dataComments.map((commentz, index) => {
-    if(parseFloat(commentz.findspot_id) ===parseFloat(id)){
+    if(parseFloat(commentz.userpost_id) ===parseFloat(id)){
     return (
     
     <CommentsBox loginUsername={loginUsername} key={uuidv4()} commentz={commentz} id={id} index={index} />
