@@ -33,7 +33,7 @@ const filterDateMeteorsInTwoMONTHs = meteorShowers.meteorShowers.filter(meteor =
 
 console.log(filterDateMeteors)
     return (
-<div style={{textAlign:"left", paddingLeft:"30px", paddingRight:"30px"}}>
+<div style={{textAlign:"justify", paddingLeft:"30px", paddingRight:"30px"}}>
 
 <div className="homecontainerMeteors">
   <div className="youtube">
@@ -51,6 +51,10 @@ console.log(filterDateMeteors)
   <br></br>
   <br></br>
 <h1 style={{color:"darkblue"}}>Watcher's Guide</h1>
+<h3 style={{color:"gray"}}>Meteor Showers</h3>
+<h4 style={{color:"gray"}}>Example: Lyrid</h4>
+
+
 <br></br>
 <div>
 <h3 style={{color:"purple"}}>When and Where to Watch:</h3>
@@ -137,6 +141,8 @@ console.log(filterDateMeteors)
     <br></br>
     <br></br>
     <h1 style={{color:"darkblue"}}>Upcoming Showers</h1>
+    <h3 style={{color:"gray"}}>Current and Next Three Months</h3>
+{/* <h4 style={{color:"gray"}}>Example: Lyrid</h4> */}
 {/* <img src={meteorpics} style={{width:"350px"}}></img> */}
 <br></br>
         <div >{filterDateMeteors.length >0 ? <div>{filterDateMeteors.map(meteor => {
