@@ -24,7 +24,8 @@ import PlanetsVisible from './pages/PlanetsVisible';
 import Loading from './pages/Loading';
 import PleaseLogin from './pages/PleaseLogin';
 import MeteorShowers from './pages/MeteorShowers';
-import CelestialObjects from './components/CelestialObjects';
+// import CelestialObjects from './components/CelestialObjects';
+import MarketPlaceHome from './components/marketplace/MarketPlaceHome';
 
 // import Iron from '@hapi/iron'
 // import { MAX_AGE, setTokenCookie, getTokenCookie } from './auth-cookies'
@@ -109,7 +110,7 @@ export default function App() {
 {!!accessToken ?   <Route path="/index/:id" element={<IndividualView loginUsername={loginUsername} />}/>:null}
 {!!accessToken ?   <Route path="/index/:id/edit" element={<EditForm />}/>:null}
 {!!accessToken ?    <Route path="/visibleplanets" element={<PlanetsVisible latitude={lat} longitude={lng} />}/> : null}
-{!!accessToken ?    <Route path="/celestialobjects" element={<CelestialObjects latitude={lat} longitude={lng} />}/> : null}
+{!!accessToken ?    <Route path="/marketplace" element={<MarketPlaceHome latitude={lat} longitude={lng} />}/> : null}
 
           <Route path="/*" element={<NotFound />} />
 
