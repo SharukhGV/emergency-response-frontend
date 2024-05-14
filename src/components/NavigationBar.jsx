@@ -55,7 +55,7 @@ return (
 
 
           {!!toggleLOGIN ? <Nav.Link><Link to="/meteorshowers">☄️</Link></Nav.Link>:null}
-          {!!toggleLOGIN ?     <Nav.Link>< Link to="/celestialobjects">🌌</Link></Nav.Link> :null}
+          {!!toggleLOGIN ?     <Nav.Link>< Link to="/marketplace">🛍️</Link></Nav.Link> :null}
 
      {!!toggleLOGIN ?     <Nav.Link>< Link to="/visibleplanets">🪐</Link></Nav.Link> :null}
  {!!toggleLOGIN ?  <Nav.Link ><Link to="/index">🌍</Link></Nav.Link>:null}
