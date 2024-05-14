@@ -11,7 +11,11 @@
   .youtube { grid-area: youtube; }
   
   .meteorInfo { grid-area: meteorInfo;
-  margin: auto;margin-top: 0; }
+    /* padding-left:30px;
+     padding-right:30px; */
+     margin: auto;
+     margin-top: 0;
+  }
   
 
   @media (min-width:0px) and (max-width: 1115px) {
