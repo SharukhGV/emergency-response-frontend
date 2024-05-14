@@ -15,10 +15,23 @@ console.log(today.getMonth())
 //                 <h3  style={{color:"gray"}}>{meteor.date}</h3>
 //                 <h3  style={{color:"red"}}>{meteor.frequency}</h3>
 //                 </div> */}
-let monthString = `${today.getMonth()}`
-let monthString0 = "0" + (today.getMonth())
-const filterDateMeteors = meteorShowers.meteorShowers.filter(meteor =>{return (Number((meteor.dateStart.charAt(0)+meteor.dateStart.charAt(1))) == (monthString.length===1 ? Number("0"+monthString) : Number(monthString0)))})
-console.log(monthString0)
+let monthString = `${today.getMonth()+1}`
+let monthString0 = "0" + (today.getMonth()+1)
+let nextmonthString = `${today.getMonth()+2}`
+let nextmonthString0 = "0" + (today.getMonth()+2)
+let next2monthsString = `${today.getMonth()+3}`
+let next2monthsString0 = "0" + (today.getMonth()+3)
+const filterDateMeteors = meteorShowers.meteorShowers.filter(meteor =>{return (Number((meteor.dateStart.charAt(0)+meteor.dateStart.charAt(1))) == ((monthString.length===1 ? Number(monthString0) : Number(monthString))))})
+
+
+
+const filterDateMeteorsNEXTMONTH = meteorShowers.meteorShowers.filter(meteor =>{return (Number((meteor.dateStart.charAt(0)+meteor.dateStart.charAt(1))) ==(nextmonthString.length===1 ? Number(nextmonthString0) : Number(nextmonthString)))})
+
+
+const filterDateMeteorsInTwoMONTHs = meteorShowers.meteorShowers.filter(meteor =>{return (Number((meteor.dateStart.charAt(0)+meteor.dateStart.charAt(1))) ==(next2monthsString.length===1 ? Number(next2monthsString0) : Number(next2monthsString)))})
+
+
+console.log(filterDateMeteors)
     return (
 <div style={{textAlign:"left", marginLeft:"100px",marginRight:"100px"}}>
 
@@ -114,7 +127,6 @@ console.log(monthString0)
 
 
 
-
     
   }
 }
@@ -127,7 +139,7 @@ console.log(monthString0)
     <h1 style={{color:"darkblue"}}>Upcoming Showers</h1>
 {/* <img src={meteorpics} style={{width:"350px"}}></img> */}
 <br></br>
-        <div >{filterDateMeteors.map(meteor => {
+        <div >{filterDateMeteors.length >0 ? <div>{filterDateMeteors.map(meteor => {
             return (
 
 
@@ -151,10 +163,72 @@ console.log(monthString0)
         <div></div>
 
       </div>
-    </div>    
+    </div>  
             )
         })
-        }</div></div>
+        }</div>                : <p>No Meteor Showers <strong>start</strong> in this month</p>}</div>  
+
+<div >{filterDateMeteorsNEXTMONTH.length >0 ? <div>{filterDateMeteorsNEXTMONTH.map(meteor => {
+            return (
+
+
+                <div style={{fontFamily:"Arial"}} className="card">
+      <img style={{maxHeight:"250px"}} src={meteor.image} className="card__image" alt="" />
+      <div className="card__overlay">
+        <div className="card__header">
+          <svg className="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                     
+          <img className="card__thumb" src={meteor.image} alt="" />
+          <div className="card__header-text">
+            <h5 style={{fontFamily:"Arial"}} >{meteor.name}</h5>
+            <h3 className="card__title">Start: {meteor.dateStart}</h3>  
+            <h3 className="card__title">End: {meteor.dateEnd}</h3>            
+          
+            <span style={{fontFamily:"Arial"}}  className="card__status"> </span>
+          </div>
+        </div>
+        {/* <p style={fontFamily:"Arial", fontSize:"10px"}}  className="card__description">{person.description}</strong></p> */}
+<p><strong>{meteor.frequency}</strong></p>
+
+        <div></div>
+
+      </div>
+    </div>  
+            )
+        })
+        }</div>                : <p>No Meteor Showers <strong>start</strong>  next month</p>}</div> 
+
+<div >{filterDateMeteorsInTwoMONTHs.length >0 ? <div>{filterDateMeteorsInTwoMONTHs.map(meteor => {
+            return (
+
+
+                <div style={{fontFamily:"Arial"}} className="card">
+      <img style={{maxHeight:"250px"}} src={meteor.image} className="card__image" alt="" />
+      <div className="card__overlay">
+        <div className="card__header">
+          <svg className="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                     
+          <img className="card__thumb" src={meteor.image} alt="" />
+          <div className="card__header-text">
+            <h5 style={{fontFamily:"Arial"}} >{meteor.name}</h5>
+            <h3 className="card__title">Start: {meteor.dateStart}</h3>  
+            <h3 className="card__title">End: {meteor.dateEnd}</h3>            
+          
+            <span style={{fontFamily:"Arial"}}  className="card__status"> </span>
+          </div>
+        </div>
+        {/* <p style={fontFamily:"Arial", fontSize:"10px"}}  className="card__description">{person.description}</strong></p> */}
+<p><strong>Get Ready, in Two Months!</strong></p>
+
+        <div></div>
+
+      </div>
+    </div>  
+            )
+        })
+        }</div>                : <p>No Meteor Showers <strong>start</strong>  in two months</p>}</div> 
+
+
+
+        </div>
 </div>
 
      <br></br>   {/* </div> */}
