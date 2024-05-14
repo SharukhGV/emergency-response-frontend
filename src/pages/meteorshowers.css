@@ -18,7 +18,7 @@
   }
   
 
-  @media (min-width:0px) and (max-width: 1115px) {
+  @media (min-width:0px) and (max-width: 750px) {
 
     .homecontainerMeteors {  display: grid;
         display: flex;
@@ -29,6 +29,12 @@
 
       }
       
+  .meteorInfo { grid-area: meteorInfo;
+    /* padding-left:30px;
+     padding-right:30px; */
+     margin: 100px;
+     margin-top: 0;
+  }
      
   }
 
