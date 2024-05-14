@@ -33,7 +33,7 @@ const filterDateMeteorsInTwoMONTHs = meteorShowers.meteorShowers.filter(meteor =
 
 console.log(filterDateMeteors)
     return (
-<div style={{textAlign:"left", marginLeft:"100px",marginRight:"100px"}}>
+<div style={{textAlign:"left", paddingLeft:"30px", paddingRight:"30px"}}>
 
 <div className="homecontainerMeteors">
   <div className="youtube">
