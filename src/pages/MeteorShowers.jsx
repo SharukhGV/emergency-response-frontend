@@ -20,7 +20,7 @@ let monthString0 = "0" + (today.getMonth())
 const filterDateMeteors = meteorShowers.meteorShowers.filter(meteor =>{return (Number((meteor.dateStart.charAt(0)+meteor.dateStart.charAt(1))) == (monthString.length===1 ? Number("0"+monthString) : Number(monthString0)))})
 console.log(monthString0)
     return (
-<div className="two">
+<div style={{textAlign:"left", marginLeft:"100px",marginRight:"100px"}}>
 
 <div className="homecontainerMeteors">
   <div className="youtube">
@@ -33,6 +33,51 @@ console.log(monthString0)
   </div> */}
 
 
+
+<div>
+  <br></br>
+  <br></br>
+<h1 style={{color:"darkblue"}}>Watcher's Guide</h1>
+<br></br>
+<div>
+<h3 style={{color:"purple"}}>When and Where to Watch:</h3>
+   <p><strong>- The Lyrid meteor shower runs from April 15 to April 29.</strong></p>
+   <p><strong>- The peak occurs on the evening of April 21 to the early morning hours of April 22.</strong></p>
+   <p><strong>- Find a dark location away from city lights for the best view.</strong></p>
+</div>
+<br></br>
+<div >
+
+   <h3 style={{color:"purple"}}>Meteor Origins:</h3>
+   <p><strong>   - The Lyrids are one of the oldest known meteor showers, observed for at least 2,700 years.</strong></p>
+   <p><strong>- They occur when Earth passes through the debris field of comet C/1861 G1 Thatcher.</strong></p>
+   <p><strong>- Lyrid meteors appear to originate near the constellation Lyra, specifically from the radiant point near the bright star Vega.</strong></p>
+   </div>
+<br></br>
+<div>
+   <h3 style={{color:"purple"}}>Observation Tips:</h3>
+   <p><strong>- Know the peak time: The best viewing time is during the peak hours.</strong></p>
+   <p><strong>- Location: Choose a dark spot away from artificial lights.</strong></p>
+   <p><strong>- Patience: Spend at least an hour observing to see more meteors.</strong></p>
+   <p><strong>- Notice speeds and colors: Lyrid meteors move at 29 miles per second.</strong></p>
+   <p><strong>- Meteor trains: Look for lingering trails after a meteor passes.</strong></p>
+   </div>
+<br></br>
+<div>
+   <h3 style={{color:"purple"}}>Stellarium Software:</h3>
+   <p><strong>- To track the Lyrids, use Stellarium, a free planetarium software.</strong></p>
+   <p><strong>- Set your location and date to April 21-22.</strong></p>
+   <p><strong>- Look toward the constellation Lyra to spot the radiant point.</strong></p>
+   <p><strong>- Enjoy the show as you witness these "shooting stars" streak across the sky!</strong></p>
+   </div>
+<br></br>
+<div>
+   <p style={{color:"gray"}}><strong>Remember, meteor showers are unpredictable, so patience and a sense of wonder are key. Happy stargazing!</strong></p>
+
+   </div>
+<br></br>
+
+</div>
 
 {/* <div className="card">
   <img src={"https://upload.wikimedia.org/wikipedia/commons/f/fc/Leonids-1833.jpg"} alt="Avatar" style="width:100%"></img>
@@ -76,9 +121,10 @@ console.log(monthString0)
 </div> */}
 
 </div>
-  <div  className="meteorInfo">
+  <div   className="meteorInfo">
     <br></br>
-    <h1 style={{color:"darkblue"}}>Upcoming Meteor Showers</h1>
+    <br></br>
+    <h1 style={{color:"darkblue"}}>Upcoming Showers</h1>
 {/* <img src={meteorpics} style={{width:"350px"}}></img> */}
 <br></br>
         <div >{filterDateMeteors.map(meteor => {
@@ -109,51 +155,6 @@ console.log(monthString0)
             )
         })
         }</div></div>
-</div>
-
-<div style={{textAlign:"left", marginLeft:"100px",marginRight:"100px"}}>
-  <br></br>
-  <br></br>
-<h1 style={{color:"darkblue"}}>Guide to Watching the Meteor Showers</h1>
-<br></br>
-<div>
-<h3 style={{color:"purple"}}>When and Where to Watch:</h3>
-   <p><strong>- The Lyrid meteor shower runs from April 15 to April 29.</strong></p>
-   <p><strong>- The peak occurs on the evening of April 21 to the early morning hours of April 22.</strong></p>
-   <p><strong>- Find a dark location away from city lights for the best view.</strong></p>
-</div>
-<br></br>
-<div >
-
-   <h3 style={{color:"purple"}}>Meteor Origins:</h3>
-   <p><strong>   - The Lyrids are one of the oldest known meteor showers, observed for at least 2,700 years.</strong></p>
-   <p><strong>- They occur when Earth passes through the debris field of comet C/1861 G1 Thatcher.</strong></p>
-   <p><strong>- Lyrid meteors appear to originate near the constellation Lyra, specifically from the radiant point near the bright star Vega.</strong></p>
-   </div>
-<br></br>
-<div>
-   <h3 style={{color:"purple"}}>Observation Tips:</h3>
-   <p><strong>- Know the peak time: The best viewing time is during the peak hours.</strong></p>
-   <p><strong>- Location: Choose a dark spot away from artificial lights.</strong></p>
-   <p><strong>- Patience: Spend at least an hour observing to see more meteors.</strong></p>
-   <p><strong>- Notice speeds and colors: Lyrid meteors move at 29 miles per second.</strong></p>
-   <p><strong>- Meteor trains: Look for lingering trails after a meteor passes.</strong></p>
-   </div>
-<br></br>
-<div>
-   <h3 style={{color:"purple"}}>Stellarium Software:</h3>
-   <p><strong>- To track the Lyrids, use Stellarium, a free planetarium software.</strong></p>
-   <p><strong>- Set your location and date to April 21-22.</strong></p>
-   <p><strong>- Look toward the constellation Lyra to spot the radiant point.</strong></p>
-   <p><strong>- Enjoy the show as you witness these "shooting stars" streak across the sky!</strong></p>
-   </div>
-<br></br>
-<div>
-   <p style={{color:"gray"}}><strong>Remember, meteor showers are unpredictable, so patience and a sense of wonder are key. Happy stargazing!</strong></p>
-
-   </div>
-<br></br>
-
 </div>
 
      <br></br>   {/* </div> */}

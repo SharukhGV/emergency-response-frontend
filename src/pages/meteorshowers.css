@@ -10,7 +10,8 @@
   
   .youtube { grid-area: youtube; }
   
-  .meteorInfo { grid-area: meteorInfo; }
+  .meteorInfo { grid-area: meteorInfo;
+  margin: auto;margin-top: 0; }
   
 
   @media (min-width:0px) and (max-width: 1115px) {
