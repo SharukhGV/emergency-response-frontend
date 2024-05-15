@@ -104,7 +104,7 @@ function MeteorShowers() {
         <div className="meteorInfo">
 
 
-          {meteorButton ? <button onClick={handleOnClickMeteor}>Show Within a Month</button> : <button onClick={handleOnClickMeteor}>Show three (3) Months</button>}
+          {meteorButton ? <div style={{textAlign:"center"}}><button style ={{borderRadius:"50%", width:"65px", height:"65px"}} onClick={handleOnClickMeteor}>Show</button><span style={{display:"inline-block",width:"30px",height:"10px", backgroundColor:"gray", content:""}}></span><button style ={{borderRadius:"50%", width:"65px", height:"65px"}} onClick={handleOnClickMeteor}>Single</button><span style={{display:"inline-block",width:"30px",height:"10px", backgroundColor:"gray", content:""}}></span><button style ={{borderRadius:"50%", width:"65px", height:"65px"}} onClick={handleOnClickMeteor}>Month</button></div> : <div style={{textAlign:"center"}}><button style ={{borderRadius:"50%", width:"65px", height:"65px"}} onClick={handleOnClickMeteor}>Show</button><span style={{display:"inline-block",width:"30px",height:"10px", backgroundColor:"gray", content:""}}></span><button style ={{borderRadius:"50%", width:"65px", height:"65px"}} onClick={handleOnClickMeteor}>Three</button><span style={{display:"inline-block",width:"30px",height:"10px", backgroundColor:"gray", content:""}}></span><button style ={{borderRadius:"50%", width:"65px", height:"65px"}} onClick={handleOnClickMeteor}>Months</button></div>}
 
           {meteorButton ? <>    <br></br>
             <br></br>
