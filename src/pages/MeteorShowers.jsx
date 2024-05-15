@@ -104,12 +104,12 @@ function MeteorShowers() {
         <div className="meteorInfo">
 
 
-          {meteorButton ? <button onClick={handleOnClickMeteor}>Show Within a Month</button> : <button onClick={handleOnClickMeteor}>Show next three (3) Months</button>}
+          {meteorButton ? <button onClick={handleOnClickMeteor}>Show Within a Month</button> : <button onClick={handleOnClickMeteor}>Show three (3) Months</button>}
 
           {meteorButton ? <>    <br></br>
             <br></br>
             <h1 style={{ color: "darkblue" }}>Upcoming Showers</h1>
-            <h3 style={{ color: "gray" }}>Current and Next Three Months</h3>
+            <h3 style={{ color: "gray" }}>Current and Next Two Months</h3>
 
             <br></br> <div >{filterDateMeteors.length > 0 ? <div>{filterDateMeteors.map(meteor => {
               return (
@@ -158,7 +158,6 @@ function MeteorShowers() {
                         <span style={{ fontFamily: "Arial" }} className="card__status"> </span>
                       </div>
                     </div>
-                    {/* <p style={fontFamily:"Arial", fontSize:"10px"}}  className="card__description">{person.description}</strong></p> */}
                     <p><strong>{meteor.frequency}</strong></p>
 
                     <div></div>
@@ -248,7 +247,7 @@ function MeteorShowers() {
         </div>
       </div>
 
-      <br></br>   {/* </div> */}
+      <br></br> 
       <br></br>
     </div>
   )
