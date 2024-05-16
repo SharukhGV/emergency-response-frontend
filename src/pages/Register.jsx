@@ -8,7 +8,7 @@ import { useNavigate } from "react-router-dom";
 function Register() {
   const navigate = useNavigate();
 
-  // const [username, setUserName]=useState()
+  const [userfound, setUserFound]=useState(false)
   // const [username, setPassword]=useState()
   const [personUser, setPersonUser] = useState({
     username: "",
@@ -16,21 +16,19 @@ function Register() {
   });
   const [secPW, setSecPW] = useState("")
 
-// function createUser({ username, password }) {
-//   // Here you should create the user and save the salt and hashed password (some dbs may have
-//   // authentication methods that will do it for you so you don't have to worry about it):
-//   const salt = crypto.randomBytes(16).toString('hex')
-//   const hash = crypto
-//     .pbkdf2Sync(password, salt, 1000, 64, 'sha512')
-//     .toString('hex')
-//   const user = {
-//     id: uuidv4(),
-//     createdAt: Date.now(),
-//     username,
-//     hash,
-//     salt,
-//   };
-  // const userProfile={username:user.username, hashed_password:user.hash};
+  
+const existsUSer = (user) =>{axios
+  .get(`${import.meta.env.VITE_BACKEND_API}/newusers`, user)
+  .then((response) => {
+    console.log(response.data);
+    setUserFound(true)
+ })
+  .catch((e) =>{ console.error("catch", e);setUserFound(false)}
+
+  );
+
+}
+
 const newUser = (user) =>{axios
   .post(`${import.meta.env.VITE_BACKEND_API}/newusers`, user)
   .then((response) => {
@@ -44,29 +42,15 @@ const newUser = (user) =>{axios
 
 }
 
-  // const newUser = (newuser) => {
-  //   axios
-  //     .post(`${import.meta.env.VITE_BACKEND_API}/userposts`, signup)
-  //     .then((response) => {
-  //       console.log(response.data);
-
-  //       navigate("/index");
-  //     })
-  //     .catch((e) => console.error("catch", e));
-  // };
-
-
   const handleTextChange = (event) => {
 
     setPersonUser({ ...personUser, [event.target.id]: event.target.value });
-    // console.log(personUser)
   };
 
 
   const handleTextChange2 = (event) => {
 
     setSecPW(event.target.value);
-    // console.log(secPW)
 
   };
 
@@ -82,15 +66,18 @@ const newUser = (user) =>{axios
         hashed_password: personUser.hashed_password
       };
   console.log(userData)
-      newUser(userData);
+  existsUSer(userData.username)
+if(userfound) newUser(userData);
+
     } else {
       window.alert("Passwords Do Not Match");
     }
   };
-  // createUser
+  
   return (
     <div className="registerCONTAIN"> <h1>Register</h1>
       <p>Please fill in this form to create an account.</p>
+      {userfound ?<div>User Already Exists</div>:null}
       <form onSubmit={handleSubmit} style={{ margin: "auto", display:"justified" }}>
         <div className="container">
 
