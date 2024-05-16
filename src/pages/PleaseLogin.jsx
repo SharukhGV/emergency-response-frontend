@@ -14,7 +14,7 @@ function PleaseLogin({ accessToken }) {
   return (
 
     <div id="loading-wrapper">
-      <div id="loading-text">Success!</div>
+      <div id="loading-text">Loading!</div>
       {/* <div id="loading-text">Please Login</div> */}
       <div id="loading-content"></div>
     </div>

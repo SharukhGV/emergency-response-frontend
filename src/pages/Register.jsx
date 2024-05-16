@@ -77,7 +77,9 @@ if(userfound) newUser(userData);
   return (
     <div className="registerCONTAIN"> <h1>Register</h1>
       <p>Please fill in this form to create an account.</p>
-      {userfound ?<div>User Already Exists</div>:null}
+      {userfound ?<div style={{color:"red"}}>User Already Exists</div>:null}
+      {userfound ?<div style={{color:"green"}}>You will Be Prompted to Login if you enter an existing User</div>:null}
+
       <form onSubmit={handleSubmit} style={{ margin: "auto", display:"justified" }}>
         <div className="container">
 
