@@ -18,6 +18,14 @@ Includes modals with descriptions for specific types of posts. Users can click o
 
 ![Screen of App Image](./p1home.png)
 
+## Register Page of App - Verification
+
+Application requires users to enter verification code before their account gets registered.
+
+![Screen of App Image](./emailverification.png)
+![Screen of App Image](./emailverify.png)
+
+
 ## Create Page
 Users can upload an image and write about their celestial sightings. 
 
