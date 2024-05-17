@@ -1,46 +1,57 @@
 import "./login.css"
 import { Link } from "react-router-dom"
-// import { signup } from "../../signup"
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { v4 as uuidv4 } from 'uuid';
 import axios from "axios";
-// import { useEffect } from "react";
-import { useNavigate } from "react-router-dom";
-function Register() {
-  const navigate = useNavigate();
+import emailjs from '@emailjs/browser';
 
-  const [userfound, setUserFound]=useState(false)
-  // const [username, setPassword]=useState()
+import { useNavigate } from "react-router-dom";
+
+function Register() {
+
+  const navigate = useNavigate();
+  const [startverify, setStartVerify] = useState(false)
+  const [verifySuccess, setVerifySuccess] = useState(false)
+
   const [personUser, setPersonUser] = useState({
     username: "",
     hashed_password: ""
   });
   const [secPW, setSecPW] = useState("")
+  const [verifycode, setVerifyCode] = useState("")
+  const [inputverify, setInputVerify] = useState("")
 
-  
-const existsUSer = (user) =>{axios
-  .get(`${import.meta.env.VITE_BACKEND_API}/newusers`, user)
-  .then((response) => {
-    console.log(response.data);
-    setUserFound(true)
- })
-  .catch((e) =>{ console.error("catch", e);setUserFound(false)}
 
-  );
+  useEffect(() => { setVerifyCode(uuidv4()) }, [])
 
-}
 
-const newUser = (user) =>{axios
-  .post(`${import.meta.env.VITE_BACKEND_API}/newusers`, user)
-  .then((response) => {
-    console.log(response.data);
-
-    setTimeout(() => {
+  const newUser = (user) => {
+    axios
+      .post(`${import.meta.env.VITE_BACKEND_API}/newusers`, user)
+    .then((response) => {
+      console.log(response.data);
       navigate("/pleaselogin");
-    }, 1000);  })
-  .catch((e) => console.error("catch", e)
-  );
 
-}
+    })
+    .catch((e) => console.error("catch", e)
+    );
+
+  }
+
+  function handleInputVerify(e) {
+    setInputVerify(e.target.value)
+
+  }
+
+
+  useEffect(() => {
+    if (verifycode === inputverify && inputverify !== "" && verifycode !== "") {
+      setVerifySuccess(true)
+      newUser(personUser)
+    }
+  }, [personUser, verifycode, inputverify])
+
+
 
   const handleTextChange = (event) => {
 
@@ -59,28 +70,51 @@ const newUser = (user) =>{axios
 
   const handleSubmit = (event) => {
     event.preventDefault();
-  
-    if (secPW === personUser.hashed_password) {
-      const userData = {
-        username: personUser.username,
-        hashed_password: personUser.hashed_password
-      };
-  console.log(userData)
-  existsUSer(userData.username)
-if(userfound) newUser(userData);
 
-    } else {
+
+    if (secPW !== personUser.hashed_password) {
       window.alert("Passwords Do Not Match");
     }
+    else if (secPW === personUser.hashed_password) {
+
+
+
+      setStartVerify(true)
+
+
+
+      emailjs.init({
+        publicKey: import.meta.env.VITE_PUBLIC_KEY_EMAILJS,
+        limitRate: {
+          // Set the limit rate for the application
+          id: 'app',
+          // Allow 1 request per 10s
+          throttle: 1,
+        },
+      });
+      //set the parameter as per you template parameter[https://dashboard.emailjs.com/templates]
+      var templateParams = {
+        user_email: personUser.username,
+        to_name: personUser.username,
+        from_name: 'HHP Admin',
+        message: verifycode
+      };
+
+      emailjs.send(import.meta.env.VITE_SERVICE_ID_EMAILJS, import.meta.env.VITE_TEMPLATE_EMAILJS, templateParams)
+        .then(function (response) {
+          console.log('SUCCESS!', response.status, response.text);
+        }, function (error) {
+          console.log('FAILED...', error);
+        });
+
+    }
   };
-  
+
   return (
     <div className="registerCONTAIN"> <h1>Register</h1>
       <p>Please fill in this form to create an account.</p>
-      {userfound ?<div style={{color:"red"}}>User Already Exists</div>:null}
-      {userfound ?<div style={{color:"green"}}>You will Be Prompted to Login if you enter an existing User</div>:null}
 
-      <form onSubmit={handleSubmit} style={{ margin: "auto", display:"justified" }}>
+      <form onSubmit={handleSubmit} style={{ margin: "auto", display: "justified" }}>
         <div className="container">
 
 
@@ -91,7 +125,7 @@ if(userfound) newUser(userData);
             placeholder="Enter Email" name="username" id="username" required></input>
 
           <label htmlFor="hashed_password"><b>Password</b></label>
-<input type="password" value={personUser.hashed_password} placeholder="Enter Password" name="hashed_password" id="hashed_password" minLength="7" onChange={handleTextChange}
+          <input type="password" value={personUser.hashed_password} placeholder="Enter Password" name="hashed_password" id="hashed_password" minLength="7" onChange={handleTextChange}
             required></input>
 
           <label htmlFor="hashed_password-repeat"><b>Repeat Password</b></label>
@@ -99,16 +133,21 @@ if(userfound) newUser(userData);
           <input type="password" placeholder="Repeat Password" minLength="7" name="hashed_password-repeat" id="hashed_password-repeat" value={secPW.secpass} onChange={handleTextChange2} required></input>
 
           <p>By creating an account you agree to our  <Link to="/termsconditions">Terms & Privacy</Link>.</p>
-<br></br>
-          <div><button type="submit" className="registerbtn">Register</button></div>
+          <br></br>
+          {!startverify ? <div><button type="submit" className="registerbtn">Register</button></div> : null}
 
           <div className="container-signin">
             <br></br>
-           <div> <p>Already have an account? <Link to="/login">Login</Link>.</p></div>
+            <div> <p>Already have an account? <Link to="/login">Login</Link>.</p></div>
+            {verifySuccess === false ? <>{startverify ? <div style={{ backgroundColor: "#a4c67799", padding: "20px", borderRadius: "10px" }}><label htmlFor="name">Verify Your Email: input code sent to your email.</label>
+              <p> If you have an account, Please Login and disregard Email Sent</p>
+              <input onChange={(e) => { handleInputVerify(e) }} placeholder="Verification Code" type="text" id="verify" name="verify" />
+            </div> : null}</> : <div>Please Wait...System Processing...</div>}
           </div>
         </div>
       </form>
     </div>
   )
 }
+
 export default Register
