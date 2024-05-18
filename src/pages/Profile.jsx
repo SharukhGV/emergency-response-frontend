@@ -110,7 +110,17 @@ useEffect(()=>{
     return (
 <>
     <br></br>
-    <br></br>
+    <div>
+    {imagePreview && (
+        <><p>Image Preview</p>
+          <img
+            src={imagePreview}
+            alt="Preview"
+            style={{ maxWidth: "100%", maxHeight: "200px", marginTop: "10px" }}
+          />
+           <p>Click Submit</p>
+          </>
+        )} </div>  <br></br>
 <ProfileCard dataProfile={dataProfile} loginUsername={loginUsername}/>
 <br></br>
 <div><CloudinaryUploadWidget setFile={setFile} uwConfig={uwConfig} setPublicId={setPublicId} /></div>
