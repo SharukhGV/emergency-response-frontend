@@ -1,5 +1,80 @@
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumnZXCV {   
+  float: left;
+  width: 75%;
+}
+
+/* Right column */
+.rightcolumnZXCV {
+  float: left;
+  width: 25%;
+  padding-left: 20px;
+}
+
+/* Fake image */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Add a card effect for articles */
+.cardZXCV {
+   background-color: white;
+   padding: 20px;
+   margin-top: 20px;
+}
+
+/* Clear floats after the columns */
+.rowZXCV:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Footer */
+.footerZXCV {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+  margin-top: 20px;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumnZXCV, .rightcolumnZXCV {   
+    width: 100%;
+    padding: 0;
+  }
+}
+
+/* TABLE */
+.userPostTable {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  border-style: solid;
+}
+
+.userPostTable td, .userPostTable th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.userPostTable tr:nth-child(even){background-color: #6db79cb0;}
+
+.userPostTable tr:hover {background-color: #aaff00b2;}
+
+.userPostTable th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04aa6db6;
+  color: white;
+}
 
 
 /* 

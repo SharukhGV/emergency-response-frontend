@@ -1,5 +1,4 @@
 
-// import axios from "axios"
 import { Link } from "react-router-dom"
 import dipperDefault from "./dipperDefault.png"
 import mountainsky from "./mountainsky.jpg"
@@ -15,59 +14,50 @@ function Individual({ loginUsername, id, person }) {
         .get(`https://us1.locationiq.com/v1/reverse?key=${import.meta.env.VITE_REVERSE_GEOCODING_API_KEY}&lat=${person.latitude}&lon=${person.longitude}&format=json`)
         .then((response) => {
           setData(response.data);
-          console.log(response.data); 
+          console.log(response.data);
         })
         .catch((error) => console.error("Error:", error));
     }
-  }, [person.latitude, person.longitude]); 
-  const styleIndividual = {
-    color: "white",
-    backgroundColor: "rgba(152,160,255,50)"
-  }
-  // }
+  }, [person.latitude, person.longitude]);
+
   function parseDATE(date) {
     return `${date.charAt(5)}${date.charAt(6)} / ${date.charAt(8)}${date.charAt(9)} / ${date.charAt(0)}${date.charAt(1)}${date.charAt(2)}${date.charAt(3)}`
-  }return (
+  }
+
+  const [dataProfile, setDataProfile] = useState([])
+  useEffect(() => {
+    axios
+      .get(`${import.meta.env.VITE_BACKEND_API}/profile`)
+      .then((response) => setDataProfile(response.data.data))
+      .catch((e) => console.error("catch", e));
+  }, []);
+
+  const matchingProfile = dataProfile.find(prof => prof.my_username === person.username);
+
+
+
+  return (
     <div style={{ fontFamily: "Arial" }} className="card">
       {!!person.image_url ? <img src={person.image_url} className="card__image" alt="" />
- :<img src={mountainsky} className="card__image" alt="" />}
+        : <img src={mountainsky} className="card__image" alt="" />}
       <div className="card__overlay">
         <div className="card__header">
           <svg className="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>
-          {!!person.image_url ?<img className="card__thumb" src={person.image_url} alt="" /> :<img className="card__thumb" src={dipperDefault} alt="" />}
+          {matchingProfile ? <img className="card__thumb" src={matchingProfile.image_url} alt="" /> : <img className="card__thumb" src={dipperDefault} alt="" />}
           <div className="card__header-text">
             <h5 style={{ fontFamily: "Arial" }}>
-              {/* {!!data && data.address && data.address.city ? data.address.city : <span>No Data</span>},
-              {!!data && data.address && data.address.country ? data.address.country : <span>No Location</span>} */}
-                        {person.full_name}
+
+              <strong>{person.full_name}</strong>
 
             </h5>
-            {/* <h3 className="card__title">{person.full_name}</h3> */}
             <span style={{ fontFamily: "Arial" }} className="card__status">{parseDATE(person.date)}</span>
           </div>
         </div>
-        <div style={{ fontFamily: "Arial" }}>{person.skybrightness}</div>
-        <p style={{ fontFamily: "Arial", fontSize: "10px" }} className="card__description">{person.description}</p>
-        <Link style={{ fontSize: "15px" }} to={`/index/${id}`}>View Page</Link>
+        <div style={{ fontFamily: "Arial", color: "purple" }}><strong>{person.skybrightness}</strong></div>
+        <Link style={{ fontSize: "15px" }} to={`/index/${id}`}>read more...</Link>
       </div>
     </div>
   );
-  
-
-
-
-
-    //   <div style={{color:"white"}}  id="individual">
-    //   <strong>Location Nickname:{person.full_name}</strong>
-    //   <div style={{fontSize:"10px"}}>Date: {parseDATE(person.date)}</div>
-    //   <div>Latitude: {person.latitude}</div>
-    //   <div>Longitude: {person.longitude}</div>
-    //   <div> Description: {person.description}</div>
-    //   <div> Light Pollution Level: {person.skybrightness}</div>
-    //   <Link to={`/index/${id}`}>View Page</Link>
-    //   {/* <button style={{width:'150px'}}>Archive Status: {!person.archived ? <div>❎</div>:<div>✅</div>}</button> */}
-    // </div>
-  // )
 
 
 }

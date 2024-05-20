@@ -7,23 +7,23 @@ import { useNavigate } from "react-router-dom";
 import CommentsBox from "./CommentsBox";
 import { v4 as uuidv4 } from 'uuid';
 
-function IndividualView({loginUsername}){
-    const [data, setData] = useState([])
-    const [locationIQ, setLocationIQ] = useState({})
+function IndividualView({ loginUsername }) {
+  const [data, setData] = useState([])
+  const [locationIQ, setLocationIQ] = useState({})
 
-const {id} = useParams()
+  const { id } = useParams()
 
-const [comment, setComment] = useState({
-  description: "",
-  userpost_id: id,
-  my_username: loginUsername,
-  
-});
+  const [comment, setComment] = useState({
+    description: "",
+    userpost_id: id,
+    my_username: loginUsername,
 
-const [dataComments, setDataComments] = useState([])
+  });
+
+  const [dataComments, setDataComments] = useState([])
 
 
-useEffect(() => {
+  useEffect(() => {
     axios
       .get(`${import.meta.env.VITE_BACKEND_API}/comments`)
       .then((response) => setDataComments(response.data))
@@ -31,47 +31,45 @@ useEffect(() => {
   }, []);
 
 
-const handleTextChange = (event) => {
-  setComment({...comment,description:event.target.value})
-};
-// console.log(comment)
+  const handleTextChange = (event) => {
+    setComment({ ...comment, description: event.target.value })
+  };
 
-
-const addComment = (newComment) => {
-  axios
-    .post(`${import.meta.env.VITE_BACKEND_API}/comments`, newComment)
-    .then((response) => {
-      console.log(response.data);
-
-      navigate(`/index`);
-    })
-    .catch((e) => console.error("catch", e));
-};
-
-
-const handleSubmit = (event) => {
-  event.preventDefault();
-  addComment(comment);
-}
-
-useEffect(() => {
-  if (!!data.latitude) {
+  const addComment = (newComment) => {
     axios
-      .get(`https://us1.locationiq.com/v1/reverse?key=${import.meta.env.VITE_REVERSE_GEOCODING_API_KEY}&lat=${data.latitude}&lon=${data.longitude}&format=json`)
+      .post(`${import.meta.env.VITE_BACKEND_API}/comments`, newComment)
       .then((response) => {
-        setLocationIQ(response.data);
-        console.log(response.data); // Log data inside the .then() block
+        console.log(response.data);
+
+        navigate(`/index`);
       })
-      .catch((error) => console.error("Error:", error));
+      .catch((e) => console.error("catch", e));
+  };
+
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    addComment(comment);
   }
-}, [data.latitude, data.longitude]); // Ensure useEffect runs when latitude or longitude changes
 
-console.log(dataComments)
-console.log(id)
-const navigate= useNavigate()
+  useEffect(() => {
+    if (!!data.latitude) {
+      axios
+        .get(`https://us1.locationiq.com/v1/reverse?key=${import.meta.env.VITE_REVERSE_GEOCODING_API_KEY}&lat=${data.latitude}&lon=${data.longitude}&format=json`)
+        .then((response) => {
+          setLocationIQ(response.data);
+          console.log(response.data);
+        })
+        .catch((error) => console.error("Error:", error));
+    }
+  }, [data.latitude, data.longitude]);
+
+  console.log(dataComments)
+  console.log(id)
+  const navigate = useNavigate()
 
 
-useEffect(() => {
+  useEffect(() => {
     axios
       .get(`${import.meta.env.VITE_BACKEND_API}/userposts/${id}`)
       .then((response) => setData(response.data.data))
@@ -81,117 +79,105 @@ useEffect(() => {
 
   const deleteItem = (identification) => {
     axios
-      .delete(`${import.meta.env.VITE_BACKEND_API}/userposts/${identification}`,identification)
+      .delete(`${import.meta.env.VITE_BACKEND_API}/userposts/${identification}`, identification)
       .then((response) => navigate("/index"))
       .catch((e) => console.error("catch", e));
   };
-  
-
 
   function deletePost() {
     deleteItem(id);
   }
 
-const storedValue = sessionStorage.getItem('username');
-function parseDATE(date){
-  // console.log(d.getUTCHours()); // Hours
+  const storedValue = sessionStorage.getItem('username');
+  function parseDATE(date) {
 
-  // console.log(d.getUTCSeconds());
+    console.log(dataComments)
 
-
-console.log(dataComments)
-
+    return `${date.charAt(5)}${date.charAt(6)} / ${date.charAt(8)}${date.charAt(9)} / ${date.charAt(0)}${date.charAt(1)}${date.charAt(2)}${date.charAt(3)}`
+  }
 
 
-return `${date.charAt(5)}${date.charAt(6)} / ${date.charAt(8)}${date.charAt(9)} / ${date.charAt(0)}${date.charAt(1)}${date.charAt(2)}${date.charAt(3)}`
-}
-return(
-    
+  return (
     <div>
       <br></br>
-      <br></br>
-<h2>{data.full_name}</h2>
+      <div style={{ borderStyle: "dotted", borderRadius: "10px", borderColor: "purple" }}>
+        <br></br>
+        <br></br>
+        <h2>{data.full_name}</h2>
 
-<p>Username: {data.username}</p>
-    {/* <p>Date:<span>{parseDATE(data.date)}</span></p> */}
+        <p>Username: {data.username}</p>
 
-    <img className="imageIndView" src={data.image_url} style={{width:"300px"}}></img>
-    <br></br>
-    <br></br>
-<div className="tableContain">
-<table>
-  <tr>
-    <th>Category</th>
-    <th>Values</th>
-  </tr>
-  <tr>
-    <td>Latitude</td>
-    <td>{!!data.latitude ? data.latitude : "No Location Found"}</td>
-  </tr>
-  <tr>
-    <td>Longitude</td>
-    <td>{!!data.longitude ? data.longitude : "No Location Found"}</td>
-  </tr>
-  <tr>
-    <td>Description</td>
-    <td>{data.description}</td>
-  </tr>
+        {data.image_url ? <img className="imageIndView" src={data.image_url} style={{ width: "300px" }}></img> : <div>No Image Uploaded</div>
+        }        <br></br>
+        <br></br>
+        <div className="tableContain">
+          <table className="userPostTable">
+            <tr>
+              <th>Category</th>
+              <th>Values</th>
+            </tr>
+            <tr>
+              <td>Latitude</td>
+              <td>{!!data.latitude ? data.latitude : "No Location Found"}</td>
+            </tr>
+            <tr>
+              <td>Longitude</td>
+              <td>{!!data.longitude ? data.longitude : "No Location Found"}</td>
+            </tr>
+            <tr>
+              <td>Description</td>
+              <td>{data.description}</td>
+            </tr>
 
-  <tr>
+            <tr>
 
-    <td>Address</td>
-    <td>{!!locationIQ.display_name ? <span>{locationIQ.display_name}</span> : "No Location Data"}</td>
-  </tr>
+              <td>Address</td>
+              <td>{!!locationIQ.display_name ? <span>{locationIQ.display_name}</span> : "No Location Data"}</td>
+            </tr>
 
-</table>
-<div>{data.username === storedValue ?<Link style={{fontSize:"15px"}} to={`/index/${id}/edit`}><button style={{backgroundColor:"orange", width:"100px", height:"50px"}}>Edit Page</button></Link>:null}
-{data.username === storedValue ? <button style={{backgroundColor:"red", width:"100px", height:"50px"}} onClick={deletePost}>Delete Post</button> : null}
-<Link to="/index"><button style={{width:"100px", height:"50px"}}>Back</button></Link></div>
-<br></br>
-{/* <div>{!!data.image_url ? data.image_url : null}</div> */}
+          </table>
+          <br></br>
+          <div >{data.username === storedValue ? <Link style={{ fontSize: "15px" }} to={`/index/${id}/edit`}><button style={{ backgroundColor: "orange", width: "100px", height: "50px" }}>Edit Page</button></Link> : null}
+            <span> </span>
+            {data.username === storedValue ? <button style={{ backgroundColor: "red", width: "100px", height: "50px" }} onClick={deletePost}>Delete Post</button> : null}
+            <span> </span>
 
-{/* 
-// <div className="viewsDIV">
-// <div>{data.username}</div>
-// <div>{data.skybrightness}</div>
-// <div>{data.description}</div>
-// <div>{data.date}</div>
-// <div>{data.latitude}</div>
-// <div>{data.longitude}</div>
-// <div>{!!data.image_url ? data.image_url : null}</div>
-// <div>{data.username === storedValue?<Link style={{fontSize:"15px"}} to={`/index/${id}/edit`}>Edit Page</Link>:null}</div> */}
+            <Link to="/index"><button style={{ width: "100px", height: "50px", fontSize: "15px" }}>Back</button></Link></div>
+          <br></br>
+          <span> </span>
 
+          <div style={{ borderStyle: "solid", borderRadius: "10px", borderColor: "whitesmoke" }}>
+            <br></br>
+            <div style={{ fontSize: "18px" }}><strong>Comments Section</strong></div>
+            <form onSubmit={handleSubmit}>
 
-<div>Comments Section</div>
-<form onSubmit={handleSubmit}>
-
-<input onChange={handleTextChange} type="text"></input>
-<input
-            style={{ width: "30%", padding: "0.6em 1.2em" }}
-            type="submit"
-          />
-</form>
+              <input onChange={handleTextChange} placeholder="type your comment here..." type="text"></input>
+              <input
+                style={{ width: "30%", padding: "0.6em 1.2em" }}
+                type="submit"
+              />
+            </form>
 
 
-<br></br>
-<br></br>
-<div>
-  {dataComments.map((commentz, index) => {
-    if(parseFloat(commentz.userpost_id) ===parseFloat(id)){
-    return (
-    
-    <CommentsBox loginUsername={loginUsername} key={uuidv4()} commentz={commentz} id={id} index={index} />
-    
-    )
-    }
-  })}
-</div>
+            <br></br>
+            <br></br>
+            <div>
+              {dataComments.map((commentz, index) => {
+                if (parseFloat(commentz.userpost_id) === parseFloat(id)) {
+                  return (
 
-<br></br>
-</div>
-</div>
+                    <CommentsBox loginUsername={loginUsername} key={uuidv4()} commentz={commentz} id={id} index={index} />
 
-)
+                  )
+                }
+              })}
+            </div>
+          </div>
+          <br></br>
+        </div>
+      </div>
+    </div>
+  )
 
 
 }
