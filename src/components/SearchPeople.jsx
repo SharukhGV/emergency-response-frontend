@@ -1,44 +1,25 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-// import data from "../../data.json"
-import { v4 as uuidv4 } from 'uuid';
-import markerImage from "./markerImage.png"
 import Individual from "./Individual";
-// import solarsystem from "../pages/solarsystem.png"
-import { useNavigate } from "react-router-dom";
-export default function SearchPeople({loginUsername, setMapMarkers, emergencyType, setLongitude, setLatitude, lat, lng }) {
+export default function SearchPeople({ loginUsername, setMapMarkers, emergencyType, setLongitude, setLatitude, lat, lng }) {
   const [data, setData] = useState([])
 
 
-useEffect(() => {
+  useEffect(() => {
     axios
       .get(`${import.meta.env.VITE_BACKEND_API}/userposts`)
       .then((response) => setData(response.data.data))
       .catch((e) => console.error("catch", e));
   }, []);
 
-// Set data in sessionStorage
-sessionStorage.setItem('username', loginUsername);
+  sessionStorage.setItem('username', loginUsername);
 
-
-
-// console.log(data)
   const [query, setQuery] = useState("");
-  // const [queryUser, setQueryUser] = useState("");
-  // const [queryDescription, setQueryDescription] = useState("");
 
   const handleQueryChange = (event) => {
     setQuery(event.target.value);
   };
-  
-  // const handleQueryChangeUser = (event) => {
-  //   setQueryUser(event.target.value);
-  // };
-  
-  // const handleQueryChangeDescription = (event) => {
-  //   setQueryDescription(event.target.value);
-  // };
-console.log(data)
+
   const filteredPeople = data.filter((posts) => {
     return posts.full_name.toLowerCase().includes(query.toLowerCase());
   });
@@ -61,149 +42,111 @@ console.log(data)
   const filteredHigh = data.filter((person) => {
     return person.skybrightness.toLowerCase().includes("high");
   });
-  // const filteredusers = data.filter((person) => {
-  //   return person.username.toLowerCase().includes(queryUser.toLowerCase());
-  // });
 
-  // const filteredDescription = data.filter((person) => {
-  //   return person.description.toLowerCase().includes(queryDescription.toLowerCase());
-  // });
-
-// FOR LOCCATION NICKNAME
   useEffect(() => {
     const markerArray = filteredPeople.map((person) => ({
       lat: person.latitude,
       lng: person.longitude,
     }));
 
-    setMapMarkers(markerArray); // Update mapMarkers based on filtered data
-  }, [query]); // Update markers when the query changes
+    setMapMarkers(markerArray);
+  }, [query]);
 
-  // // FOR USERS
-  // useEffect(() => {
-  //   const markerArray = filteredusers.map((person) => ({
-  //     lat: person.latitude,
-  //     lng: person.longitude,
-  //   }));
+  const [allPosts, setAllPosts] = useState(false)
+  const [northern, setNorthern] = useState(false)
+  const [meteoric, setMeteoric] = useState(false)
+  const [lowLight, setlowLight] = useState(false)
 
-  //   setMapMarkers(markerArray); // Update mapMarkers based on filtered data
-  // }, [queryUser]); // Update markers when the query changes
+  function northernLights() {
+    setAllPosts(false)
+    setNorthern(true)
+    setMeteoric(false)
+    setlowLight(false)
+  }
 
-  // useEffect(() => {
-  //   const markerArray = filteredDescription.map((person) => ({
-  //     lat: person.latitude,
-  //     lng: person.longitude,
-  //   }));
-
-  //   setMapMarkers(markerArray); // Update mapMarkers based on filtered data
-  // }, [queryDescription]); // Update markers when the query changes
-
-const [allPosts,setAllPosts]=useState(false)
-const [northern,setNorthern]=useState(false)
-const [meteoric,setMeteoric]=useState(false)
-const [lowLight,setlowLight]=useState(false)
-
-function northernLights(){
-  setAllPosts(false)
-  setNorthern(true)
-  setMeteoric(false)
-  setlowLight(false)
-}
-
-function meteoricEvent(){
-  setAllPosts(false)
-  setNorthern(false)
-  setMeteoric(true)
-  setlowLight(false)
-}
+  function meteoricEvent() {
+    setAllPosts(false)
+    setNorthern(false)
+    setMeteoric(true)
+    setlowLight(false)
+  }
 
 
-function allPostsSet(){
-  setAllPosts(true)
-  setNorthern(false)
-  setMeteoric(false)
-  setlowLight(false)
-}
+  function allPostsSet() {
+    setAllPosts(true)
+    setNorthern(false)
+    setMeteoric(false)
+    setlowLight(false)
+  }
 
 
-function lowLightPollution(){
-  setAllPosts(false)
-  setNorthern(false)
-  setMeteoric(false)
-  setlowLight(true)
-}
+  function lowLightPollution() {
+    setAllPosts(false)
+    setNorthern(false)
+    setMeteoric(false)
+    setlowLight(true)
+  }
 
 
   return (
     <div>
-      {/* <div>
-        <img onClick={planetsvis} style={{width:"100px"}} src={solarsystem}></img>
-        <strong>Search for a Location</strong>
-      </div> */}
-      {/* <div></div>
-              <strong>Search for a Location</strong>
-<div></div> */}
 
 
-{/* <button onClick={locationNickanme7}>Location Nickname</button>   <button onClick={userNAME7}>Username</button> <button onClick={description7}>Description</button> */}
-{allPosts ? <input type="text" placeholder="Search for a Location" value={query} onChange={handleQueryChange} /> : null}
-<br></br>
-<br></br>
-      {/* {locationNickanme ?<input type="text" placeholder="Search for a Location" value={query} onChange={handleQueryChange} /> :null} */}
-      {/* {usrname777?<input type="text" placeholder="Search for a User" value={queryUser} onChange={handleQueryChangeUser} />:null} */}
-      {/* {description777?<input type="text" placeholder="Search for a Description" value={handleQueryChangeDescription} onChange={handleQueryChangeDescription} />: null} */}
-<div>
-<button style={{textShadow: "0 0 3px #000000, 0 0 5px #ffffff",borderRadius:"10px",border: "2px solid #373436", width:"70px", height:"70px", opacity:"0.8", backgroundColor:"black", fontSize:"10px"}} onClick={allPostsSet}>Every Post</button>
-<span>     </span>
-<button className="northernLights" style={{textShadow: "0 0 3px #000000, 0 0 5px #ffffff",borderRadius:"10px", width:"70px", height:"70px",  opacity:"0.8",backgroundColor:"black", fontSize:"10px"}} onClick={northernLights}>Auroras</button>
-<span>     </span>
+      {allPosts ? <input type="text" placeholder="Search for a Location" value={query} onChange={handleQueryChange} /> : null}
+      <br></br>
+      <br></br>
+      <div>
+        <button style={{ textShadow: "0 0 3px #000000, 0 0 5px #ffffff", borderRadius: "10px", border: "2px solid #373436", width: "70px", height: "70px", opacity: "0.8", backgroundColor: "black", fontSize: "10px" }} onClick={allPostsSet}>Every Post <div style={{ fontSize: "17px" }}>🟢</div></button>
+        <span>     </span>
+        <button className="northernLights" style={{ textShadow: "0 0 3px #000000, 0 0 5px #ffffff", borderRadius: "10px", width: "70px", height: "70px", opacity: "0.8", backgroundColor: "black", fontSize: "10px" }} onClick={northernLights}>Auroras <div style={{ fontSize: "17px" }}>🌃</div></button>
+        <span>     </span>
 
-<button className="fireBall" style={{textShadow: "0 0 3px #000000, 0 0 5px #ffffff",borderRadius:"10px", width:"70px", height:"70px",  opacity:"0.8", backgroundColor:"black", fontSize:"10px"}} onClick={meteoricEvent}>Meteors</button>
-<span>     </span>
+        <button className="fireBall" style={{ textShadow: "0 0 3px #000000, 0 0 5px #ffffff", borderRadius: "10px", width: "70px", height: "70px", opacity: "0.8", backgroundColor: "black", fontSize: "10px" }} onClick={meteoricEvent}>Meteors <div style={{ fontSize: "17px" }}>☄️</div></button>
+        <span>     </span>
 
-<button style={{textShadow: "0 0 3px #000000, 0 0 5px #ffffff",borderRadius:"10px",border: "2px solid #373436", opacity:"0.8", width:"70px", height:"70px", backgroundColor:"black", fontSize:"10px"}} onClick={lowLightPollution}>Low LP</button>
-</div>
+        <button style={{ textShadow: "0 0 3px #000000, 0 0 5px #ffffff", borderRadius: "10px", border: "2px solid #373436", opacity: "0.8", width: "70px", height: "70px", backgroundColor: "black", fontSize: "10px" }} onClick={lowLightPollution}>Low LP <div style={{ fontSize: "17px" }}>🌆</div></button>
+      </div>
 
 
 
-     {allPosts ? <ul className="ultraelem"> 
+      {allPosts ? <ul className="ultraelem">
         {filteredPeople.map((person) => (
-          <li className="listelem" style={{display:"flex",flexWrap:"wrap"}} key={person.id}>
-            
+          <li className="listelem" style={{ display: "flex", flexWrap: "wrap" }} key={person.id}>
+
             <Individual loginUsername={loginUsername} id={person.id} person={person} />
           </li>
         ))}
-      </ul> :null}
+      </ul> : null}
 
-      {northern ? <ul className="ultraelem"> 
+      {northern ? <ul className="ultraelem">
         {filteredNorthernLights.map((person) => (
-          <li className="listelem" style={{display:"flex",flexWrap:"wrap"}} key={person.id}>
-            
+          <li className="listelem" style={{ display: "flex", flexWrap: "wrap" }} key={person.id}>
+
             <Individual loginUsername={loginUsername} id={person.id} person={person} />
           </li>
         ))}
-      </ul> :null}
+      </ul> : null}
 
 
-      {meteoric ? <ul className="ultraelem"> 
+      {meteoric ? <ul className="ultraelem">
         {filteredMeteor.map((person) => (
-          <li className="listelem" style={{display:"flex",flexWrap:"wrap"}} key={person.id}>
-            
+          <li className="listelem" style={{ display: "flex", flexWrap: "wrap" }} key={person.id}>
+
             <Individual loginUsername={loginUsername} id={person.id} person={person} />
           </li>
         ))}
-      </ul> :null}
+      </ul> : null}
 
 
 
-      {lowLight ? <ul className="ultraelem"> 
+      {lowLight ? <ul className="ultraelem">
         {filteredLow.map((person) => (
-          <li className="listelem" style={{display:"flex",flexWrap:"wrap"}} key={person.id}>
-            
+          <li className="listelem" style={{ display: "flex", flexWrap: "wrap" }} key={person.id}>
+
             <Individual loginUsername={loginUsername} id={person.id} person={person} />
           </li>
         ))}
-      </ul> :null}
+      </ul> : null}
 
 
     </div>
