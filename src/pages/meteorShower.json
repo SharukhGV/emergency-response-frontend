@@ -5,71 +5,80 @@
         "dateStart": "01/01",
         "dateEnd":"01/05",
         "frequency": "Active annually, peak around January 3",
-        "image":"https://upload.wikimedia.org/wikipedia/commons/f/f2/Bootes-foreleg.png"
+        "image":"https://upload.wikimedia.org/wikipedia/commons/f/f2/Bootes-foreleg.png",
+        "about":"The Quadrantid meteor shower peaks in January and is known for its intense but short-lived display. It seems to radiate from the constellation Boötes."
       },
       {
         "name": "Lyrids",
         "dateStart": "04/16",
         "dateEnd": "04/25",
         "frequency": "Active annually, peak around April 22",
-        "image": "https://cdn.pixabay.com/photo/2018/04/08/17/08/constellation-3301788_1280.jpg"
+        "image": "https://cdn.pixabay.com/photo/2018/04/08/17/08/constellation-3301788_1280.jpg",
+        "about":" The Lyrids occur in April, with meteors appearing to originate from the constellation Lyra. They are associated with Comet C/1861 G1 Thatcher."
       },
       {
         "name": "Eta Aquarids",
         "dateStart": "04/19",
         "dateEnd": "05/28",
         "frequency": "Active annually, peak around May 6",
-        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Lspn_comet_halley.jpg/800px-Lspn_comet_halley.jpg"
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Lspn_comet_halley.jpg/800px-Lspn_comet_halley.jpg",
+        "about":"Active in May, the Eta Aquarids are linked to Halley's Comet. They appear to come from the constellation Aquarius."
       },
       {
         "name": "Perseids",
         "dateStart": "07/17",
         "dateEnd":"08/26",
         "frequency": "Active annually, peak around August 12",
-        "image":"https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/%D8%B2%D8%AE%D8%A9_%D8%B4%D9%87%D8%A8_%D8%A7%D9%84%D8%A8%D8%B1%D8%B4%D8%A7%D9%88%D9%8A%D8%A7%D8%AA.jpg/800px-%D8%B2%D8%AE%D8%A9_%D8%B4%D9%87%D8%A8_%D8%A7%D9%84%D8%A8%D8%B1%D8%B4%D8%A7%D9%88%D9%8A%D8%A7%D8%AA.jpg"
+        "image":"https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/%D8%B2%D8%AE%D8%A9_%D8%B4%D9%87%D8%A8_%D8%A7%D9%84%D8%A8%D8%B1%D8%B4%D8%A7%D9%88%D9%8A%D8%A7%D8%AA.jpg/800px-%D8%B2%D8%AE%D8%A9_%D8%B4%D9%87%D8%A8_%D8%A7%D9%84%D8%A8%D8%B1%D8%B4%D8%A7%D9%88%D9%8A%D8%A7%D8%AA.jpg",
+        "about":"One of the most popular showers, the Perseids peak in August. They radiate from the constellation Perseus and are associated with Comet 109P/Swift-Tuttle."
       },
       {
         "name": "Draconids",
         "dateStart": "10/06",
         "dateEnd":"10/10",
         "frequency": "Active annually, variable intensity, occasional meteor storms",
-        "image": "https://upload.wikimedia.org/wikipedia/commons/8/89/Bolide.jpg"
+        "image": "https://upload.wikimedia.org/wikipedia/commons/8/89/Bolide.jpg",
+        "about":"The Draconids peak in October and seem to come from the constellation Draco. They are associated with Comet 21P/Giacobini-Zinner."
       },
       {
         "name": "Orionids",
         "dateStart": "10/02",
         "dateEnd": "11/07",
         "frequency": "Active annually, peak around October 21",
-        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Orionid_Meteor%281%29.JPG/800px-Orionid_Meteor%281%29.JPG"
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Orionid_Meteor%281%29.JPG/800px-Orionid_Meteor%281%29.JPG",
+        "about":"Active in October, the Orionids radiate from the constellation Orion. They are remnants of Halley's Comet."
       },
       {
         "name": "Taurids",
         "dateStart": "10/ 20",
         "dateEnd": "12/10",
-
         "frequency": "Active annually, separate branches for Northern and Southern Taurids, peaks in late October and early November",
-        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Tauride-20201204.jpg/800px-Tauride-20201204.jpg"
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Tauride-20201204.jpg/800px-Tauride-20201204.jpg",
+        "about":" The Taurids have two branches (North and South) and peak in November. They appear to come from the constellation Taurus."
       },
       {
         "name": "Leonids",
         "dateStart": "11/06",
         "dateEnd":"11/30",
         "frequency": "Active annually, peak around November 17-18, periodic meteor storms",
-        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Leonid_Meteor.jpg/800px-Leonid_Meteor.jpg"
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Leonid_Meteor.jpg/800px-Leonid_Meteor.jpg",
+        "about":"The Leonids peak in November and are associated with Comet 55P/Tempel-Tuttle. They radiate from the constellation Leo."
       },
       {
         "name": "Geminids",
         "dateStart": "12/04",
         "dateEnd": "12/17",
         "frequency": "Active annually, peak around December 13-14, one of the most reliable meteor showers",
-        "image" : "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Geminids.jpg/800px-Geminids.jpg"
+        "image" : "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Geminids.jpg/800px-Geminids.jpg",
+        "about":" The Geminids are one of the best showers, peaking in December. They seem to originate from the constellation Gemini and are not associated with a comet but an asteroid."
       },
       {
         "name": "Ursids",
         "dateStart": "12/17",
         "dateEnd": "12/26",
         "frequency": "Active annually, peak around December 21-22",
-        "image": "https://upload.wikimedia.org/wikipedia/commons/4/4a/Radiant_for_Ursids_2018.jpg"
+        "image": "https://upload.wikimedia.org/wikipedia/commons/4/4a/Radiant_for_Ursids_2018.jpg",
+        "about":"Active in December, the Ursids appear to come from the constellation Ursa Minor."
       }
     ]
   }
