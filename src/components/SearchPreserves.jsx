@@ -32,11 +32,11 @@ function SearchPreserves({ preserveMarkers, setPreserveMarkers }) {
 
   const filteredPreserves = darkSkyPreserves.filter((preserve) => {
     if (sortKey === "bestlocale") {
-      return (preserve[sortKey][0]).includes(query.toLowerCase());
+      return (preserve[sortKey][0]).toLowerCase().includes(query.toLowerCase());
 
     }
     else {
-      return (preserve[sortKey]).includes(query.toLowerCase());
+      return (preserve[sortKey]).toLowerCase().includes(query.toLowerCase());
     }
   });
 
