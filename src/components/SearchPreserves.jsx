@@ -123,7 +123,7 @@ function SearchPreserves({ preserveMarkers, setPreserveMarkers }) {
         <option value="besttime">best time</option>
         <option value="bestlocale">best location</option>
       </select>
-      {toggle ? <button onClick={handleToggle}>Normal Alphabetical</button> : <button onClick={handleToggle}>Reverse Alphabetical</button>}
+      {toggle ? <button style={{borderRadius:"10px", maxWidth:"250px"}} onClick={handleToggle}>Normal Alphabetical</button> : <button  style={{borderRadius:"10px", maxWidth:"250px"}} onClick={handleToggle}>Reverse Alphabetical</button>}
 
       <ul className="ultraelem">
         {filteredPreserves.map((preserve) => (
