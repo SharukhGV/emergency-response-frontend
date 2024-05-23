@@ -86,34 +86,44 @@ function PlanetsVisible() {
 
     )
     else if (errorMsg !== "") {
-     return <div>
-      <br></br>
-     <h1 style={{color:"red"}}> OOPS! {errorMsg}</h1>
-      
+      return <div>
+        <br></br>
+        <h1 style={{ color: "red" }}> OOPS! {errorMsg}</h1>
+
       </div>
     }
     else {
       return (
-        <div>
+        <>
+          <br></br>
+          <div style={{ border: "dotted" }}>
 
-          <h1 style={{ color: "blue" }}>Current Visible Planets</h1>
-          <h3 style={{ color: "gray" }}>Latitude: {latitude}</h3>
-          <h3 style={{ color: "gray" }}>Longitude: {longitude}</h3>
-          {planets.map((planet, index) => {
-            return (
-              <Planet key={index} planet={planet} />
-            )
-          })}
-        </div>
+            <h1 style={{ color: "darkred" }}>Visible Celestial Bodies</h1>
+            <fieldset style={{ border: "solid", margin: "30px" }}>
+              <legend style={{ backgroundColor: "darkred", color: "white" }}>Your Geolocation: Enabled</legend>
+              <p style={{ color: "gray", fontSize: "13px" }}>Latitude: {latitude}</p>
+              <p style={{ color: "gray", fontSize: "13px" }}>Longitude: {longitude}</p></fieldset>
+            {planets.map((planet, index) => {
+              return (<>
+                <Planet key={index} planet={planet} />
+              </>
+              )
+            })}
+            <br></br>
+          </div>
+
+          <br></br>
+          <br></br>      </>
+
       )
     }
 
   }
 
   return (
-
-    <>{renderPlanets()}</>
-
+    <>
+      <>{renderPlanets()}</>
+    </>
   )
 
 
