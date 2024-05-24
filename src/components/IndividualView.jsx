@@ -146,7 +146,7 @@ function IndividualView({ loginUsername }) {
           <br></br>
           <span> </span>
 
-          <div style={{ borderStyle: "solid", borderRadius: "10px", borderColor: "whitesmoke" }}>
+          <div className="comments" style={{ borderStyle: "solid", borderRadius: "10px", borderColor: "darkred" }}>
             <br></br>
             <div style={{ fontSize: "18px" }}><strong>Comments Section</strong></div>
             <form onSubmit={handleSubmit}>

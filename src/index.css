@@ -69,8 +69,82 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
-} */
+} */ 
 
 
-body{background-color: rgb(193, 221, 210);
+
+.light{
+  background-color: rgb(193, 221, 210);
+  display:fixed;
+  margin: auto;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.dark{background-color: rgb(0, 0, 0);
+  color: red;
+  display:fixed;
+  margin: auto;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.dark .NavBarContainer{
+  background-color: rgb(56, 19, 19);
+}
+
+.dark .NavBarContainer strong{
+  background-color: rgba(56, 19, 19, 0);
+  color: red;
+}
+
+.dark p {
+  color: red;
+}
+.dark div {
+  color: red;
+}
+
+.dark a {
+  color: red;
+}
+.dark h1{
+  color: red;
+}
+
+.dark h2{
+  color: red;
+}
+
+.dark h3{
+  color: red;
+}
+
+.dark h4{
+  color: red;
+}
+
+.dark h5{
+  color: red;
+}
+
+.dark h6{
+  color: red;
+}
+
+.light button {
+  border-radius: 10px;
+  color: rgb(255, 255, 255);
+  padding-top: 3px;
+  padding-bottom: 3px;
+  background-color: rgb(19, 11, 107);
+}
+
+.dark button {
+  border-radius: 10px;
+  color: rgb(255, 255, 255);
+  padding-top: 3px;
+  padding-bottom: 3px;
+  background-color: rgb(10, 8, 28);
 }

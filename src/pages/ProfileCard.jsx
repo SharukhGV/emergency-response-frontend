@@ -11,8 +11,7 @@ const latestPost = dataProfile
 
 if (latestPost) {
   return (
-    <div style={{ width: "350px", margin: "auto", border:"solid", borderRadius:"10px",
-    backgroundColor:"#ccffee" }}>
+    <div style={{ width: "350px", margin: "auto", border:"solid", borderRadius:"10px" }}>
       <br></br>
       <img src={latestPost.image_url} alt="profile icon" style={{ width: "300px", height: "300px", borderRadius: "50%", border:"solid" }} />
       <h1>Welcome Back</h1>

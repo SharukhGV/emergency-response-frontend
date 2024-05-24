@@ -55,14 +55,14 @@ function MeteorShowers() {
             <br></br>
             <br></br>
             <div style={{textAlign:"center"}}>
-            <h1 style={{ color: "darkblue" }}><strong>Watcher's Guide</strong></h1>
-            <h3 style={{ color: "gray" }}>Meteor Showers</h3>
-            <h4 style={{ color: "gray" }}>Example: Lyrid</h4>
+            <h1 ><strong>Watcher's Guide</strong></h1>
+            <h3 >Meteor Showers</h3>
+            <h4 >Example: Lyrid</h4>
 </div>
 
             <br></br>
             <div>
-              <h3 style={{ color: "purple" }}>When and Where to Watch:</h3>
+              <h3 >When and Where to Watch:</h3>
               <p><strong>- The Lyrid meteor shower runs from April 15 to April 29.</strong></p>
               <p><strong>- The peak occurs on the evening of April 21 to the early morning hours of April 22.</strong></p>
               <p><strong>- Find a dark location away from city lights for the best view.</strong></p>
@@ -70,14 +70,14 @@ function MeteorShowers() {
             <br></br>
             <div >
 
-              <h3 style={{ color: "purple" }}>Meteor Origins:</h3>
+              <h3 >Meteor Origins:</h3>
               <p><strong>   - The Lyrids are one of the oldest known meteor showers, observed for at least 2,700 years.</strong></p>
               <p><strong>- They occur when Earth passes through the debris field of comet C/1861 G1 Thatcher.</strong></p>
               <p><strong>- Lyrid meteors appear to originate near the constellation Lyra, specifically from the radiant point near the bright star Vega.</strong></p>
             </div>
             <br></br>
             <div>
-              <h3 style={{ color: "purple" }}>Observation Tips:</h3>
+              <h3 >Observation Tips:</h3>
               <p><strong>- Know the peak time: The best viewing time is during the peak hours.</strong></p>
               <p><strong>- Location: Choose a dark spot away from artificial lights.</strong></p>
               <p><strong>- Patience: Spend at least an hour observing to see more meteors.</strong></p>
@@ -86,7 +86,7 @@ function MeteorShowers() {
             </div>
             <br></br>
             <div>
-              <h3 style={{ color: "purple" }}>Stellarium Software:</h3>
+              <h3 >Stellarium Software:</h3>
               <p><strong>- To track the Lyrids, use Stellarium, a free planetarium software.</strong></p>
               <p><strong>- Set your location and date to April 21-22.</strong></p>
               <p><strong>- Look toward the constellation Lyra to spot the radiant point.</strong></p>
@@ -94,7 +94,7 @@ function MeteorShowers() {
             </div>
             <br></br>
             <div>
-              <p style={{ color: "gray" }}><strong>Remember, meteor showers are unpredictable, so patience and a sense of wonder are key. Happy stargazing!</strong></p>
+              <p ><strong>Remember, meteor showers are unpredictable, so patience and a sense of wonder are key. Happy stargazing!</strong></p>
 
             </div>
             <br></br>
@@ -111,8 +111,8 @@ function MeteorShowers() {
                       {/* ON BUTTON CLICK, SHOW METEOR SHOWERS WITHIN THREE MONTHS */}
 
             <br></br>
-            <h1 style={{ color: "darkblue" }}><strong>Upcoming Showers</strong></h1>
-            <h3 style={{ color: "gray" }}>Current and Next Two Months</h3>
+            <h1 ><strong>Upcoming Showers</strong></h1>
+            <h3 >Current and Next Two Months</h3>
 
             <br></br> <div >{filterDateMeteors.length > 0 ? <div>{filterDateMeteors.map(meteor => {
               return (
@@ -141,7 +141,7 @@ function MeteorShowers() {
                     </div>
                   </div>
 
-                  <div style={{margin:"30px", color:"purple",padding:"3px", backgroundColor:"yellowgreen", borderRadius:"10px", borderColor:"green",border:"solid" }}>{meteor.about}</div>
+                  <div style={{margin:"30px", padding:"3px", borderRadius:"10px",border:"solid" }}>{meteor.about}</div>
 
                 </>
               )
@@ -174,7 +174,7 @@ function MeteorShowers() {
 
                     </div>
                   </div>
-                  <div style={{margin:"30px", color:"purple",padding:"3px", backgroundColor:"yellowgreen", borderRadius:"10px", borderColor:"green",border:"solid" }}>{meteor.about}</div>
+                  <div style={{margin:"30px", padding:"3px",  borderRadius:"10px", borderColor:"green",border:"solid" }}>{meteor.about}</div>
                 </>
               )
             })
@@ -207,7 +207,7 @@ function MeteorShowers() {
 
                     </div>
                   </div>
-                  <div style={{margin:"30px", color:"purple",padding:"3px", backgroundColor:"yellowgreen", borderRadius:"10px", borderColor:"green",border:"solid" }}>{meteor.about}</div>
+                  <div style={{margin:"30px", color:"purple",padding:"3px", borderRadius:"10px", borderColor:"green",border:"solid" }}>{meteor.about}</div>
                 </>
               )
             })
@@ -219,8 +219,8 @@ function MeteorShowers() {
             
               <br></br>
               <br></br>
-              <h1 style={{ color: "darkblue" }}><strong>Upcoming Showers</strong></h1>
-              <h3 style={{ color: "gray" }}>Starting and Ending Within a Month</h3>
+              <h1><strong>Upcoming Showers</strong></h1>
+              <h3>Starting and Ending Within a Month</h3>
               <div>{meteorShowers.meteorShowers.map(meteor => {
 
                 let meteorNamesString = stacking.join(",")
@@ -250,7 +250,7 @@ function MeteorShowers() {
 
                         </div>
                       </div>
-                      <div style={{margin:"30px", color:"purple",padding:"3px", backgroundColor:"yellowgreen", borderRadius:"10px", borderColor:"green",border:"solid" }}>{meteor.about}</div>
+                      <div style={{margin:"30px", color:"purple",padding:"3px", borderRadius:"10px", borderColor:"green",border:"solid" }}>{meteor.about}</div>
                     </div>
 
                     : null
