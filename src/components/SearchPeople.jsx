@@ -98,10 +98,10 @@ export default function SearchPeople({ loginUsername, setMapMarkers, emergencyTy
       <div>
         <button style={{ textShadow: "0 0 3px #000000, 0 0 5px #ffffff", borderRadius: "10px", border: "2px solid #373436", width: "70px", height: "70px", opacity: "0.8", backgroundColor: "black", fontSize: "10px" }} onClick={allPostsSet}>Every Post <div style={{ fontSize: "17px" }}>🟢</div></button>
         <span>     </span>
-        <button className="northernLights" style={{ textShadow: "0 0 3px #000000, 0 0 5px #ffffff", borderRadius: "10px", width: "70px", height: "70px", opacity: "0.8", backgroundColor: "black", fontSize: "10px" }} onClick={northernLights}>Auroras <div style={{ fontSize: "17px" }}>🌃</div></button>
+        <button className="northernLights" style={{ border: "2px solid #373436", textShadow: "0 0 3px #000000, 0 0 5px #ffffff", borderRadius: "10px", width: "70px", height: "70px", opacity: "0.8", backgroundColor: "black", fontSize: "10px" }} onClick={northernLights}>Auroras <div style={{ fontSize: "17px" }}>🌃</div></button>
         <span>     </span>
 
-        <button className="fireBall" style={{ textShadow: "0 0 3px #000000, 0 0 5px #ffffff", borderRadius: "10px", width: "70px", height: "70px", opacity: "0.8", backgroundColor: "black", fontSize: "10px" }} onClick={meteoricEvent}>Meteors <div style={{ fontSize: "17px" }}>☄️</div></button>
+        <button className="fireBall" style={{ border: "2px solid #373436", textShadow: "0 0 3px #000000, 0 0 5px #ffffff", borderRadius: "10px", width: "70px", height: "70px", opacity: "0.8", backgroundColor: "black", fontSize: "10px" }} onClick={meteoricEvent}>Meteors <div style={{ fontSize: "17px" }}>☄️</div></button>
         <span>     </span>
 
         <button style={{ textShadow: "0 0 3px #000000, 0 0 5px #ffffff", borderRadius: "10px", border: "2px solid #373436", opacity: "0.8", width: "70px", height: "70px", backgroundColor: "black", fontSize: "10px" }} onClick={lowLightPollution}>Low LP <div style={{ fontSize: "17px" }}>🌆</div></button>
