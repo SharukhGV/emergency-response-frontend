@@ -113,9 +113,9 @@ function Register() {
   return (
     <div className="registerCONTAIN"> <h1>Register</h1>
       <p>Please fill in this form to create an account.</p>
+        <div className="container">
 
       <form onSubmit={handleSubmit} style={{ margin: "auto", display: "justified" }}>
-        <div className="container">
 
 
           <label htmlFor="username"><b>Email</b></label>
@@ -144,8 +144,8 @@ function Register() {
               <input onChange={(e) => { handleInputVerify(e) }} placeholder="Verification Code" type="text" id="verify" name="verify" />
             </div> : null}</> : <div>Please Wait...System Processing...</div>}
           </div>
-        </div>
-      </form>
+      </form>        </div>
+
     </div>
   )
 }
