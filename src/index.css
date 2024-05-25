@@ -132,19 +132,3 @@ button:focus-visible {
 .dark h6{
   color: red;
 }
-
-.light button {
-  border-radius: 10px;
-  color: rgb(255, 255, 255);
-  padding-top: 3px;
-  padding-bottom: 3px;
-  background-color: rgb(19, 11, 107);
-}
-
-.dark button {
-  border-radius: 10px;
-  color: rgb(255, 255, 255);
-  padding-top: 3px;
-  padding-bottom: 3px;
-  background-color: rgb(10, 8, 28);
-}

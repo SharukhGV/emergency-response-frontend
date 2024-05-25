@@ -1,5 +1,22 @@
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
+
+.light button {
+  border-radius: 10px;
+  color: rgb(255, 255, 255);
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background-color: rgb(19, 11, 107);
+}
+
+.dark button {
+  border-radius: 10px;
+  color: rgb(255, 255, 255);
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background-color: rgb(10, 8, 28);
+}
+
 /* Create two unequal columns that floats next to each other */
 /* Left column */
 .leftcolumnZXCV {
@@ -1393,4 +1410,34 @@ p {
 .dark .indexButtonsPRESERVECOMMUNITYOBSERVATORY {
   background-color: #000000;
   color: red
+}
+
+.light .registerbtn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.light .registerbtn:hover {
+  opacity: 1;
+}
+
+.dark .registerbtn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.dark .registerbtn:hover {
+  opacity: 1;
 }
