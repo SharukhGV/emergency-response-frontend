@@ -97,7 +97,7 @@ function Earthquake() {
 
           </table>
 
-
+<br></br>
 
         </div>
       )
