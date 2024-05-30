@@ -70,7 +70,7 @@ export default function Home({ setEmergencyType, loginUsername, accessToken, tog
 		}
 		if (theme === "dark") {
 			return (
-				<img onClick={toggleTheme} style={{ maxWidth: "300px", height: "auto" }} src={HiveLogoGif}></img>
+				<img onClick={toggleTheme} style={{ maxWidth: "300px", height: "auto" }} src={hiveheavenLOGOWHITE}></img>
 
 			)
 		}

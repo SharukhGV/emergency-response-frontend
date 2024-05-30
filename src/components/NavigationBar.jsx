@@ -5,7 +5,23 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import telescopeHome from "./telescopeHome.png"
-function NavigationBar({ loginUsername, toggleLOGIN, settoggleLOGIN, accessToken }) {
+import moontoggle from "./moontoggle.png"
+import suntoggle from "./suntoggle.png"
+function NavigationBar({ theme,toggleTheme,loginUsername, toggleLOGIN, settoggleLOGIN, accessToken }) {
+
+
+	function renderLOGO() {
+		if (theme === "light") {
+
+			return (<img onClick={toggleTheme} style={{ maxWidth: "50px", height: "50px" }} src={suntoggle}></img>)
+		}
+		if (theme === "dark") {
+			return (
+				<img onClick={toggleTheme} style={{ maxWidth: "50px", height: "50px" }} src={moontoggle}></img>
+
+			)
+		}
+	}
 
   return (
     <Navbar expand="lg" className="navigationBAr" >
@@ -24,23 +40,14 @@ function NavigationBar({ loginUsername, toggleLOGIN, settoggleLOGIN, accessToken
 
 
         {!!toggleLOGIN ? <Nav.Link><Link to="/meteorshowers">☄️</Link></Nav.Link> : null}
-        {!!toggleLOGIN ? <NavDropdown style={{ color: "black" }} title="🛍️" id="basic-nav-dropdown">
-          <NavDropdown.Item ><Link to="/marketplace"><strong>Market</strong></Link> </NavDropdown.Item>
-
-
-          <NavDropdown.Item ><Link to="/marketplace/newitem"><strong>New Item</strong></Link></NavDropdown.Item>
-          <NavDropdown.Item ><Link to="/marketplace/index"><strong>All Items</strong></Link></NavDropdown.Item>
-
-
-        </NavDropdown> : null}
+    
 
         {!!toggleLOGIN ? <Nav.Link>< Link to="/visibleplanets">🪐</Link></Nav.Link> : null}
         {!!toggleLOGIN ? <Nav.Link ><Link to="/index">🌍</Link></Nav.Link> : null}
-        {!toggleLOGIN ? <Nav.Link><Link to="/login">💻 <strong >Login</strong></Link></Nav.Link> : null}
-        {!toggleLOGIN ? <Nav.Link><Link to="/signup">📃 <strong >Register</strong></Link></Nav.Link> : null}
-
-
-
+        {!toggleLOGIN ? <Nav.Link><Link to="/login"><strong className="loginregisterwords">Login</strong></Link></Nav.Link> : null}
+        {!toggleLOGIN ? <Nav.Link><Link to="/signup"><strong className="loginregisterwords">Register</strong></Link></Nav.Link> : null}
+     
+{renderLOGO()}
       </Container>
     </Navbar>
   );
