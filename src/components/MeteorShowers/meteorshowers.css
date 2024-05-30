@@ -16,6 +16,10 @@
      margin: auto;
      margin-top: 50px;
   }
+  .youtube{
+    margin: auto;
+    margin-top: 50px;
+  }
   
 
   @media (min-width:0px) and (max-width: 750px) {
@@ -40,16 +44,170 @@
      
   }
 
-/* 
-  .meteorMap:nth-of-type(odd){
 
-background-color: rgba(0, 4, 255, 0.26);
+
+  .dark .span {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    margin: 0 5px;
+    position: relative;
+  }
+  
+  .dark .span::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: inherit;
+    border-radius: 50%;
+    z-index: -1;
+    animation: ripple 1.5s ease-out infinite;
+  }
+  
+  .dark .span:first-child {
+    background-color: #ff414d;
+  }
+  
+  .dark .span:first-child::before {
+    animation-delay: 0.2s;
+  }
+  
+  .dark .span:nth-child(2) {
+    background-color: #ff7a00;
+    transform: scale(0.9);
+  }
+  
+  .dark .span:nth-child(2)::before {
+    animation-delay: 0.4s;
+  }
+  
+  .dark .span:nth-child(3) {
+    background-color: #28df99;
+    transform: scale(0.8);
+  }
+  
+  .dark .span:nth-child(3)::before {
+    animation-delay: 0.6s;
+  }
+  
+  .dark .span:nth-child(4) {
+    background-color: #81b214;
+    transform: scale(0.7);
+  }
+  
+  .dark .span:nth-child(4)::before {
+    animation-delay: 0.8s;
+  }
+  
+  .dark .span:last-child {
+    background-color: #ff00007e;
+    transform: scale(0.6);
+  }
+  
+  .dark .span:last-child::before {
+    animation-delay: 1s;
   }
 
 
-  .meteorMap:nth-of-type(even){
 
-    background-color: rgba(255, 166, 0, 0.26);
-      } */
-
+  
+  .light .span {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    margin: 0 5px;
+    position: relative;
+  }
+  
+  .light .span::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: inherit;
+    border-radius: 50%;
+    z-index: -1;
+    animation: ripple 1.5s ease-out infinite;
+  }
+  
+  .light .span:first-child {
+    background-color: #ff414d;
+  }
+  
+  .light .span:first-child::before {
+    animation-delay: 0.2s;
+  }
+  
+  .light .span:nth-child(2) {
+    background-color: #ff7a00;
+    transform: scale(0.9);
+  }
+  
+  .light .span:nth-child(2)::before {
+    animation-delay: 0.4s;
+  }
+  
+  .light .span:nth-child(3) {
+    background-color: #28df99;
+    transform: scale(0.8);
+  }
+  
+  .light .span:nth-child(3)::before {
+    animation-delay: 0.6s;
+  }
+  
+  .light .span:nth-child(4) {
+    background-color: #81b214;
+    transform: scale(0.7);
+  }
+  
+  .light .span:nth-child(4)::before {
+    animation-delay: 0.8s;
+  }
+  
+  .light .span:last-child {
+    background-color: #ff00007e;
+    transform: scale(0.6);
+  }
+  
+  .light .span:last-child::before {
+    animation-delay: 1s;
+  }
+  
+  @keyframes ripple {
+    from {
+      opacity: 1;
+      transform: scale(0);
+    }
+    to {
+      opacity: 0;
+      transform: scale(3);
+    }
+  }
+  
       
+  .dark .dateEarthQuake{
+color:plum
+
+  }
+
+ .dark .magnitudeEarthQuake{
+color:yellowgreen
+  }
+
+.light .buttonEarthQuake{
+  border: none;
+
+  background-color: rgba(0, 0, 0, 0) ;
+width: 25px;
+height:25px;
+}
+.light .buttonEarthQuake :hover{
+border: none;
+  background-color: rgba(0, 0, 0, 0) ;
+width: 40px;
+height:40px;
+}

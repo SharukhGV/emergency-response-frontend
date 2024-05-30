@@ -2,6 +2,7 @@
 import meteorShowers from "./meteorShower.json"
 import "./meteorshowers.css"
 import { useState, useEffect } from "react";
+import Earthquake from "./Earthquake"
 function MeteorShowers() {
   const today = new Date();
   console.log(today.getMonth())
@@ -48,57 +49,8 @@ function MeteorShowers() {
 
       <div className="homecontainerMeteors">
         <div className="youtube">
-
-
-          <div>
-            <br></br>
-            <br></br>
-            <div style={{textAlign:"center"}}>
-            <h1 ><strong>Watcher's Guide</strong></h1>
-            <h3 >Meteor Showers</h3>
-            <h4 >Example: Lyrid</h4>
-</div>
-
-            <br></br>
-            <div>
-              <h3 >When and Where to Watch:</h3>
-              <p><strong>- The Lyrid meteor shower runs from April 15 to April 29.</strong></p>
-              <p><strong>- The peak occurs on the evening of April 21 to the early morning hours of April 22.</strong></p>
-              <p><strong>- Find a dark location away from city lights for the best view.</strong></p>
-            </div>
-            <br></br>
-            <div >
-
-              <h3 >Meteor Origins:</h3>
-              <p><strong>   - The Lyrids are one of the oldest known meteor showers, observed for at least 2,700 years.</strong></p>
-              <p><strong>- They occur when Earth passes through the debris field of comet C/1861 G1 Thatcher.</strong></p>
-              <p><strong>- Lyrid meteors appear to originate near the constellation Lyra, specifically from the radiant point near the bright star Vega.</strong></p>
-            </div>
-            <br></br>
-            <div>
-              <h3 >Observation Tips:</h3>
-              <p><strong>- Know the peak time: The best viewing time is during the peak hours.</strong></p>
-              <p><strong>- Location: Choose a dark spot away from artificial lights.</strong></p>
-              <p><strong>- Patience: Spend at least an hour observing to see more meteors.</strong></p>
-              <p><strong>- Notice speeds and colors: Lyrid meteors move at 29 miles per second.</strong></p>
-              <p><strong>- Meteor trains: Look for lingering trails after a meteor passes.</strong></p>
-            </div>
-            <br></br>
-            <div>
-              <h3 >Stellarium Software:</h3>
-              <p><strong>- To track the Lyrids, use Stellarium, a free planetarium software.</strong></p>
-              <p><strong>- Set your location and date to April 21-22.</strong></p>
-              <p><strong>- Look toward the constellation Lyra to spot the radiant point.</strong></p>
-              <p><strong>- Enjoy the show as you witness these "shooting stars" streak across the sky!</strong></p>
-            </div>
-            <br></br>
-            <div>
-              <p ><strong>Remember, meteor showers are unpredictable, so patience and a sense of wonder are key. Happy stargazing!</strong></p>
-
-            </div>
-            <br></br>
-
-          </div>
+<h1>Recent EarthQuakes</h1>
+<Earthquake/>
 
         </div>
         <div style={{textAlign:"center"}} className="meteorInfo">
