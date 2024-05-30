@@ -1441,3 +1441,13 @@ p {
 .dark .registerbtn:hover {
   opacity: 1;
 }
+
+.light .loginregisterwords {
+color:"black"
+
+}
+
+.dark .loginregisterwords {
+  color:"red"
+  
+  }
