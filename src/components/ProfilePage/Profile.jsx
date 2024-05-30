@@ -1,10 +1,8 @@
-import profilePic from "./profilepic.png"
 import { useEffect, useState } from "react"
 import { Cloudinary } from "@cloudinary/url-gen";
 import CloudinaryUploadWidget from "../../pages/CloudinaryUploadWidget";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import { v4 as uuidv4 } from 'uuid';
 import ProfileCard from "./ProfileCard";
 function Profile({ loginUsername }) {
     // const [data,setData] =useState([])
