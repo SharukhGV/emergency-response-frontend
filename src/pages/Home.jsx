@@ -1,24 +1,9 @@
-// import { useState } from "react"
 import { Link, useNavigate } from "react-router-dom"
-// import Locationdiv from "../components/LocationCapture";
 import { useState } from "react";
-// import FindSpot from "./FindSpot.png"
-// import logo from "./logo.png"
-// import Popup from 'reactjs-popup';
 import 'reactjs-popup/dist/index.css';
-import hiveheavenLOGO from "./hiveheavenLOGO.png"
-// import constellationlogo from "./constellationlogo.png"
-// import constellationlogoCOLOR from "./constellationlogoCOLOR.png"
-import hiveheavenLOGOWHITE from "./hiveheavenLOGOWHITE.png"
-// import hiveheavenLOGO2 from "./hiveheavenLOGO2.png"
-import HiveLogoGif from "./HiveLogoGif.gif"
-// import { auto } from "@cloudinary/url-gen/qualifiers/quality";                        
-// import solarsystem from "./solarsystem.png"
-// import astronaut from "./astronaut.png"
+import hiveheavenLOGO from "./images/hiveheavenLOGO.png"
+import hiveheavenLOGOWHITE from "./images/hiveheavenLOGOWHITE.png"
 import "./home.css"
-import ControlledCarousel from "../components/ControlledCarousel";
-// import NewMoonNext from "./NewMoonNext";
-import About from "./About";
 export default function Home({ setEmergencyType, loginUsername, accessToken, toggleTheme, theme }) {
 	const navigate = useNavigate(); // Initialize the navigation function
 
@@ -119,12 +104,7 @@ export default function Home({ setEmergencyType, loginUsername, accessToken, tog
 							<h1 className="modal-container-title">
 								🌌 No Light Pollution
 							</h1>
-							<button onClick={modal1Click} className="icon-button">
-								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
-									<path fill="none" d="M0 0h24v24H0z" />
-									<path fill="currentColor" d="M12 10.586l4.95-4.95 1.414 1.414-4.95 4.95 4.95 4.95-1.414 1.414-4.95-4.95-4.95 4.95-1.414-1.414 4.95-4.95-4.95-4.95L7.05 5.636z" />
-								</svg>
-							</button>
+
 						</header>
 						<section className="modal-container-body rtf">
 							<h2>0-20% Light Disturbances</h2>
@@ -154,12 +134,7 @@ export default function Home({ setEmergencyType, loginUsername, accessToken, tog
 							<h1 className="modal-container-title">
 								🏡 Moderate Light Pollution
 							</h1>
-							<button onClick={modal2Click} className="icon-button">
-								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
-									<path fill="none" d="M0 0h24v24H0z" />
-									<path fill="currentColor" d="M12 10.586l4.95-4.95 1.414 1.414-4.95 4.95 4.95 4.95-1.414 1.414-4.95-4.95-4.95 4.95-1.414-1.414 4.95-4.95-4.95-4.95L7.05 5.636z" />
-								</svg>
-							</button>
+
 						</header>
 						<section className="modal-container-body rtf">
 							<h2>20-50% Light Disturbances</h2>
@@ -190,12 +165,7 @@ export default function Home({ setEmergencyType, loginUsername, accessToken, tog
 							<h1 className="modal-container-title">
 								🌆 High Light Pollution
 							</h1>
-							<button onClick={modal3Click} className="icon-button">
-								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
-									<path fill="none" d="M0 0h24v24H0z" />
-									<path fill="currentColor" d="M12 10.586l4.95-4.95 1.414 1.414-4.95 4.95 4.95 4.95-1.414 1.414-4.95-4.95-4.95 4.95-1.414-1.414 4.95-4.95-4.95-4.95L7.05 5.636z" />
-								</svg>
-							</button>
+
 						</header>
 						<section className="modal-container-body rtf">
 							<h2>50-100% Light Disturbances</h2>
@@ -224,12 +194,7 @@ export default function Home({ setEmergencyType, loginUsername, accessToken, tog
 							<h1 className="modal-container-title">
 								✨  Northern Lights
 							</h1>
-							<button onClick={modal4Click} className="icon-button">
-								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
-									<path fill="none" d="M0 0h24v24H0z" />
-									<path fill="currentColor" d="M12 10.586l4.95-4.95 1.414 1.414-4.95 4.95 4.95 4.95-1.414 1.414-4.95-4.95-4.95 4.95-1.414-1.414 4.95-4.95-4.95-4.95L7.05 5.636z" />
-								</svg>
-							</button>
+
 						</header>
 						<section className="modal-container-body rtf">
 							<h2>Aurora Borealis</h2>
@@ -258,12 +223,7 @@ export default function Home({ setEmergencyType, loginUsername, accessToken, tog
 							<h1 className="modal-container-title">
 								☄️ Fireballs (Meteoric Events)
 							</h1>
-							<button onClick={modal5Click} className="icon-button">
-								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
-									<path fill="none" d="M0 0h24v24H0z" />
-									<path fill="currentColor" d="M12 10.586l4.95-4.95 1.414 1.414-4.95 4.95 4.95 4.95-1.414 1.414-4.95-4.95-4.95 4.95-1.414-1.414 4.95-4.95-4.95-4.95L7.05 5.636z" />
-								</svg>
-							</button>
+
 						</header>
 						<section className="modal-container-body rtf">
 							<h2>Fireballs</h2>
