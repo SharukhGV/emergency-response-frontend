@@ -1,12 +1,12 @@
-import GoogleMaps from "../components/GoogleMaps";
-import SearchPeople from "../components/SearchPeople";
+import GoogleMaps from "../components/IndexPage/GoogleMaps";
+import SearchPeople from "../components/IndexPage/SearchPeople";
 import telescopeicon2 from "./telescopeicon2.png"
-import markerImage from "../components/markerImage.png"
+import markerImage from "./markerImage.png"
 import { useState } from "react";
-import SearchPreserves from "../components/SearchPreserves";
-import collegeMarker from "../components/collegeMarker.png"
-import SearchObservatories from "../components/SearchObservatories";
-import observatoryMarker from "../components/observatoryMarker.png"
+import SearchPreserves from "../components/IndexPage/SearchPreserves";
+import collegeMarker from "./collegeMarker.png"
+import SearchObservatories from "../components/IndexPage/SearchObservatories";
+import observatoryMarker from "./observatoryMarker.png"
 
 function Index({ setMapMarkers, mapMarkers, location, setAccessToken, loginUsername }) {
 
