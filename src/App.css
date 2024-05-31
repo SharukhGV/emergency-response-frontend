@@ -2,21 +2,21 @@
 
 
 .light button {
-  border-radius: 10px;
   color: rgb(255, 255, 255);
   padding-top: 5px;
   padding-bottom: 5px;
   background-color: rgb(19, 11, 107);
+  border: none;
 }
 
 .dark button {
-  border-radius: 10px;
   padding-top: 5px;
   padding-bottom: 5px;
   background-color: rgb(10, 8, 28);
+  color:beige;
+  border: darkred;
 }
 
-/* Create two unequal columns that floats next to each other */
 /* Left column */
 .leftcolumnZXCV {
   float: left;
@@ -30,46 +30,9 @@
   padding-left: 20px;
 }
 
-/* Fake image */
-.fakeimg {
-  background-color: #aaa;
-  width: 100%;
-  padding: 20px;
-}
 
-/* Add a card effect for articles */
-.cardZXCV {
-  background-color: white;
-  padding: 20px;
-  margin-top: 20px;
-}
 
-/* Clear floats after the columns */
-.rowZXCV:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* Footer */
-.footerZXCV {
-  padding: 20px;
-  text-align: center;
-  background: #ddd;
-  margin-top: 20px;
-}
-
-/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 800px) {
-
-  .leftcolumnZXCV,
-  .rightcolumnZXCV {
-    width: 100%;
-    padding: 0;
-  }
-}
-
-/* TABLE */
+/* TABLE for EArthQuake and User Individual Posts */
 .userPostTable {
   font-family: Arial, Helvetica, sans-serif;
   border-collapse: collapse;
@@ -120,53 +83,6 @@ h3 {
   text-align: center;
 }
 
-/* 
-
-
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-} */
-/* 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-} */
-
-/* @keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-} */
-
-/* @media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-} */
-
-/* .card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-} */
-
-
 
 .light input[type=submit] {
   width: 100%;
@@ -197,17 +113,14 @@ h3 {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #000000;
+  background-color: #031e0f;
   cursor: pointer;
   transition: border-color 0.25s;
   width: 100%;
   margin-top: 5px;
+  color: red;
 }
 
-.dark input[type=submit]:hover {
-  background-color: #000000;
-  color: #802929
-}
 
 .cardEmergency {
   border-radius: 10px;
@@ -228,97 +141,11 @@ h3 {
 }
 
 
-@media (min-width: 0px) and (max-width: 400px) {
-
-
-
-  input[type=submit] {
-    width: 100%;
-    border-radius: 8px;
-    border: 1px solid transparent;
-    padding: 0.6em 1.2em;
-    font-size: 1em;
-    font-weight: 500;
-    font-family: inherit;
-    background-color: #7c031a;
-    cursor: pointer;
-    transition: border-color 0.25s;
-    width: 100%;
-    margin-top: 5px;
-    color: #ffffff
-  }
-
-  input[type=submit]:hover {
-    background-color: #000000;
-    color: #ffffff
-  }
-
-
-  .light button {
-
-    background-color: #373436;
-    color: #fbffda;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    width: 100%;
-    border-radius: 10%;
-    font-size: 17px;
-  }
-
-  .dark button {
-
-    background-color: #322a30;
-    color: #ff0000;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    width: 100%;
-    border-radius: 10%;
-    font-size: 17px;
-  }
-
-  .light button:hover {
-    background-color: #373436;
-    color: #fbffda;
-  }
-
-}
-
 .dark button:hover {
   background-color: #373436;
   color: #fbffda;
 }
 
-
-
-
-input[type=submit] {
-  width: 100%;
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #000000;
-  cursor: pointer;
-  transition: border-color 0.25s;
-  width: 100%;
-  margin-top: 5px;
-  color: white
-}
-
-input[type=submit]:hover {
-  background-color: #000000de;
-  color: #c54c62
-}
-
-
-
-button:hover {
-  background-color: #373436;
-  color: #ffffff;
-  font-style: oblique
-}
 
 ul {
   text-decoration: none;
@@ -337,69 +164,6 @@ li {
   padding-right: 7px;
   text-decoration: none;
 
-}
-
-.container {
-
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.item {
-  order: 5;
-  /* default is 0 */
-  background-color: #999898;
-  margin: auto;
-  padding: 30px;
-  border-radius: 10px;
-  width: 100%;
-}
-
-
-input[type=text] {
-  width: 75%;
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #d8d8d8;
-  cursor: pointer;
-  transition: border-color 0.25s;
-  margin-top: 5px;
-  color: #373436;
-}
-
-
-input[type=email] {
-  width: 75%;
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #d8d8d8;
-  cursor: pointer;
-  transition: border-color 0.25s;
-  margin-top: 5px;
-  color: #373436;
-}
-
-input[type=password] {
-  width: 75%;
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #d8d8d8;
-  cursor: pointer;
-  transition: border-color 0.25s;
-  margin-top: 5px;
-  color: #373436;
 }
 
 /* SEARCH BAR CSS */
@@ -434,11 +198,6 @@ input[type=password] {
   z-index: -1;
 }
 
-/* YouTube icon */
-
-
-
-
 /* END SEARCH BAR CSS */
 
 #individual {
@@ -446,16 +205,6 @@ input[type=password] {
   border-radius: 10%;
   padding: 10px;
 }
-
-.skydescription {
-
-  color: #000000;
-  margin: auto;
-  padding: 20px;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  background-color: #fbffda;
-}
-
 
 
 
@@ -489,63 +238,6 @@ a:hover {
 
 
 
-.background-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-}
-
-.stars {
-  background: black url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png) repeat;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  display: block;
-  z-index: -100;
-}
-
-.twinkling {
-  width: 10000px;
-  height: 100%;
-  background: transparent url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/twinkling.png") repeat;
-  background-size: 1000px 1000px;
-  position: absolute;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  z-index: -50;
-
-  -moz-animation: move-background 70s linear infinite;
-  -ms-animation: move-background 70s linear infinite;
-  -o-animation: move-background 70s linear infinite;
-  -webkit-animation: move-background 70s linear infinite;
-  animation: move-background 70s linear infinite;
-
-}
-
-.clouds {
-  width: 10000px;
-  height: 100%;
-  background: transparent url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/clouds_repeat.png") repeat;
-  background-size: 1000px 1000px;
-  position: absolute;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  z-index: -25;
-
-  -moz-animation: move-background 150s linear infinite;
-  -ms-animation: move-background 150s linear infinite;
-  -o-animation: move-background 150s linear infinite;
-  -webkit-animation: move-background 150s linear infinite;
-  animation: move-background 150s linear infinite;
-}
-
-
 .viewsDIV {
 
   margin: auto;
@@ -571,11 +263,6 @@ a:hover {
   box-sizing: border-box;
 }
 
-
-
-p {
-  color: rgb(255, 255, 255);
-}
 
 .cards {
   display: grid;
@@ -700,7 +387,14 @@ p {
 
 
 
-/* glass card */
+/* Individual card */
+
+.imageIndView {
+  border: solid;
+  border-color: #000;
+  border-radius: 10px;
+}
+
 .tableContain {
   width: 700px;
   margin: auto;
@@ -724,11 +418,7 @@ td {
 
 }
 
-.imageIndView {
-  border: solid;
-  border-color: #000;
-  border-radius: 10px;
-}
+
 
 tr:hover {
   background-color: coral;
@@ -762,262 +452,7 @@ tr:hover {
 }
 
 
-
-
-/* NAVBAR DROPDOWN MENU */
-
-
-#menuToggle {
-  display: block;
-  position: absolute;
-  top: 0px;
-  left: 50px;
-
-  z-index: 1;
-
-  -webkit-user-select: none;
-  user-select: none;
-}
-
-#menuToggle a {
-  text-decoration: none;
-  color: #232323;
-
-  transition: color 0.3s ease;
-}
-
-#menuToggle a:hover {
-  color: tomato;
-}
-
-
-#menuToggle input {
-  display: block;
-  width: 40px;
-  height: 32px;
-  position: absolute;
-  top: -7px;
-  left: -5px;
-
-  cursor: pointer;
-
-  opacity: 0;
-  /* hide this */
-  z-index: 2;
-  /* and place it over the hamburger */
-
-  -webkit-touch-callout: none;
-}
-
-/*
- * Just a quick hamburger
- */
-#menuToggle span {
-  display: block;
-  width: 33px;
-  height: 4px;
-  margin-bottom: 5px;
-  position: relative;
-
-  background: #cdcdcd00;
-  border-radius: 3px;
-
-  z-index: 1;
-
-  transform-origin: 4px 0px;
-
-  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
-    background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
-    opacity 0.55s ease;
-}
-
-#menuToggle span:first-child {
-  transform-origin: 0% 0%;
-}
-
-#menuToggle span:nth-last-child(2) {
-  transform-origin: 0% 100%;
-}
-
-/* 
- * Transform all the slices of hamburger
- * into a crossmark.
- */
-#menuToggle input:checked~span {
-  opacity: 1;
-  transform: rotate(45deg) translate(-2px, -1px);
-  background: #23232305;
-}
-
-#menu {
-  position: absolute;
-  width: 300px;
-  margin: -100px 0 0 -50px;
-  padding: 50px;
-  padding-top: 125px;
-
-  background: rgb(236, 236, 236);
-  background: linear-gradient(90deg, rgba(236, 236, 236, 1) 93%, rgba(236, 236, 236, 0) 100%);
-  list-style-type: none;
-  -webkit-font-smoothing: antialiased;
-  /* to stop flickering of text in safari */
-
-  transform-origin: 0% 0%;
-  transform: translate(-100%, 0);
-
-  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
-}
-
-#menu .li {
-  padding: 10px 0;
-  font-size: 22px;
-}
-
-/*
- * And let's slide it in from the left
- */
-#menuToggle input:checked~.ul {
-  transform: none;
-}
-
-
-/* starry night meteor shower background */
-
-
-
-
-@keyframes move-background {
-  from {
-    -webkit-transform: translate3d(0px, 0px, 0px);
-  }
-
-  to {
-    -webkit-transform: translate3d(1000px, 0px, 0px);
-  }
-}
-
-@-webkit-keyframes move-background {
-  from {
-    -webkit-transform: translate3d(0px, 0px, 0px);
-  }
-
-  to {
-    -webkit-transform: translate3d(1000px, 0px, 0px);
-  }
-}
-
-@-moz-keyframes move-background {
-  from {
-    -webkit-transform: translate3d(0px, 0px, 0px);
-  }
-
-  to {
-    -webkit-transform: translate3d(1000px, 0px, 0px);
-  }
-}
-
-@-webkit-keyframes move-background {
-  from {
-    -webkit-transform: translate3d(0px, 0px, 0px);
-  }
-
-  to {
-    -webkit-transform: translate3d(1000px, 0px, 0px);
-  }
-}
-
-.background-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  z-index: -300;
-}
-
-.stars {
-  background: black url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png) repeat;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  display: block;
-  z-index: -100;
-}
-
-.twinkling {
-  width: 10000px;
-  height: 100%;
-  background: transparent url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/twinkling.png") repeat;
-  background-size: 1000px 1000px;
-  position: absolute;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  z-index: -50;
-
-  -moz-animation: move-background 70s linear infinite;
-  -ms-animation: move-background 70s linear infinite;
-  -o-animation: move-background 70s linear infinite;
-  -webkit-animation: move-background 70s linear infinite;
-  animation: move-background 70s linear infinite;
-
-}
-
-.clouds {
-  width: 10000px;
-  height: 100%;
-  background: transparent url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/clouds_repeat.png") repeat;
-  background-size: 1000px 1000px;
-  position: absolute;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  z-index: -25;
-
-  -moz-animation: move-background 150s linear infinite;
-  -ms-animation: move-background 150s linear infinite;
-  -o-animation: move-background 150s linear infinite;
-  -webkit-animation: move-background 150s linear infinite;
-  animation: move-background 150s linear infinite;
-}
-
-/* img{
-  height: 70vh;
-  width:70vh;
-  position: absolute;
-  z-index: -25;
-  right: 20px;
-} */
-
-
-
-/* MODAL SCSS SECOND  */
-
-
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
-}
-
-/* Some basic CSS overrides */
-
-
-button,
-input,
-select,
-textarea {
-  font: inherit;
-}
-
-a {
-  color: inherit;
-}
-
-/* End basic CSS override */
-
+/* Modal HOme Component */
 * {
   scrollbar-width: 0;
 }
@@ -1082,12 +517,6 @@ a {
   line-height: 1;
   font-weight: 700;
   font-size: 1.125;
-
-  svg {
-    width: 32px;
-    height: 32px;
-    color: #750550;
-  }
 }
 
 .light .modal-container-body {
@@ -1224,11 +653,6 @@ a {
   font-weight: 700;
   font-size: 1.125;
 
-  svg {
-    width: 32px;
-    height: 32px;
-    color: #750550;
-  }
 }
 
 .dark .modal-container-body {
@@ -1304,7 +728,7 @@ a {
   }
 }
 
-
+/* For NAvigation BAr Inner COlor */
 .container-fluid {
   background-color: rgb(255, 255, 255);
 }
@@ -1379,9 +803,12 @@ p {
   border: red solid;
 }
 
+
+
 .dark .indexButtonsPRESERVECOMMUNITYOBSERVATORY {
   background-color: #000000;
-  color: red
+  color: red;
+  border: solid red
 }
 
 .light .registerbtn {
@@ -1415,11 +842,24 @@ p {
 }
 
 .light .loginregisterwords {
-color:"black"
+  color: "black"
 
 }
 
 .dark .loginregisterwords {
-  color:"red"
-  
-  }
+  color: "red"
+
+}
+
+
+.light .commentBox {
+  background-color: #88ceb5c4;
+}
+
+.dark .commentBox {
+  background-color: #000000c4;
+}
+
+input {
+  border-radius: 10px;
+}

@@ -6,14 +6,7 @@ function Earthquake() {
   const [errorMsg, setErrorMsg] = useState("")
   const [loading, setLoading] = useState(true)
 
-  setInterval(function () {
-    window.reload()
-  }, 5 * 60 * 1000);
 
-  function reloadWin() {
-    setCount(count + 1)
-    setCount(count - 1)
-  }
 
   useEffect(() => {
     try {
@@ -48,25 +41,24 @@ function Earthquake() {
       return (<div>{errorMsg}</div>)
     }
     else if (loading) {
-      return (<div>  <div>
+      return ( <div>
         <span class="span"></span>
         <span class="span"></span>
         <span class="span"></span>
         <span class="span"></span>
-        <span class="span"></span>
-      </div><br></br><button style={{ borderRadius: "10px", backgroundColor: "gray", padding: "10px" }} onclick={reloadWin}>Click Here to Refresh the Page...</button></div>)
+        <span class="span"></span></div>)
     }
 
     else {
       return (
         <div >
 
-          <table >
+          <table className='userPostTable' >
             <thead >
               <tr>
                 <th className="dateEarthQuake">Date</th>
 
-                <th className="magnitudeEarthQuake"><span class="span">Magnitude</span>
+                <th className="magnitudeEarthQuake"><span class="span"> </span>   
                 </th>
 
                 <th><><button className='buttonEarthQuake' onClick={increase}>➕</button> <span > Location </span><button  className='buttonEarthQuake' onClick={decrease}>➖</button> </>

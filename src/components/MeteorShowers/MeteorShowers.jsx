@@ -48,7 +48,7 @@ function MeteorShowers() {
     <div style={{ textAlign: "justify", paddingLeft: "30px", paddingRight: "30px" }}>
 
       <div className="homecontainerMeteors">
-        <div className="youtube">
+        <div className="earthquakeInfo">
 <h1>Recent EarthQuakes</h1>
 <Earthquake/>
 
