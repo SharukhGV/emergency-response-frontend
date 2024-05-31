@@ -1,7 +1,9 @@
 import axios from "axios";
 import { useState,useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-
+// This component is used in the "IndividualView" Component. 
+// It is the comments for Individual user posts. All user post are found in the "Individual" component
+// Single user posts are found in the "IndividualView" component
 function CommentsBox({ commentz, uuid, loginUsername, id, index }) {
     const deleteComment = (identification) => {
         axios

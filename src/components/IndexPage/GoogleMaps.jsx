@@ -6,7 +6,7 @@ import collegeMarker from "./collegeMarker.png"
     import AstronomyColleges from "./AstronomyColleges.json"
 import { useEffect, useState } from "react";
 import observatoryMarker from "./observatoryMarker.png"
-
+// This component is imported into the actual Index page in the "pages" folder
 export default function GoogleMaps({ mapMarkers,preserveMarkers,observatoryMarkers }) {
   const [markers, setMarkers] = useState([]);
   const [markersPreserves, setMarkersPreserves] = useState([]);

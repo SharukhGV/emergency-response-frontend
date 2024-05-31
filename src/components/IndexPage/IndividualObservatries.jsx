@@ -1,3 +1,4 @@
+// This component is imported into the actual "SearchObservatories" component in this same" folder
 
 function IndividualObservatries({facility}){
 

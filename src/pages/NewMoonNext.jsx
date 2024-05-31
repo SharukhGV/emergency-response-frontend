@@ -1,7 +1,8 @@
+// This component was used but required payment after a certain number of API requests. Not currently in use
+
 // import axios from "axios"
 // import { useState,useEffect } from "react"
 // function NewMoonNext(){
-
 // const[newmoon,setNewMoon]=useState([])
 // const [latitude, setLatitude] = useState(null);
 // const [longitude, setLongitude] = useState(null);
