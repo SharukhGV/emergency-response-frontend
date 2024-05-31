@@ -3,6 +3,8 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { Cloudinary } from "@cloudinary/url-gen";
 import CloudinaryUploadWidget from "./CloudinaryUploadWidget";
+// This component is navigated-to from the "Home" component modals using useNavigate in the emergencySETTER function
+
 function NewForm({ accessToken, emergencyType, setLongitude, setLatitude, lat, lng, loginUsername }) {
   const [publicId, setPublicId] = useState("");
   const [imagePreview, setImagePreview] = useState(null);

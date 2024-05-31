@@ -6,7 +6,8 @@ import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import CommentsBox from "./CommentsBox";
 import { v4 as uuidv4 } from 'uuid';
-
+// This component has origins in the "Individual" component 
+// It is navigated here using Link and the post's id
 function IndividualView({ loginUsername }) {
   const [data, setData] = useState([])
   const [locationIQ, setLocationIQ] = useState({})

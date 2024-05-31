@@ -1,10 +1,7 @@
-
+// This component is imported into the "SearchPreserves" component in this same folder
 function IndividualPreserves({ preserve }) {
 
   return (
-
-
-
 
     <div style={{ fontFamily: "Arial", backgroundColor: "rgba(255, 255, 255, 0)" }} className="card">
       <img src={preserve.image} className="card__image" alt="" />

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import Individual from "./Individual";
+// This component is imported into the actual "Index" component in the "pages" folder
 export default function SearchPeople({ loginUsername, setMapMarkers, emergencyType, setLongitude, setLatitude, lat, lng }) {
   const [data, setData] = useState([])
 

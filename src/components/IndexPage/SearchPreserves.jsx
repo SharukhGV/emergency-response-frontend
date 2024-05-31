@@ -1,6 +1,6 @@
 import IndividualPreserves from "./IndividualPreserves";
 import { useState, useEffect } from "react";
-
+// This component is imported into the actual "Index" component in the "pages" folder
 function SearchPreserves({ preserveMarkers, setPreserveMarkers }) {
 
 

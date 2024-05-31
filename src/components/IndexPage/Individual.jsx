@@ -4,6 +4,7 @@ import dipperDefault from "./dipperDefault.png"
 import mountainsky from "./mountainsky.jpg"
 import axios from "axios"
 import { useState, useEffect } from "react"
+// This component is imported into the "SearchPeople" component in this same folder
 
 function Individual({ loginUsername, id, person }) {
   const [data, setData] = useState({});
