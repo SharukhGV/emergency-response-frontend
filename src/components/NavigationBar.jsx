@@ -29,7 +29,7 @@ function NavigationBar({ theme,toggleTheme,loginUsername, toggleLOGIN, settoggle
         <Navbar.Brand ><Link to="/"><img style={{ width: "50px", height: "50px" }} src={telescopeHome}></img></Link></Navbar.Brand>
 
 
-        {!!toggleLOGIN ? <NavDropdown style={{ color: "black" }} title="Profile" id="basic-nav-dropdown">
+        {!!toggleLOGIN ? <NavDropdown  title="Profile" id="basic-nav-dropdown">
           <NavDropdown.Item ><Link to="/profile">👨🏼‍🚀 Profile</Link> </NavDropdown.Item>
 
 

@@ -100,7 +100,7 @@ function IndividualView({ loginUsername }) {
   return (
     <div>
       <br></br>
-      <div style={{ borderStyle: "dotted", borderRadius: "10px", borderColor: "purple" }}>
+      <div style={{ borderStyle: "dotted", borderRadius: "10px" }}>
         <br></br>
         <br></br>
         <h2>{data.full_name}</h2>
@@ -142,18 +142,19 @@ function IndividualView({ loginUsername }) {
             {data.username === storedValue ? <button style={{ backgroundColor: "red", width: "100px", height: "50px" }} onClick={deletePost}>Delete Post</button> : null}
             <span> </span>
 
-            <Link to="/index"><button style={{ width: "100px", height: "50px", fontSize: "15px" }}>Back</button></Link></div>
+            <Link to="/index"><button style={{border:"solid darkred", color:"beige", width: "100px", height: "50px", fontSize: "15px" }}>Back</button></Link></div>
           <br></br>
           <span> </span>
 
-          <div className="comments" style={{ borderStyle: "solid", borderRadius: "10px", borderColor: "darkred" }}>
+          <div className="comments">
             <br></br>
             <div style={{ fontSize: "18px" }}><strong>Comments Section</strong></div>
             <form onSubmit={handleSubmit}>
 
               <input onChange={handleTextChange} placeholder="type your comment here..." type="text"></input>
+            <br></br>
               <input
-                style={{ width: "30%", padding: "0.6em 1.2em" }}
+                style={{ width: "30%" }}
                 type="submit"
               />
             </form>

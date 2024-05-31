@@ -5,20 +5,20 @@
     gap: 4px 0px;
     grid-auto-flow: row;
     grid-template-areas:
-      "youtube meteorInfo";
+      "earthquakeInfo meteorInfo";
   }
   
-  .youtube { grid-area: youtube; }
+  .earthquakeInfo { grid-area: earthquakeInfo; }
   
   .meteorInfo { grid-area: meteorInfo;
-    /* padding-left:30px;
-     padding-right:30px; */
      margin: auto;
      margin-top: 50px;
   }
-  .youtube{
+  .earthquakeInfo{
     margin: auto;
     margin-top: 50px;
+    margin: auto;
+    text-align: center;
   }
   
 
