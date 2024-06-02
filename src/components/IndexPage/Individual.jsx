@@ -38,29 +38,39 @@ function Individual({ loginUsername, id, person }) {
 
 
   return (
-    <div style={{ fontFamily: "Arial" }} className="card">
-      {!!person.image_url ? <img src={person.image_url} className="card__image" alt="" />
-        : <img src={mountainsky} className="card__image" alt="" />}
-      <div className="card__overlay">
-        <div className="card__header">
-          <svg className="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>
-          {matchingProfile ? <img className="card__thumb" src={matchingProfile.image_url} alt="" /> : <img className="card__thumb" src={dipperDefault} alt="" />}
-          <div className="card__header-text">
-            <h5 style={{ fontFamily: "Arial" }}>
 
-              <strong>{person.full_name}</strong>
+    <>
 
-            </h5>
-            <span style={{ fontFamily: "Arial" }} className="card__status">{parseDATE(person.date)}</span>
-          </div>
-        </div>
-        <div style={{ fontFamily: "Arial", color: "purple" }}><strong>{person.skybrightness}</strong></div>
-        <Link style={{ fontSize: "15px" }} to={`/index/${id}`}>read more...</Link>
-      </div>
-    </div>
-  );
+      <table className='userPostTable' >
+        <thead >
+          <tr>
+            <th className="dateEarthQuake">Date</th>
+
+            <th>Title
+            </th>
+            <th>Post Image</th>
+
+            <th>User Icon
+
+            </th>
+          </tr>
+        </thead>
 
 
+        <tr>                    <td className="dateEarthQuake"><Link style={{ fontSize: "15px" }} to={`/index/${id}`}>{parseDATE(person.date)}</Link></td>
+
+          <td className="magnitudeEarthQuake"><Link style={{ fontSize: "15px" }} to={`/index/${id}`}>{person.full_name}</Link></td>
+
+{!!person.image_url ? <td style={{backgroundImage:`url(${person.image_url})`, backgroundSize:"cover", backgroundPosition:"center"}} ></td> :<td>No Image</td>
+}
+          <td >{matchingProfile ? <img className="card__thumb" src={matchingProfile.image_url} alt="" /> : <img className="card__thumb" src={dipperDefault} alt="" />}
+          </td>
+        </tr>
+
+      </table>
+    </>
+
+  )
 }
 
 export default Individual

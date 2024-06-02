@@ -93,7 +93,7 @@ export default function SearchPeople({ loginUsername, setMapMarkers, emergencyTy
     <div>
 
 
-      {allPosts ? <input type="text" placeholder="Search for a Location" value={query} onChange={handleQueryChange} /> : null}
+      {allPosts ? <input type="text" placeholder="Search for a Post Title..." value={query} onChange={handleQueryChange} /> : null}
       <br></br>
       <br></br>
       <div>

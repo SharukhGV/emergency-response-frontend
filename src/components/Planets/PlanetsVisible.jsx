@@ -79,10 +79,12 @@ function PlanetsVisible() {
           <div style={{ border: "dotted" }}>
 
             <h1 style={{ color: "darkred" }}>Visible Celestial Bodies</h1>
+            <div style={{maxWidth:"500px",margin:"auto"}}>
             <fieldset style={{ border: "solid", margin: "30px" }}>
               <legend style={{ backgroundColor: "darkred", color: "white" }}>Your Geolocation: Enabled</legend>
               <p style={{ color: "gray", fontSize: "13px" }}>Latitude: {latitude}</p>
               <p style={{ color: "gray", fontSize: "13px" }}>Longitude: {longitude}</p></fieldset>
+              </div>
             {planets.map((planet, index) => {
               return (<>
                 <Planet key={index} planet={planet} />

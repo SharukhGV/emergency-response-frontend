@@ -1,0 +1,30 @@
+{
+    "lunar_eclipses": [
+      {
+        "date": "2018-01-31",
+        "type": "Total",
+        "regions_affected": ["Asia", "Australia", "North America"]
+      },
+      {
+        "date": "2022-05-16",
+        "type": "Total",
+        "regions_affected": ["Americas", "Europe", "Africa"]
+      },
+      {
+        "date": "2025-09-07",
+        "type": "Partial",
+        "regions_affected": ["Africa", "Europe", "Asia"]
+      },
+      {
+        "date": "2033-10-08",
+        "type": "Total",
+        "regions_affected": ["Americas", "Asia", "Australia"]
+      },
+      {
+        "date": "2047-12-06",
+        "type": "Total",
+        "regions_affected": ["Europe", "Africa", "Asia"]
+      }
+    ]
+  }
+  

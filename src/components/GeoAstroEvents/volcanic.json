@@ -1,0 +1,35 @@
+{
+    "volcanic_eruptions": [
+      {
+        "date": "2010-04-14",
+        "volcano": "Eyjafjallajökull",
+        "location": "Iceland",
+        "main_affected_region": "Europe"
+      },
+      {
+        "date": "2018-06-03",
+        "volcano": "Fuego",
+        "location": "Guatemala",
+        "main_affected_region": "Central America"
+      },
+      {
+        "date": "2021-09-19",
+        "volcano": "Cumbre Vieja",
+        "location": "Spain",
+        "main_affected_region": "Canary Islands"
+      },
+      {
+        "date": "2030-07-01",
+        "volcano": "Tungurahua",
+        "location": "Ecuador",
+        "main_affected_region": "South America"
+      },
+      {
+        "date": "2045-05-25",
+        "volcano": "Kilauea",
+        "location": "United States",
+        "main_affected_region": "Hawaii"
+      }
+    ]
+  }
+  

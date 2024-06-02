@@ -1,0 +1,30 @@
+{
+    "solar_eclipses": [
+      {
+        "date": "2017-08-21",
+        "type": "Total",
+        "regions_affected": ["United States"]
+      },
+      {
+        "date": "2024-04-08",
+        "type": "Total",
+        "regions_affected": ["United States", "Canada", "Mexico"]
+      },
+      {
+        "date": "2030-11-25",
+        "type": "Partial",
+        "regions_affected": ["South America", "Africa"]
+      },
+      {
+        "date": "2045-08-12",
+        "type": "Total",
+        "regions_affected": ["United States"]
+      },
+      {
+        "date": "2050-10-14",
+        "type": "Annular",
+        "regions_affected": ["South America"]
+      }
+    ]
+  }
+  
