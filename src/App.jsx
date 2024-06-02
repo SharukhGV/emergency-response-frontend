@@ -15,11 +15,10 @@ import EditForm from './pages/EditForm';
 import PlanetsVisible from './components/Planets/PlanetsVisible';
 import Loading from './components/LoginRegister/Loading';
 import PleaseLogin from './components/LoginRegister/PleaseLogin';
-import MeteorShowers from './components/MeteorShowers/MeteorShowers';
 import MarketPlaceHome from './components/marketplace/MarketPlaceHome';
 import AllProducts from './components/marketplace/AllProducts';
 import NewItem from './components/marketplace/NewItem';
-
+import GeoAstroEvents from './components/GeoAstroEvents/GeoAstroEvents';
 export default function App() {
 
   const [lat, setLatitude] = useState(null);
@@ -85,7 +84,7 @@ export default function App() {
           {!accessToken ? <Route path="/login" element={<Login settoggleLOGIN={settoggleLOGIN} toggleLOGIN={toggleLOGIN} accessToken={accessToken} setAccessToken={setAccessToken} loginUsername={loginUsername} setLoginUsername={setLoginUsername} />} /> : null}
           <Route path="/loading" element={<Loading accessToken={accessToken} />} />
           <Route path="/pleaselogin" element={<PleaseLogin accessToken={accessToken} />} />
-          {!!accessToken ? <Route path="/meteorshowers" element={<MeteorShowers accessToken={accessToken} />} /> : null}
+          {!!accessToken ? <Route path="/geoastroevents" element={<GeoAstroEvents accessToken={accessToken} />} /> : null}
 
           <Route path="/termsconditions" element={<TermsConditions />} />
           {!!accessToken ? <Route path="/profile" element={<Profile loginUsername={loginUsername} />} /> : null}

@@ -2,10 +2,9 @@ import { useState, useEffect } from 'react'
 function Earthquake() {
 
   const [quake, setQuake] = useState([])
-  const [count, setCount] = useState(10)
+  const [count, setCount] = useState(5)
   const [errorMsg, setErrorMsg] = useState("")
   const [loading, setLoading] = useState(true)
-
 
 
   useEffect(() => {
@@ -41,7 +40,7 @@ function Earthquake() {
       return (<div>{errorMsg}</div>)
     }
     else if (loading) {
-      return ( <div>
+      return (<div>
         <span class="span"></span>
         <span class="span"></span>
         <span class="span"></span>
@@ -56,12 +55,12 @@ function Earthquake() {
           <table className='userPostTable' >
             <thead >
               <tr>
-                <th className="dateEarthQuake">Date</th>
+                <th className="dateEarthQuake">Month/Day</th>
 
-                <th className="magnitudeEarthQuake"><span class="span"> </span>   
+                <th className="magnitudeEarthQuake"><span class="span"> </span>
                 </th>
 
-                <th><><button className='buttonEarthQuake' onClick={increase}>➕</button> <span > Location </span><button  className='buttonEarthQuake' onClick={decrease}>➖</button> </>
+                <th><><button className='buttonEarthQuake' onClick={increase}>➕</button> <span > Location </span><button className='buttonEarthQuake' onClick={decrease}>➖</button> </>
                 </th>
               </tr>
             </thead>
@@ -89,7 +88,7 @@ function Earthquake() {
 
           </table>
 
-<br></br>
+          <br></br>
 
         </div>
       )
