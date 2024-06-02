@@ -2,7 +2,7 @@
 import Earthquake from "./Earthquake"
 import LunarEclipse from "./LunarEclipse";
 import SolarEclipse from "./LunarEclipse";
-import MeteorShowers from "./MeteorShowers";
+import Meteorshowers from "./Meteorshowers";
 import Volcanoes from "./Volcanoes";
 function GeoAstroEvents() {
 
@@ -26,7 +26,7 @@ function GeoAstroEvents() {
           <h3>25 YRS. Past-Potential-Future</h3>
           <Volcanoes />
         </div>
-        <div><MeteorShowers /></div>
+        <div><Meteorshowers /></div>
 
 
       </div>

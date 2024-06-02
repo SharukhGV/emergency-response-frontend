@@ -3,7 +3,7 @@ import meteorShowers from "./meteorShower.json"
 import "./meteorshowers.css"
 import { useState, useEffect } from "react";
 
-function MeteorShowers(){
+function Meteorshowers(){
   const today = new Date();
   console.log(today.getMonth())
   const [stacking, setStacking] = useState([])
@@ -212,4 +212,4 @@ return(
 
 }
 
-export default MeteorShowers
+export default Meteorshowers
