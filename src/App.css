@@ -893,3 +893,13 @@ input {
 border-radius: 10px;
 border: solid black;
 }
+
+
+@media (max-width:700px){
+  .toggledropdownsearchbarIndex{
+    width: 250px;
+    margin: auto;
+  }
+
+
+}
