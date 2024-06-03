@@ -39,36 +39,17 @@ function Individual({ loginUsername, id, person }) {
 
   return (
 
-    <>
 
-      <table className='userPostTable' >
-        <thead >
-          <tr>
-            <th className="dateEarthQuake">Date</th>
+<div class="individualCard">
+{ person.image_url ?  <img src={person.image_url} alt="Avatar" style={{width:"100%"}}/> : <img src={mountainsky} alt="Avatar" style={{width:"100%"}}/> }
+  <div class="individualContainer">    
+  <span >{matchingProfile ? <img className="individualProfile" src={matchingProfile.image_url} alt="" /> : <img className="individualProfile" src={dipperDefault} alt="" />}</span>
+<span>     </span>
+    <strong><Link style={{ fontSize: "15px" }} to={`/index/${id}`}><span className="individualdate">{parseDATE(person.date)}</span></Link></strong>
+ <div>{person.full_name}</div> 
+  </div>
+</div>
 
-            <th>Title
-            </th>
-            <th>Post Image</th>
-
-            <th>User Icon
-
-            </th>
-          </tr>
-        </thead>
-
-
-        <tr>                    <td className="dateEarthQuake"><Link style={{ fontSize: "15px" }} to={`/index/${id}`}>{parseDATE(person.date)}</Link></td>
-
-          <td className="magnitudeEarthQuake"><Link style={{ fontSize: "15px" }} to={`/index/${id}`}>{person.full_name}</Link></td>
-
-{!!person.image_url ? <td style={{backgroundImage:`url(${person.image_url})`, backgroundSize:"cover", backgroundPosition:"center"}} ></td> :<td>No Image</td>
-}
-          <td >{matchingProfile ? <img className="card__thumb" src={matchingProfile.image_url} alt="" /> : <img className="card__thumb" src={dipperDefault} alt="" />}
-          </td>
-        </tr>
-
-      </table>
-    </>
 
   )
 }
