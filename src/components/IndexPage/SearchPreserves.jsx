@@ -114,13 +114,14 @@ function SearchPreserves({ preserveMarkers, setPreserveMarkers }) {
   return (
     <div>
       <div className="toggledropdownsearchbarIndex">
-      <input type="text" placeholder="Search for a Dark Sky Preserve" value={query} onChange={handleQueryChange} />
-      <select style={{ textAlign: "center", width: "150px", backgroundColor: "#d8d8d8", borderRadius: "10px" }} value={sortKey} onChange={handleSortKeyChange}>
+      <input style={{height:"45px", width:"250px"}} type="text" placeholder="Search for a Dark Sky Preserve" value={query} onChange={handleQueryChange} />
+      <select className="preservesSort" value={sortKey} onChange={handleSortKeyChange}>
         <option value="name">name</option>
         <option value="besttime">best time</option>
         <option value="bestlocale">best location</option>
       </select>
-      {toggle ? <button style={{borderRadius:"10px", maxWidth:"250px"}} onClick={handleToggle}>Normal Alphabetical</button> : <button  style={{borderRadius:"10px", maxWidth:"250px"}} onClick={handleToggle}>Reverse Alphabetical</button>}
+      <br></br>
+      {toggle ? <button className="preserveButton" onClick={handleToggle}>Normal Alphabetical</button> : <button onClick={handleToggle}>Reverse Alphabetical</button>}
 </div>
       <ul className="ultraelem">
         {filteredPreserves.map((preserve) => (

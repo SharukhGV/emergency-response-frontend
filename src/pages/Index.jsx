@@ -45,8 +45,8 @@ function Index({ setMapMarkers, mapMarkers, location, setAccessToken, loginUsern
         <button style={{ backgroundColor: " #00000000", color: "yellow" }} onClick={legendToggle}>🧭</button>
         <br></br>
         <div>
-          <h2><strong>Astronomy Atlas</strong></h2>
-          <p>Points of Interest</p>
+          <h1><strong>Astronomy Atlas</strong></h1>
+          <h3>Points of Interest</h3>
           <br></br>
           {showLegend ? <div style={{ paddingBottom: "10px", border: "dashed" }}>
             <img style={{ paddingRight: "10px" }} src={telescopeicon2}></img>

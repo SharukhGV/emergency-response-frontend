@@ -1,13 +1,13 @@
 
+import PlanetsVisible from "../Planets/PlanetsVisible";
 import meteorShowers from "./meteorShower.json"
 import "./meteorshowers.css"
 import { useState, useEffect } from "react";
 
-function Meteorshowers(){
+function MeteorShowers(){
   const today = new Date();
   console.log(today.getMonth())
   const [stacking, setStacking] = useState([])
-  const [meteorButton, setMeteorButton] = useState(false)
 
   let monthString = `${today.getMonth() + 1}`
   let monthString0 = "0" + (today.getMonth() + 1)
@@ -39,20 +39,13 @@ function Meteorshowers(){
   }, []
   )
 
-  function handleOnClickMeteor() {
-    setMeteorButton(!meteorButton)
-  }
-
   console.log(filterDateMeteors)
 
 
 return(
   <div style={{textAlign:"center"}} className="meteorInfo">
 
-
-  {meteorButton ? <div style={{ textAlign: "center" }}><button style={{ borderRadius: "50%", width: "65px", height: "65px" }} onClick={handleOnClickMeteor}>Show</button><span style={{ display: "inline-block", width: "30px", height: "10px", backgroundColor: "gray", content: "" }}></span><button style={{ borderRadius: "50%", width: "65px", height: "65px" }} onClick={handleOnClickMeteor}>Single</button><span style={{ display: "inline-block", width: "30px", height: "10px", backgroundColor: "gray", content: "" }}></span><button style={{ borderRadius: "50%", width: "65px", height: "65px" }} onClick={handleOnClickMeteor}>Month</button></div> : <div style={{ textAlign: "center" }}><button style={{ borderRadius: "50%", width: "65px", height: "65px" }} onClick={handleOnClickMeteor}>Show</button><span style={{ display: "inline-block", width: "30px", height: "10px", backgroundColor: "gray", content: "" }}></span><button style={{ borderRadius: "50%", width: "65px", height: "65px" }} onClick={handleOnClickMeteor}>Three</button><span style={{ display: "inline-block", width: "30px", height: "10px", backgroundColor: "gray", content: "" }}></span><button style={{ borderRadius: "50%", width: "65px", height: "65px" }} onClick={handleOnClickMeteor}>Months</button></div>}
-
-  {meteorButton ? <>    <br></br>
+<>
               {/* ON BUTTON CLICK, SHOW METEOR SHOWERS WITHIN THREE MONTHS */}
 
     <br></br>
@@ -158,52 +151,12 @@ return(
     })
     }</div> : <p>No Meteor Showers <strong>start</strong>  in two months</p>}</div> </>
 
-    :
+
     <>
-    {/* ON BUTTON CLICK, SHOW METEOR SHOWERS WITHIN A MONTH */}
-    
-      <br></br>
-      <br></br>
-      <h1><strong>Upcoming Showers</strong></h1>
-      <h3>Starting and Ending Within a Month</h3>
-      <div>{meteorShowers.meteorShowers.map(meteor => {
-
-        let meteorNamesString = stacking.join(",")
-        console.log(meteorNamesString)
-        return (<> {
-          meteorNamesString.includes(meteor.name) ?
-
-            <div>
-
-              <div style={{ fontFamily: "Arial" }} className="card">
-                <img style={{ maxHeight: "250px" }} src={meteor.image} className="card__image" alt="" />
-                <div className="card__overlay">
-                  <div className="card__header">
-                    <svg className="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>
-                    <img className="card__thumb" src={meteor.image} alt="" />
-                    <div className="card__header-text">
-                      <h5 style={{ fontFamily: "Arial" }} >{meteor.name}</h5>
-                      <h3 className="card__title">Start: {meteor.dateStart}</h3>
-                      <h3 className="card__title">End: {meteor.dateEnd}</h3>
-
-                      <span style={{ fontFamily: "Arial" }} className="card__status"> </span>
-                    </div>
-                  </div>
-                  <p style={{ fontFamily: "Arial", fontSize: "10px" }} className="card__description"><strong>{meteor.description}</strong></p>
-
-                  <div></div>
-
-                </div>
-              </div>
-              <div style={{margin:"30px", color:"purple",padding:"3px", borderRadius:"10px", borderColor:"green",border:"solid" }}>{meteor.about}</div>
-            </div>
-
-            : null
-        } </>)
-      })}</div>
-      <br></br>
+   
+      <PlanetsVisible/>
     </>
-  }
+  
 
 
 
@@ -212,4 +165,4 @@ return(
 
 }
 
-export default Meteorshowers
+export default MeteorShowers
