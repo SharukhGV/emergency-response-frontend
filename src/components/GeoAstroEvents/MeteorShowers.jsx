@@ -9,7 +9,6 @@ function MeteorShowers(){
   console.log(today.getMonth())
   const [stacking, setStacking] = useState([])
 
-  
   let monthString = `${today.getMonth() + 1}`
   let monthString0 = "0" + (today.getMonth() + 1)
   let nextmonthString = `${today.getMonth() + 2}`
