@@ -1,6 +1,5 @@
 
 import Earthquake from "./Earthquake"
-
 import MeteorShowers from "./MeteorShowers";
 import SolarEclipse from "./SolarEclipse";
 import Volcanoes from "./Volcanoes";
