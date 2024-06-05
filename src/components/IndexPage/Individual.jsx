@@ -40,15 +40,15 @@ function Individual({ loginUsername, id, person }) {
   return (
 
 
-<div class="individualCard">
-{ person.image_url ?  <img src={person.image_url} alt="Avatar" style={{width:"100%"}}/> : <img src={mountainsky} alt="Avatar" style={{width:"100%"}}/> }
-  <div class="individualContainer">    
-  <span >{matchingProfile ? <img className="individualProfile" src={matchingProfile.image_url} alt="" /> : <img className="individualProfile" src={dipperDefault} alt="" />}</span>
-<span>     </span>
-    <strong><Link style={{ fontSize: "15px" }} to={`/index/${id}`}><span className="individualdate">{parseDATE(person.date)}</span></Link></strong>
- <div>{person.full_name}</div> 
-  </div>
-</div>
+    <div class="individualCard">
+      {person.image_url ? <img style={{width:"250px", height:"150px"}} src={person.image_url} alt="Avatar" /> : <img style={{width:"250px", height:"150px"}} src={mountainsky} alt="Avatar" />}
+      <div class="individualContainer">
+        <span >{matchingProfile ? <img className="individualProfile" src={matchingProfile.image_url} alt="" /> : <img className="individualProfile" src={dipperDefault} alt="" />}</span>
+        <span>     </span>
+        <strong><Link style={{ fontSize: "15px" }} to={`/index/${id}`}><span className="individualdate">{parseDATE(person.date)}</span></Link></strong>
+        <div>{person.full_name}</div>
+      </div>
+    </div>
 
 
   )

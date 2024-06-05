@@ -6,6 +6,11 @@ import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import CommentsBox from "./CommentsBox";
 import { v4 as uuidv4 } from 'uuid';
+import { GoogleMap, LoadScript } from "@react-google-maps/api";
+import noMap from "./noMap.png"
+import "./individualView.css"
+import mountainsky from "./mountainsky.jpg"
+
 // This component has origins in the "Individual" component 
 // It is navigated here using Link and the post's id
 function IndividualView({ loginUsername }) {
@@ -91,69 +96,101 @@ function IndividualView({ loginUsername }) {
 
   const storedValue = sessionStorage.getItem('username');
   function parseDATE(date) {
-
-    console.log(dataComments)
-
     return `${date.charAt(5)}${date.charAt(6)} / ${date.charAt(8)}${date.charAt(9)} / ${date.charAt(0)}${date.charAt(1)}${date.charAt(2)}${date.charAt(3)}`
   }
 
+  const [dataProfile, setDataProfile] = useState([])
+  useEffect(() => {
+    axios
+      .get(`${import.meta.env.VITE_BACKEND_API}/profile`)
+      .then((response) => setDataProfile(response.data.data))
+      .catch((e) => console.error("catch", e));
+  }, []);
+
+  const matchingProfile = dataProfile.find(prof => prof.my_username === data.username);
+
+  const mapStyles = {
+    height: "300px",
+    width: "350px",
+  };
+  let defaultCenter = {
+    lat: Math.trunc(data.latitude),
+    lng: Math.trunc(data.longitude)
+  };
 
   return (
-    <div>
+    <div style={{maxWidth:"700px", margin:"auto"}}>
       <br></br>
-      <div style={{ borderStyle: "dotted", borderRadius: "10px" }}>
-        <br></br>
-        <br></br>
-        <h2>{data.full_name}</h2>
+      <div className="parentView">
+        <div className="viewCard">
+          <h2>{data.full_name}</h2>
 
-        <p>Username: {data.username}</p>
+          <p>Username: {data.username}</p>
 
-        {data.image_url ? <img className="imageIndView" src={data.image_url} style={{ width: "300px" }}></img> : <div>No Image Uploaded</div>
-        }        <br></br>
-        <br></br>
-        <div className="tableContain">
-          <table className="userPostTable">
-            <tr>
-              <th>Category</th>
-              <th>Values</th>
-            </tr>
-            <tr>
-              <td>Latitude</td>
-              <td>{!!data.latitude ? data.latitude : "No Location Found"}</td>
-            </tr>
-            <tr>
-              <td>Longitude</td>
-              <td>{!!data.longitude ? data.longitude : "No Location Found"}</td>
-            </tr>
-            <tr>
-              <td>Description</td>
-              <td>{data.description}</td>
-            </tr>
+          {data.image_url ? <img className="imageIndView" src={data.image_url} style={{width:"300px",height:"195px"}}></img> : <img className="imageIndView" style={{width:"300px",height:"195px"}}src={mountainsky}/>
+          }        <br></br>
+          <br></br></div>
 
-            <tr>
+        <div className="viewMaps">
+          <div style={{ border: "solid black", width: "355px" }}>
+         { !!data.latitude ? <LoadScript googleMapsApiKey={import.meta.env.VITE_GOOGLE_MAPS_API_KEY}>
+              <GoogleMap
+                mapContainerStyle={mapStyles}
+                zoom={6}
+                center={defaultCenter}
 
-              <td>Address</td>
-              <td>{!!locationIQ.display_name ? <span>{locationIQ.display_name}</span> : "No Location Data"}</td>
-            </tr>
+              /></LoadScript> : <img style={{width:"350px",height:"250px"}} src={noMap}/> }</div>
+        </div>
+</div>
 
-          </table>
-          <br></br>
-          <div >{data.username === storedValue ? <Link style={{ fontSize: "15px" }} to={`/index/${id}/edit`}><button style={{ backgroundColor: "orange", width: "100px", height: "50px" }}>Edit Page</button></Link> : null}
-            <span> </span>
-            {data.username === storedValue ? <button style={{ backgroundColor: "red", width: "100px", height: "50px" }} onClick={deletePost}>Delete Post</button> : null}
-            <span> </span>
+        <div className="viewTable">
+          <div className="tableContain">
+            <table className="userPostTable">
+              <tr>
+                <th style={{ textAlign: "center" }}>Category</th>
+                <th style={{ textAlign: "center" }}>Values</th>
+              </tr>
+              <tr>
+                <td>Latitude</td>
+                <td>{!!data.latitude ? data.latitude : "No Location Found"}</td>
+              </tr>
+              <tr>
+                <td>Longitude</td>
+                <td>{!!data.longitude ? data.longitude : "No Location Found"}</td>
+              </tr>
+              <tr>
+                <td>Description</td>
+                <td>{data.description}</td>
+              </tr>
 
-            <Link to="/index"><button style={{border:"solid darkred", color:"beige", width: "100px", height: "50px", fontSize: "15px" }}>Back</button></Link></div>
-          <br></br>
-          <span> </span>
+              <tr>
 
+                <td>Address</td>
+                <td>{!!locationIQ.display_name ? <span>{locationIQ.display_name}</span> : "No Location Data"}</td>
+              </tr>
+
+            </table>
+            <br></br>
+            <div >{data.username === storedValue ? <Link style={{ fontSize: "15px" }} to={`/index/${id}/edit`}><button style={{ backgroundColor: "orange", width: "100px", height: "50px" }}>Edit Page</button></Link> : null}
+              <span> </span>
+              {data.username === storedValue ? <button style={{ backgroundColor: "red", width: "100px", height: "50px" }} onClick={deletePost}>Delete Post</button> : null}
+              <span> </span>
+
+              <Link to="/index"><button style={{ border: "solid darkred", color: "beige", width: "100px", height: "50px", fontSize: "15px" }}>Back</button></Link></div>
+        
+          </div></div>
+
+
+
+
+        <div className="viewComments">
           <div className="comments">
             <br></br>
-            <div style={{ fontSize: "18px" }}><strong>Comments Section</strong></div>
+            <h3><strong>Comments Section</strong></h3>
             <form onSubmit={handleSubmit}>
 
               <input onChange={handleTextChange} placeholder="type your comment here..." type="text"></input>
-            <br></br>
+              <br></br>
               <input
                 style={{ width: "30%" }}
                 type="submit"
@@ -177,7 +214,7 @@ function IndividualView({ loginUsername }) {
           </div>
           <br></br>
         </div>
-      </div>
+
     </div>
   )
 
