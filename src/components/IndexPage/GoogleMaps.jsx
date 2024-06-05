@@ -5,16 +5,16 @@ import telescopeicon from "./telescopeicon.png"
 import { useEffect, useState } from "react";
 import observatoryMarker from "./observatoryMarker.png"
 // This component is imported into the actual Index page in the "pages" folder
-export default function GoogleMaps({ mapMarkers,preserveMarkers,observatoryMarkers }) {
+export default function GoogleMaps({ mapMarkers, preserveMarkers, observatoryMarkers }) {
   const [markers, setMarkers] = useState([]);
   const [markersPreserves, setMarkersPreserves] = useState([]);
-const [markersObserv,setMarkersObserv]=useState([])
+  const [markersObserv, setMarkersObserv] = useState([])
 
   useEffect(() => {
     setMarkers(mapMarkers);
     setMarkersPreserves(preserveMarkers)
     setMarkersObserv(observatoryMarkers)
-  }, [mapMarkers,preserveMarkers,observatoryMarkers]);
+  }, [mapMarkers, preserveMarkers, observatoryMarkers]);
 
   const mapStyles = {
     height: "400px",
@@ -22,14 +22,14 @@ const [markersObserv,setMarkersObserv]=useState([])
   };
 
   let defaultCenter = {
-    lat: 39.8097343, 
-    lng: -98.5556199, 
+    lat: 39.8097343,
+    lng: -98.5556199,
   };
 
-  if(markers.length === 1){
-    defaultCenter={
-      lat:markers[0].lat,
-      lng:markers[0].lng
+  if (markers.length === 1) {
+    defaultCenter = {
+      lat: markers[0].lat,
+      lng: markers[0].lng
     }
   }
 
@@ -39,19 +39,19 @@ const [markersObserv,setMarkersObserv]=useState([])
         mapContainerStyle={mapStyles}
         zoom={3}
         center={defaultCenter}
-      
+
       >
-{markersPreserves.map((marker, index) => (
+        {markersPreserves.map((marker, index) => (
           <Marker
-            key={index+1236545}
+            key={index + 1236545}
             position={{ lat: parseFloat(marker.lat), lng: parseFloat(marker.lng) }}
             icon={telescopeicon}
           />
         ))}
 
-{markersObserv.map((marker, index) => (
+        {markersObserv.map((marker, index) => (
           <Marker
-            key={index+198986545}
+            key={index + 198986545}
             position={{ lat: parseFloat(marker.lat), lng: parseFloat(marker.lng) }}
             icon={observatoryMarker}
           />

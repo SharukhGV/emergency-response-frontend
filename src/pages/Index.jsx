@@ -45,25 +45,26 @@ function Index({ setMapMarkers, mapMarkers, location, setAccessToken, loginUsern
           <h1><strong>Astronomy Atlas</strong></h1>
           <h3>Points of Interest</h3>
           <br></br>
-          {showLegend ? <div style={{ paddingBottom: "10px", border: "dashed" }}>
+          {showLegend ? <div className="markerLegend">
+
             <img style={{ paddingRight: "10px" }} src={telescopeicon2}></img>
             <div>This Marker on the Map denotes a Dark Sky Preserve</div>
-            <img src={markerImage}></img>
-            <div>This Marker on the Map denotes a Point of Interest by a Community User</div>
+
             <img src={observatoryMarker}></img>
             <div>This Marker on the Map denotes a public Observatory</div>
+
+            <img src={markerImage}></img>
+            <div>This Marker on the Map denotes a Point of Interest by a Community User</div>
 
 
           </div> : null}</div>
         <br></br>
 
-        <button className="indexButtonsPRESERVECOMMUNITYOBSERVATORY" onClick={(darkSKIES)} style={{ width: "250px", borderRadius: "20px", }}>Dark Sky Preserves 🌌</button>  
-        <br></br> 
-        <button className="indexButtonsPRESERVECOMMUNITYOBSERVATORY" onClick={communityPosts} style={{ width: "250px",  borderRadius: "20px" }}>Community Posts 🌐</button>
+        <button className="indexButtonsPRESERVECOMMUNITYOBSERVATORY" onClick={(darkSKIES)} style={{ width: "250px", borderRadius: "20px", color: "green" }}>Dark Sky Preserves 🌌</button>
         <br></br>
-        <button className="indexButtonsPRESERVECOMMUNITYOBSERVATORY" onClick={(ObservatoryPosts)} style={{ width: "250px", borderRadius: "20px" }}>Public Observatories 🔭</button>
-
+        <button className="indexButtonsPRESERVECOMMUNITYOBSERVATORY" onClick={(ObservatoryPosts)} style={{ width: "250px", borderRadius: "20px", color: "gray" }}>Public Observatories 🔭</button>
         <br></br>
+        <button className="indexButtonsPRESERVECOMMUNITYOBSERVATORY" onClick={communityPosts} style={{ width: "250px", borderRadius: "20px", color: "orange" }}>Community Posts 🌐</button>
         <br></br>
         {darkPreserve === 1 ? <h3 style={{ fontSize: "15px" }}>Dark Sky Preserves</h3> : null}
         {darkPreserve === 2 ? <h3 style={{ fontSize: "15px" }}> Community Posts</h3> : null}
