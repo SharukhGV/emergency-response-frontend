@@ -4,7 +4,6 @@ import telescopeicon2 from "./telescopeicon2.png"
 import markerImage from "./markerImage.png"
 import { useState } from "react";
 import SearchPreserves from "../components/IndexPage/SearchPreserves";
-import collegeMarker from "./collegeMarker.png"
 import SearchObservatories from "../components/IndexPage/SearchObservatories";
 import observatoryMarker from "./observatoryMarker.png"
 
@@ -29,9 +28,7 @@ function Index({ setMapMarkers, mapMarkers, location, setAccessToken, loginUsern
     setDarkPreserve(3)
   }
 
-  function AstronomyColleges() {
-    setDarkPreserve(4)
-  }
+
 
   const [showLegend, setShowLegend] = useState(false)
   function legendToggle() {
@@ -53,8 +50,6 @@ function Index({ setMapMarkers, mapMarkers, location, setAccessToken, loginUsern
             <div>This Marker on the Map denotes a Dark Sky Preserve</div>
             <img src={markerImage}></img>
             <div>This Marker on the Map denotes a Point of Interest by a Community User</div>
-            <img src={collegeMarker}></img>
-            <div>This Marker on the Map denotes a College that offers Astronomy as a Major</div>
             <img src={observatoryMarker}></img>
             <div>This Marker on the Map denotes a public Observatory</div>
 
