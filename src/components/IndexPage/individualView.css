@@ -1,0 +1,35 @@
+
+.parentView {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 100vh; Adjust the height as needed */
+    flex-direction: column;
+}
+ 
+.viewMaps{
+    padding-bottom: 15px;
+}
+
+
+
+
+@media (min-width:700px) {
+
+    .parentView {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr;
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+        max-width: 650px;
+        margin: auto;
+        }
+        
+ 
+    
+    .viewCard { grid-area: 1 / 1 / 2 / 2; padding-right: 10px;  }
+    .viewMaps { grid-area: 1 / 2 / 2 / 3;padding-left: 10px;padding-bottom: 5px; }
+    
+
+}
