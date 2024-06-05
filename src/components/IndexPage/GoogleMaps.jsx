@@ -2,8 +2,6 @@
 import { GoogleMap, Marker, LoadScript } from "@react-google-maps/api";
 import markerImage from "./markerImage.png";
 import telescopeicon from "./telescopeicon.png"
-import collegeMarker from "./collegeMarker.png"
-    import AstronomyColleges from "./AstronomyColleges.json"
 import { useEffect, useState } from "react";
 import observatoryMarker from "./observatoryMarker.png"
 // This component is imported into the actual Index page in the "pages" folder
@@ -56,14 +54,6 @@ const [markersObserv,setMarkersObserv]=useState([])
             key={index+198986545}
             position={{ lat: parseFloat(marker.lat), lng: parseFloat(marker.lng) }}
             icon={observatoryMarker}
-          />
-        ))}
-
-{AstronomyColleges.colleges.map((marker, index) => (
-          <Marker
-            key={index+17779745}
-            position={{ lat: parseFloat(marker.coordinates.latitude), lng: parseFloat(marker.coordinates.longitude) }}
-            icon={collegeMarker}
           />
         ))}
 
