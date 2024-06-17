@@ -12,6 +12,7 @@ export default function Home({ setEmergencyType, loginUsername, accessToken, tog
 	const [modal3, setModal3] = useState(false)
 	const [modal4, setModal4] = useState(false)
 	const [modal5, setModal5] = useState(false)
+	const [modalButtons, setModalButtons] = useState(false)
 
 
 	function modal1Click() {
@@ -61,6 +62,28 @@ export default function Home({ setEmergencyType, loginUsername, accessToken, tog
 		}
 	}
 
+	function renderModalButtons() {
+		return (
+
+			<div className="buttonPollCont">
+				<button className="lowlight" onClick={modal1Click}>Low Light Pollution</button>        <br></br>
+
+				<button className="moderatelight" onClick={modal2Click}>Moderate Light Pollution</button>        <br></br>
+
+				<button className="highlight" onClick={modal3Click}>High Light Pollution</button>        <br></br>
+
+				<button className="northernLights" onClick={modal4Click}>Northern Lights</button>        <br></br>
+
+				<button className="fireBall" onClick={modal5Click}>Meteoric Events</button>
+
+				<button className="otherCategory" value="Anything Else" onClick={emergencySETTER}>Anything Else</button>
+
+				<br></br></div>
+		)
+	}
+	function boolModalSet() {
+		setModalButtons(!modalButtons)
+	}
 	return (
 		<div  >
 			{renderLOGO()}
@@ -69,32 +92,19 @@ export default function Home({ setEmergencyType, loginUsername, accessToken, tog
 			<h3>{loginUsername}</h3>
 			<div >
 				<br></br>
-				<div className="milkyBand"><div>Report Celestial Sightings</div>
-					<div >Choose from the Options Below</div>
+				<div className="milkyBand"><div>An informational application powered by astronomy and geology data</div>
+					<div >From USGS, NASA, and user input...</div>
 					<br></br></div>
 				<br></br>
-				<div className="buttonPollCont">
-					<button className="lowlight" onClick={modal1Click}>Low Light Pollution</button>        <br></br>
 
-					<button className="moderatelight" onClick={modal2Click}>Moderate Light Pollution</button>        <br></br>
+				{modalButtons ? <button onClick={boolModalSet}>Report Celestial Sightings</button> : <button onClick={boolModalSet}>Toggle Celestial Report Buttons</button>}
 
-					<button className="highlight" onClick={modal3Click}>High Light Pollution</button>        <br></br>
+				<br></br>
+				<br></br>
+				{modalButtons ? renderModalButtons() : null}
 
-					<button className="northernLights" onClick={modal4Click}>Northern Lights</button>        <br></br>
-
-					<button className="fireBall" onClick={modal5Click}>Meteoric Events</button>
-
-					<button className="otherCategory" value="Anything Else" onClick={emergencySETTER}>Anything Else</button>
-
-					<br></br></div>
 				<br></br>
 			</div>
-
-
-
-
-
-
 
 
 			{modal1 ?
