@@ -5,7 +5,7 @@ import hiveheavenLOGO from "./images/hiveheavenLOGO.png"
 import hiveheavenLOGOWHITE from "./images/hiveheavenLOGOWHITE.png"
 import "./home.css"
 export default function Home({ setEmergencyType, loginUsername, accessToken, toggleTheme, theme }) {
-	const navigate = useNavigate(); // Initialize the navigation function
+	const navigate = useNavigate();
 
 	const [modal1, setModal1] = useState(false)
 	const [modal2, setModal2] = useState(false)
@@ -87,7 +87,6 @@ export default function Home({ setEmergencyType, loginUsername, accessToken, tog
 	return (
 		<div  >
 			{renderLOGO()}
-			{/* <div className="caro"><ControlledCarousel /></div> */}
 			<h3>{!!loginUsername ? "Welcome" : "Login to view all Features"}</h3>
 			<h3>{loginUsername}</h3>
 			<div >
