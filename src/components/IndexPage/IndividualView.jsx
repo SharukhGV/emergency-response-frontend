@@ -180,10 +180,10 @@ function IndividualView({ loginUsername }) {
         
           </div></div>
 
+<br></br>
 
 
-
-        <div className="viewComments">
+        <div style={{backgroundColor:"#0483a330", padding:"15px", borderRadius:"10px"}} className="viewComments">
           <div className="comments">
             <br></br>
             <h3><strong>Comments Section</strong></h3>
@@ -204,9 +204,9 @@ function IndividualView({ loginUsername }) {
               {dataComments.map((commentz, index) => {
                 if (parseFloat(commentz.userpost_id) === parseFloat(id)) {
                   return (
-
-                    <CommentsBox loginUsername={loginUsername} key={uuidv4()} commentz={commentz} id={id} index={index} />
-
+<>                    <CommentsBox loginUsername={loginUsername} key={uuidv4()} commentz={commentz} id={id} index={index} />
+<br></br>
+</>
                   )
                 }
               })}
