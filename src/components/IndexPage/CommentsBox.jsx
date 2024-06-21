@@ -37,15 +37,15 @@ function CommentsBox({ commentz, uuid, loginUsername, id, index }) {
   }
   return (
     <div className="commentBox" style={{ border: "solid", padding: "30px", borderRadius: "10px" }} key={uuid}>
-             <div className="commentsProfile">{matchingProfile ? <img style={{ width: "50px", height: "50px", borderRadius: "50%", left:"0" }} src={matchingProfile.image_url} /> : null}</div>
+      <div className="commentsProfile">{matchingProfile ? <img style={{ width: "50px", height: "50px", borderRadius: "50%", left: "0" }} src={matchingProfile.image_url} /> : null}</div>
 
       <div>
         <div>{parseDATE(commentz.date)}</div>
-        <div style={{ fontSize: "10px" }}><span>{commentz.my_username}</span><span>      
+        <div style={{ fontSize: "10px" }}><span>{commentz.my_username}</span><span>
         </span></div>
         <div style={{ fontSize: "15px" }}>{commentz.description}</div></div>
 
-        <div> {loginUsername === commentz.my_username ? <button onClick={deleteCommentNow}>delete</button> : null}</div>
+      <div> {loginUsername === commentz.my_username ? <button onClick={deleteCommentNow}>delete</button> : null}</div>
 
 
 
