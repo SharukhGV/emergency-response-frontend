@@ -119,7 +119,7 @@ function IndividualView({ loginUsername }) {
   };
 
   return (
-    <div style={{maxWidth:"700px", margin:"auto"}}>
+    <div style={{ maxWidth: "700px", margin: "auto" }}>
       <br></br>
       <div className="parentView">
         <div className="viewCard">
@@ -127,93 +127,93 @@ function IndividualView({ loginUsername }) {
 
           <p>Username: {data.username}</p>
 
-          {data.image_url ? <img className="imageIndView" src={data.image_url} style={{width:"300px",height:"195px"}}></img> : <img className="imageIndView" style={{width:"300px",height:"195px"}}src={mountainsky}/>
+          {data.image_url ? <img className="imageIndView" src={data.image_url} style={{ width: "300px", height: "195px" }}></img> : <img className="imageIndView" style={{ width: "300px", height: "195px" }} src={mountainsky} />
           }        <br></br>
           <br></br></div>
 
         <div className="viewMaps">
           <div style={{ border: "solid black", width: "355px" }}>
-         { !!data.latitude ? <LoadScript googleMapsApiKey={import.meta.env.VITE_GOOGLE_MAPS_API_KEY}>
+            {!!data.latitude ? <LoadScript googleMapsApiKey={import.meta.env.VITE_GOOGLE_MAPS_API_KEY}>
               <GoogleMap
                 mapContainerStyle={mapStyles}
                 zoom={6}
                 center={defaultCenter}
 
-              /></LoadScript> : <img style={{width:"350px",height:"250px"}} src={noMap}/> }</div>
+              /></LoadScript> : <img style={{ width: "350px", height: "250px" }} src={noMap} />}</div>
         </div>
-</div>
+      </div>
 
-        <div className="viewTable">
-          <div className="tableContain">
-            <table className="userPostTable">
-              <tr>
-                <th style={{ textAlign: "center" }}>Category</th>
-                <th style={{ textAlign: "center" }}>Values</th>
-              </tr>
-              <tr>
-                <td>Latitude</td>
-                <td>{!!data.latitude ? data.latitude : "No Location Found"}</td>
-              </tr>
-              <tr>
-                <td>Longitude</td>
-                <td>{!!data.longitude ? data.longitude : "No Location Found"}</td>
-              </tr>
-              <tr>
-                <td>Description</td>
-                <td>{data.description}</td>
-              </tr>
+      <div className="viewTable">
+        <div className="tableContain">
+          <table className="userPostTable">
+            <tr>
+              <th style={{ textAlign: "center" }}>Category</th>
+              <th style={{ textAlign: "center" }}>Values</th>
+            </tr>
+            <tr>
+              <td>Latitude</td>
+              <td>{!!data.latitude ? data.latitude : "No Location Found"}</td>
+            </tr>
+            <tr>
+              <td>Longitude</td>
+              <td>{!!data.longitude ? data.longitude : "No Location Found"}</td>
+            </tr>
+            <tr>
+              <td>Description</td>
+              <td>{data.description}</td>
+            </tr>
 
-              <tr>
+            <tr>
 
-                <td>Address</td>
-                <td>{!!locationIQ.display_name ? <span>{locationIQ.display_name}</span> : "No Location Data"}</td>
-              </tr>
+              <td>Address</td>
+              <td>{!!locationIQ.display_name ? <span>{locationIQ.display_name}</span> : "No Location Data"}</td>
+            </tr>
 
-            </table>
-            <br></br>
-            <div >{data.username === storedValue ? <Link style={{ fontSize: "15px" }} to={`/index/${id}/edit`}><button style={{ backgroundColor: "orange", width: "100px", height: "50px" }}>Edit Page</button></Link> : null}
-              <span> </span>
-              {data.username === storedValue ? <button style={{ backgroundColor: "red", width: "100px", height: "50px" }} onClick={deletePost}>Delete Post</button> : null}
-              <span> </span>
-
-              <Link to="/index"><button style={{ border: "solid darkred", color: "beige", width: "100px", height: "50px", fontSize: "15px" }}>Back</button></Link></div>
-        
-          </div></div>
-
-<br></br>
-
-
-        <div style={{backgroundColor:"#0483a330", padding:"15px", borderRadius:"10px"}} className="viewComments">
-          <div className="comments">
-            <br></br>
-            <h3><strong>Comments Section</strong></h3>
-            <form onSubmit={handleSubmit}>
-
-              <input onChange={handleTextChange} placeholder="type your comment here..." type="text"></input>
-              <br></br>
-              <input
-                style={{ width: "30%" }}
-                type="submit"
-              />
-            </form>
-
-
-            <br></br>
-            <br></br>
-            <div>
-              {dataComments.map((commentz, index) => {
-                if (parseFloat(commentz.userpost_id) === parseFloat(id)) {
-                  return (
-<>                    <CommentsBox loginUsername={loginUsername} key={uuidv4()} commentz={commentz} id={id} index={index} />
-<br></br>
-</>
-                  )
-                }
-              })}
-            </div>
-          </div>
+          </table>
           <br></br>
+          <div >{data.username === storedValue ? <Link style={{ fontSize: "15px" }} to={`/index/${id}/edit`}><button style={{ backgroundColor: "orange", width: "100px", height: "50px" }}>Edit Page</button></Link> : null}
+            <span> </span>
+            {data.username === storedValue ? <button style={{ backgroundColor: "red", width: "100px", height: "50px" }} onClick={deletePost}>Delete Post</button> : null}
+            <span> </span>
+
+            <Link to="/index"><button style={{ border: "solid darkred", color: "beige", width: "100px", height: "50px", fontSize: "15px" }}>Back</button></Link></div>
+
+        </div></div>
+
+      <br></br>
+
+
+      <div style={{ backgroundColor: "#0483a330", padding: "15px", borderRadius: "10px" }} className="viewComments">
+        <div className="comments">
+          <br></br>
+          <h3><strong>Comments Section</strong></h3>
+          <form onSubmit={handleSubmit}>
+
+            <input onChange={handleTextChange} placeholder="type your comment here..." type="text"></input>
+            <br></br>
+            <input
+              style={{ width: "30%" }}
+              type="submit"
+            />
+          </form>
+
+
+          <br></br>
+          <br></br>
+          <div>
+            {dataComments.map((commentz, index) => {
+              if (parseFloat(commentz.userpost_id) === parseFloat(id)) {
+                return (
+                  <>                    <CommentsBox loginUsername={loginUsername} key={uuidv4()} commentz={commentz} id={id} index={index} />
+                    <br></br>
+                  </>
+                )
+              }
+            })}
+          </div>
         </div>
+        <br></br>
+      </div>
 
     </div>
   )

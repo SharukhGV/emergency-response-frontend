@@ -41,7 +41,7 @@ function Individual({ loginUsername, id, person }) {
 
     <div>
       <div class="backgroundCardTechy">
-        {person.image_url ? <img className="imgCardTechy" src={person.image_url} alt="Avatar" /> : <img className="imgCardTechy" src={mountainsky} alt="Avatar" />}
+      <Link  to={`/index/${id}`}>{person.image_url ? <img className="imgCardTechy" src={person.image_url} alt="Avatar" /> : <img className="imgCardTechy" src={mountainsky} alt="Avatar" />}</Link>
         <div class="individualContainertechy">
           <span >{matchingProfile ? <img className="individualProfile" src={matchingProfile.image_url} alt="" /> : <img className="individualProfile" src={dipperDefault} alt="" />}</span>
           <span>     </span>
