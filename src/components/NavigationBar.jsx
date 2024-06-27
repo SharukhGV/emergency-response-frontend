@@ -39,7 +39,7 @@ function NavigationBar({ theme,toggleTheme,loginUsername, toggleLOGIN, settoggle
         </NavDropdown> : null}
 
 
-        {!!toggleLOGIN ? <Nav.Link><Link to="/geoastroevents">☄️</Link></Nav.Link> : null}
+     <Nav.Link><Link to="/geoastroevents">☄️</Link></Nav.Link>
     
 
         {/* {!!toggleLOGIN ? <Nav.Link>< Link to="/visibleplanets">🪐</Link></Nav.Link> : null} */}

@@ -84,7 +84,7 @@ export default function App() {
           {!accessToken ? <Route path="/login" element={<Login settoggleLOGIN={settoggleLOGIN} toggleLOGIN={toggleLOGIN} accessToken={accessToken} setAccessToken={setAccessToken} loginUsername={loginUsername} setLoginUsername={setLoginUsername} />} /> : null}
           <Route path="/loading" element={<Loading accessToken={accessToken} />} />
           <Route path="/pleaselogin" element={<PleaseLogin accessToken={accessToken} />} />
-          {!!accessToken ? <Route path="/geoastroevents" element={<GeoAstroEvents accessToken={accessToken} />} /> : null}
+          <Route path="/geoastroevents" element={<GeoAstroEvents accessToken={accessToken} />} />
 
           <Route path="/termsconditions" element={<TermsConditions />} />
           {!!accessToken ? <Route path="/profile" element={<Profile loginUsername={loginUsername} />} /> : null}
