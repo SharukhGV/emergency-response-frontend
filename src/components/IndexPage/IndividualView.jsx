@@ -10,7 +10,7 @@ import { GoogleMap, LoadScript } from "@react-google-maps/api";
 import noMap from "./noMap.png"
 import "./individualView.css"
 import mountainsky from "./mountainsky.jpg"
-
+import CommunityInteractions from "./CommunityInteractions/CommunityInteractions";
 // This component has origins in the "Individual" component 
 // It is navigated here using Link and the post's id
 function IndividualView({ loginUsername }) {
@@ -70,8 +70,6 @@ function IndividualView({ loginUsername }) {
     }
   }, [data.latitude, data.longitude]);
 
-  console.log(dataComments)
-  console.log(id)
   const navigate = useNavigate()
 
 
@@ -126,7 +124,6 @@ function IndividualView({ loginUsername }) {
           <h2>{data.full_name}</h2>
 
           <p>Username: {data.username}</p>
-
           {data.image_url ? <img className="imageIndView" src={data.image_url} style={{ width: "300px", height: "195px" }}></img> : <img className="imageIndView" style={{ width: "300px", height: "195px" }} src={mountainsky} />
           }        <br></br>
           <br></br></div>
@@ -181,7 +178,11 @@ function IndividualView({ loginUsername }) {
         </div></div>
 
       <br></br>
+<div>
 
+  <div><CommunityInteractions postIdentification={id} loginUsername={loginUsername}/></div>
+
+</div>
 
       <div style={{ backgroundColor: "#0483a330", padding: "15px", borderRadius: "10px" }} className="viewComments">
         <div className="comments">

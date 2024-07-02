@@ -27,7 +27,10 @@ function NewForm({ accessToken, emergencyType, setLongitude, setLatitude, lat, l
     },
   })
 
-
+  const [commInteractions, setcommInteractions] = useState({
+    username: loginUsername,
+    user_post_id: null
+  });
 
 
   const navigate = useNavigate()
@@ -81,12 +84,14 @@ function NewForm({ accessToken, emergencyType, setLongitude, setLatitude, lat, l
     axios
       .post(`${import.meta.env.VITE_BACKEND_API}/userposts`, newFindSpot)
       .then((response) => {
-        console.log(response.data);
+       console.log(response.data) 
 
         navigate("/index");
       })
       .catch((e) => console.error("catch", e));
   };
+
+
 
   useEffect(() => {
     if (navigator.geolocation) {
