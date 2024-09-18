@@ -10,7 +10,7 @@ function ProfileCard({dataProfile, loginUsername}){
     return (
       <div className="profile-container">
         <div className="profile-image-container">
-          <img src={latestPost.image_url} alt="profile icon" className="profile-image" />
+          <img src={latestPost.image_url} alt="profile icon" className="profilepicimage" />
         </div>
         <h1 className="welcome-text">Welcome Back</h1>
         <p className="username">{loginUsername}</p>
