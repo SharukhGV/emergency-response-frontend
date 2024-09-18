@@ -33,8 +33,7 @@ const Earthquake= () => {
     <div>
 <br></br>
       <h2>Earthquakes (Magnitude 4.5+)</h2>
-      <p>"And We have already destroyed what surrounds you of [those] cities, and We have diversified the signs that perhaps they might return [from disbelief]."
-     </p> <p>Quran Surah Al-Ahqaf verse 27</p>
+     
       <table>
         <thead>
           <tr>
