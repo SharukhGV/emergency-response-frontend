@@ -4,6 +4,7 @@ import 'reactjs-popup/dist/index.css';
 import hiveheavenLOGO from "./images/hiveheavenLOGO.png"
 import hiveheavenLOGOWHITE from "./images/hiveheavenLOGOWHITE.png"
 import "./home.css"
+import HomeAnomaly from "./HomeAnomaly"
 export default function Home({ setEmergencyType, loginUsername, accessToken, toggleTheme, theme }) {
 	const navigate = useNavigate();
 
@@ -104,7 +105,7 @@ export default function Home({ setEmergencyType, loginUsername, accessToken, tog
 
 				<br></br>
 			</div>
-
+<HomeAnomaly/>
 
 			{modal1 ?
 				<div className="modal">

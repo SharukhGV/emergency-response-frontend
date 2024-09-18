@@ -19,6 +19,12 @@ import MarketPlaceHome from './components/marketplace/MarketPlaceHome';
 import AllProducts from './components/marketplace/AllProducts';
 import NewItem from './components/marketplace/NewItem';
 import GeoAstroEvents from './components/GeoAstroEvents/GeoAstroEvents';
+import MagneticPoleAnomaly from './pages/MagneticPoleAnomaly';
+import SunLifeCycle from './pages/components/SunLifeCycle';
+import MoonquakeInfo from './pages/components/MoonquakeInfo';
+import ReversingCore from './pages/components/ReversingCore';
+import EarthRotationSpeed from './pages/components/EarthRotationSpeed';
+import Earthquake from './pages/Earthquake';
 export default function App() {
 
   const [lat, setLatitude] = useState(null);
@@ -95,6 +101,12 @@ export default function App() {
           {!!accessToken ? <Route path="/marketplace/index" element={<AllProducts latitude={lat} longitude={lng} />} /> : null}
           {!!accessToken ? <Route path="/marketplace/newitem" element={<NewItem latitude={lat} longitude={lng} />} /> : null}
 
+          <Route path="/magneticpoleanomaly" element={<MagneticPoleAnomaly/>} />
+    <Route path="/sunlifecycle" element={<SunLifeCycle/>} />
+    <Route path="/mooninfo" element={<MoonquakeInfo/>} />
+    <Route path="/earthinfo" element={<ReversingCore/>} />
+    <Route path="/earthrotation" element={<EarthRotationSpeed/>} />
+    <Route path="/earthquakes" element={<Earthquake/>} />
           <Route path="/*" element={<NotFound />} />
 
         </Routes>
