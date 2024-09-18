@@ -111,8 +111,7 @@ function IndividualView({ loginUsername }) {
 
   const mapStyles = {
     height: "300px",
-    width: "350px",
-  };
+maxWidth:"760px"  };
   let defaultCenter = {
     lat: Math.trunc(data.latitude),
     lng: Math.trunc(data.longitude)
