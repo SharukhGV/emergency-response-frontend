@@ -30,57 +30,112 @@
   padding-left: 20px;
 }
 
-
-
-/* TABLE for EArthQuake and User Individual Posts */
+/* TABLE for Earthquake and User Individual Posts */
 .userPostTable {
-  font-family: Arial, Helvetica, sans-serif;
-  border-collapse: collapse;
+  font-family: 'Orbitron', 'Roboto Mono', Arial, sans-serif;
+  border-collapse: separate;
+  border-spacing: 0;
   width: 100%;
-  border-style: solid;
+  border: 2px solid var(--table-border);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.1);
 }
 
 .userPostTable td,
 .userPostTable th {
-  border: 1px solid #ddd;
-  padding: 8px;
+  border: 1px solid var(--table-border);
+  padding: 12px;
+  transition: all 0.3s ease;
+}
+
+/* Light Theme */
+.light .userPostTable {
+  --table-border: #3498db;
+  --table-header: #04aa6d;
+  --table-even: #6db79c;
+  --table-hover: #aaff00;
+  --text-color: #0a3d62;
 }
 
 .light .userPostTable tr:nth-child(even) {
-  background-color: #6db79cb0;
+  background-color: rgba(109, 183, 156, 0.2);
 }
 
 .light .userPostTable tr:hover {
-  background-color: #aaff00b2;
+  background-color: rgba(170, 255, 0, 0.2);
 }
 
 .light .userPostTable th {
-  padding-top: 12px;
-  padding-bottom: 12px;
-  text-align: left;
-  background-color: #04aa6db6;
+  background-color: var(--table-header);
   color: white;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+
+/* Dark Theme */
+.dark .userPostTable {
+  --table-border: #ff00ff;
+  --table-header: #1a1a1a;
+  --table-even: #2a2a2a;
+  --table-hover: #3a3a3a;
+  --text-color: #00ff00;
 }
 
 .dark .userPostTable tr:nth-child(even) {
-  background-color: #1e1515b0;
+  background-color: rgba(42, 42, 42, 0.8);
 }
 
 .dark .userPostTable tr:hover {
-  background-color: #000000b2;
+  background-color: rgba(58, 58, 58, 0.8);
 }
 
 .dark .userPostTable th {
-  padding-top: 12px;
-  padding-bottom: 12px;
-  text-align: left;
-  background-color: #000000b6;
-  color: white;
+  background-color: var(--table-header);
+  color: var(--text-color);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: bold;
+  text-shadow: 0 0 5px var(--text-color);
 }
 
+/* Common styles for both themes */
+.userPostTable th {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  text-align: left;
+}
 
+.userPostTable td {
+  position: relative;
+}
+
+.userPostTable td::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, transparent, var(--table-border), transparent);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.userPostTable tr:hover td::after {
+  transform: scaleX(1);
+}
+
+/* Header styles */
 h3 {
   text-align: center;
+  font-family: 'Orbitron', 'Roboto Mono', Arial, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--table-header);
+  margin-bottom: 20px;
+  text-shadow: 0 0 10px var(--table-border);
 }
 
 
@@ -791,88 +846,143 @@ p {
   color: red;
 }
 
+:root {
+  --light-bg: #e0f2f1;
+  --light-text: #0a3d62;
+  --light-accent: #00bcd4;
+  --light-hover: #4dd0e1;
+  
+  --dark-bg: #0a0a0a;
+  --dark-text: #00ff00;
+  --dark-accent: #ff00ff;
+  --dark-hover: #b300b3;
+  
+  --glow: 0 0 10px;
+  --font-sci-fi: 'Orbitron', 'Roboto Mono', Arial, sans-serif;
+}
+
+/* Button Styles */
+button {
+  font-family: var(--font-sci-fi);
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Edit Button */
 .dark .edit button {
-  background-color: rgb(0, 0, 0);
-  color: red;
-  border: red solid;
+  background-color: var(--dark-bg);
+  color: var(--dark-accent);
+  border: 2px solid var(--dark-accent);
+  box-shadow: inset 0 0 5px var(--dark-accent);
 }
 
 .dark .edit button:hover {
-  background-color: rgb(32, 11, 11);
-  color: red;
-  border: red solid;
+  background-color: var(--dark-hover);
+  box-shadow: 0 0 15px var(--dark-accent);
 }
 
-
+/* Index Buttons */
+.indexButtonsPRESERVECOMMUNITYOBSERVATORY {
+  margin-bottom: 3px;
+  font-weight: bold;
+}
 
 .dark .indexButtonsPRESERVECOMMUNITYOBSERVATORY {
-  background-color: #000000;
-  color: red;
-  border: solid red;
-  margin-bottom: 3px;
+  background-color: var(--dark-bg);
+  color: var(--dark-text);
+  border: 2px solid var(--dark-accent);
+  box-shadow: inset 0 0 5px var(--dark-accent);
 }
 
 .light .indexButtonsPRESERVECOMMUNITYOBSERVATORY {
-  background-color: #ececec;
-  color: rgb(0, 0, 0);
-  border: solid rgb(0, 174, 255);
-  margin-bottom: 3px;
+  background-color: var(--light-bg);
+  color: var(--light-text);
+  border: 2px solid var(--light-accent);
+  box-shadow: inset 0 0 5px var(--light-accent);
+}
 
+/* Register Button */
+.registerbtn {
+  padding: 16px 20px;
+  margin: 8px 0;
+  width: 100%;
+  opacity: 0.9;
+  font-size: 16px;
 }
 
 .light .registerbtn {
-  background-color: #04AA6D;
-  color: white;
-  padding: 16px 20px;
-  margin: 8px 0;
+  background-color: var(--light-accent);
+  color: var(--light-bg);
   border: none;
-  cursor: pointer;
-  width: 100%;
-  opacity: 0.9;
-}
-
-.light .registerbtn:hover {
-  opacity: 1;
 }
 
 .dark .registerbtn {
-  background-color: #04AA6D;
-  color: white;
-  padding: 16px 20px;
-  margin: 8px 0;
+  background-color: var(--dark-accent);
+  color: var(--dark-bg);
   border: none;
-  cursor: pointer;
-  width: 100%;
-  opacity: 0.9;
 }
 
+.light .registerbtn:hover,
 .dark .registerbtn:hover {
   opacity: 1;
+  box-shadow: var(--glow) currentColor;
 }
 
+/* Login/Register Words */
 .light .loginregisterwords {
-  color: "black"
-
+  color: var(--light-text);
 }
 
 .dark .loginregisterwords {
-  color: "red"
-
+  color: var(--dark-text);
 }
 
+/* Comment Box */
+.commentBox {
+  border-radius: 10px;
+  padding: 15px;
+  margin: 10px 0;
+  transition: all 0.3s ease;
+}
 
 .light .commentBox {
-  background-color: #88ceb5c4;
+  background-color: rgba(136, 206, 181, 0.7);
+  border: 1px solid var(--light-accent);
 }
 
 .dark .commentBox {
-  background-color: #000000c4;
+  background-color: rgba(0, 0, 0, 0.7);
+  border: 1px solid var(--dark-accent);
 }
 
+/* Input Fields */
 input {
   border-radius: 10px;
+  padding: 10px;
+  font-family: var(--font-sci-fi);
+  transition: all 0.3s ease;
 }
 
+.light input {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid var(--light-accent);
+  color: var(--light-text);
+}
+
+.dark input {
+  background-color: rgba(0, 0, 0, 0.8);
+  border: 1px solid var(--dark-accent);
+  color: var(--dark-text);
+}
+
+input:focus {
+  outline: none;
+  box-shadow: var(--glow) currentColor;
+}
 
 
 .cardIndex {
