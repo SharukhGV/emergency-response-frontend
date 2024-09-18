@@ -107,7 +107,7 @@ function IndividualView({ loginUsername }) {
       .catch((e) => console.error("catch", e));
   }, []);
 
-  const matchingProfile = dataProfile.find(prof => prof.my_username === data.username);
+  // const matchingProfile = dataProfile.find(prof => prof.my_username === data.username);
 
   const mapStyles = {
     height: "300px",
@@ -117,39 +117,43 @@ function IndividualView({ loginUsername }) {
     lat: Math.trunc(data.latitude),
     lng: Math.trunc(data.longitude)
   };
-
   return (
-    <div style={{ maxWidth: "700px", margin: "auto" }}>
-      <br></br>
-      <div className="parentView">
-        <div className="viewCard">
-          <h2>{data.full_name}</h2>
-
-          <p>Username: {data.username}</p>
-
-          {data.image_url ? <img className="imageIndView" src={data.image_url} style={{ width: "300px", height: "195px" }}></img> : <img className="imageIndView" style={{ width: "300px", height: "195px" }} src={mountainsky} />
-          }        <br></br>
-          <br></br></div>
-
-        <div className="viewMaps">
-          <div style={{ border: "solid black", width: "355px" }}>
-            {!!data.latitude ? <LoadScript googleMapsApiKey={import.meta.env.VITE_GOOGLE_MAPS_API_KEY}>
-              <GoogleMap
-                mapContainerStyle={mapStyles}
-                zoom={6}
-                center={defaultCenter}
-
-              /></LoadScript> : <img style={{ width: "350px", height: "250px" }} src={noMap} />}</div>
+    <div className="sci-fi-container">
+      <div className="sci-fi-card">
+        <h2 className="sci-fi-title">{data.full_name}</h2>
+        <p className="sci-fi-username">Username: {data.username}</p>
+        <div className="sci-fi-image-container">
+          {data.image_url ? (
+            <img className="sci-fi-image" src={data.image_url} alt="Post" />
+          ) : (
+            <img className="sci-fi-image" src={mountainsky} alt="Default" />
+          )}
         </div>
       </div>
 
-      <div className="viewTable">
-        <div className="tableContain">
-          <table className="userPostTable">
+      <div className="sci-fi-map">
+        {!!data.latitude ? (
+          <LoadScript googleMapsApiKey={import.meta.env.VITE_GOOGLE_MAPS_API_KEY}>
+            <GoogleMap
+              mapContainerStyle={mapStyles}
+              zoom={6}
+              center={defaultCenter}
+            />
+          </LoadScript>
+        ) : (
+          <img className="sci-fi-no-map" src={noMap} alt="No Map Available" />
+        )}
+      </div>
+
+      <div className="sci-fi-table-container">
+        <table className="sci-fi-table">
+          <thead>
             <tr>
-              <th style={{ textAlign: "center" }}>Category</th>
-              <th style={{ textAlign: "center" }}>Values</th>
+              <th>Category</th>
+              <th>Values</th>
             </tr>
+          </thead>
+          <tbody>
             <tr>
               <td>Latitude</td>
               <td>{!!data.latitude ? data.latitude : "No Location Found"}</td>
@@ -162,63 +166,59 @@ function IndividualView({ loginUsername }) {
               <td>Description</td>
               <td>{data.description}</td>
             </tr>
-
             <tr>
-
               <td>Address</td>
-              <td>{!!locationIQ.display_name ? <span>{locationIQ.display_name}</span> : "No Location Data"}</td>
+              <td>{!!locationIQ.display_name ? locationIQ.display_name : "No Location Data"}</td>
             </tr>
-
-          </table>
-          <br></br>
-          <div >{data.username === storedValue ? <Link style={{ fontSize: "15px" }} to={`/index/${id}/edit`}><button style={{ backgroundColor: "orange", width: "100px", height: "50px" }}>Edit Page</button></Link> : null}
-            <span> </span>
-            {data.username === storedValue ? <button style={{ backgroundColor: "red", width: "100px", height: "50px" }} onClick={deletePost}>Delete Post</button> : null}
-            <span> </span>
-
-            <Link to="/index"><button style={{ border: "solid darkred", color: "beige", width: "100px", height: "50px", fontSize: "15px" }}>Back</button></Link></div>
-
-        </div></div>
-
-      <br></br>
-
-
-      <div style={{ backgroundColor: "#0483a330", padding: "15px", borderRadius: "10px" }} className="viewComments">
-        <div className="comments">
-          <br></br>
-          <h3><strong>Comments Section</strong></h3>
-          <form onSubmit={handleSubmit}>
-
-            <input onChange={handleTextChange} placeholder="type your comment here..." type="text"></input>
-            <br></br>
-            <input
-              style={{ width: "30%" }}
-              type="submit"
-            />
-          </form>
-
-
-          <br></br>
-          <br></br>
-          <div>
-            {dataComments.map((commentz, index) => {
-              if (parseFloat(commentz.userpost_id) === parseFloat(id)) {
-                return (
-                  <>                    <CommentsBox loginUsername={loginUsername} key={uuidv4()} commentz={commentz} id={id} index={index} />
-                    <br></br>
-                  </>
-                )
-              }
-            })}
-          </div>
-        </div>
-        <br></br>
+          </tbody>
+        </table>
       </div>
 
+      <div className="sci-fi-buttons">
+        {data.username === storedValue && (
+          <>
+            <Link to={`/index/${id}/edit`}>
+              <button className="sci-fi-button edit">Edit Page</button>
+            </Link>
+            <button className="sci-fi-button delete" onClick={deletePost}>Delete Post</button>
+          </>
+        )}
+        <Link to="/index">
+          <button className="sci-fi-button back">Back</button>
+        </Link>
+      </div>
+
+      <div className="sci-fi-comments">
+        <h3 className="sci-fi-comments-title">Comments Section</h3>
+        <form onSubmit={handleSubmit} className="sci-fi-comment-form">
+          <input
+            onChange={handleTextChange}
+            placeholder="Type your comment here..."
+            type="text"
+            className="sci-fi-input"
+          />
+          <button type="submit" className="sci-fi-button submit">Submit</button>
+        </form>
+
+        <div className="sci-fi-comments-list">
+          {dataComments.map((commentz, index) => {
+            if (parseFloat(commentz.userpost_id) === parseFloat(id)) {
+              return (
+                <CommentsBox
+                  key={uuidv4()}
+                  loginUsername={loginUsername}
+                  commentz={commentz}
+                  id={id}
+                  index={index}
+                />
+              );
+            }
+            return null;
+          })}
+        </div>
+      </div>
     </div>
-  )
-
-
+  );
 }
 
-export default IndividualView
+export default IndividualView;

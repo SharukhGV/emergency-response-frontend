@@ -35,20 +35,22 @@ function CommentsBox({ commentz, uuid, loginUsername, id, index }) {
   function parseDATE(date) {
     return `${date.charAt(5)}${date.charAt(6)} / ${date.charAt(8)}${date.charAt(9)} / ${date.charAt(0)}${date.charAt(1)}${date.charAt(2)}${date.charAt(3)}`
   }
+  
   return (
-    <div className="commentBox" style={{ border: "solid", padding: "30px", borderRadius: "10px" }} key={uuid}>
-      <div className="commentsProfile">{matchingProfile ? <img style={{ width: "50px", height: "50px", borderRadius: "50%", left: "0" }} src={matchingProfile.image_url} /> : null}</div>
-
-      <div>
-        <div>{parseDATE(commentz.date)}</div>
-        <div style={{ fontSize: "10px" }}><span>{commentz.my_username}</span><span>
-        </span></div>
-        <div style={{ fontSize: "15px" }}>{commentz.description}</div></div>
-
-      <div> {loginUsername === commentz.my_username ? <button onClick={deleteCommentNow}>delete</button> : null}</div>
-
-
-
+    <div className="comment-box" key={uuid}>
+      <div className="comment-header">
+        <div className="comment-profile">
+          {matchingProfile && <img className="profile-image" src={matchingProfile.image_url} alt="Profile" />}
+        </div>
+        <div className="comment-info">
+          <div className="comment-date">{parseDATE(commentz.date)}</div>
+          <div className="comment-username">{commentz.my_username}</div>
+        </div>
+      </div>
+      <div className="comment-content">{commentz.description}</div>
+      {loginUsername === commentz.my_username && (
+        <button className="delete-button" onClick={deleteCommentNow}>Delete</button>
+      )}
     </div>
   );
 }

@@ -1,35 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
 
-.parentView {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* height: 100vh; Adjust the height as needed */
-    flex-direction: column;
-}
- 
-.viewMaps{
-    padding-bottom: 15px;
+.sci-fi-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background: linear-gradient(145deg, #1a1a2e, #16213e);
+  color: #e94560;
+  font-family: 'Orbitron', sans-serif;
 }
 
+.sci-fi-card {
+  background: rgba(15, 52, 96, 0.5);
+  border: 2px solid #0f3460;
+  border-radius: 15px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
+}
 
+.sci-fi-title {
+  font-size: 24px;
+  color: #00fff5;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
 
+.sci-fi-username {
+  font-size: 16px;
+  color: #e94560;
+}
 
-@media (min-width:700px) {
+.sci-fi-image-container {
+  margin-top: 20px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
 
-    .parentView {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: 1fr;
-        grid-column-gap: 0px;
-        grid-row-gap: 0px;
-        max-width: 650px;
-        margin: auto;
-        }
-        
- 
-    
-    .viewCard { grid-area: 1 / 1 / 2 / 2; padding-right: 10px;  }
-    .viewMaps { grid-area: 1 / 2 / 2 / 3;padding-left: 10px;padding-bottom: 5px; }
-    
+.sci-fi-image {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
 
+.sci-fi-image:hover {
+  transform: scale(1.05);
+}
+
+.sci-fi-map {
+  margin-bottom: 20px;
+  border: 2px solid #0f3460;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.sci-fi-no-map {
+  width: 100%;
+  height: auto;
+}
+
+.sci-fi-table-container {
+  margin-bottom: 20px;
+}
+
+.sci-fi-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 10px;
+}
+
+.sci-fi-table th,
+.sci-fi-table td {
+  padding: 10px;
+  text-align: left;
+  background: rgba(15, 52, 96, 0.5);
+}
+
+.sci-fi-table th {
+  background: #0f3460;
+  color: #00fff5;
+  text-transform: uppercase;
+}
+
+.sci-fi-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.sci-fi-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 14px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.sci-fi-button.edit {
+  background-color: #ffa500;
+  color: #1a1a2e;
+}
+
+.sci-fi-button.delete {
+  background-color: #e94560;
+  color: #1a1a2e;
+}
+
+.sci-fi-button.back {
+  background-color: #00fff5;
+  color: #1a1a2e;
+}
+
+.sci-fi-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 255, 255, 0.4);
+}
+
+.sci-fi-comments {
+  background: rgba(15, 52, 96, 0.5);
+  border: 2px solid #0f3460;
+  border-radius: 15px;
+  padding: 20px;
+}
+
+.sci-fi-comments-title {
+  color: #00fff5;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+.sci-fi-comment-form {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.sci-fi-input {
+  flex-grow: 1;
+  padding: 10px;
+  border: none;
+  background: rgba(15, 52, 96, 0.8);
+  color: #00fff5;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.sci-fi-button.submit {
+  background-color: #00fff5;
+  color: #1a1a2e;
+  margin-left: 10px;
+}
+
+.sci-fi-comments-list {
+  max-height: 400px;
+  overflow-y: auto;
 }
