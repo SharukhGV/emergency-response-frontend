@@ -4,7 +4,7 @@
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
-  /* background: linear-gradient(145deg, #1a1a2e, #16213e); */
+  background: linear-gradient(145deg, #1a1a2e, #16213e);
   color: #e94560;
   font-family: 'Orbitron', sans-serif;
 }
@@ -100,17 +100,17 @@
   transition: all 0.3s ease;
 }
 
-.sci-fi-button.edit {
+#sci-fi-button .edit {
   background-color: #ffa500;
   color: #1a1a2e;
 }
 
-.sci-fi-button.delete {
+#sci-fi-button .delete {
   background-color: #e94560;
   color: #1a1a2e;
 }
 
-.sci-fi-button.back {
+#sci-fi-button .back {
   background-color: #00fff5;
   color: #1a1a2e;
 }

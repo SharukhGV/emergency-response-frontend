@@ -426,20 +426,20 @@ a:hover {
   overflow: hidden;
 }
 
-.ultraelem {
+/* .ultraelem {
   display: flex;
   flex-wrap: wrap;
   gap: 7px 7px;
   row-gap: 7px;
   column-gap: 7px;
   background-color: rgba(255, 255, 255, 0);
-}
+} */
 
-.listelem {
+/* .listelem {
   height: 300px;
   flex-grow: 1;
   background-color: rgba(255, 255, 255, 0);
-}
+} */
 
 
 
@@ -1039,46 +1039,46 @@ input:focus {
   border-radius: 10px;
 }
 
-.individualProfile {
+/* .individualProfile {
   width: 30px;
   height: 30px;
   border-radius: 50%;
-}
+} */
 
 
-.individualdate {
+/* .individualdate {
 
   background-color: rgb(189, 189, 190);
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
   padding: 3px;
-}
+} */
 
 .individualContainer {
   padding: 2px 16px;
 }
 
-.backgroundCardTechy {
+/* .backgroundCardTechy {
   background-image: url("./components/IndexPage/cardhive.png");
   background-size: cover;
   width: 300px;
   height: 300px;
-}
+} */
 
-.imgCardTechy {
+/* .imgCardTechy {
   margin-top: 50px;
   margin-left: 40px;
   width: 200px;
   height: 150px;
   border-radius: 10px;
   border: #000 solid
-}
+} */
 
-.individualContainertechy {
+/* .individualContainertechy {
   margin-left: 55px;
   padding-top: 10px;
   width: 150px;
-}
+} */
 
 .light .visiblePlanets {
   color: darkred;
@@ -1136,4 +1136,55 @@ input:focus {
   }
 
 
+}
+/* Flexbox container for all cards */
+.ultraelem {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start; /* Default: Cards aligned to the left */
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  gap: 20px; /* Space between cards */
+}
+
+/* Individual card */
+.backgroundCardTechy {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center content inside the card */
+  justify-content: center; /* Center content inside the card */
+  width: 300px; /* Set a width for the card */
+  padding: 20px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+/* Ensure the image inside the card fits properly */
+.imgCardTechy {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Center profile and additional content inside the card */
+.individualContainertechy {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+}
+
+/* Responsive behavior: Center cards when there's only one per row */
+@media (max-width: 768px) {
+  .ultraelem {
+    justify-content: center; /* Center cards when there's only one per row */
+  }
+  
+  .backgroundCardTechy {
+    width: 100%; /* Take up full width on small screens */
+    max-width: 300px; /* Max width for card */
+  }
 }

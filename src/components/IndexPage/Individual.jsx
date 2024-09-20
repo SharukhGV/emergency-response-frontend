@@ -5,7 +5,7 @@ import mountainsky from "./mountainsky.jpg"
 import axios from "axios"
 import { useState, useEffect } from "react"
 // This component is imported into the "SearchPeople" component in this same folder
-
+import "./individual.css"
 function Individual({ loginUsername, id, person }) {
   const [data, setData] = useState({});
 
@@ -39,7 +39,6 @@ function Individual({ loginUsername, id, person }) {
 
   return (
 
-    <div>
       <div class="backgroundCardTechy">
       <Link  to={`/index/${id}`}>{person.image_url ? <img className="imgCardTechy" src={person.image_url} alt="Avatar" /> : <img className="imgCardTechy" src={mountainsky} alt="Avatar" />}</Link>
         <div class="individualContainertechy">
@@ -49,7 +48,6 @@ function Individual({ loginUsername, id, person }) {
           <div>{person.full_name}</div>
         </div>
       </div>
-    </div>
 
   )
 }
