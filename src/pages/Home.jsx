@@ -89,7 +89,7 @@ export default function Home({ setEmergencyType, loginUsername, accessToken, tog
 		<div  >
 			{renderLOGO()}
 			<h3>{!!loginUsername ? "Welcome" : "Login to view all Features"}</h3>
-			<h3>{loginUsername}</h3>
+			<h3 style={{fontSize:"13px"}}>{loginUsername}</h3>
 			<div >
 				<br></br>
 				<div className="milkyBand"><div>An informational application powered by astronomy and geology data</div>

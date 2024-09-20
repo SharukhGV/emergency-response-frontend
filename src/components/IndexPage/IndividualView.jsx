@@ -177,9 +177,9 @@ maxWidth:"760px"  };
         {data.username === storedValue && (
           <>
             <Link to={`/index/${id}/edit`}>
-              <button style={{backgroundColor:"orange"}} id="sci-fi-button edit">Edit Page</button>
+              <button style={{backgroundColor:"orange"}} id="sci-fi-button edit">Edit</button>
             </Link>
-            <button style={{backgroundColor:"red"}} id="sci-fi-button delete" onClick={deletePost}>Delete Post</button>
+            <button style={{backgroundColor:"red"}} id="sci-fi-button delete" onClick={deletePost}>Delete</button>
           </>
         )}
         <Link to="/index">
