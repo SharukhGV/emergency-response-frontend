@@ -39,6 +39,16 @@ function NavigationBar({ theme,toggleTheme,loginUsername, toggleLOGIN, settoggle
         </NavDropdown> : null}
 
 
+        {!!toggleLOGIN ? <NavDropdown  title="Dreams" id="basic-nav-dropdown">
+          <NavDropdown.Item ><Link to="/dreamnewform">Form</Link> </NavDropdown.Item>
+          <NavDropdown.Item ><Link to="/dreams">All</Link> </NavDropdown.Item>
+
+
+
+
+        </NavDropdown> : null}
+
+
      <Nav.Link><Link to="/geoastroevents">☄️</Link></Nav.Link>
     
 
