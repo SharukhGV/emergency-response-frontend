@@ -97,7 +97,7 @@ export default function Home({ setEmergencyType, loginUsername, accessToken, tog
 					<br></br></div>
 				<br></br>
 
-				{modalButtons ? <button onClick={boolModalSet}>Report Celestial Sightings</button> : <button onClick={boolModalSet}>Toggle Celestial Report Buttons</button>}
+				{modalButtons ? <button style={{border:"solid", borderColor:"whitesmoke"}} onClick={boolModalSet}>Report Celestial Sightings</button> : <button style={{border:"solid", borderColor:"whitesmoke"}} onClick={boolModalSet}>Toggle Celestial Report Buttons</button>}
 
 				<br></br>
 				<br></br>

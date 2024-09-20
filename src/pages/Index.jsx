@@ -39,7 +39,7 @@ function Index({ setMapMarkers, mapMarkers, location, setAccessToken, loginUsern
      <div className="sci-fi-container">
   <GoogleMaps preserveMarkers={preserveMarkers} mapMarkers={mapMarkers} observatoryMarkers={observatoryMarkers} />
   <br />
-  <button className="legend-button" onClick={legendToggle}>🧭</button>
+  <button style={{border:"solid", borderColor:"whitesmoke"}} className="legend-button" onClick={legendToggle}>🧭</button>
   <br />
   <div>
     <h1>Astronomy Atlas</h1>
@@ -57,11 +57,11 @@ function Index({ setMapMarkers, mapMarkers, location, setAccessToken, loginUsern
     )}
   </div>
   <br />
-  <button className="sci-fi-button" onClick={darkSKIES}>Dark Sky Preserves 🌌</button>
+  <button style={{border:"solid", borderColor:"whitesmoke"}} className="sci-fi-button" onClick={darkSKIES}>Dark Sky Preserves 🌌</button>
   <br />
-  <button className="sci-fi-button" onClick={ObservatoryPosts}>Public Observatories 🔭</button>
+  <button style={{border:"solid", borderColor:"whitesmoke"}} className="sci-fi-button" onClick={ObservatoryPosts}>Public Observatories 🔭</button>
   <br />
-  <button className="sci-fi-button" onClick={communityPosts}>Community Posts 🌐</button>
+  <button style={{border:"solid", borderColor:"whitesmoke"}} className="sci-fi-button" onClick={communityPosts}>Community Posts 🌐</button>
   <br />
   {darkPreserve === 1 && <h3>Dark Sky Preserves</h3>}
   {darkPreserve === 2 && <h3>Community Posts</h3>}

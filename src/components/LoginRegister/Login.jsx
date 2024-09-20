@@ -70,7 +70,7 @@ function Login({ setLoginUsername, loginUsername,toggleLOGIN,settoggleLOGIN, set
 
                         <p>By Logging in to an account you agree to our <Link to="/termsconditions">Terms & Privacy</Link>.</p>
 
-                        <button type="submit" className="registerbtn">Login</button>
+                        <button style={{padding:"10px"}} type="submit" className="registerbtn">Login</button>
 
                         <div className="container-signin">
                             <p>Don't have an account? <Link to="/signup">Sign Up</Link>.</p>

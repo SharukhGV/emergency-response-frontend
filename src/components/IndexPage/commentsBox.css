@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
 
-.comment-box {
+.dark .comment-box {
   background: linear-gradient(145deg, #1a1a2e, #16213e);
   border: 2px solid #0f3460;
   border-radius: 15px;
@@ -13,7 +13,7 @@
   overflow: hidden;
 }
 
-.comment-box::before {
+.dark .comment-box::before {
   content: '';
   position: absolute;
   top: -50%;
@@ -40,17 +40,17 @@
   }
 }
 
-.comment-header {
+.dark .comment-header {
   display: flex;
   align-items: center;
   margin-bottom: 15px;
 }
 
-.comment-profile {
+.dark .comment-profile {
   margin-right: 15px;
 }
 
-.profile-image {
+.dark .profile-image {
   width: 50px;
   height: 50px;
   border-radius: 50%;
@@ -58,30 +58,30 @@
   box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
 }
 
-.comment-info {
+.dark .comment-info {
   flex-grow: 1;
 }
 
-.comment-date {
+.dark .comment-date {
   font-size: 0.8em;
   color: #00fff5;
   margin-bottom: 5px;
 }
 
-.comment-username {
+.dark .comment-username {
   font-size: 10px;
   font-weight: bold;
   color: #e94560;
 }
 
-.comment-content {
+.dark .comment-content {
   font-size: 1em;
   line-height: 1.4;
   margin-bottom: 15px;
   color: #fff;
 }
 
-.delete-button {
+.dark .delete-button {
   background-color: #e94560;
   color: #fff;
   border: none;
@@ -94,7 +94,110 @@
   transition: all 0.3s ease;
 }
 
-.delete-button:hover {
+.dark .delete-button:hover {
+  background-color: #ff6b6b;
+  box-shadow: 0 0 10px rgba(255, 107, 107, 0.5);
+}
+
+
+/* LIGHT THEME */
+
+
+.light .comment-box {
+  background: linear-gradient(145deg, #282800, #304400);
+  border: 2px solid #0f3460;
+  border-radius: 15px;
+  padding: 20px;
+  margin-bottom: 20px;
+  color: #e94560;
+  font-family: 'Orbitron', sans-serif;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.light .comment-box::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 20px,
+    rgba(255, 238, 0, 0.05) 20px,
+    rgba(0, 255, 255, 0.05) 40px
+  );
+  animation: scan 5s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes scan {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(50%);
+  }
+}
+
+.light .comment-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.light .comment-profile {
+  margin-right: 15px;
+}
+
+.light .profile-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid #fcff2e;
+  box-shadow: 0 0 10px rgba(239, 209, 160, 0.5);
+}
+
+.light .comment-info {
+  flex-grow: 1;
+}
+
+.light .comment-date {
+  font-size: 0.8em;
+  color: #ebfffd;
+  margin-bottom: 5px;
+}
+
+.light .comment-username {
+  font-size: 10px;
+  font-weight: bold;
+  color: #e94560;
+}
+
+.light .comment-content {
+  font-size: 1em;
+  line-height: 1.4;
+  margin-bottom: 15px;
+  color: #f88e8e;
+}
+
+.light .delete-button {
+  background-color: #e94560;
+  color: #fff;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: 'Orbitron', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+.light .delete-button:hover {
   background-color: #ff6b6b;
   box-shadow: 0 0 10px rgba(255, 107, 107, 0.5);
 }

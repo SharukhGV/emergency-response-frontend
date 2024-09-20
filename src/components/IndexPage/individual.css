@@ -1,7 +1,7 @@
 /* Main container */
-.backgroundCardTechy {
-    background: linear-gradient(45deg, #0c0c1d, #1a1a3a);
-    border: 2px solid #00ffff;
+.light .backgroundCardTechy {
+    background: linear-gradient(45deg, #fff4b4, #8080b1);
+    border: 2px solid #030909;
     border-radius: 15px;
     box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
     overflow: hidden;
@@ -10,13 +10,13 @@
 
   }
   
-  .backgroundCardTechy:hover {
+  .light .backgroundCardTechy:hover {
     transform: scale(1.05);
-    box-shadow: 0 0 30px rgba(0, 255, 255, 0.8);
+    box-shadow: 0 0 30px rgba(49, 66, 66, 0.8);
   }
   
   /* Image styles */
-  .imgCardTechy {
+ .light .imgCardTechy {
     width: 375px;
     height: auto;
     filter: brightness(0.8) contrast(1.2);
@@ -32,36 +32,36 @@ border-color: #3c3e3e;
 margin: auto;
   }
 }
-  .imgCardTechy:hover {
+  .light .imgCardTechy:hover {
     filter: brightness(1) contrast(1.1);
   }
   
   /* Individual container */
-  .individualContainertechy {
+  .light .individualContainertechy {
     padding: 15px;
-    background: rgba(0, 0, 0, 0.7);
-    color: #00ffff;
+    background: rgba(0, 0, 0, 0.13);
+    color: #ffffff;
     font-family: 'Orbitron', sans-serif; /* Sci-fi style font */
   }
   
   /* Profile image */
-  .individualProfile {
+  .light .individualProfile {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    border: 2px solid #00ffff;
+    border: 2px solid #112424;
     box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
   }
   
   /* Date style */
-  .individualdate {
+  .light .individualdate {
     font-size: 14px;
     color: #ff00ff; /* Neon pink */
     text-shadow: 0 0 5px rgba(255, 0, 255, 0.7);
   }
   
   /* Name style */
-  .individualContainertechy div {
+  .light .individualContainertechy div {
     margin-top: 10px;
     font-size: 18px;
     font-weight: bold;
@@ -72,13 +72,13 @@ margin: auto;
   }
   
   /* Link styles */
-  a {
+  .light a {
     text-decoration: none;
     color: inherit;
     transition: all 0.3s ease;
   }
   
-  a:hover {
+  .light a:hover {
     color: #ff00ff; /* Neon pink on hover */
     text-shadow: 0 0 10px rgba(255, 0, 255, 0.7);
   }
@@ -86,7 +86,7 @@ margin: auto;
   
 
   /* Parent container for all cards */
-.ultraelem {
+  .light .ultraelem {
   display: flex;
   flex-wrap: wrap;
   justify-content: center; /* Center the cards horizontally */
@@ -98,7 +98,7 @@ margin: auto;
 }
 
 /* Individual cards */
-.backgroundCardTechy {
+.light .backgroundCardTechy {
   display: flex;
   flex-direction: column; /* Stack the card contents vertically */
   align-items: center; /* Center the contents horizontally */
@@ -113,27 +113,170 @@ margin: auto;
 }
 
 /* Center image within the card */
-.imgCardTechy {
+.light .imgCardTechy {
   max-width: 100%; /* Ensure the image doesn't overflow */
   height: auto;
 }
 
 /* Align the inner container contents */
-.individualContainertechy {
+.light .individualContainertechy {
   display: flex;
   flex-direction: column;
   align-items: center; /* Center all items horizontally */
   margin-top: 10px;
 }
 
-.individualProfile {
+.light .individualProfile {
   width: 50px; /* Profile image size */
   height: 50px;
   border-radius: 50%; /* Make the profile image circular */
 }
 
 /* Link styles */
-a {
+.light a {
   text-decoration: none;
   color: inherit;
+}
+
+
+/* DARK THEME */
+
+/* Main container */
+.dark .backgroundCardTechy {
+  background: linear-gradient(45deg, #260a71, #8080b1);
+  border: 2px solid #030909;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  max-width: 375px;
+
+}
+
+.dark .light .backgroundCardTechy:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px rgba(49, 66, 66, 0.8);
+}
+
+/* Image styles */
+.dark .light .imgCardTechy {
+  width: 375px;
+  height: auto;
+  filter: brightness(0.8) contrast(1.2);
+  transition: all 0.3s ease;
+border-radius: 10px;
+border: solid;
+border-color: #3c3e3e;
+  
+}
+
+@media (max-width:755px) {
+  .dark .backgroundCardTechy {
+margin: auto;
+}
+}
+.dark .imgCardTechy:hover {
+  filter: brightness(1) contrast(1.1);
+}
+
+/* Individual container */
+.dark .individualContainertechy {
+  padding: 15px;
+  background: rgba(0, 0, 0, 0.315);
+  color: #00ffff;
+  font-family: 'Orbitron', sans-serif; /* Sci-fi style font */
+  border-radius: 10px;
+}
+
+/* Profile image */
+.dark .individualProfile {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid #00ffff;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+}
+
+/* Date style */
+.dark .individualdate {
+  font-size: 14px;
+  color: #ff00ff; /* Neon pink */
+  text-shadow: 0 0 5px rgba(255, 0, 255, 0.7);
+}
+
+/* Name style */
+.dark .individualContainertechy div {
+  margin-top: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #ffffff;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+/* Link styles */
+.dark a {
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s ease;
+}
+.dark a:hover {
+  color: #ff00ff; /* Neon pink on hover */
+  text-shadow: 0 0 10px rgba(255, 0, 255, 0.7);
+}
+
+
+
+/* Parent container for all cards */
+.ultraelem {
+display: flex;
+flex-wrap: wrap;
+justify-content: center; /* Center the cards horizontally */
+list-style-type: none;
+padding: 0;
+margin: 0;
+gap: 20px; /* Space between cards */
+background-color: #0c0c1d00;
+}
+
+/* Individual cards */
+.dark .backgroundCardTechy {
+display: flex;
+flex-direction: column; /* Stack the card contents vertically */
+align-items: center; /* Center the contents horizontally */
+justify-content: center; /* Center the contents vertically */
+width: 300px; /* Set a fixed width for cards */
+padding: 20px;
+box-sizing: border-box; /* Ensure padding is included in width */
+border: 1px solid #ccc; /* Example border */
+border-radius: 10px; /* Optional: rounded corners */
+background-color: #f9f9f9; /* Example background color */
+text-align: center; /* Center text inside the card */
+}
+
+/* Center image within the card */
+.dark .imgCardTechy {
+max-width: 100%; /* Ensure the image doesn't overflow */
+height: auto;
+}
+
+/* Align the inner container contents */
+.dark .individualContainertechy {
+display: flex;
+flex-direction: column;
+align-items: center; /* Center all items horizontally */
+margin-top: 10px;
+}
+
+.dark .individualProfile {
+width: 50px; /* Profile image size */
+height: 50px;
+border-radius: 50%; /* Make the profile image circular */
+}
+
+/* Link styles */
+.dark a {
+text-decoration: none;
+color: inherit;
 }

@@ -134,7 +134,7 @@ function Register() {
 
           <p>By creating an account you agree to our  <Link to="/termsconditions">Terms & Privacy</Link>.</p>
           <br></br>
-          {!startverify ? <div><button type="submit" className="registerbtn">Register</button></div> : null}
+          {!startverify ? <div><button  style={{padding:"10px"}}  type="submit" className="registerbtn">Register</button></div> : null}
 
           <div className="container-signin">
             <br></br>

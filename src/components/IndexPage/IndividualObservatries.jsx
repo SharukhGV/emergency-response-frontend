@@ -7,7 +7,7 @@ function IndividualObservatries({facility}){
     
     
     
-    <div style={{ fontFamily: "Arial", backgroundColor:"rgba(255, 255, 255, 0)" }} className="card">
+    <div className="card">
           <img src={facility.image} className="card__image" alt="" />
           <div className="card__overlay">
             <div className="card__header">

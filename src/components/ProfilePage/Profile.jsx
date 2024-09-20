@@ -116,16 +116,16 @@ useEffect(()=>{
             alt="Preview"
             style={{ maxWidth: "100%", maxHeight: "200px", marginTop: "10px" }}
           />
-           <p>Click Submit</p>
+           <p>Click "Submit" Below</p>
           </>
         )} </div>  <br></br>
 <ProfileCard dataProfile={dataProfile} loginUsername={loginUsername}/>
 <br></br>
-<div><CloudinaryUploadWidget setFile={setFile} uwConfig={uwConfig} setPublicId={setPublicId} /></div>
+<div style={{border:"solid",borderColor:"whitesmoke", width:"305px", margin:"auto", borderRadius:"10px"}}><CloudinaryUploadWidget setFile={setFile} uwConfig={uwConfig} setPublicId={setPublicId} /></div>
 {matchingProfile ? (
-        <button style={{backgroundColor:"green", width:"300px"}} onClick={editProfile}>Submit</button>
+        <button style={{backgroundColor:"green", width:"305px", border:"solid", borderColor:"whitesmoke"}} onClick={editProfile}>Submit</button>
       ) : (
-        <button style={{backgroundColor:"green", width:"300px"}} onClick={addImage}>Submit</button>
+        <button style={{backgroundColor:"green", width:"305px" , border:"solid", borderColor:"whitesmoke"}} onClick={addImage}>Submit</button>
       )}
 
 <br></br>

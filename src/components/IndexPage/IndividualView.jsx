@@ -196,7 +196,7 @@ maxWidth:"760px"  };
             type="text"
             className="sci-fi-input"
           />
-          <button type="submit" className="sci-fi-button submit">Submit</button>
+          <button style={{backgroundColor:"black", color:"yellowgreen",borderColor:"whitesmoke",border:"solid"}} type="submit" >Submit</button>
         </form>
 
         <div className="sci-fi-comments-list">

@@ -3,7 +3,7 @@ function IndividualPreserves({ preserve }) {
 
   return (
 
-    <div style={{ fontFamily: "Arial", backgroundColor: "rgba(255, 255, 255, 0)" }} className="card">
+    <div className="card">
       <img src={preserve.image} className="card__image" alt="" />
       <div className="card__overlay">
         <div className="card__header">
