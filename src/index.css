@@ -72,7 +72,7 @@ button:focus-visible {
 } */ 
 
 :root {
-  --light-bg: #c1ddd2;
+  --light-bg: #dddbc1;
   --light-text: #0a3d62;
   --light-accent: #3498db;
   

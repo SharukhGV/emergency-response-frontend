@@ -4,9 +4,9 @@ import innerearth from "../../assets/innerearth.png"
 const ReversingCore = () => {
   return (
     <div>
-
+<br></br>
       <h2>Earth's Inner Core Movement</h2>
-    <div style={{ padding: '20px', fontFamily: 'Arial, sans-serif',backgroundColor:"white", borderRadius:"10px", borderColor:"orange",border:"solid" }}>
+    <div style={{ padding: '20px', fontFamily: 'Arial, sans-serif', borderRadius:"10px", borderColor:"orange",border:"solid" }}>
 
       <img style={{maxWidth:"450px"}} src={innerearth}></img>
       <br></br>
@@ -31,7 +31,9 @@ const ReversingCore = () => {
           USC News, 
         </a>"USC Study Confirms the Rotation of Earth’s Inner Core Has Slowed." 
         , accessed September 13th, 2024.</em>
-      </p></div>
+      </p>
+      
+      <br></br></div>
   );
 };
 

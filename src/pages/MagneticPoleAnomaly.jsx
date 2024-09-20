@@ -96,7 +96,7 @@ function MagneticPoleAnomaly(){
 <br></br>
       <h2>Magnetic Pole Anomaly</h2>
       <p>The north Magnetic Pole is moving at an alarming rate. Past rock and fossil records have indicated extiction events at a time when the poles have shifted.</p>
-<div style={{backgroundColor:"white",border:"solid", borderColor:"green", borderRadius:"10px", padding:"15px"}}>
+<div style={{border:"solid", borderColor:"green", borderRadius:"10px", padding:"15px"}}>
       <canvas ref={chartRef} />
       <p style={{color:'darkmagenta'}}>Current North Magnetic Pole (2020): 86°N, 86°W</p>
       <p style={{color:'blue'}}>Current South Magnetic Pole (2020): 64°S, 137°E</p>
@@ -106,7 +106,7 @@ function MagneticPoleAnomaly(){
 <MagneticPoleTable/>
 
 <br></br>
-<div style={{backgroundColor:"white",border:"solid", borderColor:"green", borderRadius:"10px",padding:"15px"}}>
+<div style={{border:"solid", borderColor:"green", borderRadius:"10px",padding:"15px"}}>
 
 <div>
     <p><strong>Field Weakening:</strong></p>
@@ -124,7 +124,7 @@ function MagneticPoleAnomaly(){
 </div>
 </div>
 <br></br>
-<div style={{backgroundColor:"white",border:"solid", borderColor:"orange", borderRadius:"10px",padding:"15px"}}>
+<div style={{border:"solid", borderColor:"orange", borderRadius:"10px",padding:"15px"}}>
   <div >
     <p><strong>Paleomagnetism: What is it?</strong></p>
     <p>Paleomagnetism is the study of the record of Earth's magnetic field preserved in rocks, sediments, and archaeological materials. Magnetic minerals (like magnetite) in igneous and sedimentary rocks align themselves with the Earth's magnetic field at the time of their formation, preserving the direction and intensity of the field.</p>
@@ -144,7 +144,7 @@ function MagneticPoleAnomaly(){
 </div>
 {/* <div style={{border:"solid", borderColor:"blue", padding:"15px"}}><ReversingCore/></div> */}
    <br></br>
-   <div style={{backgroundColor:"white",border:"solid", borderColor:"red", borderRadius:"10px",padding:"15px"}}>
+   <div style={{border:"solid", borderColor:"red", borderRadius:"10px",padding:"15px"}}>
    <div>
     <p><strong>The Great Dying: What happened:</strong></p>
     <p>The largest extinction event in Earth's history, with over 90% of marine species and 70% of terrestrial species wiped out. This event is linked to massive volcanic eruptions (Siberian Traps), resulting in global warming, ocean acidification, and anoxia.</p>

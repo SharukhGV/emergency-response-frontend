@@ -52,6 +52,7 @@ const Earthquake= () => {
           ))}
         </tbody>
       </table>
+      <br></br>
     </div>
   );
 };

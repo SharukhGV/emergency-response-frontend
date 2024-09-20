@@ -4,8 +4,9 @@ import smithsonianmoonimage from "../../assets/smithsonianmoonimage.jpg"
 const MoonquakeInfo = () => {
   return (
     <div >   
+      <br></br>
    <h2>Moon's Shrinkage and Moonquakes</h2>
-    <div style={{border:"solid", borderColor:"blue", padding:"15px", borderRadius:"10px", backgroundColor:"white"}} className="moonquake-info">
+    <div style={{border:"solid", borderColor:"blue", padding:"15px", borderRadius:"10px"}} className="moonquake-info">
 <img style={{maxWidth:"300px", border:"solid", borderRadius:"10px"}} src={smithsonianmoonimage}></img>
 <br></br>
 <em>Smithsonian Magazine: NASA’s Lunar Reconnaissance Orbiter found these thrust faults near the moon’s south pole. T. R. Watters et al., The Planetary Science Journal, 2024, under CC BY 4.0 DEED</em>
@@ -23,7 +24,7 @@ const MoonquakeInfo = () => {
       </div>
 
       </div>
-
+<br></br>
     </div>
   );
 };

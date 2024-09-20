@@ -15,10 +15,10 @@ const SunLifeCycle = () => {
     //   boxShadow: '0 4px 8px rgba(0,0,0,0.1)'
     }}>
 
-      <h2 style={{ color: '#1a237e', paddingBottom: '10px' }}>The Sun's Life Cycle and Current Solar Activity</h2>
+      <h2 style={{ paddingBottom: '10px' }}>The Sun's Life Cycle and Current Solar Activity</h2>
 
-      <section style={{border:"solid", borderRadius:"10px", borderColor:"gray", padding:"15px",backgroundColor:"white"}}>
-        <strong style={{ color: '#303f9f' }}>Will the Sun Lose Its Shimmer?</strong>
+      <section style={{border:"solid", borderRadius:"10px", borderColor:"gray", padding:"15px"}}>
+        <strong >Will the Sun Lose Its Shimmer?</strong>
         <p>
           Yes, the Sun will eventually lose its shimmer, but this process will take billions of years according to scientists. The Sun is currently
           in its <strong>Main Sequence</strong> phase, where it shines by converting hydrogen into helium through nuclear fusion. This will continue for
@@ -26,8 +26,8 @@ const SunLifeCycle = () => {
         </p>
       </section>
 <br></br>
-      <section style={{border:"solid", borderRadius:"10px", backgroundColor:"white", borderColor:"orange", padding:"15px"}}>
-        <strong style={{ color: '#303f9f' }}>The Projected Phases of the Sun's Life Cycle:</strong>
+      <section style={{border:"solid", borderRadius:"10px", borderColor:"orange", padding:"15px"}}>
+        <strong>The Projected Phases of the Sun's Life Cycle:</strong>
         <br></br>
         <br></br>
         <img style={{maxWidth:"300px", borderRadius:"10px",border:"solid"}} src={hrdiagram}></img>
@@ -39,7 +39,6 @@ const SunLifeCycle = () => {
             <div key={index} style={{
               margin: '10px 0',
               padding: '10px',
-              backgroundColor: 'white',
               borderRadius: '5px',
             }}>
               <strong>{phase}:</strong> {getPhaseDescription(phase)}
@@ -48,13 +47,13 @@ const SunLifeCycle = () => {
     
       </section>
       <br></br>
-      <section style={{ marginTop: '20px', backgroundColor: 'white', padding: '20px', borderRadius: '5px', border:"solid", borderColor:"yellow" }}>
-      <h3 style={{ color: '#303f9f' }}>What is the Solar Maximum</h3>
+      <section style={{ marginTop: '20px', padding: '20px', borderRadius: '5px', border:"solid", borderColor:"yellow" }}>
+      <h3>What is the Solar Maximum</h3>
 
 <p>Solar maximums occur due to the Sun's complex magnetic field dynamics, which go through an approximately 11-year cycle. During a solar maximum, heightened solar activity happens because the Sun's magnetic field becomes highly distorted and tangled, causing an increase in sunspots, solar flares, and coronal mass ejections (CMEs). As the Sun’s magnetic field lines twist and reconnect, this intense magnetic activity releases enormous amounts of energy, leading to more frequent and powerful solar events. The heightened activity also results from the Sun reversing its magnetic poles at the peak of the cycle, further driving disruptions and increasing solar emissions. These fluctuations contribute to more intense radiation, influencing space weather and sometimes affecting Earth’s magnetic environment.</p>
 
-      <section style={{ marginTop: '20px', backgroundColor: 'white', padding: '20px', borderRadius: '5px' }}>
-        <h3 style={{ color: '#303f9f' }}>Current Solar Maximum and Activity Anomaly</h3>
+      <section style={{ marginTop: '20px', padding: '20px', borderRadius: '5px' }}>
+        <h3 >Current Solar Maximum and Activity Anomaly</h3>
         <p>
           As of September 2024, we are experiencing an unexpected anomaly in solar activity. Initially, Solar Cycle 25 was predicted to be relatively weak, with a peak expected around July 2025. However, recent observations have led to significant revisions in these forecasts:
         </p>
