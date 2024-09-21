@@ -30,7 +30,7 @@ const Earthquake= () => {
   if (error) return <p>Error: {error}</p>;
 
   return (
-    <div>
+    <div style={{margin:"auto", padding:"15px"}}>
 <br></br>
       <h2>Earthquakes (Magnitude 4.5+)</h2>
      

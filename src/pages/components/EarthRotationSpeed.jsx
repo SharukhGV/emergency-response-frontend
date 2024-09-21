@@ -126,7 +126,7 @@ const EarthRotationSpeed = () => {
           ))}
         </tbody>
       </table> */}
-      <div style={{ height: '400px', width: '800px', margin: '20px auto', border:"solid", borderColor:"green", borderRadius:"10px" }}>
+      <div style={{ height: 'auto', maxWidth: '800px', margin: '20px auto', border:"solid", borderColor:"green", borderRadius:"10px" }}>
         <Line data={chartData} options={chartOptions} />
       </div>
 

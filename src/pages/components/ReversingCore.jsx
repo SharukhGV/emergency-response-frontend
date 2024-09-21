@@ -8,7 +8,7 @@ const ReversingCore = () => {
       <h2>Earth's Inner Core Movement</h2>
     <div style={{ padding: '20px', fontFamily: 'Arial, sans-serif', borderRadius:"10px", borderColor:"orange",border:"solid" }}>
 
-      <img style={{maxWidth:"450px"}} src={innerearth}></img>
+      <img style={{maxWidth:"90%", height:"auto"}} src={innerearth}></img>
       <br></br>
       <em>The inner core began to decrease its speed around 2010, moving slower than the Earth’s surface. <a href="https://today.usc.edu/usc-study-confirms-the-rotation-of-earths-inner-core-has-slowed/">(USC Graphic/Edward Sotelo)</a></em>
       <br></br>
