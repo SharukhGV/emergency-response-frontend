@@ -71,7 +71,7 @@ const DreamNewForm = ({ initialDream = null, accessToken, loginUsername }) => {
     padding: '30px',
     borderRadius: '10px',
     boxShadow: '0 4px 10px rgba(0, 0, 0, 0.1)',
-    fontFamily: "'Dancing Script', cursive",
+    // fontFamily: "'Dancing Script', cursive",
     color: '#333',
     maxWidth: '600px',
     margin: '50px auto',
