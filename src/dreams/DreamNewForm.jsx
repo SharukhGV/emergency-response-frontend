@@ -79,18 +79,19 @@ const DreamNewForm = ({ initialDream = null, accessToken, loginUsername }) => {
     backdropFilter: 'blur(5px)',
     transition: 'all 0.3s ease-in-out',
   }}
->
+> 
+<p>Dreams are important. Some say they are influenced by past events while others say it can also denote future ones</p>
   {accessToken ? (
     <form onSubmit={handleSubmit}>
       {error && (
         <div
           className="error"
           style={{
-            backgroundColor: '#ffdddd',
+            // backgroundColor: '#ffdddd',
             padding: '10px',
             margin: '10px 0',
             borderRadius: '5px',
-            color: '#d9534f',
+            // color: '#d9534f',
           }}
         >
           {error}
@@ -136,7 +137,7 @@ const DreamNewForm = ({ initialDream = null, accessToken, loginUsername }) => {
             border: '1px solid #ccc',
             outline: 'none',
             boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
-            fontFamily: "'Dancing Script', cursive",
+            // fontFamily: "'Dancing Script', cursive",
             transition: 'box-shadow 0.3s ease',
           }}
           onFocus={(e) => (e.target.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.2)')}
@@ -169,7 +170,7 @@ const DreamNewForm = ({ initialDream = null, accessToken, loginUsername }) => {
             border: '1px solid #ccc',
             outline: 'none',
             boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
-            fontFamily: "'Dancing Script', cursive",
+            // fontFamily: "'Dancing Script', cursive",
             transition: 'box-shadow 0.3s ease',
           }}
           onFocus={(e) => (e.target.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.2)')}
@@ -202,7 +203,7 @@ const DreamNewForm = ({ initialDream = null, accessToken, loginUsername }) => {
             border: '1px solid #ccc',
             outline: 'none',
             boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
-            fontFamily: "'Dancing Script', cursive",
+            // fontFamily: "'Dancing Script', cursive",
             transition: 'box-shadow 0.3s ease',
           }}
           onFocus={(e) => (e.target.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.2)')}

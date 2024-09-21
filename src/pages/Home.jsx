@@ -92,8 +92,9 @@ export default function Home({ setEmergencyType, loginUsername, accessToken, tog
 			<h3 style={{fontSize:"13px"}}>{loginUsername}</h3>
 			<div >
 				<br></br>
-				<div className="milkyBand"><div>An informational application powered by astronomy and geology data</div>
+				<div className="milkyBand"><div>An informational apocalyptic signs application powered by astronomy and geology data</div>
 					<div >From USGS, NASA, and user input...</div>
+					<p>Users can also record and share their dreams.</p>
 					<br></br></div>
 				<br></br>
 

@@ -38,12 +38,12 @@ const DreamIndex = () => {
     <div
     className="dream-index"
     style={{
-      backgroundColor: 'rgba(240, 240, 255, 0.7)',
+    //   backgroundColor: 'whitesmoke',
       padding: '30px',
       borderRadius: '10px',
       boxShadow: '0 4px 10px rgba(0, 0, 0, 0.1)',
       fontFamily: "'Roboto', Lato",
-      color: '#333',
+    //   color: '#black',
       maxWidth: '900px',
       margin: '50px auto',
       textAlign: 'center',
@@ -67,7 +67,7 @@ const DreamIndex = () => {
           width: '250px',
           outline: 'none',
           boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
-          fontFamily: "'Dancing Script', cursive",
+        //   fontFamily: "'Dancing Script', cursive",
           transition: 'box-shadow 0.3s ease',
         }}
         onFocus={(e) => (e.target.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.2)')}
@@ -81,7 +81,7 @@ const DreamIndex = () => {
           borderRadius: '5px',
           border: '1px solid #ccc',
           outline: 'none',
-          fontFamily: "'Dancing Script', cursive",
+        //   fontFamily: "'Dancing Script', cursive",
           boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
           transition: 'box-shadow 0.3s ease',
         }}
@@ -100,10 +100,12 @@ const DreamIndex = () => {
           key={dream.id}
           className="dream-card"
           style={{
-            backgroundColor: 'rgba(255, 255, 255, 0.85)',
+            // backgroundColor: 'rgba(255, 255, 255, 0.85)',
             padding: '20px',
             borderRadius: '10px',
             boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+            border:"solid",
+            borderColor:"purple",
             textAlign: 'left',
             transition: 'all 0.3s ease-in-out',
             fontFamily: "'Dancing Script', cursive",

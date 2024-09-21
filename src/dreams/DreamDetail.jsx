@@ -43,7 +43,7 @@ const DreamDetail = (loginUsername) => {
     <div
     className="dream-detail"
     style={{
-      backgroundColor: 'rgba(255, 255, 255, 0.8)',
+    //   backgroundColor: 'black',
       padding: '20px',
       borderRadius: '10px',
       boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
