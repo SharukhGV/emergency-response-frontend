@@ -47,7 +47,7 @@ const DreamDetail = (loginUsername) => {
       padding: '20px',
       borderRadius: '10px',
       boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
-      fontFamily: "'Dancing Script', cursive",
+      fontFamily: "'Roboto', Lato",
       color: '#4a4a4a',
       maxWidth: '600px',
       margin: '50px auto',
