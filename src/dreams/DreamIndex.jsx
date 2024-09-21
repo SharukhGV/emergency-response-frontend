@@ -108,7 +108,7 @@ const DreamIndex = () => {
             borderColor:"purple",
             textAlign: 'left',
             transition: 'all 0.3s ease-in-out',
-            fontFamily: "'Dancing Script', cursive",
+            // fontFamily: "'Dancing Script', cursive",
           }}
         >
           <h2 style={{ fontSize: '1.8rem', color: '#3a3a85' }}>{dream.title}</h2>
