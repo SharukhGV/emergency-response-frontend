@@ -87,7 +87,7 @@ export default function SearchPeople({ loginUsername, setMapMarkers }) {
       margin: '50px auto',
       textAlign: 'center',
     }}>
-      <h1 style={{ fontSize: '2rem', color: '#3a3a85', marginBottom: '20px' }}>Sky Observations</h1>
+      <h1 style={{ fontSize: '2rem', marginBottom: '20px' }}>Sky Observations</h1>
 
       <div className="filters" style={{ marginBottom: '30px' }}>
         <input 

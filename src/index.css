@@ -83,10 +83,7 @@
 }
 
 /* Dark mode paragraphs, divs, links, and headings */
-.dark p, .dark div, .dark a, 
-.dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6 {
-  color: var(--dark-text); /* Sets general text color to dark mode's text */
-}
+/*  */
 
 /* Dark mode links */
 .dark a {

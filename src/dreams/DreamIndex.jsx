@@ -51,7 +51,7 @@ const DreamIndex = () => {
       padding: '30px',
       borderRadius: '10px',
       boxShadow: '0 4px 10px rgba(0, 0, 0, 0.1)',
-      fontFamily: "'Roboto', Lato",
+    //   fontFamily: "'Roboto', Lato",
       maxWidth: '900px',
       margin: '50px auto',
       textAlign: 'center',
