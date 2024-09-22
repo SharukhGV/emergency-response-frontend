@@ -2,7 +2,7 @@
     font-family: Arial, sans-serif;
     max-width: 600px;
     margin: 0 auto;
-    padding: 20px;
+    /* padding: 20px; */
   }
   
   .magnetic-pole-table h2 {
@@ -11,14 +11,14 @@
   }
   
   .magnetic-pole-table table {
-    width: 100%;
+    /* width: 100%; */
     border-collapse: collapse;
     margin-top: 20px;
   }
   
   .magnetic-pole-table th, .magnetic-pole-table td {
     border: 1px solid #ddd;
-    padding: 12px;
+    /* padding: 12px; */
     text-align: center;
   }
   
@@ -35,3 +35,10 @@
   .magnetic-pole-table tr:hover {
     background-color: #200606;
   } */
+
+  
+  @media (max-width: 438px) {
+    .magnetic-pole-table {
+font-size: 10px;
+    }
+  }

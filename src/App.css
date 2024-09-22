@@ -1188,3 +1188,145 @@ input:focus {
     max-width: 300px; /* Max width for card */
   }
 }
+
+
+
+/* Light Theme */
+.light {
+  --table-border: #e1e1e1;
+  --table-header: #3498db;
+  --table-even: #f5f9fc;
+  --table-hover: #d1e8ff;
+  --text-color: #2d3436;
+  --background-color: #ffffff;
+  --button-background: #3498db;
+  --button-hover: #2980b9;
+  --button-text: #ffffff;
+  --footer-background: #f8f9fa;
+}
+
+/* Light buttons */
+.light button {
+  color: var(--button-text);
+  background-color: var(--button-background);
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.light button:hover {
+  background-color: var(--button-hover);
+}
+
+/* Light input submit */
+.light input[type=submit] {
+  background-color: var(--button-background);
+  color: var(--button-text);
+  border-radius: 8px;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1em;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.light input[type=submit]:hover {
+  background-color: var(--button-hover);
+  color: #fff;
+}
+
+/* Light Table */
+.light .userPostTable {
+  --table-border: #ddd;
+  --table-header: #3498db;
+  --table-even: #f5f9fc;
+  --table-hover: #d1e8ff;
+  --text-color: #2d3436;
+  background-color: var(--background-color);
+}
+
+.light .userPostTable th {
+  background-color: var(--table-header);
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+
+.light footer {
+  background-color: var(--footer-background);
+  color: var(--text-color);
+}
+
+
+/* Dark Sci-Fi Theme */
+.dark {
+  --table-border: #ff00ff;
+  --table-header: #1a1a1a;
+  --table-even: #2a2a2a;
+  --table-hover: #3a3a3a;
+  --text-color: #00ff00;
+  --background-color: #0d0d0d;
+  --button-background: #222;
+  --button-hover: #ff0033;
+  --button-text: #e6e6e6;
+  --footer-background: #1a1a1a;
+}
+
+/* Dark Sci-Fi buttons */
+.dark button {
+  color: var(--button-text);
+  background-color: var(--button-background);
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: 2px solid #ff0033;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.dark button:hover {
+  background-color: var(--button-hover);
+  color: #fff;
+}
+
+/* Dark input submit */
+.dark input[type=submit] {
+  background-color: var(--button-background);
+  color: var(--button-text);
+  border-radius: 8px;
+  border: 2px solid #ff0033;
+  padding: 10px 20px;
+  font-size: 1em;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.dark input[type=submit]:hover {
+  background-color: var(--button-hover);
+  color: #fff;
+}
+
+/* Dark Sci-Fi Table */
+.dark .userPostTable {
+  --table-border: #ff00ff;
+  --table-header: #1a1a1a;
+  --table-even: #2a2a2a;
+  --table-hover: #3a3a3a;
+  --text-color: #00ff00;
+  background-color: var(--background-color);
+  border-color: #ff00ff;
+}
+
+.dark .userPostTable th {
+  background-color: var(--table-header);
+  color: var(--text-color);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: bold;
+  text-shadow: 0 0 5px var(--text-color);
+}
+
+.dark footer {
+  background-color: var(--footer-background);
+  color: var(--text-color);
+}
