@@ -1,163 +1,109 @@
-/* :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
-}
-
-a {
-  font-weight: 500;
-  color: #64e8ff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #53f2c5;
-}
-
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #7c031a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-  width: 100%;
-}
-button:hover {
-  border-color: #b4ffc6;
-  background-color: #06ff65;
-  color: #7c031a;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
-} */ 
-
+/* Root variables for both light and dark modes */
 :root {
-  --light-bg: #dddbc1;
-  --light-text: #0a3d62;
-  --light-accent: #3498db;
+  /* Light mode color palette */
+  --light-bg: #dddbc1; /* Background color for light mode */
+  --light-text: #0a3d62; /* Text color for light mode */
+  --light-accent: #3498db; /* Accent color for light mode (used in links, headings, etc.) */
   
-  --dark-bg: #0a0a0a;
-  --dark-text: #00ff00;
-  --dark-accent: #ff00ff;
+  /* Dark mode color palette */
+  --dark-bg: #0a0a0a; /* Background color for dark mode */
+  --dark-text: #00ff00; /* Text color for dark mode */
+  --dark-accent: #ff00ff; /* Accent color for dark mode (used in links, headings, etc.) */
   
-  --glow: 0 0 10px;
-  --font-sci-fi: 'Orbitron', 'Roboto Mono', Arial, sans-serif;
+  /* Glow effect for hover states */
+  --glow: 0 0 10px; /* Glow effect applied to text and accents */
+  
+  /* Sci-fi style font */
+  --font-sci-fi: 'Orbitron', 'Roboto Mono', Arial, sans-serif; /* Sci-fi fonts used across both themes */
 }
 
+/* Light mode styling */
 .light {
-  background-color: var(--light-bg);
-  color: var(--light-text);
+  background-color: var(--light-bg); /* Sets the background to light mode's background */
+  color: var(--light-text); /* Sets text color to light mode's text */
   display: fixed;
   margin: auto;
   text-align: center;
-  font-family: var(--font-sci-fi);
-  transition: all 0.3s ease;
+  font-family: var(--font-sci-fi); /* Uses the sci-fi font family */
+  transition: all 0.3s ease; /* Smooth transition for theme changes */
 }
 
+/* Light mode Navbar with a blur effect and semi-transparent background */
 .light .NavBarContainer {
-  background-color: rgba(52, 152, 219, 0.2);
-  backdrop-filter: blur(5px);
+  background-color: rgba(52, 152, 219, 0.2); /* Semi-transparent light blue */
+  backdrop-filter: blur(5px); /* Adds a blur effect behind the navbar */
 }
 
+/* Light mode strong elements in the navbar (like branding text) */
 .light .NavBarContainer strong {
-  color: var(--light-accent);
-  text-shadow: var(--glow) var(--light-accent);
+  color: var(--light-accent); /* Accent color for important text */
+  text-shadow: var(--glow) var(--light-accent); /* Adds glow to important text */
 }
 
+/* Light mode links */
 .light a {
-  color: var(--light-accent);
-  text-decoration: none;
-  transition: all 0.3s ease;
+  color: var(--light-accent); /* Sets link color to light accent */
+  text-decoration: none; /* Removes underline from links */
+  transition: all 0.3s ease; /* Smooth hover transition */
 }
 
+/* Hover effect for links in light mode */
 .light a:hover {
-  text-shadow: var(--glow) var(--light-accent);
+  text-shadow: var(--glow) var(--light-accent); /* Adds a glow effect on hover */
 }
 
+/* Light mode headings */
 .light h1, .light h2, .light h3, .light h4, .light h5, .light h6 {
-  color: var(--light-accent);
-  text-transform: uppercase;
-  letter-spacing: 2px;
+  color: var(--light-accent); /* Uses accent color for headings */
+  text-transform: uppercase; /* Transforms headings to uppercase */
+  letter-spacing: 2px; /* Increases spacing between letters for a futuristic look */
 }
 
+/* Dark mode styling */
 .dark {
-  background-color: var(--dark-bg);
-  color: var(--dark-text);
+  background-color: var(--dark-bg); /* Sets the background to dark mode's background */
+  color: var(--dark-text); /* Sets text color to dark mode's text */
   display: fixed;
   margin: auto;
   text-align: center;
-  font-family: var(--font-sci-fi);
-  transition: all 0.3s ease;
+  font-family: var(--font-sci-fi); /* Uses the sci-fi font family */
+  transition: all 0.3s ease; /* Smooth transition for theme changes */
 }
 
+/* Dark mode Navbar with a blur effect and semi-transparent background */
 .dark .NavBarContainer {
-  background-color: rgba(255, 0, 255, 0.2);
-  backdrop-filter: blur(5px);
+  background-color: rgba(255, 0, 255, 0.2); /* Semi-transparent magenta */
+  backdrop-filter: blur(5px); /* Adds a blur effect behind the navbar */
 }
 
+/* Dark mode strong elements in the navbar */
 .dark .NavBarContainer strong {
-  color: var(--dark-accent);
-  text-shadow: var(--glow) var(--dark-accent);
+  color: var(--dark-accent); /* Accent color for important text */
+  text-shadow: var(--glow) var(--dark-accent); /* Adds glow to important text */
 }
 
+/* Dark mode paragraphs, divs, links, and headings */
 .dark p, .dark div, .dark a, 
 .dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6 {
-  color: var(--dark-text);
+  color: var(--dark-text); /* Sets general text color to dark mode's text */
 }
 
+/* Dark mode links */
 .dark a {
-  text-decoration: none;
-  transition: all 0.3s ease;
+  text-decoration: none; /* Removes underline from links */
+  transition: all 0.3s ease; /* Smooth hover transition */
 }
 
+/* Hover effect for links in dark mode */
 .dark a:hover {
-  color: var(--dark-accent);
-  text-shadow: var(--glow) var(--dark-accent);
+  color: var(--dark-accent); /* Changes link color on hover */
+  text-shadow: var(--glow) var(--dark-accent); /* Adds a glow effect on hover */
 }
 
+/* Dark mode headings */
 .dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6 {
-  color: var(--dark-accent);
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  text-shadow: var(--glow) var(--dark-accent);
+  color: var(--dark-accent); /* Uses accent color for headings */
+  text-transform: uppercase; /* Transforms headings to uppercase */
+  letter-spacing: 2px; /* Increases spacing between letters for a futuristic look */
+  text-shadow: var(--glow) var(--dark-accent); /* Adds glow to headings */
 }
