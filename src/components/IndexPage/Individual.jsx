@@ -48,12 +48,12 @@ function Individual({ loginUsername, id, person }) {
       </div>
       <div className="post-content" style={{ flex: 1 }}>
         <h2 style={{ fontSize: '1.2rem', marginBottom: '5px' }}>
-          <Link to={`/index/${id}`} style={{ color: '#3a3a85', textDecoration: 'none' }}>{person.full_name}</Link>
+          <Link to={`/index/${id}`} style={{ textDecoration: 'none' }}>{person.full_name}</Link>
         </h2>
-        <p style={{ fontSize: '0.9rem', color: '#666', marginBottom: '5px' }}>
+        <p style={{ fontSize: '0.9rem', marginBottom: '5px' }}>
           {parseDATE(person.date)} - {person.skybrightness}
         </p>
-        <p style={{ fontSize: '1rem', color: '#333' }}>
+        <p style={{ fontSize: '1rem' }}>
           {person.description && person.description.substring(0, 100)}...
         </p>
       </div>
