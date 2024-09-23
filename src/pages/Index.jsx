@@ -38,10 +38,10 @@ function Index({ setMapMarkers, mapMarkers, location, setAccessToken, loginUsern
     <>
      <div className="sci-fi-container">
   <GoogleMaps preserveMarkers={preserveMarkers} mapMarkers={mapMarkers} observatoryMarkers={observatoryMarkers} />
-  <br />
+  {/* <br />
   <button style={{border:"solid", borderColor:"whitesmoke"}} className="legend-button" onClick={legendToggle}>🧭</button>
-  <br />
-  <div>
+  <br /> */}
+  {/* <div>
     <h1>Astronomy Atlas</h1>
     <h3>Points of Interest</h3>
     <br />
@@ -70,7 +70,8 @@ function Index({ setMapMarkers, mapMarkers, location, setAccessToken, loginUsern
     {darkPreserve === 1 && <SearchPreserves preserveMarkers={preserveMarkers} setPreserveMarkers={setPreserveMarkers} />}
     {darkPreserve === 2 && <SearchPeople setAccessToken={setAccessToken} loginUsername={loginUsername} location={location} mapMarkers={mapMarkers} setMapMarkers={setMapMarkers} />}
     {darkPreserve === 3 && <SearchObservatories observatoryMarkers={observatoryMarkers} setObservatoryMarker={setObservatoryMarker} />}
-  </div>
+  </div> */}
+  <SearchPeople e setAccessToken={setAccessToken} loginUsername={loginUsername} location={location} mapMarkers={mapMarkers} setMapMarkers={setMapMarkers}/>
 </div>
     </>
   );

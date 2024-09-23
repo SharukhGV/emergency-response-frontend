@@ -195,11 +195,11 @@ function IndividualView({ loginUsername }) {
   return (
     <div style={containerStyle}>
       <div style={headerStyle}>
-        <img
+        {/* <img
           style={profileImageStyle}
           src={data.image_url || mountainsky}
           alt={data.full_name}
-        />
+        /> */}
         <div>
           <h2 style={titleStyle}>{data.full_name}</h2>
           <p style={usernameStyle}>Author: {data.username}</p>
