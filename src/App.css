@@ -1546,17 +1546,31 @@ h1, h2, h3, h4, h5, h6, .modal-container-title {
   height: 20px;
   background-color: #bbb;
   position: relative;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
 
-.satellite-panels {
+.satellite-body::before,
+.satellite-body::after {
+  content: '';
   position: absolute;
-  top: 50%;
-  left: 100%;
-  width: 60px;
-  height: 12px;
-  background-color: #4a90e2;
-  transform: translateY(-50%);
+  width: 10px;
+  height: 10px;
+  background-color: #888;
+  border-radius: 50%;
+  top: 5px;
 }
+
+.satellite-body::before {
+  left: 5px;
+}
+
+.satellite-body::after {
+  right: 5px;
+}
+
+
+
 
 @keyframes twinkle {
   0% { opacity: 0.5; }

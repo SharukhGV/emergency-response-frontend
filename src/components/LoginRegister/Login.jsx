@@ -45,7 +45,9 @@ function Login({ setLoginUsername, loginUsername,toggleLOGIN,settoggleLOGIN, set
 
 
     return (
-        <div className="loginCONTAIN"> <h1>Login</h1>
+        <div className="loginCONTAIN">
+            <br></br>
+             <h1>Login</h1>
             <p>Please fill in this form to Login to an account.</p>
 {/* <div><img style={{width:"300px"}} src={hiveLOGO}></img></div> */}
 {errorMessage ? <p style={{color:"red"}}>Incorrect Credentials</p>:null}
