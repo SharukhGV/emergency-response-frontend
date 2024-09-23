@@ -214,19 +214,20 @@ function IndividualView({ loginUsername }) {
         />
       </div>
 
-      <div style={mapStyles}>
-        {!!data.latitude ? (
-          <LoadScript googleMapsApiKey={import.meta.env.VITE_GOOGLE_MAPS_API_KEY}>
-            <GoogleMap
-              mapContainerStyle={mapStyles}
-              zoom={6}
-              center={{ lat: data.latitude, lng: data.longitude }}
-            />
-          </LoadScript>
-        ) : (
-          <img style={imageStyle} src={noMap} alt="No Map Available" />
-        )}
-      </div>
+      
+<div style={mapStyles}>
+  {!!data.latitude && !!data.longitude && !isNaN(data.latitude) && !isNaN(data.longitude) ? (
+    <LoadScript googleMapsApiKey={import.meta.env.VITE_GOOGLE_MAPS_API_KEY}>
+      <GoogleMap
+        mapContainerStyle={mapStyles}
+        zoom={6}
+        center={{ lat: parseFloat(data.latitude), lng: parseFloat(data.longitude) }}
+      />
+    </LoadScript>
+  ) : (
+    <img style={imageStyle} src={noMap} alt="No Map Available" />
+  )}
+</div>
 
       <table style={tableStyle}>
         <tbody>
