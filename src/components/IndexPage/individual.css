@@ -1,282 +1,208 @@
-/* Main container */
-.light .backgroundCardTechy {
-    background: linear-gradient(45deg, #fff4b4, #8080b1);
-    border: 2px solid #030909;
-    border-radius: 15px;
-    box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
-    overflow: hidden;
-    transition: all 0.3s ease;
-    max-width: 375px;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
 
-  }
-  
-  .light .backgroundCardTechy:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 30px rgba(49, 66, 66, 0.8);
-  }
-  
-  /* Image styles */
- .light .imgCardTechy {
-    width: 375px;
-    height: auto;
-    filter: brightness(0.8) contrast(1.2);
-    transition: all 0.3s ease;
-border-radius: 10px;
-border: solid;
-border-color: #3c3e3e;
-    
-  }
-  
-@media (max-width:755px) {
-  .backgroundCardTechy {
-margin: auto;
-  }
-}
-  .light .imgCardTechy:hover {
-    filter: brightness(1) contrast(1.1);
-  }
-  
-  /* Individual container */
-  .light .individualContainertechy {
-    padding: 15px;
-    background: rgba(0, 0, 0, 0.13);
-    color: #ffffff;
-    font-family: 'Orbitron', sans-serif; /* Sci-fi style font */
-  }
-  
-  /* Profile image */
-  .light .individualProfile {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    border: 2px solid #112424;
-    box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
-  }
-  
-  /* Date style */
-  .light .individualdate {
-    font-size: 14px;
-    color: #ff00ff; /* Neon pink */
-    text-shadow: 0 0 5px rgba(255, 0, 255, 0.7);
-  }
-  
-  /* Name style */
-  .light .individualContainertechy div {
-    margin-top: 10px;
-    font-size: 18px;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    color: #ffffff;
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
-  }
-  
-  /* Link styles */
-  .light a {
-    text-decoration: none;
-    color: inherit;
-    transition: all 0.3s ease;
-  }
-  
-  .light a:hover {
-    color: #ff00ff; /* Neon pink on hover */
-    text-shadow: 0 0 10px rgba(255, 0, 255, 0.7);
-  }
-
-  
-
-  /* Parent container for all cards */
-  .light .ultraelem {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center; /* Center the cards horizontally */
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  gap: 20px; /* Space between cards */
-  background-color: #9191ce00;
-}
-
-/* Individual cards */
-.light .backgroundCardTechy {
-  display: flex;
-  flex-direction: column; /* Stack the card contents vertically */
-  align-items: center; /* Center the contents horizontally */
-  justify-content: center; /* Center the contents vertically */
-  width: 300px; /* Set a fixed width for cards */
-  padding: 20px;
-  box-sizing: border-box; /* Ensure padding is included in width */
-  border: 1px solid #ccc; /* Example border */
-  border-radius: 10px; /* Optional: rounded corners */
-  background-color: #f9f9f9; /* Example background color */
-  text-align: center; /* Center text inside the card */
-}
-
-/* Center image within the card */
-.light .imgCardTechy {
-  max-width: 100%; /* Ensure the image doesn't overflow */
-  height: auto;
-}
-
-/* Align the inner container contents */
-.light .individualContainertechy {
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Center all items horizontally */
-  margin-top: 10px;
-}
-
-.light .individualProfile {
-  width: 50px; /* Profile image size */
-  height: 50px;
-  border-radius: 50%; /* Make the profile image circular */
-}
-
-/* Link styles */
-.light a {
-  text-decoration: none;
-  color: inherit;
-}
-
-
-/* DARK THEME */
-
-/* Main container */
-.dark .backgroundCardTechy {
-  background: linear-gradient(45deg, #260a71, #8080b1);
-  border: 2px solid #030909;
-  border-radius: 15px;
-  box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+/* Common styles */
+.backgroundCardTechy {
+  border-radius: 12px;
   overflow: hidden;
   transition: all 0.3s ease;
-  max-width: 375px;
-
+  max-width: 350px;
+  margin: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.dark .light .backgroundCardTechy:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 30px rgba(49, 66, 66, 0.8);
+.backgroundCardTechy:hover {
+  transform: translateY(-5px);
 }
 
-/* Image styles */
-.dark .light .imgCardTechy {
-  width: 375px;
-  height: auto;
-  filter: brightness(0.8) contrast(1.2);
+.imgCardTechy {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
   transition: all 0.3s ease;
-border-radius: 10px;
-border: solid;
-border-color: #ffffff;
-  
 }
 
-@media (max-width:755px) {
-  .dark .backgroundCardTechy {
-margin: auto;
-}
-}
-.dark .imgCardTechy:hover {
-  filter: brightness(1) contrast(1.1);
+.individualContainertechy {
+  padding: 20px;
+  font-family: 'Roboto', sans-serif;
 }
 
-/* Individual container */
-.dark .individualContainertechy {
-  padding: 15px;
-  background: rgba(0, 0, 0, 0.315);
-  color: #00ffff;
-  font-family: 'Orbitron', sans-serif; /* Sci-fi style font */
-  border-radius: 10px;
-}
-
-/* Profile image */
-.dark .individualProfile {
-  width: 50px;
-  height: 50px;
+.individualProfile {
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
-  border: 2px solid #00ffff;
-  box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+  margin-bottom: 10px;
 }
 
-/* Date style */
-.dark .individualdate {
+.individualdate {
   font-size: 14px;
-  color: #ff00ff; /* Neon pink */
-  text-shadow: 0 0 5px rgba(255, 0, 255, 0.7);
+  margin-bottom: 5px;
 }
 
-/* Name style */
-.dark .individualContainertechy div {
+.individualContainertechy div {
   margin-top: 10px;
   font-size: 18px;
   font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  color: #ffffff;
-  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
 
-/* Link styles */
-.dark a {
+a {
   text-decoration: none;
   color: inherit;
   transition: all 0.3s ease;
 }
-.dark a:hover {
-  color: #ff00ff; /* Neon pink on hover */
-  text-shadow: 0 0 10px rgba(255, 0, 255, 0.7);
-}
 
-
-
-/* Parent container for all cards */
 .ultraelem {
-display: flex;
-flex-wrap: wrap;
-justify-content: center; /* Center the cards horizontally */
-list-style-type: none;
-padding: 0;
-margin: 0;
-gap: 20px; /* Space between cards */
-background-color: #0c0c1d00;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style-type: none;
+  padding: 20px;
+  margin: 0;
+  gap: 30px;
 }
 
-/* Individual cards */
+/* Light theme */
+.light .backgroundCardTechy {
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+}
+
+.light .individualContainertechy {
+  background: #f9f9f9;
+  color: #333333;
+}
+
+.light .individualdate {
+  color: #666666;
+}
+
+.light a:hover {
+  color: #007bff;
+}
+
+/* Dark theme */
 .dark .backgroundCardTechy {
-display: flex;
-flex-direction: column; /* Stack the card contents vertically */
-align-items: center; /* Center the contents horizontally */
-justify-content: center; /* Center the contents vertically */
-width: 300px; /* Set a fixed width for cards */
-padding: 20px;
-box-sizing: border-box; /* Ensure padding is included in width */
-border: 1px solid #ccc; /* Example border */
-border-radius: 10px; /* Optional: rounded corners */
-background-color: #f9f9f9; /* Example background color */
-text-align: center; /* Center text inside the card */
+  background: #2c2c2c;
+  border: 1px solid #444444;
 }
 
-/* Center image within the card */
-.dark .imgCardTechy {
-max-width: 100%; /* Ensure the image doesn't overflow */
-height: auto;
-}
-
-/* Align the inner container contents */
 .dark .individualContainertechy {
-display: flex;
-flex-direction: column;
-align-items: center; /* Center all items horizontally */
-margin-top: 10px;
+  background: #1e1e1e;
+  color: #e0e0e0;
 }
 
-.dark .individualProfile {
-width: 50px; /* Profile image size */
-height: 50px;
-border-radius: 50%; /* Make the profile image circular */
+.dark .individualdate {
+  color: #b0b0b0;
 }
 
-/* Link styles */
-.dark a {
-text-decoration: none;
-color: inherit;
+.dark a:hover {
+  color: #4da6ff;
+}
+
+/* Pagination styles */
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  padding: 10px;
+}
+
+.pagination button {
+  background: none;
+  border: none;
+  font-size: 16px;
+  margin: 0 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.light .pagination button {
+  color: #333333;
+}
+
+.light .pagination button:hover {
+  color: #007bff;
+}
+
+.dark .pagination button {
+  color: #e0e0e0;
+}
+
+.dark .pagination button:hover {
+  color: #4da6ff;
+}
+
+/* Individual view page styles */
+.individual-view {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 30px;
+  border-radius: 12px;
+}
+
+.light .individual-view {
+  background: #ffffff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dark .individual-view {
+  background: #2c2c2c;
+  box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
+}
+
+.individual-view-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.individual-view-profile {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.individual-view-info h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.individual-view-date {
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.individual-view-image {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+.individual-view-description {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .backgroundCardTechy {
+    max-width: 100%;
+  }
+
+  .individual-view {
+    padding: 20px;
+  }
+
+  .individual-view-header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .individual-view-profile {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
 }

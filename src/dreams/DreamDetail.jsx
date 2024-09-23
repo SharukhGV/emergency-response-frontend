@@ -43,7 +43,7 @@ const DreamDetail = (loginUsername) => {
     <div
     className="dream-detail"
     style={{
-    //   backgroundColor: 'black',
+      // backgroundColor:"#f5f5f5",
       padding: '20px',
       borderRadius: '10px',
       boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
@@ -92,6 +92,26 @@ const DreamDetail = (loginUsername) => {
     >
       Back to All Dreams
     </Link>
+    <span>  </span>
+    {loginUsername.loginUsername === dream.username && (<Link
+      to={`/dreams/${id}/edit`}
+      style={{
+        display: 'inline-block',
+        marginTop: '20px',
+        marginRight: '10px',
+        padding: '10px 15px',
+        backgroundColor: '#4caf50',
+        color: '#fff',
+        textDecoration: 'none',
+        borderRadius: '5px',
+        transition: 'background-color 0.3s ease-in-out',
+      }}
+      onMouseOver={(e) => (e.target.style.backgroundColor = '#45a049')}
+      onMouseOut={(e) => (e.target.style.backgroundColor = '#4caf50')}
+    >
+      Edit Dream
+    </Link>)}
+
     {loginUsername.loginUsername === dream.username && (
       <button
         className="delete-button"
@@ -112,6 +132,7 @@ const DreamDetail = (loginUsername) => {
       >
         Delete
       </button>
+      
     )}
   </div>
   

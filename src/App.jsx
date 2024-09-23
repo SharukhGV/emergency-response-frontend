@@ -28,6 +28,7 @@ import Earthquake from './pages/Earthquake';
 import DreamNewForm from './dreams/DreamNewForm';
 import DreamIndex from './dreams/DreamIndex';
 import DreamDetail from './dreams/DreamDetail';
+import EditDreams from './dreams/EditDreams';
 export default function App() {
 
   const [lat, setLatitude] = useState(null);
@@ -106,6 +107,7 @@ export default function App() {
           {!!accessToken ? <Route path="/dreamnewform" element={<DreamNewForm settoggleLOGIN={settoggleLOGIN} toggleLOGIN={toggleLOGIN} accessToken={accessToken} setAccessToken={setAccessToken} loginUsername={loginUsername} setLoginUsername={setLoginUsername} />} /> : null}
           {!!accessToken ? <Route path="/dreams" element={<DreamIndex/>} />: null}
            {!!accessToken ? <Route path="/dreams/:id" element={<DreamDetail accessToken={accessToken} setAccessToken={setAccessToken} loginUsername={loginUsername} setLoginUsername={setLoginUsername}/>} />: null}
+          {!!accessToken ? <Route path="/dreams/:id/edit" element={<EditDreams />} /> : null}
           <Route path="/magneticpoleanomaly" element={<MagneticPoleAnomaly/>} />
     <Route path="/sunlifecycle" element={<SunLifeCycle/>} />
     <Route path="/mooninfo" element={<MoonquakeInfo/>} />
