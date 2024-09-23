@@ -13,6 +13,8 @@ export default function Home({ setEmergencyType, loginUsername, accessToken, tog
 	const [modal3, setModal3] = useState(false)
 	const [modal4, setModal4] = useState(false)
 	const [modal5, setModal5] = useState(false)
+	const [modal6, setModal6] = useState(false)
+
 	const [modalButtons, setModalButtons] = useState(false)
 
 
@@ -40,7 +42,9 @@ export default function Home({ setEmergencyType, loginUsername, accessToken, tog
 
 		setModal5(!modal5)
 	}
-
+	function modal6Click() {
+		setModal6(!modal6)
+	  }
 
 
 	const emergencySETTER = (event) => {
@@ -65,19 +69,14 @@ export default function Home({ setEmergencyType, loginUsername, accessToken, tog
 
 	function renderModalButtons() {
 		return (
-
 			<div className="buttonPollCont">
-				<button className="lowlight" onClick={modal1Click}>Low Light Pollution</button>        <br></br>
-
-				<button className="moderatelight" onClick={modal2Click}>Moderate Light Pollution</button>        <br></br>
-
-				<button className="highlight" onClick={modal3Click}>High Light Pollution</button>        <br></br>
-
-				<button className="northernLights" onClick={modal4Click}>Northern Lights</button>        <br></br>
-
-				<button className="fireBall" onClick={modal5Click}>Meteoric Events</button>
-
-				<button className="otherCategory" value="Anything Else" onClick={emergencySETTER}>Anything Else</button>
+			<button style={{height:"50px", borderRadius:"20px", width:"350px", backgroundColor:"brown", color:"white"}} className="earthTremors" onClick={modal1Click}>Earth Tremors</button>        <br></br>
+			<button style={{height:"50px", borderRadius:"20px", width:"350px", backgroundColor:"gray", color:"white"}} className="migratoryPatterns" onClick={modal2Click}>Migratory Pattern Shifts</button>        <br></br>
+			<button style={{height:"50px", borderRadius:"20px", width:"350px", backgroundColor:"darkorange", color:"white"}} className="invasiveSpecies" onClick={modal3Click}>Invasive Species Sightings</button>        <br></br>
+			<button style={{height:"50px", borderRadius:"20px", width:"350px", backgroundColor:"darkblue", color:"white"}} className="unusualWeather" onClick={modal4Click}>Unusual Weather</button>        <br></br>
+			<button style={{height:"50px",width:"350px",borderRadius:"20px", backgroundColor:"darkgreen", color:"white"}} className="wildlifeAnomalies" onClick={modal5Click}>Wildlife Anomalies</button>
+			<button style={{height:"50px",width:"350px",borderRadius:"20px", backgroundColor:"blue", color:"white"}} className="waterLevelChanges" value="Water Level Changes" onClick={modal6Click}>Water Level Changes</button>
+		<button style={{height:"50px",width:"350px",borderRadius:"20px", backgroundColor:"#000000", color:"white"}} className="otherCategory" value="Anything Else" onClick={emergencySETTER}>Anything Else</button>
 
 				<br></br></div>
 		)
@@ -92,13 +91,11 @@ export default function Home({ setEmergencyType, loginUsername, accessToken, tog
 			<h3 style={{fontSize:"13px"}}>{loginUsername}</h3>
 			<div >
 				<br></br>
-				<div className="milkyBand"><div>An informational apocalyptic signs application powered by astronomy and geology data</div>
-					<div >From USGS, NASA, and user input...</div>
-					<p>Users can also record and share their dreams.</p>
+				<div className="milkyBand">This application aims to address the problem of environmental destruction and societal ignorance by raising awareness through symbolic representations of astronomical, biological, and geologic anomalies in dreams, encouraging users to reflect on human behaviors that contribute to these issues and inspiring action to prevent or prepare for potential apocalyptic scenarios.
 					<br></br></div>
 				<br></br>
 
-				{modalButtons ? <button style={{border:"solid", borderColor:"whitesmoke"}} onClick={boolModalSet}>Report Celestial Sightings</button> : <button style={{border:"solid", borderColor:"whitesmoke"}} onClick={boolModalSet}>Toggle Celestial Report Buttons</button>}
+				{modalButtons ? <button style={{border:"solid", borderColor:"whitesmoke"}} onClick={boolModalSet}>Report Anomaly Sightings</button> : <button style={{border:"solid", borderColor:"whitesmoke"}} onClick={boolModalSet}>Toggle Celestial Report Buttons</button>}
 
 				<br></br>
 				<br></br>
@@ -108,153 +105,149 @@ export default function Home({ setEmergencyType, loginUsername, accessToken, tog
 			</div>
 <HomeAnomaly/>
 
-			{modal1 ?
-				<div className="modal">
-					<article className="modal-container">
-						<header className="modal-container-header">
-							<h1 className="modal-container-title">
-								🌌 No Light Pollution
-							</h1>
+{modal1 ?
+  <div className="modal">
+    <article className="modal-container">
+      <header className="modal-container-header">
+        <h1 className="modal-container-title">
+          🌋 Earth Tremors
+        </h1>
+      </header>
+      <section className="modal-container-body rtf">
+        <h2>Seismic Activity</h2>
+        <h3>Description</h3>
+        <p>Earth tremors are minor seismic events that can be felt as vibrations or shaking of the ground. They may range from barely noticeable to more pronounced movements, depending on their intensity and proximity. These tremors can be caused by various factors, including tectonic plate movements, volcanic activity, or human-induced activities like mining or fracking.</p>
+        <h3>What to Look For</h3>
+        <p>Pay attention to subtle vibrations, rattling of objects, or swaying of hanging items. In stronger tremors, you might experience difficulty standing or see visible movement in structures.</p>
+        <p>If you've experienced earth tremors, click "Create Entry" to report your observation.</p>
+      </section>
+      <footer className="modal-container-footer">
+        <button className="button is-ghost" style={{ backgroundColor: "Green", color: "white", fontSize: "10px" }} id='natural2' value="Earth Tremors" onClick={emergencySETTER}>Create Entry</button>
+        <button style={{ fontSize: "10px" }} onClick={modal1Click} className="button is-primary">Close</button>
+      </footer>
+    </article>
+  </div>
+: null}
 
-						</header>
-						<section className="modal-container-body rtf">
-							<h2>0-20% Light Disturbances</h2>
+{modal2 ?
+  <div className="modal">
+    <article className="modal-container">
+      <header className="modal-container-header">
+        <h1 className="modal-container-title">
+          🐦 Migratory Pattern Shifts
+        </h1>
+      </header>
+      <section className="modal-container-body rtf">
+        <h2>Changes in Animal Migration</h2>
+        <h3>Description</h3>
+        <p>Migratory pattern shifts occur when animals change their usual migration routes, timing, or destinations. These shifts can be indicators of environmental changes, including climate change, habitat loss, or alterations in food availability. Observing these changes can provide valuable data on ecosystem health and global environmental trends.</p>
+        <h3>What to Look For</h3>
+        <p>Notice unusual presence or absence of migratory species in your area, changes in arrival or departure times of seasonal visitors, or unexpected species appearing in your region.</p>
+        <p>If you've observed changes in migratory patterns, click "Create Entry" to report your observation.</p>
+      </section>
+      <footer className="modal-container-footer">
+        <button className="button is-ghost" style={{ backgroundColor: "Green", color: "white", fontSize: "10px" }} id='natural2' value="Migratory Pattern Shifts" onClick={emergencySETTER}>Create Entry</button>
+        <button style={{ fontSize: "10px" }} onClick={modal2Click} className="button is-primary">Close</button>
+      </footer>
+    </article>
+  </div>
+: null}
 
-							<h3>Sky Description</h3>
+{modal3 ?
+  <div className="modal">
+    <article className="modal-container">
+      <header className="modal-container-header">
+        <h1 className="modal-container-title">
+          🌱 Invasive Species Sightings
+        </h1>
+      </header>
+      <section className="modal-container-body rtf">
+        <h2>Non-Native Species Observations</h2>
+        <h3>Description</h3>
+        <p>Invasive species are plants, animals, or other organisms that are not native to an ecosystem and can cause harm to the environment, economy, or human health. These species can disrupt local ecosystems, outcompete native species, and alter habitats. Early detection of invasive species is crucial for effective management and control.</p>
+        <h3>What to Look For</h3>
+        <p>Watch for unfamiliar plants or animals in your area, especially those that seem to be spreading rapidly or outcompeting native species. Pay attention to changes in local flora and fauna.</p>
+        <p>If you've spotted a potential invasive species, click "Create Entry" to report your sighting.</p>
+      </section>
+      <footer className="modal-container-footer">
+        <button className="button is-ghost" style={{ backgroundColor: "Green", color: "white", fontSize: "10px" }} id='natural2' value="Invasive Species Sightings" onClick={emergencySETTER}>Create Entry</button>
+        <button style={{ fontSize: "10px" }} onClick={modal3Click} className="button is-primary">Close</button>
+      </footer>
+    </article>
+  </div>
+: null}
 
-							<p>In areas with minimal light pollution, the night sky remains profoundly dark and provides an optimal environment for stargazing. The Milky Way is a prominent feature, stretching across the celestial dome, and thousands of stars are visible in intricate detail. Fainter constellations and deep-sky objects reveal themselves against the cosmic canvas.</p>
-							<h3>Approximate Star Visibility</h3>
+{modal4 ?
+  <div className="modal">
+    <article className="modal-container">
+      <header className="modal-container-header">
+        <h1 className="modal-container-title">
+          🌪️ Unusual Weather
+        </h1>
+      </header>
+      <section className="modal-container-body rtf">
+        <h2>Atypical Weather Phenomena</h2>
+        <h3>Description</h3>
+        <p>Unusual weather events are meteorological phenomena that deviate significantly from the typical patterns in a given area. These can include extreme temperatures, unseasonable precipitation, severe storms, or other weather anomalies. Tracking unusual weather can help identify climate trends and potential impacts on ecosystems and human activities.</p>
+        <h3>What to Look For</h3>
+        <p>Observe weather conditions that seem out of place for your region or season, such as unexpected snowfall, heatwaves, prolonged droughts, or intense storms. Pay attention to the frequency and intensity of these events.</p>
+        <p>If you've experienced unusual weather, click "Create Entry" to report your observation.</p>
+      </section>
+      <footer className="modal-container-footer">
+        <button className="button is-ghost" style={{ backgroundColor: "Green", color: "white", fontSize: "10px" }} id='natural2' value="Unusual Weather" onClick={emergencySETTER}>Create Entry</button>
+        <button style={{ fontSize: "10px" }} onClick={modal4Click} className="button is-primary">Close</button>
+      </footer>
+    </article>
+  </div>
+: null}
 
-							<p>Around 2,000 to 3,000 stars are discernible to the naked eye, creating a breathtaking and immersive celestial panorama.</p>
+{modal5 ?
+  <div className="modal">
+    <article className="modal-container">
+      <header className="modal-container-header">
+        <h1 className="modal-container-title">
+          🦋 Wildlife Anomalies
+        </h1>
+      </header>
+      <section className="modal-container-body rtf">
+        <h2>Unusual Animal Behavior or Appearances</h2>
+        <h3>Description</h3>
+        <p>Wildlife anomalies refer to unusual behaviors, physical characteristics, or population changes in animal species. These can include unexpected animal sightings, strange behaviors, or physical abnormalities. Observing and reporting these anomalies can provide valuable data for wildlife researchers and conservationists.</p>
+        <h3>What to Look For</h3>
+        <p>Watch for animals exhibiting unusual behaviors, appearances in unexpected locations, noticeable changes in local wildlife populations, or physical abnormalities in individual animals.</p>
+        <p>If you've observed any wildlife anomalies, click "Create Entry" to report your sighting.</p>
+      </section>
+      <footer className="modal-container-footer">
+        <button className="button is-ghost" style={{ backgroundColor: "Green", color: "white", fontSize: "10px" }} id='natural2' value="Wildlife Anomalies" onClick={emergencySETTER}>Create Entry</button>
+        <button style={{ fontSize: "10px" }} onClick={modal5Click} className="button is-primary">Close</button>
+      </footer>
+    </article>
+  </div>
+: null}
 
-							<p>If your Sky appears this way, Click "Create Entry."</p>
-						</section>
-						<footer className="modal-container-footer">
-							<button className="button is-ghost" style={{ backgroundColor: "Green", color: "white", fontSize: "10px" }} id='natural2' value="Low Light Pollution" onClick={emergencySETTER}>Create Entry</button>
-							<button style={{ fontSize: "10px" }} onClick={modal1Click} className="button is-primary">Close</button>
-						</footer>
-					</article>
-				</div>
-				: null}
-
-
-			{modal2 ?
-				<div className="modal">
-					<article className="modal-container">
-						<header className="modal-container-header">
-							<h1 className="modal-container-title">
-								🏡 Moderate Light Pollution
-							</h1>
-
-						</header>
-						<section className="modal-container-body rtf">
-							<h2>20-50% Light Disturbances</h2>
-
-							<h3>Sky Description</h3>
-
-							<p>Moderate light pollution becomes evident, affecting the visibility of fainter stars and slightly dimming the luminosity of the Milky Way. Despite this, major constellations and brighter stars remain clearly visible against a night sky that maintains a discernible depth. The overall ambiance is still conducive to stargazing, albeit with a noticeable reduction in the visibility of celestial details.</p>
-							<h3>Approximate Star Visibility</h3>
-
-							<p>Roughly 500 to 2,000 stars are visible to the naked eye, offering a compromised but still engaging astronomical experience..</p>
-
-							<p>If your Sky appears this way, Click "Create Entry."</p>
-						</section>
-						<footer className="modal-container-footer">
-							<button className="button is-ghost" style={{ backgroundColor: "Green", color: "white", fontSize: "10px" }} id='natural2' value="Moderate Light Pollution" onClick={emergencySETTER}>Create Entry</button>
-							<button style={{ fontSize: "10px" }} onClick={modal2Click} className="button is-primary">Close</button>
-						</footer>
-					</article>
-				</div>
-				: null}
-
-
-
-			{modal3 ?
-				<div className="modal">
-					<article className="modal-container">
-						<header className="modal-container-header">
-							<h1 className="modal-container-title">
-								🌆 High Light Pollution
-							</h1>
-
-						</header>
-						<section className="modal-container-body rtf">
-							<h2>50-100% Light Disturbances</h2>
-
-							<h3>Sky Description</h3>
-
-							<p>Significant light pollution dominates the night sky, resulting in the substantial dimming of the Milky Way and fainter stars. The overall brightness of the sky is elevated, making it challenging to observe intricate celestial features. Only the brightest stars and celestial objects, such as planets, manage to pierce through the luminous veil. Stargazing is limited, and the night sky loses much of its natural splendor.</p>
-							<h3>Approximate Star Visibility</h3>
-
-							<p>Less than 500 stars are visible to the naked eye, with the majority being the brightest and most prominent celestial bodies. The sky is noticeably brighter, and the cosmic landscape is significantly muted.</p>
-
-							<p>If your Sky appears this way, Click "Create Entry."</p>
-						</section>
-						<footer className="modal-container-footer">
-							<button className="button is-ghost" style={{ backgroundColor: "Green", color: "white", fontSize: "10px" }} id='natural2' value="High Light Pollution" onClick={emergencySETTER}>Create Entry</button>
-							<button style={{ fontSize: "10px" }} onClick={modal3Click} className="button is-primary">Close</button>
-						</footer>
-					</article>
-				</div>
-				: null}
-
-			{modal4 ?
-				<div className="modal">
-					<article className="modal-container">
-						<header className="modal-container-header">
-							<h1 className="modal-container-title">
-								✨  Northern Lights
-							</h1>
-
-						</header>
-						<section className="modal-container-body rtf">
-							<h2>Aurora Borealis</h2>
-
-							<h3>Sky Description</h3>
-
-							<p>During geomagnetic storms, the night sky transforms into a mesmerizing display of vibrant colors known as the Northern Lights. Wisps of green, pink, and violet dance across the heavens in undulating curtains, creating an ethereal atmosphere. The celestial light show is a result of charged particles from the sun interacting with Earth's magnetic field and atmosphere. In regions near the magnetic poles, such as the Arctic, the auroras can be a frequent and awe-inspiring phenomenon, casting an enchanting glow that stretches across the northern horizon.</p>
-							<h3>Observation Experience: </h3>
-
-							<p>Viewing the Northern Lights is a surreal and otherworldly experience, providing a rare opportunity to witness the dynamic interaction between solar winds and Earth's magnetic field. The level of activity and intensity can vary, with some displays featuring rapid movement and vivid colors, while others unfold more gently, creating a tranquil celestial spectacle.</p>
-
-							<p>If you witnessed this event, Click "Create Entry."</p>
-						</section>
-						<footer className="modal-container-footer">
-							<button className="button is-ghost" style={{ backgroundColor: "Green", color: "white", fontSize: "10px" }} id='natural2' value="Northern Lights" onClick={emergencySETTER}>Create Entry</button>
-							<button style={{ fontSize: "10px" }} onClick={modal4Click} className="button is-primary">Close</button>
-						</footer>
-					</article>
-				</div>
-				: null}
-
-			{modal5 ?
-				<div className="modal">
-					<article className="modal-container">
-						<header className="modal-container-header">
-							<h1 className="modal-container-title">
-								☄️ Fireballs (Meteoric Events)
-							</h1>
-
-						</header>
-						<section className="modal-container-body rtf">
-							<h2>Fireballs</h2>
-
-							<h3>Sky Description</h3>
-
-							<p>A sudden and brilliant streak of light across the night sky marks the passage of a fireball—a particularly bright meteor or meteoroid that burns intensely as it enters Earth's atmosphere. These celestial intruders illuminate the darkness with a dazzling blaze, often leaving behind a glowing trail in their wake. Fireballs are typically larger and more luminous than regular meteors, making them easily noticeable even in areas with some light pollution. The fleeting but intense brightness captures the attention of observers, creating a momentary celestial spectacle.</p>
-							<h3>Observation Experience: </h3>
-
-							<p>Witnessing a fireball is a thrilling and unpredictable event. The rapid descent and fiery trail of these cosmic visitors add an element of excitement to night sky observation. Fireballs are fleeting, often lasting only a few seconds, but their dramatic appearance leaves a lasting impression on those fortunate enough to witness their celestial journey.</p>
-
-							<p>If you witnessed this event, Click "Create Entry."</p>
-						</section>
-						<footer className="modal-container-footer">
-							<button className="button is-ghost" style={{ backgroundColor: "Green", color: "white", fontSize: "10px" }} id='natural2' value="Fireball Meteoric Event" onClick={emergencySETTER}>Create Entry</button>
-							<button style={{ fontSize: "10px" }} onClick={modal5Click} className="button is-primary">Close</button>
-						</footer>
-					</article>
-				</div>
-				: null}
+{modal6 ?
+  <div className="modal">
+    <article className="modal-container">
+      <header className="modal-container-header">
+        <h1 className="modal-container-title">
+          💧 Water Level Changes
+        </h1>
+      </header>
+      <section className="modal-container-body rtf">
+        <h2>Fluctuations in Water Bodies</h2>
+        <h3>Description</h3>
+        <p>Water level changes refer to significant fluctuations in the depth or extent of water bodies such as rivers, lakes, reservoirs, and coastal areas. These changes can be caused by various factors including climate change, precipitation patterns, human activities, or geological events. Monitoring water level changes is crucial for understanding hydrological cycles, managing water resources, and assessing flood or drought risks.</p>
+        <h3>What to Look For</h3>
+        <p>Observe noticeable increases or decreases in water levels of local water bodies. Look for signs of flooding, receding shorelines, exposed riverbeds, or unusually high or low water marks. Pay attention to changes that persist over time or occur outside of normal seasonal variations.</p>
+        <p>If you've noticed significant water level changes, click "Create Entry" to report your observation.</p>
+      </section>
+      <footer className="modal-container-footer">
+        <button className="button is-ghost" style={{ backgroundColor: "Green", color: "white", fontSize: "10px" }} id='natural2' value="Water Level Changes" onClick={emergencySETTER}>Create Entry</button>
+        <button style={{ fontSize: "10px" }} onClick={modal6Click} className="button is-primary">Close</button>
+      </footer>
+    </article>
+  </div>
+: null}
 
 		</div>
 	);

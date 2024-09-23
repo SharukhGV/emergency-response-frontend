@@ -63,7 +63,8 @@ const DreamNewForm = ({ initialDream = null, accessToken, loginUsername }) => {
   return (
     <div style={{maxWidth:"600px", margin:"auto", paddingTop:"20px"}} className={`dream-form-container ${accessToken ? '' : 'logged-out'}`}>
       <h2>{initialDream ? 'Edit Dream' : 'Log New Dream'}</h2>
-      <p className="dream-intro">Dreams are important. Some say they are influenced by past events while others say they can also denote future ones.</p>
+      <p className="dream-intro">This application aims to address the problem of environmental destruction and societal ignorance by raising awareness through symbolic representations of astronomical, biological, and geologic anomalies in dreams, encouraging users to reflect on human behaviors that contribute to these issues and inspiring action to prevent or prepare for potential apocalyptic scenarios.
+      </p>
       {accessToken ? (
         <form onSubmit={handleSubmit}>
           {error && <div className="error-message">{error}</div>}
