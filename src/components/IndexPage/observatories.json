@@ -16,14 +16,7 @@
         "website": "https://www.maunakeaobservatories.org/",
         "image":"https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Mauna_Kea_at_Sunset.jpg/800px-Mauna_Kea_at_Sunset.jpg"
       },
-      {
-        "name": "Kitt Peak National Observatory",
-        "location": "Tucson, Arizona",
-        "latitude": 31.9584,
-        "longitude": -111.5984,
-        "website": "https://www.noao.edu/kpno/",
-        "image":"https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Kitt_Peak_National_Observatory_in_the_Quinlan_Mountains%2C_2023.jpg/800px-Kitt_Peak_National_Observatory_in_the_Quinlan_Mountains%2C_2023.jpg"
-      },
+   
       {
         "name": "Chabot Space & Science Center",
         "location": "Oakland, California",
@@ -154,15 +147,8 @@
         "longitude": -81.6084,
         "website": "https://astronomy.case.edu/",
         "image":"https://upload.wikimedia.org/wikipedia/commons/a/a2/The_Warner_%26_Swasey_Observatory_at_Kitt_Peak_National_Observatory.jpg"
-      },
-      {
-        "name": "Buehler Planetarium & Observatory",
-        "location": "Davie, Florida",
-        "latitude": 26.0806,
-        "longitude": -80.2422,
-        "website": "https://www.broward.edu/academics/programs/astronomy/",
-        "image":"https://upload.wikimedia.org/wikipedia/commons/5/55/Buehler_Planetarium_and_Observatory1.jpg"
       }
+    
     ]
   }
   

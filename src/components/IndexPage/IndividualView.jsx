@@ -1,18 +1,14 @@
 import { useParams } from "react-router-dom"
-import { useState } from "react";
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 import axios from "axios";
-import { Link } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import CommentsBox from "./CommentsBox";
 import { v4 as uuidv4 } from 'uuid';
 import { GoogleMap, LoadScript } from "@react-google-maps/api";
 import noMap from "./noMap.png"
-import "./individualView.css"
 import mountainsky from "./mountainsky.jpg"
+import { border } from "@cloudinary/url-gen/qualifiers/background";
 
-// This component has origins in the "Individual" component 
-// It is navigated here using Link and the post's id
 function IndividualView({ loginUsername }) {
   const [data, setData] = useState([])
   const [locationIQ, setLocationIQ] = useState({})
@@ -107,114 +103,198 @@ function IndividualView({ loginUsername }) {
       .catch((e) => console.error("catch", e));
   }, []);
 
-  // const matchingProfile = dataProfile.find(prof => prof.my_username === data.username);
-
   const mapStyles = {
     height: "300px",
-maxWidth:"760px"  };
-  let defaultCenter = {
-    lat: Math.trunc(data.latitude),
-    lng: Math.trunc(data.longitude)
+    maxWidth: "100%",
+    borderRadius: "12px",
+    boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
   };
+
+  const containerStyle = {
+    maxWidth: "800px",
+    margin: "0 auto",
+    padding: "30px",
+    borderRadius: "12px",
+    boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
+  };
+
+  const headerStyle = {
+    display: "flex",
+    alignItems: "center",
+    marginBottom: "20px",
+    backgroundColor: "#ffffff",
+    padding: "20px",
+    borderRadius: "12px",
+    boxShadow: "0 2px 4px rgba(0, 0, 0, 0.05)",
+  };
+
+  const profileImageStyle = {
+    width: "80px",
+    height: "80px",
+    borderRadius: "50%",
+    marginRight: "20px",
+    objectFit: "cover",
+    border: "3px solid #007bff",
+  };
+
+  const titleStyle = {
+    fontSize: "28px",
+    fontWeight: "bold",
+    color: "#333",
+    marginBottom: "5px",
+  };
+
+  const usernameStyle = {
+    fontSize: "16px",
+    color: "#666",
+  };
+
+  const imageContainerStyle = {
+    marginBottom: "20px",
+    borderRadius: "12px",
+    overflow: "hidden",
+    boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
+  };
+
+  const imageStyle = {
+    width: "100%",
+    height: "auto",
+    display: "block",
+  };
+
+  const tableStyle = {
+    width: "100%",
+    borderCollapse: "separate",
+    borderSpacing: "0 10px",
+    marginBottom: "20px",
+  };
+
+  const cellStyle = {
+    padding: "12px",
+    // backgroundColor: "#ffffff",
+    borderRadius: "8px",
+    border: "1px solid beige",
+  };
+
+  const buttonContainerStyle = {
+    display: "flex",
+    justifyContent: "flex-start",
+    gap: "10px",
+    marginBottom: "20px",
+  };
+
+  const buttonStyle = {
+    padding: "10px 20px",
+    borderRadius: "8px",
+    border: "none",
+    cursor: "pointer",
+    fontWeight: "bold",
+    transition: "all 0.3s ease",
+  };
+
   return (
-    <div className="sci-fi-container">
-      <div className="sci-fi-card">
-        <h2 className="sci-fi-title">{data.full_name}</h2>
-        <p className="sci-fi-username">Username: {data.username}</p>
-        <div className="sci-fi-image-container">
-          {data.image_url ? (
-            <img className="sci-fi-image" src={data.image_url} alt="Post" />
-          ) : (
-            <img className="sci-fi-image" src={mountainsky} alt="Default" />
-          )}
+    <div style={containerStyle}>
+      <div style={headerStyle}>
+        <img
+          style={profileImageStyle}
+          src={data.image_url || mountainsky}
+          alt={data.full_name}
+        />
+        <div>
+          <h2 style={titleStyle}>{data.full_name}</h2>
+          <p style={usernameStyle}>Author: {data.username}</p>
         </div>
       </div>
 
-      <div className="sci-fi-map">
+      <div style={imageContainerStyle}>
+        <img
+          style={imageStyle}
+          src={data.image_url || mountainsky}
+          alt={data.full_name}
+        />
+      </div>
+
+      <div style={mapStyles}>
         {!!data.latitude ? (
           <LoadScript googleMapsApiKey={import.meta.env.VITE_GOOGLE_MAPS_API_KEY}>
             <GoogleMap
               mapContainerStyle={mapStyles}
               zoom={6}
-              center={defaultCenter}
+              center={{ lat: data.latitude, lng: data.longitude }}
             />
           </LoadScript>
         ) : (
-          <img className="sci-fi-no-map" src={noMap} alt="No Map Available" />
+          <img style={imageStyle} src={noMap} alt="No Map Available" />
         )}
       </div>
 
-      <div className="sci-fi-table-container">
-        <table className="sci-fi-table">
-          <thead>
-            <tr>
-              <th>Category</th>
-              <th>Values</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Latitude</td>
-              <td>{!!data.latitude ? data.latitude : "No Location Found"}</td>
-            </tr>
-            <tr>
-              <td>Longitude</td>
-              <td>{!!data.longitude ? data.longitude : "No Location Found"}</td>
-            </tr>
-            <tr>
-              <td>Description</td>
-              <td>{data.description}</td>
-            </tr>
-            <tr>
-              <td>Address</td>
-              <td>{!!locationIQ.display_name ? locationIQ.display_name : "No Location Data"}</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+      <table style={tableStyle}>
+        <tbody>
+          <tr>
+            <td style={cellStyle}><strong>Latitude:</strong></td>
+            <td style={cellStyle}>{data.latitude || "No Location Found"}</td>
+          </tr>
+          <tr>
+            <td style={cellStyle}><strong>Longitude:</strong></td>
+            <td style={cellStyle}>{data.longitude || "No Location Found"}</td>
+          </tr>
+          <tr>
+            <td style={cellStyle}><strong>Description:</strong></td>
+            <td style={cellStyle}>{data.description}</td>
+          </tr>
+          <tr>
+            <td style={cellStyle}><strong>Address:</strong></td>
+            <td style={cellStyle}>{locationIQ.display_name || "No Location Data"}</td>
+          </tr>
+        </tbody>
+      </table>
 
-      <div className="sci-fi-buttons">
-        {data.username === storedValue && (
+      <div style={buttonContainerStyle}>
+        {data.username === loginUsername && (
           <>
             <Link to={`/index/${id}/edit`}>
-              <button style={{backgroundColor:"orange"}} id="sci-fi-button edit">Edit</button>
+              <button style={{...buttonStyle, backgroundColor: "#ffa500", color: "#fff"}}>Edit</button>
             </Link>
-            <button style={{backgroundColor:"red"}} id="sci-fi-button delete" onClick={deletePost}>Delete</button>
+            <button style={{...buttonStyle, backgroundColor: "#ff4136", color: "#fff"}} onClick={deletePost}>Delete</button>
           </>
         )}
         <Link to="/index">
-          <button style={{backgroundColor:"green"}} id="sci-fi-button back">Back</button>
+          <button style={{...buttonStyle, backgroundColor: "#2ecc40", color: "#fff"}}>Back</button>
         </Link>
       </div>
 
-      <div className="sci-fi-comments">
-        <h3 className="sci-fi-comments-title">Comments Section</h3>
-        <form onSubmit={handleSubmit} className="sci-fi-comment-form">
+      <div>
+        <h3 style={{fontSize: "24px", marginBottom: "15px"}}>Comments</h3>
+        <form onSubmit={handleSubmit} style={{marginBottom: "20px"}}>
           <input
             onChange={handleTextChange}
             placeholder="Type your comment here..."
             type="text"
-            className="sci-fi-input"
+            style={{
+              width: "100%",
+              padding: "10px",
+              borderRadius: "8px",
+              border: "1px solid #ddd",
+              marginBottom: "10px",
+            }}
           />
-          <button style={{backgroundColor:"black", color:"yellowgreen",borderColor:"whitesmoke",border:"solid"}} type="submit" >Submit</button>
+          <button type="submit" style={{...buttonStyle, backgroundColor: "#0074d9", color: "#fff"}}>Submit</button>
         </form>
 
-        <div className="sci-fi-comments-list">
-          {dataComments.map((commentz, index) => {
-            if (parseFloat(commentz.userpost_id) === parseFloat(id)) {
-              return (
-                <CommentsBox
-                  key={uuidv4()}
-                  loginUsername={loginUsername}
-                  commentz={commentz}
-                  id={id}
-                  index={index}
-                />
-              );
-            }
-            return null;
-          })}
-        </div>
+        {dataComments.map((commentz, index) => {
+          if (parseFloat(commentz.userpost_id) === parseFloat(id)) {
+            return (
+              <CommentsBox
+                key={uuidv4()}
+                loginUsername={loginUsername}
+                commentz={commentz}
+                id={id}
+                index={index}
+              />
+            );
+          }
+          return null;
+        })}
       </div>
     </div>
   );

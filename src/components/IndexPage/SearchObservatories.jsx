@@ -142,14 +142,7 @@ function SearchObservatories({ setObservatoryMarker }) {
           "website": "https://flandrau.org/",
           "image":"https://upload.wikimedia.org/wikipedia/commons/4/44/Flandrau_Science_Center_%26_Planetarium_-_University_of_Arizona_-_Tucson%2C_AZ_-_DSC08584.jpg"
         },
-        {
-          "name": "Arizona Science Center - Dorrance Planetarium",
-          "location": "Phoenix, Arizona",
-          "latitude": 33.4484,
-          "longitude": -112.0740,
-          "website": "https://www.azscience.org/",
-          "image":"https://upload.wikimedia.org/wikipedia/commons/5/5f/Arizona_Science_Center_1%2C_600_East_Washington_Street%2C_Phonenix.jpg"
-        },
+      
         {
           "name": "Warner and Swasey Observatory",
           "location": "Cleveland, Ohio",
@@ -158,14 +151,7 @@ function SearchObservatories({ setObservatoryMarker }) {
           "website": "https://astronomy.case.edu/",
           "image":"https://upload.wikimedia.org/wikipedia/commons/a/a2/The_Warner_%26_Swasey_Observatory_at_Kitt_Peak_National_Observatory.jpg"
         },
-        {
-          "name": "Buehler Planetarium & Observatory",
-          "location": "Davie, Florida",
-          "latitude": 26.0806,
-          "longitude": -80.2422,
-          "website": "https://www.broward.edu/academics/programs/astronomy/",
-          "image":"https://upload.wikimedia.org/wikipedia/commons/5/55/Buehler_Planetarium_and_Observatory1.jpg"
-        }
+       
       ]
     const [query, setQuery] = useState("");
 
