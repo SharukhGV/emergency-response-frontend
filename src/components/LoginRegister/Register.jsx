@@ -111,7 +111,10 @@ function Register() {
   };
 
   return (
-    <div className="registerCONTAIN"> <h1>Register</h1>
+    <div className="registerCONTAIN"> 
+                <br></br>
+
+    <h1>Register</h1>
       <p>Please fill in this form to create an account.</p>
         <div className="container">
 
