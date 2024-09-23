@@ -66,7 +66,7 @@ export default function Home({ setEmergencyType, loginUsername, accessToken, tog
 			)
 		}
 	}
-
+  
 	function renderModalButtons() {
 		return (
 			<div className="buttonPollCont">

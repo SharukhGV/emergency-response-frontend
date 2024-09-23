@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
 
 .light button {
   color: rgb(255, 255, 255);
@@ -32,7 +31,7 @@
 
 /* TABLE for Earthquake and User Individual Posts */
 .userPostTable {
-  font-family: 'Orbitron', 'Roboto Mono', Arial, sans-serif;
+  font-family: 'Roboto', Arial, sans-serif;
   border-collapse: separate;
   border-spacing: 0;
   width: 100%;
@@ -60,7 +59,6 @@
 
 .light .userPostTable tr:nth-child(even) {
   background-color: rgba(109, 183, 156, 0.2);
-  
 }
 
 .light .userPostTable tr:hover {
@@ -131,14 +129,13 @@
 /* Header styles */
 h3 {
   text-align: center;
-  font-family: 'Orbitron', 'Roboto Mono', Arial, sans-serif;
+  font-family: 'Roboto', Arial, sans-serif;
   text-transform: uppercase;
   letter-spacing: 2px;
   color: var(--table-header);
   margin-bottom: 20px;
   text-shadow: 0 0 10px var(--table-border);
 }
-
 
 .light input[type=submit] {
   width: 100%;
@@ -160,7 +157,6 @@ h3 {
   color: #ffffff
 }
 
-
 .dark input[type=submit] {
   width: 100%;
   border-radius: 8px;
@@ -176,7 +172,6 @@ h3 {
   margin-top: 5px;
   color: red;
 }
-
 
 .cardEmergency {
   border-radius: 10px;
@@ -196,16 +191,13 @@ h3 {
   padding: 5px;
 }
 
-
 .dark button:hover {
   background-color: #373436;
   color: #fbffda;
 }
 
-
 ul {
   text-decoration: none;
-  /* background-color: #2b1404; */
   list-style-type: none;
   align-items: center;
   text-align: center;
@@ -219,18 +211,14 @@ li {
   padding-left: 7px;
   padding-right: 7px;
   text-decoration: none;
-
 }
 
 /* SEARCH BAR CSS */
-
 .box {
   position: relative;
   width: 75%;
   margin: auto;
-
 }
-
 
 .box:hover input {
   width: 75%;
@@ -262,11 +250,7 @@ li {
   padding: 10px;
 }
 
-
-
 /* CARD PROFILE */
-
-
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   max-width: 300px;
@@ -279,8 +263,6 @@ li {
   font-size: 18px;
 }
 
-
-
 a {
   text-decoration: none;
   font-size: 22px;
@@ -292,18 +274,13 @@ a:hover {
   opacity: 0.7;
 }
 
-
-
 .viewsDIV {
-
   margin: auto;
   text-align: center;
   background-color: #000000dc;
   color: #3cff00;
   padding: 10px;
-
 }
-
 
 :root .light {
   --surface-color: #fff;
@@ -318,7 +295,6 @@ a:hover {
 * {
   box-sizing: border-box;
 }
-
 
 .cards {
   display: grid;
@@ -405,7 +381,7 @@ a:hover {
 .card__tagline {
   display: block;
   margin: 1em 0;
-  font-family: "MockFlowFont";
+  font-family: "Roboto", Arial, sans-serif;
   font-size: .8em;
   color: #3a1125;
 }
@@ -419,32 +395,14 @@ a:hover {
   padding: 0 2em 2em;
   margin: 0;
   color: #7e1a4c;
-  font-family: "MockFlowFont";
+  font-family: "Roboto", Arial, sans-serif;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
   overflow: hidden;
 }
 
-/* .ultraelem {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 7px 7px;
-  row-gap: 7px;
-  column-gap: 7px;
-  background-color: rgba(255, 255, 255, 0);
-} */
-
-/* .listelem {
-  height: 300px;
-  flex-grow: 1;
-  background-color: rgba(255, 255, 255, 0);
-} */
-
-
-
 /* Individual card */
-
 .imageIndView {
   border: solid;
   border-color: #000;
@@ -462,7 +420,6 @@ table {
   width: 100%;
   border-color: #000;
   text-align: center;
-
 }
 
 th,
@@ -471,10 +428,7 @@ td {
   text-align: left;
   border: 1px solid #000000;
   text-align: center;
-
 }
-
-
 
 tr:hover {
   background-color: coral;
@@ -490,8 +444,6 @@ tr:hover {
   overflow: hidden;
 }
 
-
-
 .dark footer {
   background-color: rgb(41, 37, 29);
   position: absolute;
@@ -506,7 +458,6 @@ tr:hover {
   max-width: 100px;
   max-height: auto;
 }
-
 
 /* Modal HOme Component */
 * {
@@ -535,7 +486,6 @@ tr:hover {
   justify-content: center;
   background-color: rgba(#ffe8e8, 0.25);
   color: #000;
-
 }
 
 .light .modal-container {
@@ -554,7 +504,6 @@ tr:hover {
 
   @media (max-width: 600px) {
     width: 90%;
-
   }
 }
 
@@ -581,7 +530,6 @@ tr:hover {
 }
 
 .rtf {
-
   h1,
   h2,
   h3,
@@ -656,8 +604,6 @@ tr:hover {
   }
 }
 
-
-
 .dark .modal {
   position: absolute;
   top: 0;
@@ -669,7 +615,6 @@ tr:hover {
   justify-content: center;
   background-color: rgba(#140f0f, 0.25);
   color: #000;
-
 }
 
 .dark .modal-container {
@@ -689,7 +634,6 @@ tr:hover {
 
   @media (max-width: 600px) {
     width: 90%;
-
   }
 }
 
@@ -708,7 +652,6 @@ tr:hover {
   line-height: 1;
   font-weight: 700;
   font-size: 1.125;
-
 }
 
 .dark .modal-container-body {
@@ -748,7 +691,6 @@ tr:hover {
   transition: 0.15s ease;
 
   &.is-ghost {
-
     &:hover,
     &:focus {
       background-color: #dfdad7;
@@ -766,7 +708,6 @@ tr:hover {
   transition: 0.15s ease;
 
   &.is-ghost {
-
     &:hover,
     &:focus {
       background-color: #000000;
@@ -789,14 +730,10 @@ tr:hover {
   background-color: rgb(255, 255, 255);
 }
 
-
-
 .navigationBAr {
   z-index: 1000;
   background-color: rgb(0, 0, 0);
 }
-
-
 
 .cardCONTAIN {
   max-width: 700px;
@@ -805,7 +742,6 @@ tr:hover {
 }
 
 @media only screen and (max-width: 600px) {
-
   .cardCONTAIN {
     max-width: 100%;
     margin: auto;
@@ -851,7 +787,7 @@ tr:hover {
   --dark-hover: #b300b3;
   
   --glow: 0 0 10px;
-  --font-sci-fi: 'Orbitron', 'Roboto Mono', Arial, sans-serif;
+  --font-sci-fi: 'Roboto', Arial, sans-serif;
 }
 
 /* Button Styles */
@@ -977,19 +913,16 @@ input:focus {
   box-shadow: var(--glow) currentColor;
 }
 
-
 .cardIndex {
   width: 100%;
   height: 150px;
   background-color: #0483a3c0;
-
 }
 
 .cardIndex :hover {
   width: 100%;
   height: 150px;
   background-color: #ffffff;
-
 }
 
 .imageIndex {
@@ -999,16 +932,12 @@ input:focus {
   border: solid black;
 }
 
-
 @media (max-width:700px) {
   .toggledropdownsearchbarIndex {
     width: 250px;
     margin: auto;
   }
-
-
 }
-
 
 .individualCard {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -1017,12 +946,10 @@ input:focus {
   margin: auto;
   background-color: whitesmoke;
   padding: 7px;
-
 }
 
 .individualCard:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-
 }
 
 .individualCardNoImage {
@@ -1031,46 +958,9 @@ input:focus {
   border-radius: 10px;
 }
 
-/* .individualProfile {
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-} */
-
-
-/* .individualdate {
-
-  background-color: rgb(189, 189, 190);
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
-  padding: 3px;
-} */
-
 .individualContainer {
   padding: 2px 16px;
 }
-
-/* .backgroundCardTechy {
-  background-image: url("./components/IndexPage/cardhive.png");
-  background-size: cover;
-  width: 300px;
-  height: 300px;
-} */
-
-/* .imgCardTechy {
-  margin-top: 50px;
-  margin-left: 40px;
-  width: 200px;
-  height: 150px;
-  border-radius: 10px;
-  border: #000 solid
-} */
-
-/* .individualContainertechy {
-  margin-left: 55px;
-  padding-top: 10px;
-  width: 150px;
-} */
 
 .light .visiblePlanets {
   color: darkred;
@@ -1082,13 +972,11 @@ input:focus {
   text-align: center;
 }
 
-
 .preserveButton {
   border-radius: 10px;
   width: 250px;
   height: 45px
 }
-
 
 .preservesSort {
   text-align: center;
@@ -1126,27 +1014,26 @@ input:focus {
     border: dotted;
     width: 500px;
   }
-
-
 }
+
 /* Flexbox container for all cards */
 .ultraelem {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start; /* Default: Cards aligned to the left */
+  justify-content: flex-start;
   list-style-type: none;
   padding: 0;
   margin: 0;
-  gap: 20px; /* Space between cards */
+  gap: 20px;
 }
 
 /* Individual card */
 .backgroundCardTechy {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Center content inside the card */
-  justify-content: center; /* Center content inside the card */
-  width: 300px; /* Set a width for the card */
+  align-items: center;
+  justify-content: center;
+  width: 300px;
   padding: 20px;
   box-sizing: border-box;
   border: 1px solid #ccc;
@@ -1172,471 +1059,33 @@ input:focus {
 /* Responsive behavior: Center cards when there's only one per row */
 @media (max-width: 768px) {
   .ultraelem {
-    justify-content: center; /* Center cards when there's only one per row */
+    justify-content: center;
   }
   
   .backgroundCardTechy {
-    width: 100%; /* Take up full width on small screens */
-    max-width: 300px; /* Max width for card */
+    width: 100%;
+    max-width: 300px;
   }
 }
 
-
-
-/* Light Theme */
-.light {
-  --table-border: #e1e1e1;
-  --table-header: #3498db;
-  --table-even: #f5f9fc;
-  --table-hover: #d1e8ff;
-  --text-color: #2d3436;
-  --background-color: #ffffff;
-  --button-background: #3498db;
-  --button-hover: #2980b9;
-  --button-text: #ffffff;
-  --footer-background: #f8f9fa;
-}
-
-/* Light buttons */
-.light button {
-  color: var(--button-text);
-  background-color: var(--button-background);
-  padding: 10px 20px;
-  border-radius: 8px;
-  border: none;
-  transition: background-color 0.3s ease;
-}
-
-.light button:hover {
-  background-color: var(--button-hover);
-}
-
-/* Light input submit */
-.light input[type=submit] {
-  background-color: var(--button-background);
-  color: var(--button-text);
-  border-radius: 8px;
-  border: none;
-  padding: 10px 20px;
-  font-size: 1em;
-  font-weight: 500;
-  transition: background-color 0.3s ease;
-}
-
-.light input[type=submit]:hover {
-  background-color: var(--button-hover);
-  color: #fff;
-}
-
-/* Light Table */
-.light .userPostTable {
-  --table-border: #ddd;
-  --table-header: #3498db;
-  --table-even: #f5f9fc;
-  --table-hover: #d1e8ff;
-  --text-color: #2d3436;
-  background-color: var(--background-color);
-}
-
-.light .userPostTable th {
-  background-color: var(--table-header);
-  color: white;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-weight: bold;
-}
-
-.light footer {
-  background-color: var(--footer-background);
-  color: var(--text-color);
-}
-
-
-/* Dark Sci-Fi Theme */
-.dark {
-  --table-border: #ff00ff;
-  --table-header: #1a1a1a;
-  --table-even: #2a2a2a;
-  --table-hover: #3a3a3a;
-  --text-color: #00ff00;
-  --background-color: #0d0d0d;
-  --button-background: #222;
-  --button-hover: #ff0033;
-  --button-text: #e6e6e6;
-  --footer-background: #1a1a1a;
-}
-
-/* Dark Sci-Fi buttons */
-.dark button {
-  color: var(--button-text);
-  background-color: var(--button-background);
-  padding: 10px 20px;
-  border-radius: 8px;
-  border: 2px solid #ff0033;
-  transition: background-color 0.3s ease, border-color 0.3s ease;
-}
-
-.dark button:hover {
-  background-color: var(--button-hover);
-  color: #fff;
-}
-
-/* Dark input submit */
-.dark input[type=submit] {
-  background-color: var(--button-background);
-  color: var(--button-text);
-  border-radius: 8px;
-  border: 2px solid #ff0033;
-  padding: 10px 20px;
-  font-size: 1em;
-  font-weight: 500;
-  transition: background-color 0.3s ease;
-}
-
-.dark input[type=submit]:hover {
-  background-color: var(--button-hover);
-  color: #fff;
-}
-
-/* Dark Sci-Fi Table */
-.dark .userPostTable {
-  --table-border: #ff00ff;
-  --table-header: #1a1a1a;
-  --table-even: #2a2a2a;
-  --table-hover: #3a3a3a;
-  --text-color: #00ff00;
-  background-color: var(--background-color);
-  border-color: #ff00ff;
-}
-
-.dark .userPostTable th {
-  background-color: var(--table-header);
-  color: var(--text-color);
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-weight: bold;
-  text-shadow: 0 0 5px var(--text-color);
-}
-
-.dark footer {
-  background-color: var(--footer-background);
-  color: var(--text-color);
-}
-
-
-/* @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@400;700&display=swap'); */
-
-.edit-dream-container {
-  max-width: 600px;
-  margin: 2rem auto;
-  padding: 2rem;
-  border-radius: 15px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
-}
-
-.edit-dream-container h2 {
-  text-align: center;
-  margin-bottom: 1.5rem;
-  font-family: 'Orbitron', sans-serif;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-}
-
-.edit-dream-container form {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-.form-group {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.form-group label {
-  font-weight: bold;
-}
-
-.form-group input[type="text"],
-.form-group input[type="date"],
-.form-group textarea {
-  padding: 0.75rem;
-  border-radius: 8px;
-  font-family: 'Roboto', sans-serif;
-  transition: all 0.3s ease;
-}
-
-.form-group textarea {
-  min-height: 100px;
-  resize: vertical;
-}
-
-.checkbox-group {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.checkbox-group input[type="checkbox"] {
-  width: 20px;
-  height: 20px;
-}
-
-.submit-button {
-  padding: 0.75rem 1.5rem;
-  border: none;
-  border-radius: 8px;
-  font-size: 1rem;
-  font-weight: bold;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  font-family: 'Orbitron', sans-serif;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-/* Light theme */
-.light {
-  background: #fff;
-  color: #333;
-}
-
-.light h2 {
-  color: #3498db;
-}
-
-.light .form-group label {
-  color: #2c3e50;
-}
-
-.light .form-group input[type="text"],
-.light .form-group input[type="date"],
-.light .form-group textarea {
-  border: 2px solid #3498db;
-  background: #f8f9fa;
-  color: #333;
-}
-
-.light .form-group input[type="text"]:focus,
-.light .form-group input[type="date"]:focus,
-.light .form-group textarea:focus {
-  outline: none;
-  box-shadow: 0 0 10px rgba(52, 152, 219, 0.5);
-}
-
-.light .submit-button {
-  background: #3498db;
-  color: #fff;
-}
-
-.light .submit-button:hover {
-  background: #2980b9;
-  box-shadow: 0 0 15px rgba(52, 152, 219, 0.5);
-}
-
-/* Dark theme */
-.dark {
-  background: #1a1a1a;
-  color: #e0e0e0;
-}
-
-.dark h2 {
-  color: #00ff00;
-}
-
-.dark .form-group label {
-  color: #00ffff;
-}
-
-.dark .form-group input[type="text"],
-.dark .form-group input[type="date"],
-.dark .form-group textarea {
-  border: 2px solid #00ff00;
-  background: #2a2a2a;
-  color: #e0e0e0;
-}
-
-.dark .form-group input[type="text"]:focus,
-.dark .form-group input[type="date"]:focus,
-.dark .form-group textarea:focus {
-  outline: none;
-  box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
-}
-
-.dark .submit-button {
-  background: #00ff00;
-  color: #000;
-}
-
-.dark .submit-button:hover {
-  background: #00cc00;
-  box-shadow: 0 0 15px rgba(0, 255, 0, 0.5);
-}
-
-
-.edit-dream-container {
-  max-width: 600px;
-  margin: 2rem auto;
-  padding: 2rem;
-  border-radius: 15px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
-  font-family: 'Roboto', sans-serif;
-}
-
-.edit-dream-container h2 {
-  text-align: center;
-  margin-bottom: 1.5rem;
-  font-family: 'Orbitron', sans-serif;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-}
-
-.edit-dream-container form {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-.form-group {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.form-group label {
-  font-weight: bold;
-  font-family: 'Orbitron', sans-serif;
-  letter-spacing: 1px;
-}
-
-.form-group input[type="text"],
-.form-group input[type="date"],
-.form-group textarea {
-  padding: 0.75rem;
-  border-radius: 8px;
-  font-family: 'Roboto', sans-serif;
-  transition: all 0.3s ease;
-}
-
-.form-group textarea {
-  min-height: 100px;
-  resize: vertical;
-}
-
-.checkbox-group {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.checkbox-group input[type="checkbox"] {
-  width: 20px;
-  height: 20px;
-  cursor: pointer;
-}
-
-.submit-button {
-  padding: 0.75rem 1.5rem;
-  border: none;
-  border-radius: 8px;
-  font-size: 1rem;
-  font-weight: bold;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  font-family: 'Orbitron', sans-serif;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-/* Light theme */
-.light {
-  background: #f0f8ff;
-  color: #333;
-}
-
-.light h2 {
-  color: #3498db;
-  text-shadow: 0 0 10px rgba(52, 152, 219, 0.3);
-}
-
-.light .form-group label {
-  color: #2c3e50;
-}
-
-.light .form-group input[type="text"],
-.light .form-group input[type="date"],
-.light .form-group textarea {
-  border: 2px solid #3498db;
-  background: #fff;
-  color: #333;
-}
-
-.light .form-group input[type="text"]:focus,
-.light .form-group input[type="date"]:focus,
-.light .form-group textarea:focus {
-  outline: none;
-  box-shadow: 0 0 10px rgba(52, 152, 219, 0.5);
-}
-
-.light .submit-button {
-  background: linear-gradient(145deg, #3498db, #2980b9);
-  color: #fff;
-}
-
-.light .submit-button:hover {
-  background: linear-gradient(145deg, #2980b9, #3498db);
-  box-shadow: 0 0 15px rgba(52, 152, 219, 0.5);
-}
-
-/* Dark theme */
-.dark {
-  background: #1a1a1a;
-  color: #e0e0e0;
-}
-
-.dark h2 {
-  color: #00ff00;
-  text-shadow: 0 0 10px rgba(0, 255, 0, 0.3);
-}
-
-.dark .form-group label {
-  color: #00ffff;
-}
-
-.dark .form-group input[type="text"],
-.dark .form-group input[type="date"],
-.dark .form-group textarea {
-  border: 2px solid #00ff00;
-  background: #2a2a2a;
-  color: #e0e0e0;
-}
-
-.dark .form-group input[type="text"]:focus,
-.dark .form-group input[type="date"]:focus,
-.dark .form-group textarea:focus {
-  outline: none;
-  box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+/* Update the body font-family */
+body {
+  font-family: 'Roboto', Arial, sans-serif;
 }
 
-.dark .submit-button {
-  background: linear-gradient(145deg, #00ff00, #00cc00);
-  color: #000;
+/* Update any specific elements that were using 'Outfit' font */
+h1, h2, h3, h4, h5, h6, .modal-container-title {
+  font-family: 'Roboto', Arial, sans-serif;
 }
 
-.dark .submit-button:hover {
-  background: linear-gradient(145deg, #00cc00, #00ff00);
-  box-shadow: 0 0 15px rgba(0, 255, 0, 0.5);
+/* Update the userPostTable font */
+.userPostTable {
+  font-family: 'Roboto', Arial, sans-serif;
 }
 
-/* Responsive design */
-@media (max-width: 768px) {
-  .edit-dream-container {
-    margin: 1rem;
-    padding: 1rem;
-  }
+/* Update any other specific elements that need the new font */
+.button, input, textarea, .card__title, .card__tagline, .card__status, .card__description {
+  font-family: 'Roboto', Arial, sans-serif;
 }
 
 .dark .dream-detail{
@@ -1647,3 +1096,379 @@ input:focus {
   background-color: #f0f8ff;
 }
 
+.edit-dream-container {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  font-family: 'Roboto', Arial, sans-serif;
+}
+
+.edit-dream-container h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-family: 'Roboto', Arial, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.edit-dream-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 0.75rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #4a90e2;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.button-group {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.button-group button {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.button-group button:hover {
+  transform: translateY(-2px);
+}
+
+.button-group button:active {
+  transform: translateY(0);
+}
+
+.save-button {
+  background-color: #4caf50;
+  color: white;
+}
+
+.save-button:hover {
+  background-color: #45a049;
+}
+
+.cancel-button {
+  background-color: #f44336;
+  color: white;
+}
+
+.cancel-button:hover {
+  background-color: #da190b;
+}
+
+.light .edit-dream-container {
+  background-color: #ffffff;
+  color: #333333;
+}
+
+.dark .edit-dream-container {
+  background-color: #2c2c2c;
+  color: #e0e0e0;
+}
+
+.dark .form-group input,
+.dark .form-group textarea {
+  background-color: #3a3a3a;
+  color: #e0e0e0;
+  border-color: #555555;
+}
+
+.dark .form-group input:focus,
+.dark .form-group textarea:focus {
+  border-color: #6ab0f3;
+}
+
+.dark .save-button {
+  background-color: #388e3c;
+}
+
+.dark .save-button:hover {
+  background-color: #2e7d32;
+}
+
+.dark .cancel-button {
+  background-color: #d32f2f;
+}
+
+.dark .cancel-button:hover {
+  background-color: #c62828;
+}
+
+/* Styles for the dream detail page */
+.dream-detail {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.dream-detail h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-family: 'Roboto', Arial, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.dream-info {
+  margin-bottom: 2rem;
+}
+
+.dream-info p {
+  margin-bottom: 0.5rem;
+}
+
+.dream-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
+.dream-actions button {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.dream-actions button:hover {
+  transform: translateY(-2px);
+}
+
+.dream-actions button:active {
+  transform: translateY(0);
+}
+
+.edit-button {
+  background-color: #4a90e2;
+  color: white;
+}
+
+.edit-button:hover {
+  background-color: #3a78c2;
+}
+
+.delete-button {
+  background-color: #f44336;
+  color: white;
+}
+
+.delete-button:hover {
+  background-color: #da190b;
+}
+
+.light .dream-detail {
+  background-color: #ffffff;
+  color: #333333;
+}
+
+.dark .dream-detail {
+  background-color: #2c2c2c;
+  color: #e0e0e0;
+}
+
+.dark .edit-button {
+  background-color: #3a78c2;
+}
+
+.dark .edit-button:hover {
+  background-color: #2a5a9c;
+}
+
+.dark .delete-button {
+  background-color: #d32f2f;
+}
+
+.dark .delete-button:hover {
+  background-color: #c62828;
+}
+
+/* Styles for the dream list page */
+.dream-list {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.dream-list h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-family: 'Roboto', Arial, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.dream-item {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  transition: all 0.3s ease;
+}
+
+.dream-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.dream-item h3 {
+  margin-bottom: 0.5rem;
+}
+
+.dream-item p {
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.dream-item-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+
+.dream-item-actions button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.dream-item-actions button:hover {
+  transform: translateY(-2px);
+}
+
+.dream-item-actions button:active {
+  transform: translateY(0);
+}
+
+.view-button {
+  background-color: #4a90e2;
+  color: white;
+}
+
+.view-button:hover {
+  background-color: #3a78c2;
+}
+
+.light .dream-list {
+  background-color: #ffffff;
+  color: #333333;
+}
+
+.light .dream-item {
+  background-color: #f5f5f5;
+}
+
+.dark .dream-list {
+  background-color: #2c2c2c;
+  color: #e0e0e0;
+}
+
+.dark .dream-item {
+  background-color: #3a3a3a;
+}
+
+.dark .view-button {
+  background-color: #3a78c2;
+}
+
+.dark .view-button:hover {
+  background-color: #2a5a9c;
+}
+
+/* Add Dream Button */
+.add-dream-button {
+  display: block;
+  width: 200px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background-color: #4caf50;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.add-dream-button:hover {
+  background-color: #45a049;
+  transform: translateY(-2px);
+}
+
+.add-dream-button:active {
+  transform: translateY(0);
+}
+
+.dark .add-dream-button {
+  background-color: #388e3c;
+}
+
+.dark .add-dream-button:hover {
+  background-color: #2e7d32;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .dream-detail,
+  .edit-dream-container,
+  .dream-list {
+    padding: 1rem;
+  }
+
+  .button-group,
+  .dream-actions {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .button-group button,
+  .dream-actions button {
+    width: 100%;
+  }
+}

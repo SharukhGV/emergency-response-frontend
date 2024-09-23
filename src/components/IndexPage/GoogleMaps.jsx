@@ -41,7 +41,7 @@ export default function GoogleMaps({ mapMarkers, preserveMarkers, observatoryMar
         center={defaultCenter}
 
       >
-        {markersPreserves.map((marker, index) => (
+        {/* {markersPreserves.map((marker, index) => (
           <Marker
             key={index + 1236545}
             position={{ lat: parseFloat(marker.lat), lng: parseFloat(marker.lng) }}
@@ -55,7 +55,7 @@ export default function GoogleMaps({ mapMarkers, preserveMarkers, observatoryMar
             position={{ lat: parseFloat(marker.lat), lng: parseFloat(marker.lng) }}
             icon={observatoryMarker}
           />
-        ))}
+        ))} */}
 
         {markers.map((marker, index) => (
           <Marker

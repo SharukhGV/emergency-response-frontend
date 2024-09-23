@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import Individual from "./Individual";
-import { Link } from "react-router-dom";
 
 export default function SearchPeople({ loginUsername, setMapMarkers }) {
   const [data, setData] = useState([]);
@@ -9,7 +8,7 @@ export default function SearchPeople({ loginUsername, setMapMarkers }) {
   const [currentPage, setCurrentPage] = useState(1);
   const [postsPerPage] = useState(10);
   const [activeFilter, setActiveFilter] = useState("all");
-
+  
   useEffect(() => {
     axios
       .get(`${import.meta.env.VITE_BACKEND_API}/userposts`)
@@ -32,22 +31,16 @@ export default function SearchPeople({ loginUsername, setMapMarkers }) {
 
     if (query) {
       filtered = filtered.filter((post) => 
-        post.full_name.toLowerCase().includes(query.toLowerCase())
+        (post.full_name && post.full_name.toLowerCase().includes(query.toLowerCase())) ||
+        (post.title && post.title.toLowerCase().includes(query.toLowerCase()))
       );
     }
 
-    switch (activeFilter) {
-      case "northern":
-        filtered = filtered.filter((post) => post.skybrightness.toLowerCase().includes("northern"));
-        break;
-      case "meteor":
-        filtered = filtered.filter((post) => post.skybrightness.toLowerCase().includes("fireball"));
-        break;
-      case "low":
-        filtered = filtered.filter((post) => post.skybrightness.toLowerCase().includes("low"));
-        break;
-      default:
-        break;
+    if (activeFilter !== "all") {
+      filtered = filtered.filter((post) => {
+        const category = post.skybrightness ? post.skybrightness.toLowerCase() : '';
+        return category === activeFilter.toLowerCase();
+      });
     }
 
     return filtered;
@@ -62,7 +55,7 @@ export default function SearchPeople({ loginUsername, setMapMarkers }) {
     }));
 
     setMapMarkers(markerArray);
-  }, [query, activeFilter]);
+  }, [filteredPosts, setMapMarkers]);
 
   // Get current posts
   const indexOfLastPost = currentPage * postsPerPage;
@@ -77,6 +70,17 @@ export default function SearchPeople({ loginUsername, setMapMarkers }) {
     setCurrentPage(1);
   };
 
+  const filterCategories = [
+    { key: "all", label: "All Posts", emoji: "🌍" },
+    { key: "Earth Tremors", label: "Earth Tremors", emoji: "🌋" },
+    { key: "Migratory Pattern Shifts", label: "Migratory Pattern Shifts", emoji: "🐦" },
+    { key: "Invasive Species Sightings", label: "Invasive Species Sightings", emoji: "🌱" },
+    { key: "Unusual Weather", label: "Unusual Weather", emoji: "🌪️" },
+    { key: "Wildlife Anomalies", label: "Wildlife Anomalies", emoji: "🦋" },
+    { key: "Water Level Changes", label: "Water Level Changes", emoji: "💧" },
+    { key: "Anything Else", label: "Anything Else", emoji: "🔍" },
+  ];
+
   return (
     <div className="search-people" style={{
       padding: '30px',
@@ -87,7 +91,7 @@ export default function SearchPeople({ loginUsername, setMapMarkers }) {
       margin: '50px auto',
       textAlign: 'center',
     }}>
-      <h1 style={{ fontSize: '2rem', marginBottom: '20px' }}>Sky Observations</h1>
+      <h1 style={{ fontSize: '2rem', marginBottom: '20px' }}>Community Posts</h1>
 
       <div className="filters" style={{ marginBottom: '30px' }}>
         <input 
@@ -104,10 +108,15 @@ export default function SearchPeople({ loginUsername, setMapMarkers }) {
             outline: 'none',
           }}
         />
-        <button style={buttonStyle(activeFilter === "all")} onClick={() => setFilter("all")}>All Posts</button>
-        <button style={buttonStyle(activeFilter === "northern")} onClick={() => setFilter("northern")}>Auroras 🌃</button>
-        <button style={buttonStyle(activeFilter === "meteor")} onClick={() => setFilter("meteor")}>Meteors ☄️</button>
-        <button style={buttonStyle(activeFilter === "low")} onClick={() => setFilter("low")}>Low LP 🌆</button>
+        {filterCategories.map(({ key, label, emoji }) => (
+          <button 
+            key={key}
+            style={buttonStyle(activeFilter === key)} 
+            onClick={() => setFilter(key)}
+          >
+            {label} {emoji}
+          </button>
+        ))}
       </div>
 
       <div className="post-list" style={{ textAlign: 'left' }}>
