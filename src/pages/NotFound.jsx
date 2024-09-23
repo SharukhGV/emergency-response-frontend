@@ -1,19 +1,23 @@
-import notfound from "./notfound.png"
-function NotFound(){
+import React from 'react';
+// import './NotFound.css';
 
-
-
-return (
-<div>
-    <br></br>
-    <h1>PAGE NOT FOUND</h1>
-<br></br>
-    <img style={{width:"300px", height:"auto"}} src={notfound}></img>
-</div>
-)
-
-
-
+function NotFound() {
+  return (
+    <div className="not-found-container">
+      <h1>404: PAGE NOT FOUND</h1>
+      <p>Looks like this page got lost in space!</p>
+      <div className="space-scene">
+        <div className="stars"></div>
+        <div className="earth">
+          <div className="earth-surface"></div>
+        </div>
+        <div className="satellite">
+          <div className="satellite-body"></div>
+          <div className="satellite-panels"></div>
+        </div>
+      </div>
+    </div>
+  );
 }
 
-export default NotFound
+export default NotFound;

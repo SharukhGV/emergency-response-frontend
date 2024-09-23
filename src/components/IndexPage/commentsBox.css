@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap'); */
 
 .dark .comment-box {
   background: linear-gradient(145deg, #1a1a2e, #16213e);
@@ -7,7 +7,7 @@
   padding: 20px;
   margin-bottom: 20px;
   color: #e94560;
-  font-family: 'Orbitron', sans-serif;
+  font-family:   sans-serif;
   box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
   position: relative;
   overflow: hidden;
@@ -88,7 +88,7 @@
   padding: 8px 15px;
   border-radius: 5px;
   cursor: pointer;
-  font-family: 'Orbitron', sans-serif;
+  font-family:  sans-serif;
   text-transform: uppercase;
   letter-spacing: 1px;
   transition: all 0.3s ease;
@@ -110,7 +110,7 @@
   padding: 20px;
   margin-bottom: 20px;
   color: #e94560;
-  font-family: 'Orbitron', sans-serif;
+  font-family:   sans-serif;
   box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
   position: relative;
   overflow: hidden;
@@ -191,7 +191,7 @@
   padding: 8px 15px;
   border-radius: 5px;
   cursor: pointer;
-  font-family: 'Orbitron', sans-serif;
+  font-family:   sans-serif;
   text-transform: uppercase;
   letter-spacing: 1px;
   transition: all 0.3s ease;

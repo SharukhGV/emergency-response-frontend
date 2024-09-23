@@ -14,7 +14,7 @@
   --glow: 0 0 10px; /* Glow effect applied to text and accents */
   
   /* Sci-fi style font */
-  --font-sci-fi: 'Orbitron', 'Roboto Mono', Arial, sans-serif; /* Sci-fi fonts used across both themes */
+  --font-sci-fi:  'Roboto Mono', Arial, sans-serif; /* Sci-fi fonts used across both themes */
 }
 
 /* Light mode styling */

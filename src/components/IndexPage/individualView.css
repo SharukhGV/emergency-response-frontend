@@ -6,7 +6,7 @@
   padding: 20px;
   /* background: linear-gradient(145deg, #1a1a2e, #16213e); */
   color: #e94560;
-  font-family: 'Orbitron', sans-serif;
+  font-family:   sans-serif;
 }
 
 .dark .sci-fi-card {
@@ -93,7 +93,7 @@
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
-  font-family: 'Orbitron', sans-serif;
+  font-family:   sans-serif;
   font-size: 14px;
   text-transform: uppercase;
   cursor: pointer;
@@ -145,7 +145,7 @@
   border: none;
   background: rgba(15, 52, 96, 0.8);
   color: #00fff5;
-  font-family: 'Orbitron', sans-serif;
+  font-family:   sans-serif;
 }
 
 .dark .sci-fi-button.submit {
@@ -173,7 +173,7 @@
   padding: 20px;
   /* background: linear-gradient(145deg, #1a1a2e, #16213e); */
   color: #e94560;
-  font-family: 'Orbitron', sans-serif;
+  font-family:   sans-serif;
 }
 
 .light .sci-fi-card {
@@ -260,7 +260,7 @@
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
-  font-family: 'Orbitron', sans-serif;
+  font-family:   sans-serif;
   font-size: 14px;
   text-transform: uppercase;
   cursor: pointer;
@@ -312,7 +312,7 @@
   border: none;
   /* background: rgba(96, 96, 15, 0.8);
   color: #ffffff; */
-  font-family: 'Orbitron', sans-serif;
+  font-family:   sans-serif;
 }
 
 .light .sci-fi-button.submit {
