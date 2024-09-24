@@ -95,7 +95,7 @@ function MagneticPoleAnomaly(){
     <div style={{maxWidth:"95%", margin:"auto"}}>
 <br></br>
       <h2>Magnetic Pole Anomaly</h2>
-      <p>The north Magnetic Pole is moving at an alarming rate. Past rock and fossil records have indicated extiction events at a time when the poles have shifted.</p>
+      <p>The north Magnetic Pole is moving at an alarming rate. Past rock and fossil records have indicated extinction events at a time when the poles have shifted.</p>
 <div style={{border:"solid", borderColor:"green", borderRadius:"10px", padding:"15px"}}>
       <canvas ref={chartRef} />
       <p style={{color:'darkmagenta'}}>Current North Magnetic Pole (2020): 86°N, 86°W</p>

@@ -1586,3 +1586,14 @@ h1, h2, h3, h4, h5, h6, .modal-container-title {
   0% { transform: rotate(0deg) translateX(120px) rotate(0deg); }
   100% { transform: rotate(360deg) translateX(120px) rotate(-360deg); }
 }
+
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  z-index: 999;
+}
