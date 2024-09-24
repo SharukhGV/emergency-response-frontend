@@ -95,6 +95,9 @@ function Login({ setLoginUsername, loginUsername,toggleLOGIN,settoggleLOGIN, set
                         <div className="container-signin">
                             <p>Don't have an account? <Link to="/signup">Sign Up</Link>.</p>
                         </div></div>
+                        <p>
+            <Link to="/reset-password">Forgot Password?</Link>
+          </p>
                 </div>
             </form>
         </div>

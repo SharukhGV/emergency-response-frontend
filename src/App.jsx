@@ -29,6 +29,7 @@ import DreamNewForm from './dreams/DreamNewForm';
 import DreamIndex from './dreams/DreamIndex';
 import DreamDetail from './dreams/DreamDetail';
 import EditDreams from './dreams/EditDreams';
+import ResetPassword from './components/LoginRegister/ResetPassword';
 export default function App() {
 
   const [lat, setLatitude] = useState(null);
@@ -114,6 +115,7 @@ export default function App() {
     <Route path="/earthinfo" element={<ReversingCore/>} />
     <Route path="/earthrotation" element={<EarthRotationSpeed/>} />
     <Route path="/earthquakes" element={<Earthquake/>} />
+    <Route path="/reset-password" element={<ResetPassword />} />
           <Route path="/*" element={<NotFound />} />
 
         </Routes>
