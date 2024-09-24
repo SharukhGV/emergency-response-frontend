@@ -1,5 +1,5 @@
 
-import PlanetsVisible from "../Planets/PlanetsVisible";
+// import PlanetsVisible from "../Planets/PlanetsVisible";
 import meteorShowers from "./meteorShower.json"
 import "./meteorshowers.css"
 import { useState, useEffect } from "react";
@@ -154,7 +154,7 @@ return(
 
     <>
    
-      <PlanetsVisible/>
+      {/* <PlanetsVisible/> */}
     </>
   
 

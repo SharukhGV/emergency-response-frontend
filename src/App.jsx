@@ -18,7 +18,7 @@ import PleaseLogin from './components/LoginRegister/PleaseLogin';
 import MarketPlaceHome from './components/marketplace/MarketPlaceHome';
 import AllProducts from './components/marketplace/AllProducts';
 import NewItem from './components/marketplace/NewItem';
-import GeoAstroEvents from './components/GeoAstroEvents/GeoAstroEvents';
+// import GeoAstroEvents from './components/GeoAstroEvents/GeoAstroEvents';
 import MagneticPoleAnomaly from './pages/MagneticPoleAnomaly';
 import SunLifeCycle from './pages/components/SunLifeCycle';
 import MoonquakeInfo from './pages/components/MoonquakeInfo';
@@ -30,6 +30,7 @@ import DreamIndex from './dreams/DreamIndex';
 import DreamDetail from './dreams/DreamDetail';
 import EditDreams from './dreams/EditDreams';
 import ResetPassword from './components/LoginRegister/ResetPassword';
+import RSSFeedComponent from './rssfeed/RssFeedComponent';
 export default function App() {
 
   const [lat, setLatitude] = useState(null);
@@ -95,7 +96,7 @@ export default function App() {
           {!accessToken ? <Route path="/login" element={<Login settoggleLOGIN={settoggleLOGIN} toggleLOGIN={toggleLOGIN} accessToken={accessToken} setAccessToken={setAccessToken} loginUsername={loginUsername} setLoginUsername={setLoginUsername} />} /> : null}
           <Route path="/loading" element={<Loading accessToken={accessToken} />} />
           <Route path="/pleaselogin" element={<PleaseLogin accessToken={accessToken} />} />
-          <Route path="/geoastroevents" element={<GeoAstroEvents accessToken={accessToken} />} />
+          {/* <Route path="/geoastroevents" element={<GeoAstroEvents accessToken={accessToken} />} /> */}
 
           <Route path="/termsconditions" element={<TermsConditions />} />
           {!!accessToken ? <Route path="/profile" element={<Profile loginUsername={loginUsername} />} /> : null}
@@ -110,6 +111,7 @@ export default function App() {
            {!!accessToken ? <Route path="/dreams/:id" element={<DreamDetail accessToken={accessToken} setAccessToken={setAccessToken} loginUsername={loginUsername} setLoginUsername={setLoginUsername}/>} />: null}
           {!!accessToken ? <Route path="/dreams/:id/edit" element={<EditDreams />} /> : null}
           <Route path="/magneticpoleanomaly" element={<MagneticPoleAnomaly/>} />
+          <Route path="/rssfeed" element={<RSSFeedComponent/>} />
     <Route path="/sunlifecycle" element={<SunLifeCycle/>} />
     <Route path="/mooninfo" element={<MoonquakeInfo/>} />
     <Route path="/earthinfo" element={<ReversingCore/>} />
