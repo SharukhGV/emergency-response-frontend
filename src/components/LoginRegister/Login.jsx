@@ -8,10 +8,13 @@ function Login({ setLoginUsername, loginUsername,toggleLOGIN,settoggleLOGIN, set
         username: "",
         hashed_password: ""
     });
+    const [isProcessing, setIsProcessing] = useState(false);
 
     const [errorMessage, setErrorMessage]=useState(null)
     const navigate = useNavigate()
     const loginUser = (user) => {
+        setIsProcessing(true);
+
         axios.post(`${import.meta.env.VITE_BACKEND_API}/newusers/login`, user)
             .then(response => {
                 const token = response.data.accessToken;
@@ -26,6 +29,8 @@ function Login({ setLoginUsername, loginUsername,toggleLOGIN,settoggleLOGIN, set
             .catch(error => {
                 console.error('There was a problem with the login operation:', error);
                 setErrorMessage(true)
+            }).finally(() => {
+                setIsProcessing(false);
             });
     };
 
@@ -50,6 +55,8 @@ function Login({ setLoginUsername, loginUsername,toggleLOGIN,settoggleLOGIN, set
              <h1>Login</h1>
             <p>Please fill in this form to Login to an account.</p>
 {/* <div><img style={{width:"300px"}} src={hiveLOGO}></img></div> */}
+{isProcessing && <p style={{color: "blue"}}>Please wait, processing...</p>}
+
 {errorMessage ? <p style={{color:"red"}}>Incorrect Credentials</p>:null}
 {errorMessage===false ? <p style={{color:"green"}}>Success! Please Wait</p>:null}
 
@@ -72,7 +79,18 @@ function Login({ setLoginUsername, loginUsername,toggleLOGIN,settoggleLOGIN, set
 
                         <p>By Logging in to an account you agree to our <Link to="/termsconditions">Terms & Privacy</Link>.</p>
 
-                        <button style={{padding:"10px"}} type="submit" className="registerbtn">Login</button>
+                        <button 
+                    style={{
+                        padding: "10px",
+                        backgroundColor: isProcessing ? "#cccccc" : "#4CAF50",
+                        cursor: isProcessing ? "not-allowed" : "pointer",
+                    }} 
+                    type="submit" 
+                    className="registerbtn" 
+                    disabled={isProcessing}
+                >
+                    {isProcessing ? "Processing..." : "Login"}
+                </button>
 
                         <div className="container-signin">
                             <p>Don't have an account? <Link to="/signup">Sign Up</Link>.</p>
