@@ -106,6 +106,7 @@ export default function Home({ setEmergencyType, loginUsername, accessToken, tog
 <HomeAnomaly/>
 
 {modal1 ?
+<div className="modal-backdrop">
   <div className="modal">
     <article className="modal-container">
       <header className="modal-container-header">
@@ -126,10 +127,11 @@ export default function Home({ setEmergencyType, loginUsername, accessToken, tog
         <button style={{ fontSize: "10px" }} onClick={modal1Click} className="button is-primary">Close</button>
       </footer>
     </article>
-  </div>
+  </div></div>
 : null}
 
 {modal2 ?
+	<div className="modal-backdrop">
   <div className="modal">
     <article className="modal-container">
       <header className="modal-container-header">
@@ -150,10 +152,11 @@ export default function Home({ setEmergencyType, loginUsername, accessToken, tog
         <button style={{ fontSize: "10px" }} onClick={modal2Click} className="button is-primary">Close</button>
       </footer>
     </article>
-  </div>
+  </div></div>
 : null}
 
 {modal3 ?
+	<div className="modal-backdrop">
   <div className="modal">
     <article className="modal-container">
       <header className="modal-container-header">
@@ -174,10 +177,11 @@ export default function Home({ setEmergencyType, loginUsername, accessToken, tog
         <button style={{ fontSize: "10px" }} onClick={modal3Click} className="button is-primary">Close</button>
       </footer>
     </article>
-  </div>
+  </div></div>
 : null}
 
 {modal4 ?
+	<div className="modal-backdrop">
   <div className="modal">
     <article className="modal-container">
       <header className="modal-container-header">
@@ -198,10 +202,11 @@ export default function Home({ setEmergencyType, loginUsername, accessToken, tog
         <button style={{ fontSize: "10px" }} onClick={modal4Click} className="button is-primary">Close</button>
       </footer>
     </article>
-  </div>
+  </div></div>
 : null}
 
 {modal5 ?
+	<div className="modal-backdrop">
   <div className="modal">
     <article className="modal-container">
       <header className="modal-container-header">
@@ -222,10 +227,11 @@ export default function Home({ setEmergencyType, loginUsername, accessToken, tog
         <button style={{ fontSize: "10px" }} onClick={modal5Click} className="button is-primary">Close</button>
       </footer>
     </article>
-  </div>
+  </div></div>
 : null}
 
 {modal6 ?
+	<div className="modal-backdrop">
   <div className="modal">
     <article className="modal-container">
       <header className="modal-container-header">
@@ -246,7 +252,7 @@ export default function Home({ setEmergencyType, loginUsername, accessToken, tog
         <button style={{ fontSize: "10px" }} onClick={modal6Click} className="button is-primary">Close</button>
       </footer>
     </article>
-  </div>
+  </div></div>
 : null}
 
 		</div>
