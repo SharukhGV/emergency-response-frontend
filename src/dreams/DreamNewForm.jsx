@@ -74,7 +74,7 @@ const DreamNewForm = ({ initialDream = null, accessToken, loginUsername }) => {
   return (
     <div style={styles.container(theme)}>
       <h2 style={styles.title(theme)}>{initialDream ? 'Edit Dream' : 'Log New Dream'}</h2>
-      <p style={styles.intro(theme)}>This application aims to address the problem of environmental destruction and societal ignorance by raising awareness through symbolic representations of astronomical, biological, and geologic anomalies in dreams, encouraging users to reflect on human behaviors that contribute to these issues and inspiring action to prevent or prepare for potential apocalyptic scenarios.</p>
+      <p style={styles.intro(theme)}>Everyone has dreams. While we each navigate our own unique lives, we share a common environment that shapes us all, to varying degrees. Our individual experiences may differ, but the themes in our collective dream experiences can reveal deeper insights into the state of the world, reflecting both our direct and indirect impact on it.</p>
       {accessToken ? (
         <form onSubmit={handleSubmit} style={styles.form}>
           {error && <div style={styles.error(theme)}>{error}</div>}
