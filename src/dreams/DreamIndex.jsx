@@ -58,7 +58,7 @@ const DreamIndex = () => {
 
   return (
     <div style={styles.container(theme)}>
-      <h1 style={styles.title(theme)}>Dream Journal</h1>
+      <h1 style={styles.title(theme)}>Public Dream Log</h1>
 
       <div style={styles.filters}>
         <input
