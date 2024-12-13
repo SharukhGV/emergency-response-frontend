@@ -91,7 +91,7 @@ export default function Home({ setEmergencyType, loginUsername, accessToken, tog
 			<h3 style={{fontSize:"13px"}}>{loginUsername}</h3>
 			<div >
 				<br></br>
-				<div className="milkyBand">This application aims to address the problem of environmental destruction and societal ignorance by raising awareness through sharing representations of astronomical, biological, and geologic anomalies in dreams, encouraging users to reflect on human behaviors that contribute to these issues and inspiring action to prevent or prepare for potential apocalyptic scenarios.
+				<div className="milkyBand">This application aims to address the problem of environmental destruction and societal ignorance by raising awareness through sharing representations of astronomical, biological, and geologic anomalies both in reality and in dreams, encouraging users to reflect on human behaviors that contribute to these issues and inspiring action to prevent or prepare for potential apocalyptic scenarios.
 					<br></br></div>
 				<br></br>
 
