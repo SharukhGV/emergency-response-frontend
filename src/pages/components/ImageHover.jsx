@@ -39,7 +39,7 @@ const ImageHover = () => {
   };
 
   return (
-    <div>
+    <div >
       <div style={containerStyle}
            onMouseEnter={() => setIsGeologicHovered(true)}
            onMouseLeave={() => setIsGeologicHovered(false)}>

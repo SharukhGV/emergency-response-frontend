@@ -6,7 +6,7 @@ export default function HomeAnomaly(){
 
 
 return (
-<div style={{margin:"auto", textAlign:"center"}}>
+<div className="imageHover">
 
 
     <div style={{border:"solid", borderRadius:"10px", borderColor:"green", padding:"15px", marginLeft:"15px", marginRight:"15px"}}><h2>Earth, Lunar, and Solar Anomalies</h2>

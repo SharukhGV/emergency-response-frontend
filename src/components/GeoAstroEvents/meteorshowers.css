@@ -203,3 +203,77 @@ border: none;
 width: 40px;
 height:40px;
 }
+/* Shared styling for dark and light themes */
+.meteorabout {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  border-radius: 12px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+  display: flex;
+  flex-direction: column; /* Default stack layout for smaller screens */
+  gap: 20px;
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+}
+
+.meteorabout__content {
+  display: flex;
+  flex-direction: row; /* Arrange image and details side-by-side */
+  align-items: center; /* Align content vertically */
+  gap: 20px; /* Space between image and details */
+}
+
+/* Image Styling */
+.meteorabout__image {
+  max-width: 150px; /* Limit the image width */
+  border-radius: 8px; /* Match rounded corners */
+  object-fit: cover; /* Maintain image aspect ratio */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow for image */
+}
+
+/* Details Styling */
+.meteorabout__details {
+  flex: 1; /* Allow details to take the remaining space */
+}
+
+.meteorabout__name {
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+  color: #444; /* Subtle color for name */
+}
+
+/* Dark Theme */
+.dark .meteorabout {
+  background: linear-gradient(135deg, #1e1e2f, #292944); /* Subtle dark gradient */
+  color: #f8f9fa; /* Light text for contrast */
+}
+
+.dark .meteorabout:hover {
+  background: linear-gradient(135deg, #292944, #3a3a5c); /* Slightly lighter gradient on hover */
+  transform: scale(1.02); /* Slight zoom effect */
+}
+
+/* Light Theme */
+.light .meteorabout {
+  background: linear-gradient(135deg, #ffffff, #f1f3f4); /* Light gradient */
+  color: #333; /* Dark text for readability */
+}
+
+.light .meteorabout:hover {
+  background: linear-gradient(135deg, #f9f9fa, #eaeef0); /* Slightly darker gradient on hover */
+  transform: scale(1.02); /* Slight zoom effect */
+}
+
+.nometeor {
+  background-color: #1e1e2f; /* Subtle dark background */
+  color: #f8f9fa; /* Light text for contrast */
+  padding: 20px;
+  border-radius: 12px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add depth with shadow */
+  border: 1px solid #444; /* Subtle border for definition */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+}
+
+.nometeor:hover {
+  background-color: #292944; /* Lighter shade for hover effect */
+  transform: scale(1.02); /* Slight zoom effect on hover */
+}
