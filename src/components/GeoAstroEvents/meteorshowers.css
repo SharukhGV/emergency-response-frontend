@@ -38,6 +38,7 @@
 
 
 
+
   .dark .span {
     display: inline-block;
     width: 35px;
@@ -241,6 +242,20 @@ height:40px;
   color: #444; /* Subtle color for name */
 }
 
+/* Responsive styling: Stack image on top of content */
+@media (min-width: 750px) and (max-width: 1150px) {
+  .meteorabout__content {
+    flex-direction: column; /* Stack image on top */
+    align-items: flex-start; /* Align content to the start */
+  }
+
+  .meteorabout__image {
+    margin-bottom: 20px; /* Add space between image and details */
+    max-width: 100%; /* Allow the image to expand fully */
+  }
+}
+
+
 /* Dark Theme */
 .dark .meteorabout {
   background: linear-gradient(135deg, #1e1e2f, #292944); /* Subtle dark gradient */
@@ -277,3 +292,6 @@ height:40px;
   background-color: #292944; /* Lighter shade for hover effect */
   transform: scale(1.02); /* Slight zoom effect on hover */
 }
+
+
+
