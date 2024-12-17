@@ -43,7 +43,7 @@ function MeteorShowers() {
 
 
   return (
-    <div style={{ textAlign: "center" }} className="meteorInfo">
+    <div style={{ textAlign: "center", marginLeft:"30px", marginRight:"30px" }} className="meteorInfo">
 
       <>
         {/* ON BUTTON CLICK, SHOW METEOR SHOWERS WITHIN THREE MONTHS */}
