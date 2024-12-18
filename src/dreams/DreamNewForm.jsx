@@ -127,8 +127,8 @@ const DreamNewForm = ({ initialDream = null, accessToken, loginUsername }) => {
                 onChange={handleChange}
                 className="form-checkbox"
               />
-              Day Dream
-            </label>
+           Did you dream during the day? (Day Dream)
+           </label>
           </div>
           <button type="submit" className="form-button">
             {initialDream ? 'Update Dream' : 'Log Dream'}
