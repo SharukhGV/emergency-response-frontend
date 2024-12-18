@@ -1,0 +1,532 @@
+/* EDIT PAGE */
+
+/* Light Theme */
+/* .light .container {
+    background-color: #e196e96e;
+    color: #333333;
+    border: 1px solid #cccccc;
+    border-radius: 10px;
+    margin-top: 30px;
+  } */
+
+.light .title {
+    color: #111111;
+}
+
+.light .form {
+    background-color: #f9f9f9;
+    margin: 30px;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.light .label {
+    color: #444444;
+}
+
+.light .input,
+.light .textarea {
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+    /* Rounded corners */
+    color: #333333;
+    padding: 10px 15px;
+    /* Comfortable padding */
+    font-size: 1rem;
+    /* Adjust for better readability */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow for depth */
+    transition: all 0.3s ease-in-out;
+    /* Smooth transitions */
+    outline: none;
+    /* Remove default outline */
+}
+
+.light .input:hover,
+.light .textarea:hover {
+    border-color: #888888;
+    /* Slightly darker border on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    /* Slightly deeper shadow on hover */
+}
+
+.light .input:focus,
+.light .textarea:focus {
+    border-color: #3a86ff;
+    /* Highlight border on focus */
+    box-shadow: 0 0 8px rgba(58, 134, 255, 0.5);
+    /* Blue glow on focus */
+    background-color: #f9fbff;
+    /* Slightly lighter background */
+}
+
+.light .textarea {
+    resize: vertical;
+    /* Allow vertical resizing only */
+    min-height: 100px;
+    /* Default height for better usability */
+}
+
+.light .button {
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+}
+
+.light .button:hover {
+    background-color: #0056b3;
+}
+
+.light .back-button {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.light .back-button:hover {
+    text-decoration: underline;
+}
+
+/* Dark Theme */
+.dark .container {
+    background-color: #333333;
+    color: #ffffff;
+    border: 1px solid #444444;
+}
+
+.dark .title {
+    color: #f1f1f1;
+}
+
+.dark .form {
+    background-color: #444444;
+}
+
+.dark .label {
+    color: #cccccc;
+}
+
+.dark .input,
+.dark .textarea {
+    background-color: #555555;
+    border: 1px solid #666666;
+    color: #ffffff;
+}
+
+.dark .button {
+    background-color: #1a73e8;
+    color: #ffffff;
+    border: none;
+}
+
+.dark .button:hover {
+    background-color: #145ca8;
+}
+
+.dark .back-button {
+    color: #1a73e8;
+    text-decoration: none;
+}
+
+.dark .back-button:hover {
+    text-decoration: underline;
+}
+
+
+/* NEW FORM PAGE */
+
+/* Light Theme */
+.light .dream-container {
+    background-color: #dddbc1;
+    color: #333333;
+}
+
+.light .dream-title {
+    color: #111111;
+}
+
+.light .dream-intro {
+    color: #555555;
+}
+
+.light .dream-form {
+    background-color: #f9f9f9;
+}
+
+.light .form-label {
+    color: #444444;
+}
+
+.light .form-input,
+.light .form-textarea {
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    color: #333333;
+}
+
+.light .form-button {
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+}
+
+.light .form-button:hover {
+    background-color: #0056b3;
+}
+
+.light .dream-error {
+    color: #ff0000;
+}
+
+.light .dream-success {
+    color: #00aa00;
+}
+
+.light .login-message {
+    color: #555555;
+}
+
+.light .back-button {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.light .back-button:hover {
+    text-decoration: underline;
+}
+
+/* Dark Theme */
+.dark .dream-container {
+    background-color: #333333;
+    color: #ffffff;
+}
+
+.dark .dream-title {
+    color: #f1f1f1;
+}
+
+.dark .dream-intro {
+    color: #cccccc;
+}
+
+.dark .dream-form {
+    background-color: #444444;
+}
+
+.dark .form-label {
+    color: #cccccc;
+}
+
+.dark .form-input,
+.dark .form-textarea {
+    background-color: #555555;
+    border: 1px solid #666666;
+    color: #ffffff;
+}
+
+.dark .form-button {
+    background-color: #1a73e8;
+    color: #ffffff;
+    border: none;
+}
+
+.dark .form-button:hover {
+    background-color: #145ca8;
+}
+
+.dark .dream-error {
+    color: #ff6666;
+}
+
+.dark .dream-success {
+    color: #66ff66;
+}
+
+.dark .login-message {
+    color: #cccccc;
+}
+
+.dark .back-button {
+    color: #1a73e8;
+    text-decoration: none;
+}
+
+.dark .back-button:hover {
+    text-decoration: underline;
+}
+
+
+
+/* Pagination & Index Page */
+
+/* Light Theme */
+.light .dream-index-container {
+    background-color: #dddbc1;
+    color: #333333;
+    margin: auto;
+}
+
+.light .dream-index-title {
+    color: #111111;
+}
+
+.light .dream-filters {
+    /* display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem; */
+}
+
+.light .dream-input,
+.light .dream-select {
+    padding: 0.5rem;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    color: #333333;
+    background-color: #ffffff;
+}
+
+.light .dream-list {
+    display: grid;
+    gap: 1rem;
+}
+
+.light .dream-item {
+    padding: 1rem;
+    border: 1px solid #dddddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.light .dream-title {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.light .dream-date {
+    font-size: 0.875rem;
+    color: #777777;
+    margin-bottom: 0.5rem;
+}
+
+.light .dream-description {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: #555555;
+}
+
+.light .view-details-button {
+    text-decoration: none;
+    color: #007bff;
+}
+
+.light .view-details-button:hover {
+    text-decoration: underline;
+}
+
+.light .pagination {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+}
+
+.light .pagination-item {
+    margin: 0 0.5rem;
+}
+
+.light .pagination-button {
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    padding: 0.5rem 1rem;
+    color: #333333;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.light .pagination-button.active {
+    background-color: #007bff;
+    color: #ffffff;
+    border-color: #007bff;
+}
+
+/* Dark Theme */
+.dark .dream-index-container {
+    background-color: #333333;
+    color: #ffffff;
+}
+
+.dark .dream-index-title {
+    color: #f1f1f1;
+}
+
+.dark .dream-filters {
+    /* display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem; */
+}
+
+.dark .dream-input,
+.dark .dream-select {
+    padding: 0.5rem;
+    border: 1px solid #444444;
+    border-radius: 4px;
+    color: #103b06;
+    background-color: #555555;
+}
+
+.dark .dream-list {
+    display: grid;
+    gap: 1rem;
+}
+
+.dark .dream-item {
+    padding: 1rem;
+    border: 1px solid #555555;
+    border-radius: 8px;
+    background-color: #444444;
+}
+
+.dark .dream-title {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.dark .dream-date {
+    font-size: 0.875rem;
+    color: #cccccc;
+    margin-bottom: 0.5rem;
+}
+
+.dark .dream-description {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: #bbbbbb;
+}
+
+.dark .view-details-button {
+    text-decoration: none;
+    color: #1a73e8;
+}
+
+.dark .view-details-button:hover {
+    text-decoration: underline;
+}
+
+.dark .pagination {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+}
+
+.dark .pagination-item {
+    margin: 0 0.5rem;
+}
+
+.dark .pagination-button {
+    background-color: #555555;
+    border: 1px solid #666666;
+    padding: 0.5rem 1rem;
+    color: #ffffff;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.dark .pagination-button.active {
+    background-color: #1a73e8;
+    color: #ffffff;
+    border-color: #1a73e8;
+}
+
+
+/* Dream Details Page */
+
+
+.dream-detail {
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Roboto', 'Lato', sans-serif;
+    color: #4a4a4a;
+    max-width: 600px;
+    margin: 50px auto;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+    backdrop-filter: blur(10px);
+}
+
+.dream-title {
+    font-size: 2.5rem;
+    color: #3a3a85;
+}
+
+.dream-date {
+    font-style: italic;
+}
+
+.dream-type {
+    font-weight: bold;
+}
+
+.day-dream {
+    color: #ffab91;
+}
+
+.night-dream {
+    color: #a1887f;
+}
+
+.dream-description {
+    line-height: 1.8;
+}
+
+.dream-creator {
+    font-weight: bold;
+}
+
+.back-button,
+.edit-button,
+.delete-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #fff;
+    transition: background-color 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.back-button {
+    background-color: #3a3a85;
+}
+
+.back-button:hover {
+    background-color: #5050a3;
+}
+
+.edit-button {
+    background-color: #4caf50;
+    margin-right: 10px;
+}
+
+.edit-button:hover {
+    background-color: #45a049;
+}
+
+.delete-button {
+    background-color: #ff6b6b;
+    border: none;
+}
+
+.delete-button:hover {
+    background-color: #ff8787;
+}
+
+
+.dream-filters{
+
+    margin: auto;
+    text-align: center;
+}

@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect,useRef } from 'react';
 import axios from 'axios';
 import { useParams, useNavigate, Link } from 'react-router-dom';
-
+import "./dreams.css"
 function EditDreams() {
   const [dream, setDream] = useState({
     title: '',
@@ -13,7 +13,7 @@ function EditDreams() {
   const navigate = useNavigate();
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(true);
-  const [theme, setTheme] = useState('light');
+  // const [theme, setTheme] = useState('light');
 
   useEffect(() => {
     const fetchDream = async () => {
@@ -36,14 +36,14 @@ function EditDreams() {
     };
     fetchDream();
 
-    // Check user's preferred color scheme
-    const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
-    setTheme(prefersDarkScheme.matches ? 'dark' : 'light');
+  //   // Check user's preferred color scheme
+  //   const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+  //   setTheme(prefersDarkScheme.matches ? 'dark' : 'light');
 
-    const handleChange = (e) => setTheme(e.matches ? 'dark' : 'light');
-    prefersDarkScheme.addEventListener('change', handleChange);
+  //   const handleChange = (e) => setTheme(e.matches ? 'dark' : 'light');
+  //   prefersDarkScheme.addEventListener('change', handleChange);
 
-    return () => prefersDarkScheme.removeEventListener('change', handleChange);
+  //   return () => prefersDarkScheme.removeEventListener('change', handleChange);
   }, [id]);
 
   const handleChange = (e) => {
@@ -72,15 +72,26 @@ function EditDreams() {
     }
   };
 
-  if (loading) return <div style={styles.loading(theme)}>Loading...</div>;
-  if (error) return <div style={styles.error(theme)}>{error}</div>;
+  // if (loading) return <div style={styles.loading(theme)}>Loading...</div>;
+  // if (error) return <div style={styles.error(theme)}>{error}</div>;
+
+
+  const textareaRef = useRef(null);
+
+  // Automatically adjust textarea height
+  useEffect(() => {
+    if (textareaRef.current) {
+      textareaRef.current.style.height = 'auto';
+      textareaRef.current.style.height = textareaRef.current.scrollHeight + 'px';
+    }
+  }, [dream.description]); // Re-runs when "description" value changes
 
   return (
-    <div style={styles.container(theme)}>
-      <h2 style={styles.title(theme)}>Edit Dream</h2>
-      <form onSubmit={handleSubmit} style={styles.form}>
-        <div style={styles.formGroup}>
-          <label htmlFor="title" style={styles.label(theme)}>Title:</label>
+    <div className="container">
+      <h2 className="title">Edit Dream</h2>
+      <form onSubmit={handleSubmit} className="form">
+        <div className="form-group">
+          <label htmlFor="title" className="label">Title:</label>
           <input
             type="text"
             id="title"
@@ -88,22 +99,24 @@ function EditDreams() {
             value={dream.title}
             onChange={handleChange}
             required
-            style={styles.input(theme)}
+            className="input"
           />
         </div>
-        <div style={styles.formGroup}>
-          <label htmlFor="description" style={styles.label(theme)}>Description:</label>
-          <textarea
-            id="description"
-            name="description"
-            value={dream.description}
-            onChange={handleChange}
-            required
-            style={styles.textarea(theme)}
-          />
-        </div>
-        <div style={styles.formGroup}>
-          <label htmlFor="date" style={styles.label(theme)}>Date:</label>
+        <div className="form-group">
+      <label htmlFor="description" className="label">Description:</label>
+      <textarea
+        id="description"
+        name="description"
+        value={dream.description}
+        onChange={handleChange}
+        required
+        className="textarea"
+        ref={textareaRef} // Attach the ref for dynamic height adjustment
+        placeholder="Write your dream description here..."
+      />
+    </div>
+        <div className="form-group">
+          <label htmlFor="date" className="label">Date:</label>
           <input
             type="date"
             id="date"
@@ -111,113 +124,30 @@ function EditDreams() {
             value={dream.date}
             onChange={handleChange}
             required
-            style={styles.input(theme)}
+            className="input"
           />
         </div>
-        <div style={styles.formGroup}>
-          <label htmlFor="isDayDream" style={styles.checkboxLabel(theme)}>
+        <div className="form-group">
+          <label htmlFor="isDayDream" className="checkbox-label">
             <input
               type="checkbox"
               id="isDayDream"
               name="isDayDream"
               checked={dream.isDayDream}
               onChange={handleChange}
-              style={styles.checkbox}
+              className="checkbox"
             />
             Day Dream
           </label>
         </div>
-        <button type="submit" style={styles.button(theme)}>Update Dream</button>
+        <button type="submit" className="button">Update Dream</button>
       </form>
-      <Link to={`/dreams/${id}`} style={styles.backButton(theme)}>Back to Dream</Link>
+      <Link to={`/dreams/${id}`} className="back-button">Back to Dream</Link>
     </div>
   );
+  
 }
 
-const styles = {
-  container: (theme) => ({
-    maxWidth: '600px',
-    margin: '0 auto',
-    padding: '20px',
-    backgroundColor: theme === 'light' ? '#f0f0f0' : '#2c2c2c',
-    color: theme === 'light' ? '#333' : '#fff',
-    borderRadius: '10px',
-    boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
-  }),
-  title: (theme) => ({
-    color: theme === 'light' ? '#3a3a85' : '#74c0fc',
-    textAlign: 'center',
-    marginBottom: '20px',
-  }),
-  form: {
-    display: 'flex',
-    flexDirection: 'column',
-  },
-  formGroup: {
-    marginBottom: '15px',
-  },
-  label: (theme) => ({
-    display: 'block',
-    marginBottom: '5px',
-    color: theme === 'light' ? '#333' : '#fff',
-  }),
-  input: (theme) => ({
-    width: '100%',
-    padding: '8px',
-    borderRadius: '4px',
-    border: `1px solid ${theme === 'light' ? '#ccc' : '#555'}`,
-    backgroundColor: theme === 'light' ? '#fff' : '#3c3c3c',
-    color: theme === 'light' ? '#333' : '#fff',
-  }),
-  textarea: (theme) => ({
-    width: '100%',
-    padding: '8px',
-    borderRadius: '4px',
-    border: `1px solid ${theme === 'light' ? '#ccc' : '#555'}`,
-    backgroundColor: theme === 'light' ? '#fff' : '#3c3c3c',
-    color: theme === 'light' ? '#333' : '#fff',
-    minHeight: '100px',
-  }),
-  checkboxLabel: (theme) => ({
-    display: 'flex',
-    alignItems: 'center',
-    color: theme === 'light' ? '#333' : '#fff',
-  }),
-  checkbox: {
-    marginRight: '10px',
-  },
-  button: (theme) => ({
-    padding: '10px 15px',
-    backgroundColor: theme === 'light' ? '#3a3a85' : '#74c0fc',
-    color: '#fff',
-    border: 'none',
-    borderRadius: '4px',
-    cursor: 'pointer',
-    fontSize: '16px',
-    transition: 'background-color 0.3s',
-  }),
-  backButton: (theme) => ({
-    display: 'inline-block',
-    marginTop: '20px',
-    padding: '10px 15px',
-    backgroundColor: theme === 'light' ? '#4caf50' : '#45a049',
-    color: '#fff',
-    textDecoration: 'none',
-    borderRadius: '4px',
-    transition: 'background-color 0.3s',
-  }),
-  loading: (theme) => ({
-    color: theme === 'light' ? '#333' : '#fff',
-    textAlign: 'center',
-    fontSize: '18px',
-    marginTop: '20px',
-  }),
-  error: (theme) => ({
-    color: theme === 'light' ? '#d32f2f' : '#f44336',
-    textAlign: 'center',
-    fontSize: '18px',
-    marginTop: '20px',
-  }),
-};
+
 
 export default EditDreams;

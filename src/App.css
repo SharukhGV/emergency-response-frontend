@@ -906,7 +906,7 @@ input {
 .dark input {
   background-color: rgba(0, 0, 0, 0.8);
   border: 1px solid var(--dark-accent);
-  color: var(--dark-text);
+  color: rgb(3, 145, 3);
 }
 
 input:focus {

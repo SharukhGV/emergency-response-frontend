@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useContext } from 'react';
 import axios from 'axios';
 import { useParams, Link, useNavigate } from 'react-router-dom';
-
+import "./dreams.css"
 const DreamDetail = (loginUsername) => {
   const [dream, setDream] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -38,105 +38,44 @@ const DreamDetail = (loginUsername) => {
   if (loading) return <div>Loading...</div>;
   if (error) return <div>Error: {error}</div>;
   if (!dream) return <div>No dream found</div>;
-
   return (
-    <div
-    className="dream-detail"
-    style={{
-      // backgroundColor:"#f5f5f5",
-      padding: '20px',
-      borderRadius: '10px',
-      boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
-      fontFamily: "'Roboto', Lato",
-      color: '#4a4a4a',
-      maxWidth: '600px',
-      margin: '50px auto',
-      textAlign: 'center',
-      transition: 'all 0.3s ease-in-out',
-      backdropFilter: 'blur(10px)',
-    }}
-  >
-    <h1 style={{ fontSize: '2.5rem', color: '#3a3a85' }}>{dream.title}</h1>
-    <p style={{ fontStyle: 'italic' }}>
-      <strong>Date:</strong> {new Date(dream.date).toLocaleDateString()}
-    </p>
-    <p>
-      <strong>Type:</strong>{' '}
-      {dream.isDayDream ? (
-        <span style={{ color: '#ffab91' }}>Day Dream</span>
-      ) : (
-        <span style={{ color: '#a1887f' }}>Night Dream</span>
+    <div className="dream-detail">
+      <h1 className="dream-title">{dream.title}</h1>
+      <p className="dream-date">
+        <strong>Date:</strong> {new Date(dream.date).toLocaleDateString()}
+      </p>
+      <p className="dream-type">
+        <strong>Type:</strong>{' '}
+        {dream.isDayDream ? (
+          <span className="day-dream">Day Dream</span>
+        ) : (
+          <span className="night-dream">Night Dream</span>
+        )}
+      </p>
+      <p>
+        <strong>Description:</strong>
+      </p>
+      <p className="dream-description">{dream.description}</p>
+      <p className="dream-creator">
+        <strong>Created by:</strong> {dream.username}
+      </p>
+      <Link to="/dreams" className="back-button">
+        Back to All Dreams
+      </Link>
+      <span> </span>
+      {loginUsername.loginUsername === dream.username && (
+        <Link to={`/dreams/${id}/edit`} className="edit-button">
+          Edit Dream
+        </Link>
       )}
-    </p>
-    <p>
-      <strong>Description:</strong>
-    </p>
-    <p style={{ lineHeight: '1.8' }}>{dream.description}</p>
-    <p>
-      <strong>Created by:</strong> {dream.username}
-    </p>
-    <Link
-      to="/dreams"
-      style={{
-        display: 'inline-block',
-        marginTop: '20px',
-        padding: '10px 15px',
-        backgroundColor: '#3a3a85',
-        color: '#fff',
-        textDecoration: 'none',
-        borderRadius: '5px',
-        transition: 'background-color 0.3s ease-in-out',
-      }}
-      onMouseOver={(e) => (e.target.style.backgroundColor = '#5050a3')}
-      onMouseOut={(e) => (e.target.style.backgroundColor = '#3a3a85')}
-    >
-      Back to All Dreams
-    </Link>
-    <span>  </span>
-    {loginUsername.loginUsername === dream.username && (<Link
-      to={`/dreams/${id}/edit`}
-      style={{
-        display: 'inline-block',
-        marginTop: '20px',
-        marginRight: '10px',
-        padding: '10px 15px',
-        backgroundColor: '#4caf50',
-        color: '#fff',
-        textDecoration: 'none',
-        borderRadius: '5px',
-        transition: 'background-color 0.3s ease-in-out',
-      }}
-      onMouseOver={(e) => (e.target.style.backgroundColor = '#45a049')}
-      onMouseOut={(e) => (e.target.style.backgroundColor = '#4caf50')}
-    >
-      Edit Dream
-    </Link>)}
-
-    {loginUsername.loginUsername === dream.username && (
-      <button
-        className="delete-button"
-        style={{
-          display: 'block',
-          marginTop: '20px',
-          padding: '10px 15px',
-          backgroundColor: '#ff6b6b',
-          color: '#fff',
-          border: 'none',
-          borderRadius: '5px',
-          cursor: 'pointer',
-          transition: 'background-color 0.3s ease-in-out',
-        }}
-        onMouseOver={(e) => (e.target.style.backgroundColor = '#ff8787')}
-        onMouseOut={(e) => (e.target.style.backgroundColor = '#ff6b6b')}
-        onClick={deleteDream}
-      >
-        Delete
-      </button>
-      
-    )}
-  </div>
-  
+      {loginUsername.loginUsername === dream.username && (
+        <button className="delete-button" onClick={deleteDream}>
+          Delete
+        </button>
+      )}
+    </div>
   );
+
 };
 
 export default DreamDetail;
