@@ -137,7 +137,7 @@ function EditDreams() {
               onChange={handleChange}
               className="checkbox"
             />
-            Day Dream
+           Did you dream during the day? (Day Dream)
           </label>
         </div>
         <button type="submit" className="button">Update Dream</button>
