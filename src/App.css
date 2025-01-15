@@ -734,6 +734,10 @@ tr:hover {
 .navigationBAr {
   z-index: 1000;
   background-color: rgb(0, 0, 0);
+  width: 100%;
+}
+.NavBarContainer{
+  width: 100%;
 }
 
 .cardCONTAIN {
@@ -1622,8 +1626,9 @@ h1, h2, h3, h4, h5, h6, .modal-container-title {
 .containermainpage {
   display: grid;
   grid-template-columns: 1fr 3fr 1fr;
-  gap: 20px;
 }
+
+
 
 @media screen and (max-width: 1660px) {
   .containermainpage {
@@ -1639,7 +1644,10 @@ h1, h2, h3, h4, h5, h6, .modal-container-title {
 
 }
 
-
+.picturespages{
+  width: 500px;
+  height: 300px;
+}
 
 @media screen and (max-width: 1659px) {
 
@@ -1659,4 +1667,10 @@ h1, h2, h3, h4, h5, h6, .modal-container-title {
   .smallerHomeAnomaly{
     display: none;
   }
+}
+
+
+
+.containermainpage .button {
+  width: 98%;
 }
