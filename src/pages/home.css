@@ -305,10 +305,9 @@ body {
 }
 
 
-/* .milkyBand{
-  background-image: url("./milkyBand.jpg");
-  background-size: cover;
-} */
+.milkyBand{
+font-size: 25px;
+}
 
 .logoabout {
   background-image: url("./landnorth.gif");
@@ -499,3 +498,66 @@ body {
   padding-top: 5px;
   padding-bottom: 5px;
 }
+
+/* Base styles for the container */
+.buttonPollCont {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two equal columns */
+  gap: 20px; /* Space between buttons */
+  padding: 20px; /* Padding for the container */
+}
+
+/* Button styles */
+.button {
+  height: 80px;
+  border-radius: 20px;
+  color: white;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Specific button colors */
+.earthTremors {
+  background-color: brown;
+}
+
+.migratoryPatterns {
+  background-color: gray;
+}
+
+.invasiveSpecies {
+  background-color: darkorange;
+}
+
+.unusualWeather {
+  background-color: darkblue;
+}
+
+.wildlifeAnomalies {
+  background-color: darkgreen;
+}
+
+.waterLevelChanges {
+  background-color: blue;
+}
+
+.otherCategory {
+  background-color: black;
+  grid-column: span 2; /* Span two columns */
+}
+
+/* Media query for responsive layout */
+@media (max-width: 768px) {
+  .buttonPollCont {
+      grid-template-columns: 1fr; /* Single column for mobile */
+  }
+
+  .otherCategory {
+      grid-column: span 1; /* Default behavior for single column */
+  }
+
+}
+
+

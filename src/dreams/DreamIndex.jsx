@@ -57,7 +57,8 @@ const DreamIndex = () => {
   // Change page
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
-  return (
+  return (<>
+  <br></br>
     <div className="dream-index-container">
       <h1 className="dream-index-title">Public Dream Log</h1>
   
@@ -103,7 +104,7 @@ const DreamIndex = () => {
         paginate={paginate}
         currentPage={currentPage}
       />
-    </div>
+    </div></>
   );}
   
   const Pagination = ({ dreamsPerPage, totalDreams, paginate, currentPage }) => {

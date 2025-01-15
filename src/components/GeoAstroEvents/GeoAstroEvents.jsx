@@ -4,6 +4,7 @@ import SolarEclipse from "./SolarEclipse";
 import Volcanoes from "./Volcanoes";
 import LunarEclipse from "./LunarEclipse"
 import MeteorShowers from "./MeteorShowers";
+import PlanetsVisible from "../Planets/PlanetsVisible";
 function GeoAstroEvents() {
 
   return (
@@ -11,21 +12,13 @@ function GeoAstroEvents() {
 
       <div className="homecontainerMeteors">
         <div className="earthquakeInfo">
-          <h1><strong>Recent EarthQuakes</strong></h1>
-          <Earthquake />
-          <h1><strong>Lunar Eclipses</strong></h1>
-          <h3>25 YRS. Past-Future</h3>
-          <LunarEclipse />
+    
 
-          <h1><strong>Solar Eclipses</strong></h1>
-          <h3>25 YRS. Past-Future</h3>
+          <PlanetsVisible />
 
-          <SolarEclipse />
-          <h1><strong>Major Volcanic Activity</strong></h1>
-          <h3>25 YRS. Past-Potential-Future</h3>
-          <Volcanoes />
+
         </div>
-<MeteorShowers/>
+        <MeteorShowers />
       </div>
 
       <br></br>

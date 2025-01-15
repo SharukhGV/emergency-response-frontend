@@ -340,8 +340,8 @@ a:hover {
   position: relative;
   display: flex;
   align-items: center;
-  gap: 2em;
-  padding: 2em;
+  /* gap: 2em; */
+  padding: 10px;
   border-radius: calc(var(--curve) * 1px) 0 0 0;
   background-color: var(--surface-color);
   transform: translateY(-100%);
@@ -1601,8 +1601,62 @@ h1, h2, h3, h4, h5, h6, .modal-container-title {
 
 
 .light .imageHover{
-  background-color: beige;
+  background-color: rgba(245, 245, 220, 0.151);
 }
 .dark .imageHover{
-  background-color: rgb(44, 40, 46);
+  background-color: rgba(44, 40, 46, 0.205);
+}
+
+
+.left, .right {
+  height: 100vh;
+  overflow-y: auto;
+  position: sticky;
+  top: 0;
+}
+
+.main {
+  min-height: 100vh;
+}
+
+.containermainpage {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  gap: 20px;
+}
+
+@media screen and (max-width: 1660px) {
+  .containermainpage {
+    grid-template-columns: 1fr;
+  }
+  
+  .left, .right {
+    /* height: auto;
+    position: static; */
+    display:none
+  }
+
+
+}
+
+
+
+@media screen and (max-width: 1659px) {
+
+  
+ .left, .right {
+    /* height: auto;
+    position: static; */
+    display:none
+  }
+
+}
+
+@media screen and (min-width:1659px){
+  .homeanomaly{
+    display: none;
+  }
+  .smallerHomeAnomaly{
+    display: none;
+  }
 }

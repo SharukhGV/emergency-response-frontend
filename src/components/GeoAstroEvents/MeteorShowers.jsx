@@ -57,27 +57,22 @@ function MeteorShowers() {
             <>
               {/* MONTH 1 */}
 
-              <div style={{ fontFamily: "Arial" }} className="meteorabout">
-                <div className="meteorabout__content">
-                  <img
-                    className="meteorabout__image"
-                    src={meteor.image}
-                    alt={meteor.name}
-                  />
-                  <div className="meteorabout__details">
-                    <h5 className="meteorabout__name">{meteor.name}</h5>
-                    <h3>Start: {meteor.dateStart}</h3>
-                    <h3>End: {meteor.dateEnd}</h3>
-                    <p>
-                      <strong>{meteor.frequency}</strong>
-                    </p>
-                    <p>{meteor.about}</p>
+              <div style={{ fontFamily: "Arial" }} className="card">
+                <img style={{ maxHeight: "250px" }} src={meteor.image} className="card__image" alt="" />
+                <div className="card__overlay">
+                  <div className="card__header">
+                    <svg className="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>
+                    <img className="card__thumb" src={meteor.image} alt="" />
+                    <div className="card__header-text">
+                      <h5 style={{ fontFamily: "Arial" }} >{meteor.name}</h5>
+                      <h3 className="card__title">Start: {meteor.dateStart}</h3>
+                      <h3 className="card__title">End: {meteor.dateEnd}</h3>
+                      <span style={{ fontFamily: "Arial" }} className="card__status"> </span>
+                    </div>
                   </div>
-                </div>
-              </div>
-
+                  <p style={{ fontFamily: "Arial", fontSize: "10px" }} className="card__description"><strong>{meteor.description}</strong></p>
+</div></div>
 <br></br>
-
             </>
           )
         })
@@ -89,26 +84,22 @@ function MeteorShowers() {
           return (
             <>
 
-              <div style={{ fontFamily: "Arial" }} className="meteorabout">
-                <div className="meteorabout__content">
-                  <img
-                    className="meteorabout__image"
-                    src={meteor.image}
-                    alt={meteor.name}
-                  />
-                  <div className="meteorabout__details">
-                    <h5 className="meteorabout__name">{meteor.name}</h5>
-                    <h3>Start: {meteor.dateStart}</h3>
-                    <h3>End: {meteor.dateEnd}</h3>
-                    <p>
-                      <strong>{meteor.frequency}</strong>
-                    </p>
-                    <p>{meteor.about}</p>
+<div style={{ fontFamily: "Arial" }} className="card">
+                <img style={{ maxHeight: "250px" }} src={meteor.image} className="card__image" alt="" />
+                <div className="card__overlay">
+                  <div className="card__header">
+                    <svg className="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>
+                    <img className="card__thumb" src={meteor.image} alt="" />
+                    <div className="card__header-text">
+                      <h5 style={{ fontFamily: "Arial" }} >{meteor.name}</h5>
+                      <h3 className="card__title">Start: {meteor.dateStart}</h3>
+                      <h3 className="card__title">End: {meteor.dateEnd}</h3>
+                      <span style={{ fontFamily: "Arial" }} className="card__status"> </span>
+                    </div>
                   </div>
-                </div>
-              </div>
+                  <p style={{ fontFamily: "Arial", fontSize: "10px" }} className="card__description"><strong>{meteor.description}</strong></p>
+</div></div>
 <br></br>
-
             </>
           )
         })
@@ -120,25 +111,21 @@ function MeteorShowers() {
           return (
 
             <>
-              <div style={{ fontFamily: "Arial" }} className="meteorabout">
-                <div className="meteorabout__content">
-                  <img
-                    className="meteorabout__image"
-                    src={meteor.image}
-                    alt={meteor.name}
-                  />
-                  <div className="meteorabout__details">
-                    <h5 className="meteorabout__name">{meteor.name}</h5>
-                    <h3>Start: {meteor.dateStart}</h3>
-                    <h3>End: {meteor.dateEnd}</h3>
-                    <p>
-                      <strong>{meteor.frequency}</strong>
-                    </p>
-                    <p>{meteor.about}</p>
+                   <div style={{ fontFamily: "Arial" }} className="card">
+                <img style={{ maxHeight: "250px" }} src={meteor.image} className="card__image" alt="" />
+                <div className="card__overlay">
+                  <div className="card__header">
+                    <svg className="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>
+                    <img className="card__thumb" src={meteor.image} alt="" />
+                    <div className="card__header-text">
+                      <h5 style={{ fontFamily: "Arial" }} >{meteor.name}</h5>
+                      <h3 className="card__title">Start: {meteor.dateStart}</h3>
+                      <h3 className="card__title">End: {meteor.dateEnd}</h3>
+                      <span style={{ fontFamily: "Arial" }} className="card__status"> </span>
+                    </div>
                   </div>
-                </div>
-              </div>
-
+                  <p style={{ fontFamily: "Arial", fontSize: "10px" }} className="card__description"><strong>{meteor.description}</strong></p>
+</div></div>
 <br></br>
             </>
           )

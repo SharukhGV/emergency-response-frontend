@@ -111,7 +111,7 @@ export default function App() {
            {!!accessToken ? <Route path="/dreams/:id" element={<DreamDetail accessToken={accessToken} setAccessToken={setAccessToken} loginUsername={loginUsername} setLoginUsername={setLoginUsername}/>} />: null}
           {!!accessToken ? <Route path="/dreams/:id/edit" element={<EditDreams />} /> : null}
           <Route path="/magneticpoleanomaly" element={<MagneticPoleAnomaly/>} />
-          <Route path="/rssfeed" element={<RSSFeedComponent/>} />
+          {/* <Route path="/rssfeed" element={<RSSFeedComponent/>} /> */}
     <Route path="/sunlifecycle" element={<SunLifeCycle/>} />
     <Route path="/mooninfo" element={<MoonquakeInfo/>} />
     <Route path="/earthinfo" element={<ReversingCore/>} />
