@@ -75,11 +75,12 @@ function PlanetsVisible() {
     else {
       return (
         <><br></br>
+        <br></br>
           <div className="visiblePlanets">
 
-            <h1><strong>Visible Celestial Bodies</strong></h1>
+            <h4><strong>Visible Celestial Bodies</strong></h4>
             <div style={{maxWidth:"500px",margin:"auto"}}>
-            <fieldset style={{ border: "solid", margin: "30px" }}>
+            <fieldset style={{ border: "solid", margin: "30px", borderRadius:"10px" }}>
               <legend style={{ backgroundColor: "darkred", color: "white" }}>Your Geolocation: Enabled</legend>
               <p style={{ color: "gray", fontSize: "13px" }}>Latitude: {latitude}</p>
               <p style={{ color: "gray", fontSize: "13px" }}>Longitude: {longitude}</p></fieldset>

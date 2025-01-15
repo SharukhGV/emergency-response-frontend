@@ -49,8 +49,8 @@ function MeteorShowers() {
         {/* ON BUTTON CLICK, SHOW METEOR SHOWERS WITHIN THREE MONTHS */}
 
         <br></br>
-        <h1 ><strong>Upcoming Showers</strong></h1>
-        <h3 >Current and Next Two Months</h3>
+        <h4 ><strong>Upcoming Showers</strong></h4>
+        <h5 >Current and Next Two Months</h5>
 
         <br></br> <div >{filterDateMeteors.length > 0 ? <div>{filterDateMeteors.map(meteor => {
           return (
