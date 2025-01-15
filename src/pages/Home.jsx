@@ -125,24 +125,24 @@ export default function Home({ setEmergencyType, loginUsername, accessToken, tog
 
           </div>
 
-         {!loginUsername ?<> <h2>JOIN TODAY TO UNLOCK THESE FEATURES</h2>
+          {!loginUsername ? <> <h2>JOIN TODAY TO UNLOCK THESE FEATURES</h2>
 
-<div>
-<h3>Dream Journal</h3>
-<img style={{width:"500px", height:"300px"}} src={dreamssection} />
-<br></br>
-<h3>Community Anomalies Reporting</h3>
-<img style={{width:"500px", height:"300px"}} src={communityposts} />
-</div></>
-: null}
+            <div>
+              <h3>Dream Journal</h3>
+              <img className="picturespages"  src={dreamssection} />
+              <br></br>
+              <h3>Community Anomalies Reporting</h3>
+              <img className="picturespages" src={communityposts} />
+            </div></>
+            : null}
           <br></br>
         </div>
 
         {loginUsername ? <div >
           <HomeAnomaly />
-        </div> :null}
+        </div> : null}
 
-        
+
         {modal1 ?
           <div className="modal-backdrop">
             <div className="modal">
