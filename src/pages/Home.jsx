@@ -128,10 +128,11 @@ export default function Home({ setEmergencyType, loginUsername, accessToken, tog
           {!loginUsername ? <> <h2>JOIN TODAY TO UNLOCK THESE FEATURES</h2>
 
             <div>
-              <h3>Dream Journal</h3>
+              <h3 style={{color:"red"}}>Dream Journal</h3>
               <img className="picturespages"  src={dreamssection} />
               <br></br>
-              <h3>Community Anomalies Reporting</h3>
+              <br></br>
+              <h3  style={{color:"red"}}>Community Anomalies Reporting</h3>
               <img className="picturespages" src={communityposts} />
             </div></>
             : null}
