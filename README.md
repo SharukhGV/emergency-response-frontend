@@ -1,92 +1,29 @@
 # Hive of Heaven
+
 ## Community Night Sky Finder
 
-A community powered app where users may
-create a post on light-polluted areas or dark skies
-with geolocation tags. This is so others can be
-better informed if travelling to see the beauty of
-the night sky. Almost 80% of the world's
-populations cannot see the Milky Way band, and
-such beauty being hidden is truly a catastrophe!
+This application aims to address the problem of environmental destruction and societal ignorance by raising awareness through sharing representations of astronomical, biological, and geologic anomalies both in reality and in dreams, encouraging users to reflect on human behaviors that contribute to these issues and inspiring action to prevent or prepare for potential apocalyptic scenarios.
 
 
-Future Features include Planets API checklist, and upvoting posts.
-
-## Home Page of App
-
-Includes modals with descriptions for specific types of posts. Users can click on a button, then a modal will pop up. Users may choose to cancel the modal or be prompted to create a post based on the button pressed.
-
-![Screen of App Image](./p1home.png)
-
-## Register Page of App - Verification
-
-Application requires users to enter verification code before their account gets registered.
-
-![Screen of App Image](./emailverification.png)
-![Screen of App Image](./emailverify.png)
+## Home Page
+### Dark and Light Themes
 
 
-## Create Page
-Users can upload an image and write about their celestial sightings. 
+![Snapshot_2025-01-17_18-23-34](https://github.com/user-attachments/assets/fe382c75-9e13-497f-84b9-92ba06aefcc0)
 
-Technologies used: Cloudinary
-
-![Screen of App Image](./p1post.png)
+![Snapshot_2025-01-17_18-24-51](https://github.com/user-attachments/assets/0256d71d-3388-49b6-9cd8-f6e4331405d7)
 
 
+## Dream Form with Full Stack CRUD Operations
 
-## Profile Page
-Users may upload their profile picture here.
-
-Technologies used: Cloudinary
-
-![Screen of App Image](./p2profile.png)
+![Snapshot_2025-01-17_18-24-01](https://github.com/user-attachments/assets/8d06511d-edf6-40c7-82ea-a908c852aa66)
 
 
+## Community Posts Page with GeoLocation Markers
 
-## Meteor Shower Page
-Users can view the visible annual meteor showers and read about a spectacle in the past.
+![Snapshot_2025-01-17_18-24-17](https://github.com/user-attachments/assets/40a3c802-6101-4207-9fb3-e816c262b0b1)
 
-![Screen of App Image](./p3meteor.png)
-
-
-
-## Galaxies & Celestial Objects Page
-Users may search for a celestial object or scroll to see the different ones displayed.
-
-![Screen of App Image](./p4celestial.png)
-
-
-## Visible Planets (Location Based from API) Page
-Based on a user's geolocation, the visible planets will be showed here.
-
-Technologies used: Visible Planets API
-
-![Screen of App Image](./p5visible.png)
-
-
-
-## Astronomy Atlas Page Page
-Various Points of Interest can be viewed on this page, including community posts. Community posts are organized into four main categories. 
-
-Technologies used: Google Maps API
-
-![Screen of App Image](./p6atlas.png)
-
-
-
-## Legend on Atlas Page
-The legend shows what markers mean on the map
-
-![Screen of App Image](./p6legend.png)
-
-
-## Individual Post Page
-An indiviudal user's post, with delete and edit functionality. Commenting is also available for all users to comment on the specific post.
-
-Technologies used: Location IQ API, Cloudinary
-
-![Screen of App Image](./p7posting.png)
+![Snapshot_2025-01-17_18-24-29](https://github.com/user-attachments/assets/8fa9f084-09dd-4101-b5e1-4528d1874a36)
 
 
 
@@ -97,9 +34,4 @@ Technologies used: Location IQ API, Cloudinary
 
 
 
-
-
-
-Here is the Link to the Site: [Hive of Heaven]
-(https://hiveheaven.pro/)
 
