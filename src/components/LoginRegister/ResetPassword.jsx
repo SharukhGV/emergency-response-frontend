@@ -86,64 +86,68 @@ function ResetPassword() {
 
     return (
         <>
-            <form onSubmit={handleSubmit}>
-                <div>
-                    <label htmlFor="email">Email:</label>
+            <form onSubmit={handleSubmit} className="form-container">
+                <div className="form-group">
+                    <label htmlFor="email" className="form-label">Email:</label>
                     <input
                         type="email"
                         id="email"
+                        className="form-input"
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                         required
                     />
                 </div>
-                <div>
-                    <label htmlFor="newPassword">New Password:</label>
+                <div className="form-group">
+                    <label htmlFor="newPassword" className="form-label">New Password:</label>
                     <input
                         type="password"
                         id="newPassword"
+                        className="form-input"
                         value={newPassword}
                         onChange={(e) => setNewPassword(e.target.value)}
                         required
                     />
                 </div>
-                <div>
-                    <label htmlFor="confirmPassword">Confirm New Password:</label>
+                <div className="form-group">
+                    <label htmlFor="confirmPassword" className="form-label">Confirm New Password:</label>
                     <input
                         type="password"
                         id="confirmPassword"
+                        className="form-input"
                         value={secPW}
                         onChange={(e) => setSecPW(e.target.value)}
                         required
                     />
                 </div>
-
-                {/* Submit button disappears after clicking */}
-                {!isSubmitting && <button type="submit">Reset Password</button>}
+    
+                {!isSubmitting && (
+                    <button type="submit" className="btn-primary">Reset Password</button>
+                )}
             </form>
-
-            {/* Show verification input only when verification process starts */}
+    
             {startVerify && !verifySuccess && (
-                <div>
-                    <label htmlFor="verificationCode">Verification Code:</label>
+                <div className="form-group">
+                    <label htmlFor="verificationCode" className="form-label">Verification Code:</label>
                     <input
                         type="text"
                         id="verificationCode"
+                        className="form-input"
                         value={inputVerify}
                         onChange={(e) => setInputVerify(e.target.value)}
                         required
                     />
                 </div>
             )}
-
-            {/* Show processing message once the correct code is entered */}
+    
             {verifySuccess && (
-                <div>
+                <div className="processing-message">
                     <p>Please wait... System Processing</p>
                 </div>
             )}
         </>
     );
+    
 }
 
 export default ResetPassword;

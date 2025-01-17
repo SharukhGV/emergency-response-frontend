@@ -125,9 +125,12 @@ export default function Home({ setEmergencyType, loginUsername, accessToken, tog
 
           </div>
 
-          {!loginUsername ? <> <h2>JOIN TODAY TO UNLOCK THESE FEATURES</h2>
+          {!loginUsername ? <> 
 
-            <div>
+            <div className="homeadvertisement">
+              <br></br>
+              <br></br>
+              <h2>JOIN TODAY TO UNLOCK THESE FEATURES</h2>
               <h3 style={{color:"red"}}>Dream Journal</h3>
               <img className="picturespages"  src={dreamssection} />
               <br></br>
@@ -136,6 +139,7 @@ export default function Home({ setEmergencyType, loginUsername, accessToken, tog
               <img className="picturespages" src={communityposts} />
             </div></>
             : null}
+          <br></br>
           <br></br>
         </div>
 

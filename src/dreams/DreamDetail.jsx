@@ -59,6 +59,7 @@ const DreamDetail = (loginUsername) => {
       <p className="dream-creator">
         <strong>Created by:</strong> {dream.username}
       </p>
+      <div style={{maxHeight:"65px", width:"auto"}}>
       <Link to="/dreams" className="back-button">
         Back to All Dreams
       </Link>
@@ -72,7 +73,7 @@ const DreamDetail = (loginUsername) => {
         <button className="delete-button" onClick={deleteDream}>
           Delete
         </button>
-      )}
+      )}</div>
     </div>
   );
 

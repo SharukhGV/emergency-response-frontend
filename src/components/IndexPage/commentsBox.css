@@ -104,12 +104,12 @@
 
 
 .light .comment-box {
-  background: linear-gradient(145deg, #282800, #304400);
+  background: linear-gradient(145deg, #444444, #949494);
   border: 2px solid #0f3460;
   border-radius: 15px;
   padding: 20px;
   margin-bottom: 20px;
-  color: #e94560;
+  color: #ffffff;
   font-family:   sans-serif;
   box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
   position: relative;
@@ -174,14 +174,14 @@
 .light .comment-username {
   font-size: 10px;
   font-weight: bold;
-  color: #e94560;
+  color: #fde2e7;
 }
 
 .light .comment-content {
   font-size: 1em;
   line-height: 1.4;
   margin-bottom: 15px;
-  color: #f88e8e;
+  color: #ffffff;
 }
 
 .light .delete-button {

@@ -81,7 +81,7 @@ function PlanetsVisible() {
             <h4><strong>Visible Celestial Bodies</strong></h4>
             <div style={{maxWidth:"500px",margin:"auto"}}>
             <fieldset style={{ border: "solid", margin: "30px", borderRadius:"10px" }}>
-              <legend style={{ backgroundColor: "darkred", color: "white" }}>Your Geolocation: Enabled</legend>
+              <legend style={{ borderRadius:"10px",backgroundColor: "darkred", color: "white" }}>Your Geolocation: Enabled</legend>
               <p style={{ color: "gray", fontSize: "13px" }}>Latitude: {latitude}</p>
               <p style={{ color: "gray", fontSize: "13px" }}>Longitude: {longitude}</p></fieldset>
               </div>
