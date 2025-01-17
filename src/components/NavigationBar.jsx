@@ -24,24 +24,24 @@ function NavigationBar({ theme,toggleTheme,loginUsername, toggleLOGIN, settoggle
 	}
 
   return (
-    <Navbar expand="lg" className="navigationBAr" >
+    <Navbar style={{color:"white"}} expand="lg" className="navigationBAr" >
       <Container className="NavBarContainer" fluid>
         <Navbar.Brand ><Link to="/"><img style={{ width: "50px", height: "50px" }} src={telescopeHome}></img></Link></Navbar.Brand>
 
 
-        {!!toggleLOGIN ? <NavDropdown  title="Profile" id="basic-nav-dropdown">
-          <NavDropdown.Item ><Link to="/profile">👨🏼‍🚀 Profile</Link> </NavDropdown.Item>
+        {!!toggleLOGIN ? <NavDropdown title="Profile" id="basic-nav-dropdown">
+          <NavDropdown.Item className="navbar-dropdown"><Link to="/profile">👨🏼‍🚀 Profile</Link> </NavDropdown.Item>
 
 
-          <NavDropdown.Item ><Logout toggleLOGIN={toggleLOGIN} settoggleLOGIN={settoggleLOGIN} loginUsername={loginUsername} /></NavDropdown.Item>
+          <NavDropdown.Item className="nav-dropdown" ><Logout toggleLOGIN={toggleLOGIN} settoggleLOGIN={settoggleLOGIN} loginUsername={loginUsername} /></NavDropdown.Item>
 
 
         </NavDropdown> : null}
 
 
         {!!toggleLOGIN ? <NavDropdown  title="Dreams" id="basic-nav-dropdown">
-          <NavDropdown.Item ><Link to="/dreamnewform">Form</Link> </NavDropdown.Item>
-          <NavDropdown.Item ><Link to="/dreams">All</Link> </NavDropdown.Item>
+          <NavDropdown.Item className="navbar-dropdown" ><Link to="/dreamnewform">Form</Link> </NavDropdown.Item>
+          <NavDropdown.Item className="navbar-dropdown"><Link to="/dreams">All</Link> </NavDropdown.Item>
 
 
 

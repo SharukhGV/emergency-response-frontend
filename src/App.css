@@ -31,7 +31,7 @@
 }
 
 /* TABLE for Earthquake and User Individual Posts */
-.userPostTable {
+/* .userPostTable {
   font-family: 'Roboto', Arial, sans-serif;
   border-collapse: separate;
   border-spacing: 0;
@@ -40,14 +40,14 @@
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 0 20px rgba(0, 255, 255, 0.1);
-}
+} */
 
-.userPostTable td,
+/* .userPostTable td,
 .userPostTable th {
   border: 1px solid var(--table-border);
   padding: 12px;
   transition: all 0.3s ease;
-}
+} */
 
 /* Light Theme */
 .light .userPostTable {
@@ -421,9 +421,10 @@ table {
   width: 100%;
   border-color: #000;
   text-align: center;
+  border-radius: 10px;
 }
 
-th,
+.light th,
 td {
   padding: 8px;
   text-align: left;
@@ -431,8 +432,17 @@ td {
   text-align: center;
 }
 
+.dark th,
+td {
+  padding: 8px;
+  text-align: left;
+  border: 1px solid #00ff2a;
+  text-align: center;
+}
+
 tr:hover {
-  background-color: coral;
+  background-color: rgb(90, 24, 0);
+  color: white;
 }
 
 .light footer {
@@ -1283,7 +1293,7 @@ h1, h2, h3, h4, h5, h6, .modal-container-title {
 .dream-actions button:active {
   transform: translateY(0);
 }
-
+/* 
 .edit-button {
   background-color: #4a90e2;
   color: white;
@@ -1300,7 +1310,7 @@ h1, h2, h3, h4, h5, h6, .modal-container-title {
 
 .delete-button:hover {
   background-color: #da190b;
-}
+} */
 
 .light .dream-detail {
   background-color: #ffffff;
@@ -1312,7 +1322,7 @@ h1, h2, h3, h4, h5, h6, .modal-container-title {
   color: #e0e0e0;
 }
 
-.dark .edit-button {
+/* .dark .edit-button {
   background-color: #3a78c2;
 }
 
@@ -1326,7 +1336,7 @@ h1, h2, h3, h4, h5, h6, .modal-container-title {
 
 .dark .delete-button:hover {
   background-color: #c62828;
-}
+} */
 
 /* Styles for the dream list page */
 .dream-list {
@@ -1669,8 +1679,69 @@ h1, h2, h3, h4, h5, h6, .modal-container-title {
   }
 }
 
+/* Form Container */
+.form-container {
+  max-width: 400px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+}
 
+/* Form Group */
+.form-group {
+  margin-bottom: 1.5rem;
+}
 
-.containermainpage .button {
-  width: 98%;
+/* Form Label */
+.form-label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+/* Form Input */
+.form-input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+  background-color: #f9f9f9;
+  transition: border-color 0.3s;
+}
+
+.form-input:focus {
+  border-color: #4caf50;
+  outline: none;
+}
+
+/* Button Primary */
+.btn-primary {
+  display: inline-block;
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  background-color: #4caf50;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: #45a049;
+}
+
+/* Processing Message */
+.processing-message {
+  margin-top: 1rem;
+  font-size: 1rem;
+  color: #555;
+  text-align: center;
 }

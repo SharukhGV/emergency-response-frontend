@@ -73,6 +73,10 @@ const DreamNewForm = ({ initialDream = null, accessToken, loginUsername }) => {
   };
 
   return (
+    <>
+
+    <br></br>
+    <br></br>
     <div className="dream-container">
       <h2 className="dream-title">{initialDream ? 'Edit Dream' : 'Log New Dream'}</h2>
       <p className="dream-intro">
@@ -127,7 +131,7 @@ const DreamNewForm = ({ initialDream = null, accessToken, loginUsername }) => {
                 onChange={handleChange}
                 className="form-checkbox"
               />
-           Did you dream during the day? (Day Dream)
+           <span> </span>Did you dream during the day? (Day Dream)
            </label>
           </div>
           <button type="submit" className="form-button">
@@ -139,6 +143,9 @@ const DreamNewForm = ({ initialDream = null, accessToken, loginUsername }) => {
       )}
       <Link to="/dreams" className="back-button">Back to Dreams</Link>
     </div>
+    
+    
+    </>
   );
   
 };

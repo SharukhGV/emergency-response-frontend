@@ -3,11 +3,12 @@
   /* Light mode color palette */
   --light-bg: #dddbc1; /* Background color for light mode */
   --light-text: #0a3d62; /* Text color for light mode */
-  --light-accent: #3498db; /* Accent color for light mode (used in links, headings, etc.) */
+  --light-accent: #2b2d2e; 
+  /* Accent color for light mode (used in links, headings, etc.) */
   
   /* Dark mode color palette */
   --dark-bg: #0a0a0a; /* Background color for dark mode */
-  --dark-text: #00ff00; /* Text color for dark mode */
+  --dark-text: #abf7ab; /* Text color for dark mode */
   --dark-accent: #ff00ff; /* Accent color for dark mode (used in links, headings, etc.) */
   
   /* Glow effect for hover states */
@@ -36,13 +37,15 @@
 
 /* Light mode strong elements in the navbar (like branding text) */
 .light .NavBarContainer strong {
-  color: var(--light-accent); /* Accent color for important text */
+  /* color: var(--light-accent);  */
+  /* Accent color for important text */
   text-shadow: var(--glow) var(--light-accent); /* Adds glow to important text */
 }
 
 /* Light mode links */
 .light a {
-  color: var(--light-accent); /* Sets link color to light accent */
+  /* color: var(--light-accent);  */
+  /* Sets link color to light accent */
   text-decoration: none; /* Removes underline from links */
   transition: all 0.3s ease; /* Smooth hover transition */
 }
@@ -106,4 +109,16 @@
   text-transform: uppercase; /* Transforms headings to uppercase */
   letter-spacing: 2px; /* Increases spacing between letters for a futuristic look */
   text-shadow: var(--glow) var(--dark-accent); /* Adds glow to headings */
+}
+
+
+.dark .navbar-dropdown{
+background-color:  #0a3d62;
+color:salmon
+}
+
+.light .navbar-dropdown{
+
+background-color: #0a3d62;
+color: whitesmoke;
 }

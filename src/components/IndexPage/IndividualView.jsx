@@ -122,7 +122,6 @@ function IndividualView({ loginUsername }) {
     display: "flex",
     alignItems: "center",
     marginBottom: "20px",
-    backgroundColor: "#ffffff",
     padding: "20px",
     borderRadius: "12px",
     boxShadow: "0 2px 4px rgba(0, 0, 0, 0.05)",
@@ -140,7 +139,6 @@ function IndividualView({ loginUsername }) {
   const titleStyle = {
     fontSize: "28px",
     fontWeight: "bold",
-    color: "#333",
     marginBottom: "5px",
   };
 
@@ -162,19 +160,9 @@ function IndividualView({ loginUsername }) {
     display: "block",
   };
 
-  const tableStyle = {
-    width: "100%",
-    borderCollapse: "separate",
-    borderSpacing: "0 10px",
-    marginBottom: "20px",
-  };
 
-  const cellStyle = {
-    padding: "12px",
-    // backgroundColor: "#ffffff",
-    borderRadius: "8px",
-    border: "1px solid beige",
-  };
+
+
 
   const buttonContainerStyle = {
     display: "flex",
@@ -194,15 +182,15 @@ function IndividualView({ loginUsername }) {
 
   return (
     <div style={containerStyle}>
-      <div style={headerStyle}>
+      <div className="headingstyle">
         {/* <img
           style={profileImageStyle}
           src={data.image_url || mountainsky}
           alt={data.full_name}
         /> */}
         <div>
-          <h2 style={titleStyle}>{data.full_name}</h2>
-          <p style={usernameStyle}>Author: {data.username}</p>
+          <h2 className="titleStyle">{data.full_name}</h2>
+          <p className="authorStyle">Author: {data.username}</p>
         </div>
       </div>
 
@@ -229,23 +217,23 @@ function IndividualView({ loginUsername }) {
   )}
 </div>
 
-      <table style={tableStyle}>
-        <tbody>
+      <table className="tableStyle">
+        <tbody className="tableStyle" >
           <tr>
-            <td style={cellStyle}><strong>Latitude:</strong></td>
-            <td style={cellStyle}>{data.latitude || "No Location Found"}</td>
+            <td className="cellStyle"><strong>Latitude:</strong></td>
+            <td  className="cellStyle">{data.latitude || "No Location Found"}</td>
           </tr>
           <tr>
-            <td style={cellStyle}><strong>Longitude:</strong></td>
-            <td style={cellStyle}>{data.longitude || "No Location Found"}</td>
+            <td className="cellStyle"><strong>Longitude:</strong></td>
+            <td  className="cellStyle">{data.longitude || "No Location Found"}</td>
           </tr>
           <tr>
-            <td style={cellStyle}><strong>Description:</strong></td>
-            <td style={cellStyle}>{data.description}</td>
+            <td className="cellStyle"><strong>Description:</strong></td>
+            <td  className="cellStyle">{data.description}</td>
           </tr>
           <tr>
-            <td style={cellStyle}><strong>Address:</strong></td>
-            <td style={cellStyle}>{locationIQ.display_name || "No Location Data"}</td>
+            <td  className="cellStyle"><strong>Address:</strong></td>
+            <td  className="cellStyle">{locationIQ.display_name || "No Location Data"}</td>
           </tr>
         </tbody>
       </table>

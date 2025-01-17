@@ -6,7 +6,7 @@
   padding: 20px;
   /* background: linear-gradient(145deg, #1a1a2e, #16213e); */
   color: #e94560;
-  font-family:   sans-serif;
+  font-family: sans-serif;
 }
 
 .dark .sci-fi-card {
@@ -93,7 +93,7 @@
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
-  font-family:   sans-serif;
+  font-family: sans-serif;
   font-size: 14px;
   text-transform: uppercase;
   cursor: pointer;
@@ -145,7 +145,7 @@
   border: none;
   background: rgba(15, 52, 96, 0.8);
   color: #00fff5;
-  font-family:   sans-serif;
+  font-family: sans-serif;
 }
 
 .dark .sci-fi-button.submit {
@@ -173,7 +173,7 @@
   padding: 20px;
   /* background: linear-gradient(145deg, #1a1a2e, #16213e); */
   color: #e94560;
-  font-family:   sans-serif;
+  font-family: sans-serif;
 }
 
 .light .sci-fi-card {
@@ -260,7 +260,7 @@
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
-  font-family:   sans-serif;
+  font-family: sans-serif;
   font-size: 14px;
   text-transform: uppercase;
   cursor: pointer;
@@ -312,7 +312,7 @@
   border: none;
   /* background: rgba(96, 96, 15, 0.8);
   color: #ffffff; */
-  font-family:   sans-serif;
+  font-family: sans-serif;
 }
 
 .light .sci-fi-button.submit {
@@ -326,4 +326,74 @@
 .light .sci-fi-comments-list {
   max-height: 400px;
   overflow-y: auto;
+}
+
+.light .tableStyle{
+  width: 100%;
+  border-collapse:separate;
+  border-spacing: 0 10px;
+  margin-bottom: 20px;
+  border-color: #0f3460;
+  border: solid;
+}
+
+.dark .tableStyle{
+  
+  width: 100%;
+  border-collapse:separate;
+  border-spacing: 0 10px;
+  margin-bottom: 20px;
+  border-color: #eef2f7;
+  border: solid;
+}
+
+.light .cellStyle {
+  padding: 12px;
+  background-color: white;
+  border-radius: 8px;
+  border: 1px solid beige;
+  border-left:solid black 1px;
+  border-top:solid black 1px;
+}
+
+;
+
+
+.dark .cellStyle {
+  padding: 12px;
+  background-color: rgb(9, 9, 39);
+  border-radius: 8px;
+  border: 1px solid rgb(110, 110, 87);
+  border-left:solid black 1px;
+  border-top:solid black 1px;
+}
+
+;
+
+.light .authorStyle{
+background-color: #eef2f7;
+}
+.dark .authorStyle{
+background-color: #0f3460;
+}
+
+
+.light .titleStyle{
+  background-color: #eef2f7;
+
+
+}
+
+.dark .titleStyle{
+  background-color: #0f3460;
+
+
+}
+
+.light .headingstyle{
+  background-color: white;
+}
+
+.dark .headingstyle{
+  background-color: rgb(27, 29, 39);
 }

@@ -89,3 +89,22 @@ h3 {
   margin-top: 20px;
 }
 
+.light .sci-fi-container {
+  background-color: white;
+  border-radius: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  
+  padding: 15px
+}
+
+
+.dark .sci-fi-container {
+  background-color: rgb(26, 25, 25);
+  border-radius: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+  padding: 15px
+}
+
