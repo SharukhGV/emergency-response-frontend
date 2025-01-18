@@ -70,7 +70,8 @@ const MagneticPoleTable = () => {
   };
 
   return (
-    <div style={{border:"solid", borderColor:"green", maxWidth:"95%"}} className="magnetic-pole-table">
+    <>
+    <div className="div2ImageHover" style={{border:"solid", borderColor:"green", maxWidth:"95%"}}>
       <h2>Magnetic Pole Shifts and Distances Moved</h2>
       <table>
         <thead>
@@ -94,45 +95,11 @@ const MagneticPoleTable = () => {
           ))}
         </tbody>
       </table>
-      
-      <h3>Distance Moved Every Five Years</h3>
-      <Bar data={chartData} options={{
-        scales: {
-          y: {
-            beginAtZero: true,
-            title: {
-              display: true,
-              text: 'Distance (km)'
-            }
-          },
-          x: {
-            title: {
-              display: true,
-              text: 'Year'
-            }
-          }
-        }
-      }} />
+     
 
-      <h3>Cumulative Distance Moved Over Time</h3>
-      <Line data={summaryChartData} options={{
-        scales: {
-          y: {
-            beginAtZero: true,
-            title: {
-              display: true,
-              text: 'Cumulative Distance (km)'
-            }
-          },
-          x: {
-            title: {
-              display: true,
-              text: 'Year'
-            }
-          }
-        }
-      }} />
+
     </div>
+    </>
   );
 };
 

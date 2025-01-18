@@ -37,8 +37,80 @@
   } */
 
   
-  @media (max-width: 438px) {
     .magnetic-pole-table {
 font-size: 10px;
     }
+
+
+  .parentImageHover {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1, 3fr);
+    gap: 10px;
   }
+  
+  .div1ImageHover { grid-area: 1 / 1 / 2 / 2;margin-left: 15px;margin-right: 15px; }
+  .div2ImageHover { grid-area: 1 / 2 / 2 / 3;margin-left: 15px;margin-right: 15px; }
+
+  
+  .image-container {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    margin: auto;
+  }
+  
+  .image {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .image.hovered {
+    opacity: 0.2;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .overlay.visible {
+    opacity: 1;
+  }
+  
+  .content-section {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-top: 1px solid #ccc;
+  }
+    
+
+
+  /* Media Query for screen widths at or below 1849px */
+@media (max-width: 1849px) {
+  .parentImageHover {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .image-container {
+    width: 120px;
+    height: 120px;
+  }
+
+  .overlay {
+    font-size: 14px;
+  }
+}
