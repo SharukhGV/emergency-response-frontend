@@ -107,7 +107,10 @@ const EarthRotationSpeed = () => {
   };
 
   return (
-    <div>
+    <>
+    <div className='parentMOON'>
+
+      <div className='div1MOON'>
 <br></br>
       <h2>Earth's Rotational Speed Over Time</h2>
       {/* <table className='magnetic-pole-table'>
@@ -129,13 +132,13 @@ const EarthRotationSpeed = () => {
       <div style={{ height: 'auto', maxWidth: '800px', margin: '20px auto', border:"solid", borderColor:"green", borderRadius:"10px" }}>
         <Line data={chartData} options={chartOptions} />
       </div>
-
-<div style={{border:"solid", borderColor:"green", borderRadius:"10px", padding:"15px"}}>
+</div>
+<div className='div2MOON' style={{border:"solid", borderColor:"green", borderRadius:"10px", padding:"15px"}}>
       <div> <p>Days on Earth are <strong>gradually lengthening</strong>, with this change <strong>accelerating in recent years</strong>. This phenomenon is linked to the same factors causing Earth's axis to <strong>shift by approximately 30 feet over the past 120 years</strong>. Two NASA-funded studies have revealed that <strong>climate-driven redistribution of ice and water</strong> is significantly impacting our planet's rotation[1].</p> </div> 
       <div> <p>NASA. "NASA-Funded Studies Explain How Climate Is Changing Earth's Rotation." <em>NASA</em>, 14 Sept. 2024, www.nasa.gov/science-research/earth-science/nasa-funded-studies-explain-how-climate-is-changing-earths-rotation/. Accessed 14 Sept. 2024.</p> </div>
 </div>
 <br></br>
-    </div>
+    </div></>
   );
 };
 
