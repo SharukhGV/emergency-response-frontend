@@ -69,13 +69,13 @@
 }
 
 .light .button {
-    background-color: #007bff;
+    background-color: #801f2c;
     color: #ffffff;
     border: none;
 }
 
 .light .button:hover {
-    background-color: #0056b3;
+    background-color: #b30000;
 }
 
 .light .back-button {
@@ -114,7 +114,7 @@
 }
 
 .dark .button {
-    background-color: #1a73e8;
+    background-color: #6b7685;
     color: #ffffff;
     border: none;
 }
