@@ -37,8 +37,166 @@
   } */
 
   
-  @media (max-width: 438px) {
     .magnetic-pole-table {
 font-size: 10px;
     }
+
+
+  .parentImageHover {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1, 3fr);
+    gap: 10px;
   }
+  
+  .div1ImageHover { grid-area: 1 / 1 / 2 / 2;margin-left: 15px;margin-right: 15px; }
+  .div2ImageHover { grid-area: 1 / 2 / 2 / 3;margin-left: 15px;margin-right: 15px; }
+
+  
+  .image-container {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    margin: auto;
+  }
+  
+  .image {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .image.hovered {
+    opacity: 0.2;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .overlay.visible {
+    opacity: 1;
+  }
+  
+  .content-section {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-top: 1px solid #ccc;
+  }
+    
+
+
+  /* Media Query for screen widths at or below 1849px */
+@media (max-width: 1849px) {
+  .parentImageHover {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .image-container {
+    width: 120px;
+    height: 120px;
+  }
+
+  .overlay {
+    font-size: 14px;
+  }
+}
+
+
+/* Moon Quake */
+
+/* Default (Desktop) Layout: Left and Right Grid */
+.parentMOON {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two columns of equal width */
+  grid-template-rows: 1fr; /* Single row */
+  gap: 20px; /* Add spacing between columns */
+  align-items: center; /* Vertically align content */
+  padding: 20px; /* Optional padding around the grid */
+}
+
+.div1MOON {
+  grid-column: 1; /* Left column */
+}
+
+.div2MOON {
+  grid-column: 2; /* Right column */
+}
+
+.image-containerMOON {
+  position: relative;
+  width: 200px; /* Default size for desktop */
+  height: 200px;
+  margin: auto;
+}
+
+.imageMOON {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.imageMOON.hovered {
+  opacity: 0.2;
+}
+
+.overlayMOON {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: black;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.overlayMOON.visible {
+  opacity: 1;
+}
+
+/* Mobile Layout: Flexbox Stacked */
+@media (max-width: 768px) {
+  .parentMOON {
+    display: flex; /* Switch to flexbox */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    gap: 15px; /* Add spacing between items */
+    padding: 15px; /* Optional padding for smaller screens */
+  }
+
+  .div1MOON, .div2MOON {
+    width: 100%; /* Ensure full-width in mobile view */
+    margin-bottom: 10px; /* Add spacing between stacked elements */
+  }
+
+  .image-containerMOON {
+    width: 150px; /* Adjust size for smaller screens */
+    height: 150px;
+  }
+
+  .overlayMOON {
+    font-size: 14px; /* Adjust font size for mobile */
+  }
+}
+
+
+.moon-quake-img{
+  width: 100%;
+}

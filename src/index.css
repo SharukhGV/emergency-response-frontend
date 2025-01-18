@@ -9,7 +9,7 @@
   /* Dark mode color palette */
   --dark-bg: #0a0a0a; /* Background color for dark mode */
   --dark-text: #abf7ab; /* Text color for dark mode */
-  --dark-accent: #ff00ff; /* Accent color for dark mode (used in links, headings, etc.) */
+  --dark-accent: #bbff00; /* Accent color for dark mode (used in links, headings, etc.) */
   
   /* Glow effect for hover states */
   --glow: 0 0 10px; /* Glow effect applied to text and accents */
