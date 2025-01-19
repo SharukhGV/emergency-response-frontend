@@ -108,38 +108,51 @@ const EarthRotationSpeed = () => {
 
   return (
     <>
-    <div className='parentMOON'>
-
-      <div className='div1MOON'>
-<br></br>
-      <h2>Earth's Rotational Speed Over Time</h2>
-      {/* <table className='magnetic-pole-table'>
-        <thead>
-          <tr>
-            <th>Year</th>
-            <th>Rotational Speed (seconds per day)</th>
-          </tr>
-        </thead>
-        <tbody>
-          {rotationData.map((data, index) => (
-            <tr key={index}>
-              <td>{data.year}</td>
-              <td>{data.speed.toFixed(3)}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table> */}
-      <div style={{ height: 'auto', maxWidth: '800px', margin: '20px auto', border:"solid", borderColor:"green", borderRadius:"10px" }}>
-        <Line data={chartData} options={chartOptions} />
+      <div className='parentMOON'>
+  
+        <div className='div1MOON'>
+          <br></br>
+          <h2>Earth's Rotational Speed Over Time</h2>
+          {/* <table className='magnetic-pole-table'>
+            <thead>
+              <tr>
+                <th>Year</th>
+                <th>Rotational Speed (seconds per day)</th>
+              </tr>
+            </thead>
+            <tbody>
+              {rotationData.map((data, index) => (
+                <tr key={index}>
+                  <td>{data.year}</td>
+                  <td>{data.speed.toFixed(3)}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table> */}
+          <div style={{ height: 'auto', maxWidth: '800px', margin: '20px auto', border: "solid", borderColor: "green", borderRadius: "10px" }}>
+            <Line data={chartData} options={chartOptions} />
+          </div>
+        </div>
+  
+        <div className='div2MOON' style={{ border: "solid", borderColor: "green", borderRadius: "10px", padding: "15px" }}>
+          <div>
+            <p>Days on Earth are <strong>gradually lengthening</strong>, with this change <strong>accelerating in recent years</strong>. This phenomenon is linked to the same factors causing Earth's axis to <strong>shift by approximately 30 feet over the past 120 years</strong>. Two NASA-funded studies have revealed that <strong>climate-driven redistribution of ice and water</strong> is significantly impacting our planet's rotation[1].</p>
+          </div>
+          <div>
+            <p>Recent studies also highlight that Earth's rotational speed is influenced by short-term fluctuations. For instance, Earth recorded its shortest day on June 29, 2022, completing its rotation 1.59 milliseconds faster than usual. Factors like the melting of ice sheets, glacial rebound, and mantle convection contribute to these variations.</p>
+          </div>
+          <div>
+            <p>The gradual slowing of Earth's rotation over geological timescales is due to tidal friction caused by interactions with the Moon. This results in an average increase in day length of about 1.8 milliseconds per century.</p>
+          </div>
+          <div>
+            <p>NASA. "NASA-Funded Studies Explain How Climate Is Changing Earth's Rotation." <em>NASA</em>, 14 Sept. 2024, www.nasa.gov/science-research/earth-science/nasa-funded-studies-explain-how-climate-is-changing-earths-rotation/. Accessed 14 Sept. 2024.</p>
+          </div>
+        </div>
+        <br></br>
       </div>
-</div>
-<div className='div2MOON' style={{border:"solid", borderColor:"green", borderRadius:"10px", padding:"15px"}}>
-      <div> <p>Days on Earth are <strong>gradually lengthening</strong>, with this change <strong>accelerating in recent years</strong>. This phenomenon is linked to the same factors causing Earth's axis to <strong>shift by approximately 30 feet over the past 120 years</strong>. Two NASA-funded studies have revealed that <strong>climate-driven redistribution of ice and water</strong> is significantly impacting our planet's rotation[1].</p> </div> 
-      <div> <p>NASA. "NASA-Funded Studies Explain How Climate Is Changing Earth's Rotation." <em>NASA</em>, 14 Sept. 2024, www.nasa.gov/science-research/earth-science/nasa-funded-studies-explain-how-climate-is-changing-earths-rotation/. Accessed 14 Sept. 2024.</p> </div>
-</div>
-<br></br>
-    </div></>
+    </>
   );
+  
 };
 
 export default EarthRotationSpeed;
