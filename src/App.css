@@ -1680,13 +1680,21 @@ h1, h2, h3, h4, h5, h6, .modal-container-title {
 }
 
 /* Form Container */
-.form-container {
+.light .form-container {
   max-width: 400px;
   margin: 2rem auto;
   padding: 1.5rem;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   background-color: #ffffff;
+}
+.dark .form-container {
+  max-width: 400px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #5e5d5d;
 }
 
 /* Form Group */
@@ -1695,7 +1703,7 @@ h1, h2, h3, h4, h5, h6, .modal-container-title {
 }
 
 /* Form Label */
-.form-label {
+.light .form-label {
   display: block;
   font-size: 0.875rem;
   font-weight: 500;
@@ -1703,8 +1711,16 @@ h1, h2, h3, h4, h5, h6, .modal-container-title {
   color: #333;
 }
 
+.dark .form-label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: #ffffff;
+}
+
 /* Form Input */
-.form-input {
+.light .form-input {
   width: 100%;
   padding: 0.75rem;
   border: 1px solid #ddd;
@@ -1714,9 +1730,25 @@ h1, h2, h3, h4, h5, h6, .modal-container-title {
   transition: border-color 0.3s;
 }
 
-.form-input:focus {
+.dark .form-input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #135e3f;
+  border-radius: 6px;
+  font-size: 1rem;
+  background-color: #545e68;
+  transition: border-color 0.3s;
+}
+
+.light .form-input:focus {
   border-color: #4caf50;
   outline: none;
+}
+
+.dark .form-input:focus {
+  border-color: #4caf50;
+  outline: none;
+  color: black;
 }
 
 /* Button Primary */
