@@ -2,14 +2,14 @@
 :root {
   /* Light mode color palette */
   --light-bg: #dddbc1; /* Background color for light mode */
-  --light-text: #0a3d62; /* Text color for light mode */
-  --light-accent: #2b2d2e; 
+  --light-text: #000000; /* Text color for light mode */
+  --light-accent: #192024; 
   /* Accent color for light mode (used in links, headings, etc.) */
   
   /* Dark mode color palette */
   --dark-bg: #0a0a0a; /* Background color for dark mode */
-  --dark-text: #abf7ab; /* Text color for dark mode */
-  --dark-accent: #bbff00; /* Accent color for dark mode (used in links, headings, etc.) */
+  --dark-text: #ffffff; /* Text color for dark mode */
+  --dark-accent: #dfe9c3; /* Accent color for dark mode (used in links, headings, etc.) */
   
   /* Glow effect for hover states */
   --glow: 0 0 10px; /* Glow effect applied to text and accents */
