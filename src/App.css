@@ -878,7 +878,7 @@ button {
 
 /* Login/Register Words */
 .light .loginregisterwords {
-  color: var(--light-text);
+  color: white;
 }
 
 .dark .loginregisterwords {
